@@ -1,5 +1,6 @@
 ﻿using DVLD_DataAccess;
 using System;
+using System.Data;
 
 namespace DVLD_Business
 {
@@ -7,43 +8,52 @@ namespace DVLD_Business
     {
         private enum Mode { Add, Update }
         private Mode _mode;
-        public int Id { get; set; }
+        public int PersonID { get; set; }
         public string NationalNo { get; set; }
-        public string FullName { get; set; }
+        public string FirstName { get; set; }
+        public string SecondName { get; set; }
+        public string ThirdName { get; set; }
+        public string LastName { get; set; }
         public DateTime DateOfBirth { get; set; }
-        public string Gender { get; set; }
+        public byte Gender { get; set; }
         public string Address { get; set; }
         public string Phone { get; set; }
         public string Email { get; set; }
-        public int NationalityCountryId { get; set; }
+        public int NationalityCountryID { get; set; }
         public string ImagePath { get; set; }
 
         public Person()
         {
-            this.Id = -1;
+            this.PersonID = 0;
             this.NationalNo = string.Empty;
-            this.FullName = string.Empty;
+            this.FirstName = string.Empty;
+            this.SecondName = string.Empty;
+            this.ThirdName = string.Empty;
+            this.LastName = string.Empty;
             this.DateOfBirth = DateTime.MinValue;
-            this.Gender = string.Empty;
+            this.Gender = 0;
             this.Address = string.Empty;
             this.Phone = string.Empty;
             this.Email = string.Empty;
-            this.NationalityCountryId = -1;
+            this.NationalityCountryID = 0;
             this.ImagePath = string.Empty;
 
             _mode = Mode.Add;
         }
-        private Person(int Id, string NationalNo, string FullName, DateTime DateOfBirth, string Gender, string Address, string Phone, string Email, int NationalityCountryId, string ImagePath)
+        private Person(int PersonID, string NationalNo, string FirstName, string SecondName, string ThirdName, string LastName, DateTime DateOfBirth, byte Gender, string Address, string Phone, string Email, int NationalityCountryID, string ImagePath)
         {
-            this.Id = Id;
+            this.PersonID = PersonID;
             this.NationalNo = NationalNo;
-            this.FullName = FullName;
+            this.FirstName = FirstName;
+            this.SecondName = SecondName;
+            this.ThirdName = ThirdName;
+            this.LastName = LastName;
             this.DateOfBirth = DateOfBirth;
             this.Gender = Gender;
             this.Address = Address;
             this.Phone = Phone;
             this.Email = Email;
-            this.NationalityCountryId = NationalityCountryId;
+            this.NationalityCountryID = NationalityCountryID;
             this.ImagePath = ImagePath;
 
 
@@ -51,13 +61,14 @@ namespace DVLD_Business
         }
         private bool _Add()
         {
-            this.Id =
-                        PersonData.Add(this.NationalNo, this.FullName, this.DateOfBirth, this.Gender, this.Address, this.Phone, this.Email, this.NationalityCountryId, this.ImagePath);
-            return (this.Id != -1);
+            this.PersonID =
+                        PersonData.Add(this.NationalNo, this.FirstName, this.SecondName, this.ThirdName, this.LastName, this.DateOfBirth, this.Gender, this.Address, this.Phone, this.Email, this.NationalityCountryID, this.ImagePath);
+            return (this.PersonID != -1);
         }
+
         private bool _Update()
         {
-            return PersonData.Update(this.Id, this.NationalNo, this.FullName, this.DateOfBirth, this.Gender, this.Address, this.Phone, this.Email, this.NationalityCountryId, this.ImagePath);
+            return PersonData.Update(this.PersonID, this.NationalNo, this.FirstName, this.SecondName, this.ThirdName, this.LastName, this.DateOfBirth, this.Gender, this.Address, this.Phone, this.Email, this.NationalityCountryID, this.ImagePath);
         }
         public bool Save()
         {
@@ -73,37 +84,48 @@ namespace DVLD_Business
             }
             return false;
         }
-        public static bool Exist(int Id)
+        public static bool Exist(int PersonID)
         {
-            return PersonData.Exist(Id);
+            return PersonData.Exist(PersonID);
         }
-        public static bool Delete(int Id)
+        public static bool Delete(int PersonID)
         {
-            if (!Exist(Id))
+            if (!Exist(PersonID))
             {
                 return false;
             }
-            else { return PersonData.Delete(Id); }
+            else { return PersonData.Delete(PersonID); }
         }
-        public Person Find(int Id)
+        public static DataTable All()
+        {
+            return PersonData.All();
+        }
+        public Person Find(int PersonID)
         {
             string NationalNo = string.Empty;
-            string FullName = string.Empty;
+            string FirstName = string.Empty;
+            string SecondName = string.Empty;
+            string ThirdName = string.Empty;
+            string LastName = string.Empty;
             DateTime DateOfBirth = DateTime.MinValue;
-            string Gender = string.Empty;
+            byte Gender = 0;
             string Address = string.Empty;
             string Phone = string.Empty;
             string Email = string.Empty;
-            int NationalityCountryId = -1;
+            int NationalityCountryID = -1;
             string ImagePath = string.Empty;
 
-            if (PersonData.Get(Id, ref NationalNo, ref FullName, ref DateOfBirth, ref Gender, ref Address, ref Phone, ref Email, ref NationalityCountryId, ref ImagePath))
+            if (PersonData.Get(PersonID, ref NationalNo, ref FirstName, ref SecondName, ref ThirdName, ref LastName, ref DateOfBirth, ref Gender, ref Address, ref Phone, ref Email, ref NationalityCountryID, ref ImagePath))
             {
-                return new Person(Id, NationalNo, FullName, DateOfBirth, Gender, Address, Phone, Email, NationalityCountryId, ImagePath);
+                return new Person(PersonID, NationalNo, FirstName, SecondName, ThirdName, LastName, DateOfBirth, Gender, Address, Phone, Email, NationalityCountryID, ImagePath);
             }
             return null;
         }
     }
+
+
+
+
 
 
 
