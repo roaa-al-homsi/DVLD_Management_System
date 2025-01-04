@@ -116,6 +116,7 @@
             this.btnAddPerson.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.btnAddPerson.Size = new System.Drawing.Size(112, 65);
             this.btnAddPerson.TabIndex = 6;
+            this.btnAddPerson.Click += new System.EventHandler(this.btnAddPerson_Click);
             // 
             // frmManagePeople
             // 

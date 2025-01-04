@@ -30,6 +30,10 @@ namespace DVLD.People
             _FillFilterBy();
         }
 
-
+        private void btnAddPerson_Click(object sender, EventArgs e)
+        {
+            frmAddUpdatePerson frmAddUpdatePerson = new frmAddUpdatePerson(-1);
+            frmAddUpdatePerson.ShowDialog();
+        }
     }
 }

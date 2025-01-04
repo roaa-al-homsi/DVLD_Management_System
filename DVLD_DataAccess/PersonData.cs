@@ -132,8 +132,14 @@ namespace DVLD_DataAccess
         {
             return GenericData.Exist("select Found=1 from People where PersonID= @PersonID", "@PersonID", PersonID);
         }
-
-
+        static public DataTable GetNamesCountries()
+        {
+            return GenericData.All("select * from Countries");
+        }
+        static public int GetIdCountryByName(string name)
+        {
+            return GenericData.GetIdByName("select Id from Countries where Name=@Name", "@Name", name);
+        }
 
 
 

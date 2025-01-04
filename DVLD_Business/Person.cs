@@ -100,7 +100,7 @@ namespace DVLD_Business
         {
             return PersonData.All();
         }
-        public Person Find(int PersonID)
+        public static Person Find(int PersonID)
         {
             string NationalNo = string.Empty;
             string FirstName = string.Empty;
@@ -121,6 +121,16 @@ namespace DVLD_Business
             }
             return null;
         }
+
+        public static DataTable GetNamesCountries()
+        {
+            return PersonData.GetNamesCountries();
+        }
+        public static int GetIdCountryByName(string name)
+        {
+            return PersonData.GetIdCountryByName(name);
+        }
+
     }
 
 
