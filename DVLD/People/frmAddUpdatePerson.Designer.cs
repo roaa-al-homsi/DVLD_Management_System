@@ -183,6 +183,7 @@
             this.btnSave.Size = new System.Drawing.Size(64, 54);
             this.btnSave.TabIndex = 35;
             this.btnSave.UseTransparentBackground = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // linkLabPic
             // 

@@ -50,7 +50,6 @@ namespace DVLD.People
             txtThirdName.Text = _person.ThirdName;
             txtPhone.Text = _person.Phone;
             txtNationalNo.Text = _person.NationalNo;
-            cmbCountry.SelectedIndex = Person.GetIdCountryByName(cmbCountry.Text);
             pickerBirth.Text = _person.DateOfBirth.ToString();
             if (_person.Gender == 1)
             {
@@ -60,6 +59,10 @@ namespace DVLD.People
             {
                 radioBtnMale.Checked = true;
             }
+
+            string nameCountry = Person.GetNameCountryById(_person.NationalityCountryID);
+            cmbCountry.SelectedIndex = cmbCountry.FindString(nameCountry);
+
         }
 
         private void frmAddUpdatePerson_Load(object sender, System.EventArgs e)
@@ -82,9 +85,6 @@ namespace DVLD.People
                 e.Handled = true;
             }
         }
-
-
-
         private void txtBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             // only numbers and char
@@ -101,6 +101,31 @@ namespace DVLD.People
                 e.Handled = true;
             }
         }
-
+        private void _FillDataPerson()
+        {
+            _person.FirstName = txtFirstName.Text;
+            _person.SecondName = txtSecondName.Text;
+            _person.ThirdName = txtThirdName.Text;
+            _person.LastName = txtLastName.Text;
+            _person.NationalNo = txtNationalNo.Text;
+            _person.Address = txtAddress.Text;
+            _person.Phone = txtPhone.Text;
+            _person.Email = txtEmail.Text;
+            _person.Gender = (byte)((radioBtnFemale.Checked) ? 1 : 0);
+            _person.DateOfBirth = pickerBirth.Value;
+            _person.NationalityCountryID = Person.GetIdCountryByName(cmbCountry.Text);
+        }
+        private void btnSave_Click(object sender, System.EventArgs e)
+        {
+            _FillDataPerson();
+            if (_person.Save())
+            {
+                MessageBox.Show("Data Saved Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Data Failed Saved ", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

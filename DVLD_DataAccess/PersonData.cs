@@ -140,7 +140,10 @@ namespace DVLD_DataAccess
         {
             return GenericData.GetIdByName("select Id from Countries where Name=@Name", "@Name", name);
         }
-
+        static public string GetNameCountryById(int id)
+        {
+            return GenericData.GetNameById("select Name from Countries where Id=@Id", "@Id", id);
+        }
 
 
     }

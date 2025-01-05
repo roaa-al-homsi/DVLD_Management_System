@@ -130,7 +130,10 @@ namespace DVLD_Business
         {
             return PersonData.GetIdCountryByName(name);
         }
-
+        public static string GetNameCountryById(int id)
+        {
+            return PersonData.GetNameCountryById(id);
+        }
     }
 
 
