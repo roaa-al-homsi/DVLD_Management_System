@@ -1,4 +1,5 @@
 ﻿using DVLD_Business;
+using System;
 using System.Data;
 using System.Drawing;
 using System.IO;
@@ -125,6 +126,11 @@ namespace DVLD.People
         }
         private void btnSave_Click(object sender, System.EventArgs e)
         {
+            if (picError.Visible)
+            {
+                MessageBox.Show("You Can't Save It, By attention for entering data.", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             _FillDataPerson();
             if (_person.Save())
             {
@@ -150,6 +156,19 @@ namespace DVLD.People
             {
                 picPerson.Image = Image.FromStream(ms);
             }
+        }
+
+        private void txtNationalNo_Leave(object sender, System.EventArgs e)
+        {
+            if (Person.ExistByNationalNo(Convert.ToInt32(txtNationalNo.Text)))
+            {
+                picError.Visible = true;
+            }
+            else
+            {
+                picError.Visible = false;
+            }
+
         }
     }
 }

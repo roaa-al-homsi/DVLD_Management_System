@@ -134,6 +134,11 @@ namespace DVLD_Business
         {
             return PersonData.GetNameCountryById(id);
         }
+        public static bool ExistByNationalNo(int nationalNo)
+        {
+            return PersonData.ExistByNationalNo(nationalNo);
+
+        }
     }
 
 
