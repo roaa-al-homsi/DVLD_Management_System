@@ -1,5 +1,7 @@
 ﻿using DVLD_Business;
 using System.Data;
+using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -132,6 +134,21 @@ namespace DVLD.People
             else
             {
                 MessageBox.Show("Data Failed Saved ", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void radioBtnFemale_CheckedChanged(object sender, System.EventArgs e)
+        {
+            // Convert the byte[] resource to an Image
+            using (MemoryStream ms = new MemoryStream(Properties.Resources.Female_512))
+            {
+                picPerson.Image = Image.FromStream(ms);
+            }
+        }
+        private void radioBtnMale_CheckedChanged(object sender, System.EventArgs e)
+        {
+            using (MemoryStream ms = new MemoryStream(Properties.Resources.Male_512))
+            {
+                picPerson.Image = Image.FromStream(ms);
             }
         }
     }
