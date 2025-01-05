@@ -35,5 +35,12 @@ namespace DVLD.People
             frmAddUpdatePerson frmAddUpdatePerson = new frmAddUpdatePerson(-1);
             frmAddUpdatePerson.ShowDialog();
         }
+
+        private void updateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int PersonId = Convert.ToInt32(dgvAllPeople.CurrentRow.Cells[0].Value);
+            frmAddUpdatePerson frmAddUpdatePerson = new frmAddUpdatePerson(PersonId);
+            frmAddUpdatePerson.ShowDialog();
+        }
     }
 }

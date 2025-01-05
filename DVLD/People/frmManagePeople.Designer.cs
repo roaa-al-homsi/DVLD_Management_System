@@ -35,12 +35,16 @@
             this.cmbFilterBy = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtFilterBy = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnAddPerson = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.cmsManagePeople = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
+            this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllPeople)).BeginInit();
+            this.cmsManagePeople.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvAllPeople
             // 
             this.dgvAllPeople.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAllPeople.ContextMenuStrip = this.cmsManagePeople;
             this.dgvAllPeople.Location = new System.Drawing.Point(55, 223);
             this.dgvAllPeople.Name = "dgvAllPeople";
             this.dgvAllPeople.RowHeadersWidth = 51;
@@ -118,6 +122,30 @@
             this.btnAddPerson.TabIndex = 6;
             this.btnAddPerson.Click += new System.EventHandler(this.btnAddPerson_Click);
             // 
+            // cmsManagePeople
+            // 
+            this.cmsManagePeople.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.cmsManagePeople.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.updateToolStripMenuItem});
+            this.cmsManagePeople.Name = "cmsManagePeople";
+            this.cmsManagePeople.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.cmsManagePeople.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
+            this.cmsManagePeople.RenderStyle.ColorTable = null;
+            this.cmsManagePeople.RenderStyle.RoundedEdges = true;
+            this.cmsManagePeople.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
+            this.cmsManagePeople.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.cmsManagePeople.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.cmsManagePeople.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
+            this.cmsManagePeople.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.cmsManagePeople.Size = new System.Drawing.Size(211, 56);
+            // 
+            // updateToolStripMenuItem
+            // 
+            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.updateToolStripMenuItem.Text = "Update";
+            this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
+            // 
             // frmManagePeople
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -134,6 +162,7 @@
             this.Text = "frmManagePeople";
             this.Load += new System.EventHandler(this.frmManagePeople_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllPeople)).EndInit();
+            this.cmsManagePeople.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -147,5 +176,7 @@
         private Guna.UI2.WinForms.Guna2ComboBox cmbFilterBy;
         private Guna.UI2.WinForms.Guna2TextBox txtFilterBy;
         private Guna.UI2.WinForms.Guna2ImageButton btnAddPerson;
+        private Guna.UI2.WinForms.Guna2ContextMenuStrip cmsManagePeople;
+        private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
     }
 }

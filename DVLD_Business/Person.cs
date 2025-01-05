@@ -8,7 +8,7 @@ namespace DVLD_Business
     {
         private enum Mode { Add, Update }
         private Mode _mode;
-        public int PersonID { get; set; }
+        public int Id { get; set; }
         public string NationalNo { get; set; }
         public string FirstName { get; set; }
         public string SecondName { get; set; }
@@ -24,7 +24,7 @@ namespace DVLD_Business
 
         public Person()
         {
-            this.PersonID = 0;
+            this.Id = 0;
             this.NationalNo = string.Empty;
             this.FirstName = string.Empty;
             this.SecondName = string.Empty;
@@ -42,7 +42,7 @@ namespace DVLD_Business
         }
         private Person(int PersonID, string NationalNo, string FirstName, string SecondName, string ThirdName, string LastName, DateTime DateOfBirth, byte Gender, string Address, string Phone, string Email, int NationalityCountryID, string ImagePath)
         {
-            this.PersonID = PersonID;
+            this.Id = PersonID;
             this.NationalNo = NationalNo;
             this.FirstName = FirstName;
             this.SecondName = SecondName;
@@ -61,14 +61,14 @@ namespace DVLD_Business
         }
         private bool _Add()
         {
-            this.PersonID =
+            this.Id =
                         PersonData.Add(this.NationalNo, this.FirstName, this.SecondName, this.ThirdName, this.LastName, this.DateOfBirth, this.Gender, this.Address, this.Phone, this.Email, this.NationalityCountryID, this.ImagePath);
-            return (this.PersonID != -1);
+            return (this.Id != -1);
         }
 
         private bool _Update()
         {
-            return PersonData.Update(this.PersonID, this.NationalNo, this.FirstName, this.SecondName, this.ThirdName, this.LastName, this.DateOfBirth, this.Gender, this.Address, this.Phone, this.Email, this.NationalityCountryID, this.ImagePath);
+            return PersonData.Update(this.Id, this.NationalNo, this.FirstName, this.SecondName, this.ThirdName, this.LastName, this.DateOfBirth, this.Gender, this.Address, this.Phone, this.Email, this.NationalityCountryID, this.ImagePath);
         }
         public bool Save()
         {

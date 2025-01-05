@@ -38,10 +38,16 @@ namespace DVLD.People
                 linkLabPic.Text = "Set Image";
                 return;
             }
+
             this.Text = "Update Person";
             labTitleForm.Text = "Update Person";
             linkLabPic.Text = "Remove Image";
             _person = Person.Find(_PersonId);
+            if (_person == null)
+            {
+                return;
+            }
+            labPersonId.Text = _person.Id.ToString();
             txtAddress.Text = _person.Address;
             txtEmail.Text = _person.Email;
             txtFirstName.Text = _person.FirstName;
@@ -120,6 +126,7 @@ namespace DVLD.People
             _FillDataPerson();
             if (_person.Save())
             {
+                labPersonId.Text = _person.Id.ToString();
                 MessageBox.Show("Data Saved Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else

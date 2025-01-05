@@ -80,7 +80,7 @@ namespace DVLD_DataAccess
         public static bool Get(int PersonID, ref string NationalNo, ref string FirstName, ref string SecondName, ref string ThirdName, ref string LastName, ref DateTime DateOfBirth, ref byte Gender, ref string Address, ref string Phone, ref string Email, ref int NationalityCountryID, ref string ImagePath)
         {
             bool IsFound = false;
-            string query = "select * from People  WHERE PersonID=@PersonID;";
+            string query = "select * from People  WHERE Id=@PersonID;";
             using (SqlConnection connection = new SqlConnection(SettingData.ConnectionString))
             {
                 using (SqlCommand command = new SqlCommand(query, connection))
@@ -93,7 +93,7 @@ namespace DVLD_DataAccess
                         if (reader.Read())
                         {
                             IsFound = true;
-                            PersonID = (int)reader["PersonID"];
+                            PersonID = (int)reader["Id"];
                             NationalNo = (string)reader["NationalNo"];
                             FirstName = (string)reader["FirstName"];
                             SecondName = (string)reader["SecondName"];
