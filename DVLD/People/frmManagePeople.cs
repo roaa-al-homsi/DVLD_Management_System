@@ -44,5 +44,25 @@ namespace DVLD.People
             frmAddUpdatePerson.ShowDialog();
 
         }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int personId = Convert.ToInt32(dgvAllPeople.CurrentRow.Cells[0].Value);
+
+            if (MessageBox.Show("Are you sure delete this person?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            {
+                if (Person.Delete(personId))
+                {
+                    MessageBox.Show("Delete Successfully", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Delete Failed", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            _RefreshData();
+        }
+
+
     }
 }

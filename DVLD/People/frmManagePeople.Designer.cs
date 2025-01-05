@@ -30,13 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmManagePeople));
             this.dgvAllPeople = new System.Windows.Forms.DataGridView();
+            this.cmsManagePeople = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
+            this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.cmbFilterBy = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtFilterBy = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnAddPerson = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.cmsManagePeople = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
-            this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllPeople)).BeginInit();
             this.cmsManagePeople.SuspendLayout();
             this.SuspendLayout();
@@ -51,6 +52,31 @@
             this.dgvAllPeople.RowTemplate.Height = 24;
             this.dgvAllPeople.Size = new System.Drawing.Size(1250, 304);
             this.dgvAllPeople.TabIndex = 0;
+            // 
+            // cmsManagePeople
+            // 
+            this.cmsManagePeople.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.cmsManagePeople.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.updateToolStripMenuItem,
+            this.deleteToolStripMenuItem});
+            this.cmsManagePeople.Name = "cmsManagePeople";
+            this.cmsManagePeople.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.cmsManagePeople.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
+            this.cmsManagePeople.RenderStyle.ColorTable = null;
+            this.cmsManagePeople.RenderStyle.RoundedEdges = true;
+            this.cmsManagePeople.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
+            this.cmsManagePeople.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.cmsManagePeople.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.cmsManagePeople.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
+            this.cmsManagePeople.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.cmsManagePeople.Size = new System.Drawing.Size(211, 80);
+            // 
+            // updateToolStripMenuItem
+            // 
+            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.updateToolStripMenuItem.Text = "Update";
+            this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
             // 
             // guna2HtmlLabel1
             // 
@@ -122,29 +148,12 @@
             this.btnAddPerson.TabIndex = 6;
             this.btnAddPerson.Click += new System.EventHandler(this.btnAddPerson_Click);
             // 
-            // cmsManagePeople
+            // deleteToolStripMenuItem
             // 
-            this.cmsManagePeople.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.cmsManagePeople.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.updateToolStripMenuItem});
-            this.cmsManagePeople.Name = "cmsManagePeople";
-            this.cmsManagePeople.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.cmsManagePeople.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
-            this.cmsManagePeople.RenderStyle.ColorTable = null;
-            this.cmsManagePeople.RenderStyle.RoundedEdges = true;
-            this.cmsManagePeople.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
-            this.cmsManagePeople.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.cmsManagePeople.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.cmsManagePeople.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
-            this.cmsManagePeople.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.cmsManagePeople.Size = new System.Drawing.Size(211, 56);
-            // 
-            // updateToolStripMenuItem
-            // 
-            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-            this.updateToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
-            this.updateToolStripMenuItem.Text = "Update";
-            this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.deleteToolStripMenuItem.Text = "Delete";
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // frmManagePeople
             // 
@@ -178,5 +187,6 @@
         private Guna.UI2.WinForms.Guna2ImageButton btnAddPerson;
         private Guna.UI2.WinForms.Guna2ContextMenuStrip cmsManagePeople;
         private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
     }
 }

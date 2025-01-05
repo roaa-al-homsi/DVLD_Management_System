@@ -124,13 +124,13 @@ namespace DVLD_DataAccess
         {
             return GenericData.All("select * from People_Info_view");
         }
-        static public bool Delete(int PersonID)
+        static public bool Delete(int personId)
         {
-            return GenericData.Delete("delete People where PersonID = @PersonID", "@PersonID", PersonID);
+            return GenericData.Delete("delete People where Id = @personId", "@personId", personId);
         }
         static public bool Exist(int PersonID)
         {
-            return GenericData.Exist("select Found=1 from People where PersonID= @PersonID", "@PersonID", PersonID);
+            return GenericData.Exist("select Found=1 from People where Id= @PersonID", "@PersonID", PersonID);
         }
         static public bool ExistByNationalNo(int nationalNo)
         {

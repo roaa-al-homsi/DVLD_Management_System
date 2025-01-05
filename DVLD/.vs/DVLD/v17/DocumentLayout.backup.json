@@ -3,20 +3,26 @@
   "WorkspaceRootPath": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\people\\frmaddupdateperson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|solutionrelative:people\\frmaddupdateperson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|c:\\users\\ruaa\\source\\repos\\dvld_management_system\\dvld\\people\\frmaddupdateperson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|solutionrelative:people\\frmaddupdateperson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\people\\frmmanagepeople.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|solutionrelative:people\\frmmanagepeople.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\people\\frmaddupdateperson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|solutionrelative:people\\frmaddupdateperson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EA00617-C8EC-4C15-884F-394B2E1A0208}|..\\DVLD_Business\\DVLD_Business.csproj|c:\\users\\ruaa\\source\\repos\\dvld_management_system\\dvld_business\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77A56D8A-CE3E-4012-AA9D-C62C2F3B031F}|..\\DVLD_DataAccess\\DVLD_DataAccess.csproj|c:\\users\\ruaa\\source\\repos\\dvld_management_system\\dvld_dataaccess\\persondata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\people\\frmmanagepeople.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|solutionrelative:people\\frmmanagepeople.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|c:\\users\\ruaa\\source\\repos\\dvld_management_system\\dvld\\people\\frmaddupdateperson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|solutionrelative:people\\frmaddupdateperson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,37 +32,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "PersonData.cs",
+              "DocumentMoniker": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD_DataAccess\\PersonData.cs",
+              "RelativeDocumentMoniker": "..\\DVLD_DataAccess\\PersonData.cs",
+              "ToolTip": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD_DataAccess\\PersonData.cs",
+              "RelativeToolTip": "..\\DVLD_DataAccess\\PersonData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAH8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-05T17:22:38.834Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Person.cs",
+              "DocumentMoniker": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD_Business\\Person.cs",
+              "RelativeDocumentMoniker": "..\\DVLD_Business\\Person.cs",
+              "ToolTip": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD_Business\\Person.cs",
+              "RelativeToolTip": "..\\DVLD_Business\\Person.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAAAGAAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-05T17:21:13.864Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "frmAddUpdatePerson.cs",
               "DocumentMoniker": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\People\\frmAddUpdatePerson.cs",
               "RelativeDocumentMoniker": "People\\frmAddUpdatePerson.cs",
               "ToolTip": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\People\\frmAddUpdatePerson.cs",
               "RelativeToolTip": "People\\frmAddUpdatePerson.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAAAEwAAABPAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAAKEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-04T17:22:55.149Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "frmManagePeople.cs",
               "DocumentMoniker": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\People\\frmManagePeople.cs",
               "RelativeDocumentMoniker": "People\\frmManagePeople.cs",
               "ToolTip": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\People\\frmManagePeople.cs",
               "RelativeToolTip": "People\\frmManagePeople.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAAABAAAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAACgAAAAAAAAAAAAAADUAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-04T17:46:22.681Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "frmAddUpdatePerson.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\People\\frmAddUpdatePerson.cs",
               "RelativeDocumentMoniker": "People\\frmAddUpdatePerson.cs",
@@ -68,7 +100,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "frmManagePeople.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\People\\frmManagePeople.cs",
               "RelativeDocumentMoniker": "People\\frmManagePeople.cs",

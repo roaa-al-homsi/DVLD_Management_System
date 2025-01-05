@@ -84,17 +84,17 @@ namespace DVLD_Business
             }
             return false;
         }
-        public static bool Exist(int PersonID)
+        public static bool Exist(int personId)
         {
-            return PersonData.Exist(PersonID);
+            return PersonData.Exist(personId);
         }
-        public static bool Delete(int PersonID)
+        public static bool Delete(int personId)
         {
-            if (!Exist(PersonID))
+            if (!Exist(personId))
             {
                 return false;
             }
-            else { return PersonData.Delete(PersonID); }
+            else { return PersonData.Delete(personId); }
         }
         public static DataTable All()
         {
