@@ -76,6 +76,8 @@ namespace DVLD.People
 
         private void frmAddUpdatePerson_Load(object sender, System.EventArgs e)
         {
+            pickerBirth.MaxDate = DateTime.Now.AddYears(-18);
+            cmbCountry.SelectedIndex = cmbCountry.FindString("Syria");
             _FillCmbCountry();
             _LoadData();
         }
