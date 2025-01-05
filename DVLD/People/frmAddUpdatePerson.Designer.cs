@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddUpdatePerson));
             this.labTitleForm = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.picError = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.labPersonId = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel13 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnCancel = new Guna.UI2.WinForms.Guna2ImageButton();
@@ -69,8 +70,8 @@
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtFirstName = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.picError = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2CustomGradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picError)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPerson)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).BeginInit();
@@ -80,7 +81,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picError)).BeginInit();
             this.SuspendLayout();
             // 
             // labTitleForm
@@ -131,6 +131,21 @@
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1092, 474);
             this.guna2CustomGradientPanel1.TabIndex = 1;
+            // 
+            // picError
+            // 
+            this.picError.BackColor = System.Drawing.Color.Transparent;
+            this.picError.Image = ((System.Drawing.Image)(resources.GetObject("picError.Image")));
+            this.picError.ImageRotate = 0F;
+            this.picError.Location = new System.Drawing.Point(751, 107);
+            this.picError.Name = "picError";
+            this.picError.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.picError.Size = new System.Drawing.Size(26, 22);
+            this.picError.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picError.TabIndex = 39;
+            this.picError.TabStop = false;
+            this.picError.UseTransparentBackground = true;
+            this.picError.Visible = false;
             // 
             // labPersonId
             // 
@@ -712,21 +727,6 @@
             this.guna2HtmlLabel5.TabIndex = 4;
             this.guna2HtmlLabel5.Text = "Second Name";
             // 
-            // picError
-            // 
-            this.picError.BackColor = System.Drawing.Color.Transparent;
-            this.picError.Image = ((System.Drawing.Image)(resources.GetObject("picError.Image")));
-            this.picError.ImageRotate = 0F;
-            this.picError.Location = new System.Drawing.Point(751, 107);
-            this.picError.Name = "picError";
-            this.picError.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.picError.Size = new System.Drawing.Size(26, 22);
-            this.picError.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picError.TabIndex = 39;
-            this.picError.TabStop = false;
-            this.picError.UseTransparentBackground = true;
-            this.picError.Visible = false;
-            // 
             // frmAddUpdatePerson
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -739,6 +739,7 @@
             this.Load += new System.EventHandler(this.frmAddUpdatePerson_Load);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picError)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPerson)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).EndInit();
@@ -748,7 +749,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picError)).EndInit();
             this.ResumeLayout(false);
 
         }
