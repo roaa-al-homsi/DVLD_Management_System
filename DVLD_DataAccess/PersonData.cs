@@ -120,6 +120,49 @@ namespace DVLD_DataAccess
 
             return IsFound;
         }
+        public static bool Get(string NationalNo, ref int PersonID, ref string FirstName, ref string SecondName, ref string ThirdName, ref string LastName, ref DateTime DateOfBirth, ref byte Gender, ref string Address, ref string Phone, ref string Email, ref int NationalityCountryID, ref string ImagePath)
+        {
+            bool IsFound = false;
+            string query = "select * from People  WHERE NationalNo=@NationalNo;";
+            using (SqlConnection connection = new SqlConnection(SettingData.ConnectionString))
+            {
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@PersonID", PersonID);
+                    try
+                    {
+                        connection.Open();
+                        SqlDataReader reader = command.ExecuteReader();
+                        if (reader.Read())
+                        {
+                            IsFound = true;
+                            PersonID = (int)reader["Id"];
+                            NationalNo = (string)reader["NationalNo"];
+                            FirstName = (string)reader["FirstName"];
+                            SecondName = (string)reader["SecondName"];
+                            ThirdName = reader["ThirdName"] != DBNull.Value ? (string)reader["ThirdName"] : string.Empty;
+                            LastName = (string)reader["LastName"];
+                            DateOfBirth = (DateTime)reader["DateOfBirth"];
+                            Gender = (byte)reader["Gender"];
+                            Address = (string)reader["Address"];
+                            Phone = (string)reader["Phone"];
+                            Email = reader["Email"] != DBNull.Value ? (string)reader["Email"] : string.Empty;
+                            NationalityCountryID = (int)reader["NationalityCountryID"];
+                            ImagePath = reader["ImagePath"] != DBNull.Value ? (string)reader["ImagePath"] : string.Empty;
+
+
+                        }
+                        else
+                        {
+                            IsFound = false;
+                        }
+                    }
+                    catch (Exception ex) { }
+                }
+            }
+
+            return IsFound;
+        }
         static public DataTable All()
         {
             return GenericData.All("select * from People_Info_view");

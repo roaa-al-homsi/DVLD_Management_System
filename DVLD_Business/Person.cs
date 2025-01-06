@@ -121,7 +121,27 @@ namespace DVLD_Business
             }
             return null;
         }
+        public static Person FindByNationalNo(string nationalNo)
+        {
+            int PersonId = -1;
+            string FirstName = string.Empty;
+            string SecondName = string.Empty;
+            string ThirdName = string.Empty;
+            string LastName = string.Empty;
+            DateTime DateOfBirth = DateTime.MinValue;
+            byte Gender = 0;
+            string Address = string.Empty;
+            string Phone = string.Empty;
+            string Email = string.Empty;
+            int NationalityCountryID = -1;
+            string ImagePath = string.Empty;
 
+            if (PersonData.Get(nationalNo, ref PersonId, ref FirstName, ref SecondName, ref ThirdName, ref LastName, ref DateOfBirth, ref Gender, ref Address, ref Phone, ref Email, ref NationalityCountryID, ref ImagePath))
+            {
+                return new Person(PersonId, nationalNo, FirstName, SecondName, ThirdName, LastName, DateOfBirth, Gender, Address, Phone, Email, NationalityCountryID, ImagePath);
+            }
+            return null;
+        }
         public static DataTable GetNamesCountries()
         {
             return PersonData.GetNamesCountries();
