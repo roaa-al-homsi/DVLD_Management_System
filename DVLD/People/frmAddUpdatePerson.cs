@@ -153,14 +153,7 @@ namespace DVLD.People
                 e.Handled = true;
             }
         }
-        private void txtBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            // only numbers and char
-            if (!char.IsLetterOrDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
+
         private void txtEmail_KeyPress(object sender, KeyPressEventArgs e)
         {
             char[] allowedChars = { '@', '.', '-', '_', '+' };
@@ -290,12 +283,14 @@ namespace DVLD.People
                 errorProvider1.SetError(textBox, null);
             }
         }
+
         private void txtEmail_Validating(object sender, CancelEventArgs e)
         {
             if (string.IsNullOrEmpty(txtEmail.Text.Trim()))
             {
                 return;
             }
+
             if (!Validation.ValidateEmail(txtEmail.Text))
             {
                 e.Cancel = true;
@@ -328,6 +323,7 @@ namespace DVLD.People
                 errorProvider1.SetError(txtNationalNo, null);
             }
         }
+
         #endregion
         private void linkLabSetImage_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -368,5 +364,9 @@ namespace DVLD.People
         {
             this.Close();
         }
+
+
+
+
     }
 }

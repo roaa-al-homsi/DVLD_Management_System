@@ -267,6 +267,7 @@
             this.txtAddress.SelectedText = "";
             this.txtAddress.Size = new System.Drawing.Size(439, 34);
             this.txtAddress.TabIndex = 30;
+            this.txtAddress.Validating += new System.ComponentModel.CancelEventHandler(this._ValidateEmptyTextBox);
             // 
             // guna2HtmlLabel12
             // 
@@ -399,6 +400,7 @@
             this.txtPhone.Size = new System.Drawing.Size(138, 34);
             this.txtPhone.TabIndex = 20;
             this.txtPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxNumbers_KeyPress);
+            this.txtPhone.Validating += new System.ComponentModel.CancelEventHandler(this._ValidateEmptyTextBox);
             // 
             // guna2HtmlLabel9
             // 
@@ -548,7 +550,7 @@
             this.txtNationalNo.SelectedText = "";
             this.txtNationalNo.Size = new System.Drawing.Size(138, 34);
             this.txtNationalNo.TabIndex = 9;
-            this.txtNationalNo.Validating += new System.ComponentModel.CancelEventHandler(this.txtNationalNo_Validating);
+            this.txtNationalNo.Validating += new System.ComponentModel.CancelEventHandler(this._ValidateEmptyTextBox);
             // 
             // guna2HtmlLabel6
             // 
@@ -612,6 +614,7 @@
             this.txtLastName.Size = new System.Drawing.Size(138, 34);
             this.txtLastName.TabIndex = 8;
             this.txtLastName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxLetters_KeyPress);
+            this.txtLastName.Validating += new System.ComponentModel.CancelEventHandler(this._ValidateEmptyTextBox);
             // 
             // guna2HtmlLabel2
             // 
@@ -684,6 +687,7 @@
             this.txtSecondName.Size = new System.Drawing.Size(138, 34);
             this.txtSecondName.TabIndex = 6;
             this.txtSecondName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxLetters_KeyPress);
+            this.txtSecondName.Validating += new System.ComponentModel.CancelEventHandler(this._ValidateEmptyTextBox);
             // 
             // guna2HtmlLabel4
             // 
