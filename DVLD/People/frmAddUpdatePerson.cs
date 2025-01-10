@@ -1,4 +1,5 @@
-﻿using DVLD_Business;
+﻿using DVLD.Global_Classes;
+using DVLD_Business;
 using Guna.UI2.WinForms;
 using System;
 using System.ComponentModel;
@@ -8,10 +9,16 @@ using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 
+
 namespace DVLD.People
 {
     public partial class frmAddUpdatePerson : Form
     {
+        // Declare a delegate
+        public delegate void DataBackEventHandler(object sender, int PersonID);
+
+        // Declare an event using the delegate
+        public event DataBackEventHandler DataBack;
         enum Mode { Add = 1, Update = 2 }
         enum enGender { Female = 1, Male = 0 }
         private Mode _mode;
@@ -70,7 +77,7 @@ namespace DVLD.People
 
             if (!string.IsNullOrEmpty(_person.ImagePath))
             {
-                picPerson.ImageLocation = _person.ImagePath;
+                pbPersonImage.ImageLocation = _person.ImagePath;
             }
 
             linkLabRemoveImage.Visible = (!string.IsNullOrEmpty(_person.ImagePath));
@@ -93,17 +100,17 @@ namespace DVLD.People
             {
                 using (MemoryStream ms = new MemoryStream(Properties.Resources.Female_512))
                 {
-                    picPerson.Image = Image.FromStream(ms);
+                    pbPersonImage.Image = Image.FromStream(ms);
                 }
             }
             else
             {
                 using (MemoryStream ms = new MemoryStream(Properties.Resources.Male_512))
                 {
-                    picPerson.Image = Image.FromStream(ms);
+                    pbPersonImage.Image = Image.FromStream(ms);
                 }
             }
-            linkLabRemoveImage.Visible = !string.IsNullOrEmpty(picPerson.ImageLocation);
+            linkLabRemoveImage.Visible = !string.IsNullOrEmpty(pbPersonImage.ImageLocation);
 
             dtpDateOfBirth.MaxDate = DateTime.Now.AddYears(-18);
             dtpDateOfBirth.Value = dtpDateOfBirth.MaxDate;
@@ -130,6 +137,7 @@ namespace DVLD.People
                 _LoadData();
             }
         }
+
         #region MyValidate
         private void txtBoxLetters_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -175,9 +183,57 @@ namespace DVLD.People
             _person.DateOfBirth = dtpDateOfBirth.Value;
             _person.Gender = (byte)((radioBtnFemale.Checked) ? enGender.Female : enGender.Male);
             _person.NationalityCountryID = Person.GetIdCountryByName(cmbCountry.Text);
-            _person.ImagePath = (string.IsNullOrEmpty(picPerson.ImageLocation)) ? null : picPerson.ImageLocation;
+            _person.ImagePath = (string.IsNullOrEmpty(pbPersonImage.ImageLocation)) ? null : pbPersonImage.ImageLocation;
 
         }
+        private bool _HandlePersonImage()
+        {
+
+            //this procedure will handle the person image,
+            //it will take care of deleting the old image from the folder
+            //in case the image changed. and it will rename the new image with guid and 
+            // place it in the images folder.
+
+
+            //_Person.ImagePath contains the old Image, we check if it changed then we copy the new image
+            if (_person.ImagePath != pbPersonImage.ImageLocation)
+            {
+                if (_person.ImagePath != string.Empty)
+                {
+                    //first we delete the old image from the folder in case there is any.
+
+                    try
+                    {
+                        File.Delete(_person.ImagePath);
+                    }
+                    catch (IOException)
+                    {
+                        // We could not delete the file.
+                        //log it later   
+                    }
+                }
+
+                if (pbPersonImage.ImageLocation != null)
+                {
+                    //then we copy the new image to the image folder after we rename it
+                    string SourceImageFile = pbPersonImage.ImageLocation.ToString();
+
+                    if (Util.CopyImageToProjectImagesFolder(ref SourceImageFile))
+                    {
+                        pbPersonImage.ImageLocation = SourceImageFile;
+                        return true;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error Copying Image File", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return false;
+                    }
+                }
+
+            }
+            return true;
+        }
+
         private void btnSave_Click(object sender, System.EventArgs e)
         {
             if (!this.ValidateChildren())
@@ -185,10 +241,10 @@ namespace DVLD.People
                 MessageBox.Show("Some fields are not validate ,but the mouse over red icon");
                 return;
             }
-            //if (!_HandlePersonImage)
-            //{
-            //    return;
-            //}
+            if (!_HandlePersonImage())
+            {
+                return;
+            }
             _FillDataPerson();
             if (_person.Save())
             {
@@ -208,14 +264,14 @@ namespace DVLD.People
             // Convert the byte[] resource to an Image
             using (MemoryStream ms = new MemoryStream(Properties.Resources.Female_512))
             {
-                picPerson.Image = Image.FromStream(ms);
+                pbPersonImage.Image = Image.FromStream(ms);
             }
         }
         private void radioBtnMale_CheckedChanged(object sender, System.EventArgs e)
         {
             using (MemoryStream ms = new MemoryStream(Properties.Resources.Male_512))
             {
-                picPerson.Image = Image.FromStream(ms);
+                pbPersonImage.Image = Image.FromStream(ms);
             }
         }
 
@@ -283,29 +339,34 @@ namespace DVLD.People
             {
                 // Process the selected file
                 string selectedFilePath = openFileDialog1.FileName;
-                picPerson.Load(selectedFilePath);
-                picPerson.ImageLocation = selectedFilePath;
+                pbPersonImage.Load(selectedFilePath);
+                pbPersonImage.ImageLocation = selectedFilePath;
                 linkLabRemoveImage.Visible = true;
             }
         }
         private void linkLabRemoveImage_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            picPerson.ImageLocation = null;
+            pbPersonImage.ImageLocation = null;
             if (radioBtnFemale.Checked)
             {
                 using (MemoryStream ms = new MemoryStream(Properties.Resources.Female_512))
                 {
-                    picPerson.Image = Image.FromStream(ms);
+                    pbPersonImage.Image = Image.FromStream(ms);
                 }
             }
             else
             {
                 using (MemoryStream ms = new MemoryStream(Properties.Resources.Male_512))
                 {
-                    picPerson.Image = Image.FromStream(ms);
+                    pbPersonImage.Image = Image.FromStream(ms);
                 }
             }
             linkLabRemoveImage.Visible = false;
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

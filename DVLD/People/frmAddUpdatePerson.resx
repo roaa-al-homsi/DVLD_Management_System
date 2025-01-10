@@ -196,7 +196,7 @@
         wQ5gIIoGCAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="picPerson.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pbPersonImage.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAARN5JREFUeF7t
         vQl0XNd5oJmkJ0pn3LHdk7SdTno86Wnbcafd455JTjqLPcdO7PTEjjtuO45layFAUZREiRQXbNwBYucO

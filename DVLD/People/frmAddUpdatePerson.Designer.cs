@@ -38,7 +38,7 @@
             this.btnCancel = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnSave = new Guna.UI2.WinForms.Guna2ImageButton();
             this.linkLabSetImage = new System.Windows.Forms.LinkLabel();
-            this.picPerson = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.pbPersonImage = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2PictureBox7 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.txtAddress = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -74,7 +74,7 @@
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.guna2CustomGradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picPerson)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPersonImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).BeginInit();
@@ -106,7 +106,7 @@
             this.guna2CustomGradientPanel1.Controls.Add(this.btnCancel);
             this.guna2CustomGradientPanel1.Controls.Add(this.btnSave);
             this.guna2CustomGradientPanel1.Controls.Add(this.linkLabSetImage);
-            this.guna2CustomGradientPanel1.Controls.Add(this.picPerson);
+            this.guna2CustomGradientPanel1.Controls.Add(this.pbPersonImage);
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2PictureBox7);
             this.guna2CustomGradientPanel1.Controls.Add(this.txtAddress);
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2HtmlLabel12);
@@ -185,6 +185,7 @@
             this.btnCancel.Size = new System.Drawing.Size(64, 54);
             this.btnCancel.TabIndex = 36;
             this.btnCancel.UseTransparentBackground = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSave
             // 
@@ -213,23 +214,22 @@
             this.linkLabSetImage.TabIndex = 34;
             this.linkLabSetImage.TabStop = true;
             this.linkLabSetImage.Text = "Set Image";
-            this.linkLabSetImage.Visible = false;
             this.linkLabSetImage.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabSetImage_LinkClicked);
             // 
-            // picPerson
+            // pbPersonImage
             // 
-            this.picPerson.BackColor = System.Drawing.Color.Transparent;
-            this.picPerson.FillColor = System.Drawing.Color.DarkGray;
-            this.picPerson.Image = ((System.Drawing.Image)(resources.GetObject("picPerson.Image")));
-            this.picPerson.ImageRotate = 0F;
-            this.picPerson.Location = new System.Drawing.Point(3, 3);
-            this.picPerson.Name = "picPerson";
-            this.picPerson.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.picPerson.Size = new System.Drawing.Size(200, 203);
-            this.picPerson.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picPerson.TabIndex = 33;
-            this.picPerson.TabStop = false;
-            this.picPerson.UseTransparentBackground = true;
+            this.pbPersonImage.BackColor = System.Drawing.Color.Transparent;
+            this.pbPersonImage.FillColor = System.Drawing.Color.DarkGray;
+            this.pbPersonImage.Image = ((System.Drawing.Image)(resources.GetObject("pbPersonImage.Image")));
+            this.pbPersonImage.ImageRotate = 0F;
+            this.pbPersonImage.Location = new System.Drawing.Point(3, 3);
+            this.pbPersonImage.Name = "pbPersonImage";
+            this.pbPersonImage.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.pbPersonImage.Size = new System.Drawing.Size(200, 203);
+            this.pbPersonImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbPersonImage.TabIndex = 33;
+            this.pbPersonImage.TabStop = false;
+            this.pbPersonImage.UseTransparentBackground = true;
             // 
             // guna2PictureBox7
             // 
@@ -757,7 +757,7 @@
             this.Load += new System.EventHandler(this.frmAddUpdatePerson_Load);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picPerson)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPersonImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).EndInit();
@@ -787,7 +787,7 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox6;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel11;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox picPerson;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox pbPersonImage;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox7;
         private Guna.UI2.WinForms.Guna2TextBox txtAddress;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel12;
