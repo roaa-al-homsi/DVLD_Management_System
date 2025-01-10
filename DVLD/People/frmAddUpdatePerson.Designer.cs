@@ -28,15 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddUpdatePerson));
             this.labTitleForm = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.picError = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.linkLabRemoveImage = new System.Windows.Forms.LinkLabel();
             this.labPersonId = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel13 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnCancel = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnSave = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.linkLabPic = new System.Windows.Forms.LinkLabel();
+            this.linkLabSetImage = new System.Windows.Forms.LinkLabel();
             this.picPerson = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2PictureBox7 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.txtAddress = new Guna.UI2.WinForms.Guna2TextBox();
@@ -44,7 +45,7 @@
             this.cmbCountry = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2PictureBox6 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.pickerBirth = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.dtpDateOfBirth = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -70,8 +71,9 @@
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtFirstName = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.guna2CustomGradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picError)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPerson)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).BeginInit();
@@ -81,28 +83,29 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // labTitleForm
             // 
             this.labTitleForm.AutoSize = false;
             this.labTitleForm.BackColor = System.Drawing.Color.Transparent;
-            this.labTitleForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labTitleForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labTitleForm.ForeColor = System.Drawing.Color.RosyBrown;
             this.labTitleForm.Location = new System.Drawing.Point(465, 28);
             this.labTitleForm.Name = "labTitleForm";
             this.labTitleForm.Size = new System.Drawing.Size(233, 34);
             this.labTitleForm.TabIndex = 0;
-            this.labTitleForm.Text = "guna2HtmlLabel1";
+            this.labTitleForm.Text = "Add New Person";
             // 
             // guna2CustomGradientPanel1
             // 
-            this.guna2CustomGradientPanel1.Controls.Add(this.picError);
+            this.guna2CustomGradientPanel1.Controls.Add(this.linkLabRemoveImage);
             this.guna2CustomGradientPanel1.Controls.Add(this.labPersonId);
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2HtmlLabel13);
             this.guna2CustomGradientPanel1.Controls.Add(this.btnCancel);
             this.guna2CustomGradientPanel1.Controls.Add(this.btnSave);
-            this.guna2CustomGradientPanel1.Controls.Add(this.linkLabPic);
+            this.guna2CustomGradientPanel1.Controls.Add(this.linkLabSetImage);
             this.guna2CustomGradientPanel1.Controls.Add(this.picPerson);
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2PictureBox7);
             this.guna2CustomGradientPanel1.Controls.Add(this.txtAddress);
@@ -110,7 +113,7 @@
             this.guna2CustomGradientPanel1.Controls.Add(this.cmbCountry);
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2PictureBox6);
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2HtmlLabel11);
-            this.guna2CustomGradientPanel1.Controls.Add(this.pickerBirth);
+            this.guna2CustomGradientPanel1.Controls.Add(this.dtpDateOfBirth);
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2PictureBox5);
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2HtmlLabel10);
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2PictureBox4);
@@ -132,20 +135,17 @@
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1092, 474);
             this.guna2CustomGradientPanel1.TabIndex = 1;
             // 
-            // picError
+            // linkLabRemoveImage
             // 
-            this.picError.BackColor = System.Drawing.Color.Transparent;
-            this.picError.Image = ((System.Drawing.Image)(resources.GetObject("picError.Image")));
-            this.picError.ImageRotate = 0F;
-            this.picError.Location = new System.Drawing.Point(751, 107);
-            this.picError.Name = "picError";
-            this.picError.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.picError.Size = new System.Drawing.Size(26, 22);
-            this.picError.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picError.TabIndex = 39;
-            this.picError.TabStop = false;
-            this.picError.UseTransparentBackground = true;
-            this.picError.Visible = false;
+            this.linkLabRemoveImage.AutoSize = true;
+            this.linkLabRemoveImage.Location = new System.Drawing.Point(268, 188);
+            this.linkLabRemoveImage.Name = "linkLabRemoveImage";
+            this.linkLabRemoveImage.Size = new System.Drawing.Size(100, 16);
+            this.linkLabRemoveImage.TabIndex = 40;
+            this.linkLabRemoveImage.TabStop = true;
+            this.linkLabRemoveImage.Text = "Remove Image";
+            this.linkLabRemoveImage.Visible = false;
+            this.linkLabRemoveImage.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabRemoveImage_LinkClicked);
             // 
             // labPersonId
             // 
@@ -173,6 +173,7 @@
             // 
             this.btnCancel.BackColor = System.Drawing.Color.Transparent;
             this.btnCancel.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.HoverState.ImageOffset = new System.Drawing.Point(5, 5);
             this.btnCancel.HoverState.ImageSize = new System.Drawing.Size(64, 64);
             this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
@@ -203,13 +204,17 @@
             this.btnSave.UseTransparentBackground = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // linkLabPic
+            // linkLabSetImage
             // 
-            this.linkLabPic.AutoSize = true;
-            this.linkLabPic.Location = new System.Drawing.Point(294, 38);
-            this.linkLabPic.Name = "linkLabPic";
-            this.linkLabPic.Size = new System.Drawing.Size(0, 16);
-            this.linkLabPic.TabIndex = 34;
+            this.linkLabSetImage.AutoSize = true;
+            this.linkLabSetImage.Location = new System.Drawing.Point(268, 148);
+            this.linkLabSetImage.Name = "linkLabSetImage";
+            this.linkLabSetImage.Size = new System.Drawing.Size(68, 16);
+            this.linkLabSetImage.TabIndex = 34;
+            this.linkLabSetImage.TabStop = true;
+            this.linkLabSetImage.Text = "Set Image";
+            this.linkLabSetImage.Visible = false;
+            this.linkLabSetImage.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabSetImage_LinkClicked);
             // 
             // picPerson
             // 
@@ -217,7 +222,7 @@
             this.picPerson.FillColor = System.Drawing.Color.DarkGray;
             this.picPerson.Image = ((System.Drawing.Image)(resources.GetObject("picPerson.Image")));
             this.picPerson.ImageRotate = 0F;
-            this.picPerson.Location = new System.Drawing.Point(64, 3);
+            this.picPerson.Location = new System.Drawing.Point(3, 3);
             this.picPerson.Name = "picPerson";
             this.picPerson.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.picPerson.Size = new System.Drawing.Size(200, 203);
@@ -260,7 +265,7 @@
             this.txtAddress.PlaceholderForeColor = System.Drawing.Color.Transparent;
             this.txtAddress.PlaceholderText = "";
             this.txtAddress.SelectedText = "";
-            this.txtAddress.Size = new System.Drawing.Size(414, 34);
+            this.txtAddress.Size = new System.Drawing.Size(439, 34);
             this.txtAddress.TabIndex = 30;
             // 
             // guna2HtmlLabel12
@@ -315,23 +320,23 @@
             this.guna2HtmlLabel11.TabIndex = 27;
             this.guna2HtmlLabel11.Text = "Country:";
             // 
-            // pickerBirth
+            // dtpDateOfBirth
             // 
-            this.pickerBirth.AutoRoundedCorners = true;
-            this.pickerBirth.BackColor = System.Drawing.Color.Transparent;
-            this.pickerBirth.BorderRadius = 17;
-            this.pickerBirth.Checked = true;
-            this.pickerBirth.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.pickerBirth.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.pickerBirth.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.pickerBirth.Location = new System.Drawing.Point(619, 213);
-            this.pickerBirth.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.pickerBirth.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.pickerBirth.Name = "pickerBirth";
-            this.pickerBirth.Size = new System.Drawing.Size(187, 36);
-            this.pickerBirth.TabIndex = 26;
-            this.pickerBirth.UseTransparentBackground = true;
-            this.pickerBirth.Value = new System.DateTime(2025, 1, 4, 21, 19, 7, 455);
+            this.dtpDateOfBirth.AutoRoundedCorners = true;
+            this.dtpDateOfBirth.BackColor = System.Drawing.Color.Transparent;
+            this.dtpDateOfBirth.BorderRadius = 17;
+            this.dtpDateOfBirth.Checked = true;
+            this.dtpDateOfBirth.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.dtpDateOfBirth.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtpDateOfBirth.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtpDateOfBirth.Location = new System.Drawing.Point(619, 213);
+            this.dtpDateOfBirth.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpDateOfBirth.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpDateOfBirth.Name = "dtpDateOfBirth";
+            this.dtpDateOfBirth.Size = new System.Drawing.Size(187, 36);
+            this.dtpDateOfBirth.TabIndex = 26;
+            this.dtpDateOfBirth.UseTransparentBackground = true;
+            this.dtpDateOfBirth.Value = new System.DateTime(2025, 1, 4, 21, 19, 7, 455);
             // 
             // guna2PictureBox5
             // 
@@ -442,6 +447,7 @@
             this.txtEmail.SelectedText = "";
             this.txtEmail.Size = new System.Drawing.Size(138, 34);
             this.txtEmail.TabIndex = 17;
+            this.txtEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmail_Validating);
             // 
             // guna2HtmlLabel8
             // 
@@ -542,8 +548,7 @@
             this.txtNationalNo.SelectedText = "";
             this.txtNationalNo.Size = new System.Drawing.Size(138, 34);
             this.txtNationalNo.TabIndex = 9;
-            this.txtNationalNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxNumbers_KeyPress);
-            this.txtNationalNo.Leave += new System.EventHandler(this.txtNationalNo_Leave);
+            this.txtNationalNo.Validating += new System.ComponentModel.CancelEventHandler(this.txtNationalNo_Validating);
             // 
             // guna2HtmlLabel6
             // 
@@ -567,7 +572,7 @@
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel4);
             this.guna2Panel1.Controls.Add(this.txtFirstName);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel5);
-            this.guna2Panel1.Location = new System.Drawing.Point(3, 225);
+            this.guna2Panel1.Location = new System.Drawing.Point(12, 220);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(359, 235);
             this.guna2Panel1.TabIndex = 9;
@@ -715,6 +720,7 @@
             this.txtFirstName.Size = new System.Drawing.Size(138, 34);
             this.txtFirstName.TabIndex = 5;
             this.txtFirstName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxLetters_KeyPress);
+            this.txtFirstName.Validating += new System.ComponentModel.CancelEventHandler(this._ValidateEmptyTextBox);
             // 
             // guna2HtmlLabel5
             // 
@@ -727,19 +733,30 @@
             this.guna2HtmlLabel5.TabIndex = 4;
             this.guna2HtmlLabel5.Text = "Second Name";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // frmAddUpdatePerson
             // 
+            this.AcceptButton = this.btnSave;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(1124, 555);
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Controls.Add(this.labTitleForm);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmAddUpdatePerson";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Load += new System.EventHandler(this.frmAddUpdatePerson_Load);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picError)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPerson)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).EndInit();
@@ -749,6 +766,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -774,8 +792,8 @@
         private Guna.UI2.WinForms.Guna2TextBox txtAddress;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel12;
         private Guna.UI2.WinForms.Guna2ComboBox cmbCountry;
-        private System.Windows.Forms.LinkLabel linkLabPic;
-        private Guna.UI2.WinForms.Guna2DateTimePicker pickerBirth;
+        private System.Windows.Forms.LinkLabel linkLabSetImage;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpDateOfBirth;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox5;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel10;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox4;
@@ -795,6 +813,8 @@
         private Guna.UI2.WinForms.Guna2ImageButton btnSave;
         private Guna.UI2.WinForms.Guna2HtmlLabel labPersonId;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel13;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox picError;
+        private System.Windows.Forms.LinkLabel linkLabRemoveImage;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

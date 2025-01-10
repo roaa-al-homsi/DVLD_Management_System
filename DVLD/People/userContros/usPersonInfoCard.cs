@@ -12,7 +12,7 @@ namespace DVLD.People.userControls
         {
             get { return _PersonId; }
         }
-        public Person Person
+        public Person SelectedPersonInfo
         {
             get { return _Person; }
         }
@@ -23,10 +23,10 @@ namespace DVLD.People.userControls
         private void _LoadImagePerson()
         {
             //picPerson.ImageLocation = string.IsNullOrWhiteSpace(_Person.ImagePath) ?
-            //    (_Person.Gender == 1) ? Properties.Resources.Female_512 : Properties.Resources.Male_512 :
+            //    (_Person.enGender == 1) ? Properties.Resources.Female_512 : Properties.Resources.Male_512 :
             //    _Person.ImagePath;
 
-            if (_Person.Gender == 1)
+            if (_Person.Gender == 0)
             {
                 using (MemoryStream ms = new MemoryStream(Properties.Resources.Male_512))
                 {
@@ -52,7 +52,8 @@ namespace DVLD.People.userControls
         }
         private void _FillPersonInfo()
         {
-            labPersonId.Text = _Person.Id.ToString();
+            _PersonId = _Person.Id;
+            LabPersonId.Text = _Person.Id.ToString();
             txtAddress.Text = _Person.Address;
             txtBirth.Text = _Person.DateOfBirth.ToString();
             txtEmail.Text = _Person.Email;
@@ -62,20 +63,39 @@ namespace DVLD.People.userControls
             txtGender.Text = (_Person.Gender == 1) ? "Female" : "Male";
             txtName.Text = $"{_Person.FirstName} {_Person.SecondName} {_Person.ThirdName} {_Person.LastName}";
             txtCountry.Text = Person.GetNameCountryById(_Person.NationalityCountryID);
+            linkLabEdit.Enabled = true;
             _LoadImagePerson();
         }
+        private void _ResetPersonInfo()
+        {
+            txtAddress.Text = string.Empty;
+            txtBirth.Text = string.Empty;
+            txtEmail.Text = string.Empty;
+            txtPhone.Text = string.Empty;
+            txtNationalNo.Text = string.Empty;
+            txtAddress.Text = string.Empty;
+            txtGender.Text = string.Empty;
+            txtName.Text = string.Empty;
+            txtCountry.Text = string.Empty;
 
-        private void _LoadPersonInfo(int personId)
+            using (MemoryStream ms = new MemoryStream(Properties.Resources.Male_512))
+            {
+                picPerson.Image = Image.FromStream(ms);
+            }
+
+        }
+        public void LoadPersonInfo(int personId)
         {
             _Person = Person.Find(personId);
             if (_Person == null)
             {
+                //  _ResetPersonInfo();
                 MessageBox.Show($"There is no person with this Id {_Person.Id}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             _FillPersonInfo();
         }
-        private void _LoadPersonInfo(string nationalNo)
+        public void LoadPersonInfo(string nationalNo)
         {
             _Person = Person.FindByNationalNo(nationalNo);
             if (_Person == null)
@@ -86,12 +106,17 @@ namespace DVLD.People.userControls
             _FillPersonInfo();
         }
 
-        private void linkLabEdit_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void linklabEdit_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
             frmAddUpdatePerson frmAddUpdate = new frmAddUpdatePerson(_PersonId);
             frmAddUpdate.ShowDialog();
             //RefreshData
-            _LoadPersonInfo(_PersonId);
+            LoadPersonInfo(_PersonId);
+        }
+
+        private void picPerson_Click(object sender, System.EventArgs e)
+        {
+
         }
     }
 }

@@ -35,9 +35,9 @@
             this.txtCountry = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtBirth = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtGender = new Guna.UI2.WinForms.Guna2TextBox();
-            this.linklabEdit = new System.Windows.Forms.LinkLabel();
-            this.labPersonId = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel13 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.linkLabEdit = new System.Windows.Forms.LinkLabel();
+            this.labId = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.LabPersonId = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtName = new Guna.UI2.WinForms.Guna2TextBox();
             this.linkLabPic = new System.Windows.Forms.LinkLabel();
             this.picPerson = new Guna.UI2.WinForms.Guna2CirclePictureBox();
@@ -73,14 +73,17 @@
             // 
             // guna2CustomGradientPanel1
             // 
+            this.guna2CustomGradientPanel1.BorderColor = System.Drawing.Color.Black;
+            this.guna2CustomGradientPanel1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            this.guna2CustomGradientPanel1.BorderThickness = 1;
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2PictureBox8);
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2HtmlLabel1);
             this.guna2CustomGradientPanel1.Controls.Add(this.txtCountry);
             this.guna2CustomGradientPanel1.Controls.Add(this.txtBirth);
             this.guna2CustomGradientPanel1.Controls.Add(this.txtGender);
-            this.guna2CustomGradientPanel1.Controls.Add(this.linklabEdit);
-            this.guna2CustomGradientPanel1.Controls.Add(this.labPersonId);
-            this.guna2CustomGradientPanel1.Controls.Add(this.guna2HtmlLabel13);
+            this.guna2CustomGradientPanel1.Controls.Add(this.linkLabEdit);
+            this.guna2CustomGradientPanel1.Controls.Add(this.labId);
+            this.guna2CustomGradientPanel1.Controls.Add(this.LabPersonId);
             this.guna2CustomGradientPanel1.Controls.Add(this.txtName);
             this.guna2CustomGradientPanel1.Controls.Add(this.linkLabPic);
             this.guna2CustomGradientPanel1.Controls.Add(this.picPerson);
@@ -104,7 +107,7 @@
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2HtmlLabel6);
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(3, 3);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(800, 397);
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(717, 383);
             this.guna2CustomGradientPanel1.TabIndex = 2;
             // 
             // guna2PictureBox8
@@ -112,7 +115,7 @@
             this.guna2PictureBox8.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox8.Image")));
             this.guna2PictureBox8.ImageRotate = 0F;
-            this.guna2PictureBox8.Location = new System.Drawing.Point(15, 71);
+            this.guna2PictureBox8.Location = new System.Drawing.Point(27, 48);
             this.guna2PictureBox8.Name = "guna2PictureBox8";
             this.guna2PictureBox8.Size = new System.Drawing.Size(32, 29);
             this.guna2PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -125,7 +128,7 @@
             this.guna2HtmlLabel1.AutoSize = false;
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Andalus", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(52, 72);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(65, 49);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(96, 28);
             this.guna2HtmlLabel1.TabIndex = 0;
@@ -134,6 +137,7 @@
             // txtCountry
             // 
             this.txtCountry.AutoRoundedCorners = true;
+            this.txtCountry.BackColor = System.Drawing.Color.Transparent;
             this.txtCountry.BorderColor = System.Drawing.Color.Transparent;
             this.txtCountry.BorderRadius = 16;
             this.txtCountry.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -143,9 +147,10 @@
             this.txtCountry.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtCountry.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtCountry.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCountry.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtCountry.Font = new System.Drawing.Font("Andalus", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCountry.ForeColor = System.Drawing.Color.Black;
             this.txtCountry.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCountry.Location = new System.Drawing.Point(180, 299);
+            this.txtCountry.Location = new System.Drawing.Point(193, 161);
             this.txtCountry.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCountry.Name = "txtCountry";
             this.txtCountry.PasswordChar = '\0';
@@ -153,12 +158,13 @@
             this.txtCountry.PlaceholderText = "";
             this.txtCountry.ReadOnly = true;
             this.txtCountry.SelectedText = "";
-            this.txtCountry.Size = new System.Drawing.Size(138, 34);
+            this.txtCountry.Size = new System.Drawing.Size(177, 34);
             this.txtCountry.TabIndex = 42;
             // 
             // txtBirth
             // 
             this.txtBirth.AutoRoundedCorners = true;
+            this.txtBirth.BackColor = System.Drawing.Color.Transparent;
             this.txtBirth.BorderColor = System.Drawing.Color.Transparent;
             this.txtBirth.BorderRadius = 16;
             this.txtBirth.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -168,9 +174,10 @@
             this.txtBirth.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtBirth.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtBirth.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBirth.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtBirth.Font = new System.Drawing.Font("Andalus", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBirth.ForeColor = System.Drawing.Color.Black;
             this.txtBirth.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBirth.Location = new System.Drawing.Point(180, 238);
+            this.txtBirth.Location = new System.Drawing.Point(193, 217);
             this.txtBirth.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBirth.Name = "txtBirth";
             this.txtBirth.PasswordChar = '\0';
@@ -178,12 +185,13 @@
             this.txtBirth.PlaceholderText = "";
             this.txtBirth.ReadOnly = true;
             this.txtBirth.SelectedText = "";
-            this.txtBirth.Size = new System.Drawing.Size(138, 34);
+            this.txtBirth.Size = new System.Drawing.Size(177, 34);
             this.txtBirth.TabIndex = 41;
             // 
             // txtGender
             // 
             this.txtGender.AutoRoundedCorners = true;
+            this.txtGender.BackColor = System.Drawing.Color.Transparent;
             this.txtGender.BorderColor = System.Drawing.Color.Transparent;
             this.txtGender.BorderRadius = 16;
             this.txtGender.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -193,9 +201,10 @@
             this.txtGender.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtGender.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtGender.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtGender.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtGender.Font = new System.Drawing.Font("Andalus", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGender.ForeColor = System.Drawing.Color.Black;
             this.txtGender.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtGender.Location = new System.Drawing.Point(180, 170);
+            this.txtGender.Location = new System.Drawing.Point(532, 264);
             this.txtGender.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtGender.Name = "txtGender";
             this.txtGender.PasswordChar = '\0';
@@ -203,48 +212,50 @@
             this.txtGender.PlaceholderText = "";
             this.txtGender.ReadOnly = true;
             this.txtGender.SelectedText = "";
-            this.txtGender.Size = new System.Drawing.Size(138, 34);
+            this.txtGender.Size = new System.Drawing.Size(177, 34);
             this.txtGender.TabIndex = 40;
             // 
-            // linklabEdit
+            // linkLabEdit
             // 
-            this.linklabEdit.AutoSize = true;
-            this.linklabEdit.BackColor = System.Drawing.Color.Transparent;
-            this.linklabEdit.DisabledLinkColor = System.Drawing.Color.Transparent;
-            this.linklabEdit.Font = new System.Drawing.Font("Aldhabi", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linklabEdit.Location = new System.Drawing.Point(649, 173);
-            this.linklabEdit.Name = "linklabEdit";
-            this.linklabEdit.Size = new System.Drawing.Size(126, 35);
-            this.linklabEdit.TabIndex = 39;
-            this.linklabEdit.TabStop = true;
-            this.linklabEdit.Text = "Edit Person Info";
-            this.linklabEdit.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklabEdit_LinkClicked);
+            this.linkLabEdit.AutoSize = true;
+            this.linkLabEdit.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabEdit.DisabledLinkColor = System.Drawing.Color.Transparent;
+            this.linkLabEdit.Font = new System.Drawing.Font("Aldhabi", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabEdit.Location = new System.Drawing.Point(563, 10);
+            this.linkLabEdit.Name = "linkLabEdit";
+            this.linkLabEdit.Size = new System.Drawing.Size(126, 35);
+            this.linkLabEdit.TabIndex = 39;
+            this.linkLabEdit.TabStop = true;
+            this.linkLabEdit.Text = "Edit Person Info";
+            this.linkLabEdit.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklabEdit_LinkClicked_1);
             // 
-            // labPersonId
+            // labId
             // 
-            this.labPersonId.AutoSize = false;
-            this.labPersonId.BackColor = System.Drawing.Color.Transparent;
-            this.labPersonId.Font = new System.Drawing.Font("Andalus", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labPersonId.Location = new System.Drawing.Point(247, 10);
-            this.labPersonId.Name = "labPersonId";
-            this.labPersonId.Size = new System.Drawing.Size(110, 29);
-            this.labPersonId.TabIndex = 38;
-            this.labPersonId.Text = "National No:";
+            this.labId.AutoSize = false;
+            this.labId.BackColor = System.Drawing.Color.Transparent;
+            this.labId.Font = new System.Drawing.Font("Andalus", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labId.Location = new System.Drawing.Point(51, 3);
+            this.labId.Name = "labId";
+            this.labId.Size = new System.Drawing.Size(110, 29);
+            this.labId.TabIndex = 38;
+            this.labId.Text = "Person Id:";
             // 
-            // guna2HtmlLabel13
+            // LabPersonId
             // 
-            this.guna2HtmlLabel13.AutoSize = false;
-            this.guna2HtmlLabel13.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel13.Font = new System.Drawing.Font("Andalus", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel13.Location = new System.Drawing.Point(399, 10);
-            this.guna2HtmlLabel13.Name = "guna2HtmlLabel13";
-            this.guna2HtmlLabel13.Size = new System.Drawing.Size(110, 29);
-            this.guna2HtmlLabel13.TabIndex = 37;
-            this.guna2HtmlLabel13.Text = "A/N";
+            this.LabPersonId.AutoSize = false;
+            this.LabPersonId.BackColor = System.Drawing.Color.Transparent;
+            this.LabPersonId.Font = new System.Drawing.Font("Andalus", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabPersonId.ForeColor = System.Drawing.Color.Maroon;
+            this.LabPersonId.Location = new System.Drawing.Point(193, 3);
+            this.LabPersonId.Name = "LabPersonId";
+            this.LabPersonId.Size = new System.Drawing.Size(110, 29);
+            this.LabPersonId.TabIndex = 37;
+            this.LabPersonId.Text = "A/N";
             // 
             // txtName
             // 
             this.txtName.AutoRoundedCorners = true;
+            this.txtName.BackColor = System.Drawing.Color.Transparent;
             this.txtName.BorderColor = System.Drawing.Color.Transparent;
             this.txtName.BorderRadius = 16;
             this.txtName.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -254,9 +265,10 @@
             this.txtName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtName.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtName.Font = new System.Drawing.Font("Andalus", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtName.Location = new System.Drawing.Point(177, 72);
+            this.txtName.Location = new System.Drawing.Point(193, 49);
             this.txtName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtName.Name = "txtName";
             this.txtName.PasswordChar = '\0';
@@ -264,13 +276,13 @@
             this.txtName.PlaceholderText = "";
             this.txtName.ReadOnly = true;
             this.txtName.SelectedText = "";
-            this.txtName.Size = new System.Drawing.Size(138, 34);
+            this.txtName.Size = new System.Drawing.Size(177, 34);
             this.txtName.TabIndex = 5;
             // 
             // linkLabPic
             // 
             this.linkLabPic.AutoSize = true;
-            this.linkLabPic.Location = new System.Drawing.Point(287, 23);
+            this.linkLabPic.Location = new System.Drawing.Point(77, 16);
             this.linkLabPic.Name = "linkLabPic";
             this.linkLabPic.Size = new System.Drawing.Size(0, 16);
             this.linkLabPic.TabIndex = 34;
@@ -278,10 +290,11 @@
             // picPerson
             // 
             this.picPerson.BackColor = System.Drawing.Color.Transparent;
+            this.picPerson.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picPerson.FillColor = System.Drawing.Color.DarkGray;
             this.picPerson.Image = ((System.Drawing.Image)(resources.GetObject("picPerson.Image")));
             this.picPerson.ImageRotate = 0F;
-            this.picPerson.Location = new System.Drawing.Point(625, 10);
+            this.picPerson.Location = new System.Drawing.Point(542, 48);
             this.picPerson.Name = "picPerson";
             this.picPerson.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.picPerson.Size = new System.Drawing.Size(167, 160);
@@ -289,13 +302,14 @@
             this.picPerson.TabIndex = 33;
             this.picPerson.TabStop = false;
             this.picPerson.UseTransparentBackground = true;
+            this.picPerson.Click += new System.EventHandler(this.picPerson_Click);
             // 
             // guna2PictureBox7
             // 
             this.guna2PictureBox7.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox7.Image")));
             this.guna2PictureBox7.ImageRotate = 0F;
-            this.guna2PictureBox7.Location = new System.Drawing.Point(15, 354);
+            this.guna2PictureBox7.Location = new System.Drawing.Point(27, 317);
             this.guna2PictureBox7.Name = "guna2PictureBox7";
             this.guna2PictureBox7.Size = new System.Drawing.Size(32, 29);
             this.guna2PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -306,6 +320,7 @@
             // txtAddress
             // 
             this.txtAddress.AutoRoundedCorners = true;
+            this.txtAddress.BackColor = System.Drawing.Color.Transparent;
             this.txtAddress.BorderColor = System.Drawing.Color.Transparent;
             this.txtAddress.BorderRadius = 16;
             this.txtAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -315,9 +330,10 @@
             this.txtAddress.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtAddress.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtAddress.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAddress.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtAddress.Font = new System.Drawing.Font("Andalus", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddress.ForeColor = System.Drawing.Color.Black;
             this.txtAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAddress.Location = new System.Drawing.Point(180, 354);
+            this.txtAddress.Location = new System.Drawing.Point(193, 318);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.PasswordChar = '\0';
@@ -332,7 +348,7 @@
             this.guna2HtmlLabel12.AutoSize = false;
             this.guna2HtmlLabel12.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel12.Font = new System.Drawing.Font("Andalus", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel12.Location = new System.Drawing.Point(53, 354);
+            this.guna2HtmlLabel12.Location = new System.Drawing.Point(65, 317);
             this.guna2HtmlLabel12.Name = "guna2HtmlLabel12";
             this.guna2HtmlLabel12.Size = new System.Drawing.Size(70, 34);
             this.guna2HtmlLabel12.TabIndex = 31;
@@ -343,7 +359,7 @@
             this.guna2PictureBox6.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox6.Image")));
             this.guna2PictureBox6.ImageRotate = 0F;
-            this.guna2PictureBox6.Location = new System.Drawing.Point(14, 299);
+            this.guna2PictureBox6.Location = new System.Drawing.Point(27, 160);
             this.guna2PictureBox6.Name = "guna2PictureBox6";
             this.guna2PictureBox6.Size = new System.Drawing.Size(32, 29);
             this.guna2PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -356,7 +372,7 @@
             this.guna2HtmlLabel11.AutoSize = false;
             this.guna2HtmlLabel11.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel11.Font = new System.Drawing.Font("Andalus", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel11.Location = new System.Drawing.Point(52, 299);
+            this.guna2HtmlLabel11.Location = new System.Drawing.Point(65, 156);
             this.guna2HtmlLabel11.Name = "guna2HtmlLabel11";
             this.guna2HtmlLabel11.Size = new System.Drawing.Size(122, 34);
             this.guna2HtmlLabel11.TabIndex = 27;
@@ -367,7 +383,7 @@
             this.guna2PictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox5.Image")));
             this.guna2PictureBox5.ImageRotate = 0F;
-            this.guna2PictureBox5.Location = new System.Drawing.Point(14, 236);
+            this.guna2PictureBox5.Location = new System.Drawing.Point(27, 216);
             this.guna2PictureBox5.Name = "guna2PictureBox5";
             this.guna2PictureBox5.Size = new System.Drawing.Size(32, 29);
             this.guna2PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -380,7 +396,7 @@
             this.guna2HtmlLabel10.AutoSize = false;
             this.guna2HtmlLabel10.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel10.Font = new System.Drawing.Font("Andalus", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel10.Location = new System.Drawing.Point(52, 236);
+            this.guna2HtmlLabel10.Location = new System.Drawing.Point(65, 215);
             this.guna2HtmlLabel10.Name = "guna2HtmlLabel10";
             this.guna2HtmlLabel10.Size = new System.Drawing.Size(122, 34);
             this.guna2HtmlLabel10.TabIndex = 24;
@@ -391,7 +407,7 @@
             this.guna2PictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox4.Image")));
             this.guna2PictureBox4.ImageRotate = 0F;
-            this.guna2PictureBox4.Location = new System.Drawing.Point(367, 164);
+            this.guna2PictureBox4.Location = new System.Drawing.Point(421, 217);
             this.guna2PictureBox4.Name = "guna2PictureBox4";
             this.guna2PictureBox4.Size = new System.Drawing.Size(32, 29);
             this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -402,6 +418,7 @@
             // txtPhone
             // 
             this.txtPhone.AutoRoundedCorners = true;
+            this.txtPhone.BackColor = System.Drawing.Color.Transparent;
             this.txtPhone.BorderColor = System.Drawing.Color.Transparent;
             this.txtPhone.BorderRadius = 16;
             this.txtPhone.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -411,9 +428,10 @@
             this.txtPhone.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtPhone.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtPhone.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPhone.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtPhone.Font = new System.Drawing.Font("Andalus", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhone.ForeColor = System.Drawing.Color.Black;
             this.txtPhone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPhone.Location = new System.Drawing.Point(481, 164);
+            this.txtPhone.Location = new System.Drawing.Point(532, 217);
             this.txtPhone.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.PasswordChar = '\0';
@@ -421,7 +439,7 @@
             this.txtPhone.PlaceholderText = "";
             this.txtPhone.ReadOnly = true;
             this.txtPhone.SelectedText = "";
-            this.txtPhone.Size = new System.Drawing.Size(138, 34);
+            this.txtPhone.Size = new System.Drawing.Size(177, 34);
             this.txtPhone.TabIndex = 20;
             // 
             // guna2HtmlLabel9
@@ -429,7 +447,7 @@
             this.guna2HtmlLabel9.AutoSize = false;
             this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel9.Font = new System.Drawing.Font("Andalus", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel9.Location = new System.Drawing.Point(405, 164);
+            this.guna2HtmlLabel9.Location = new System.Drawing.Point(459, 217);
             this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
             this.guna2HtmlLabel9.Size = new System.Drawing.Size(70, 34);
             this.guna2HtmlLabel9.TabIndex = 21;
@@ -440,7 +458,7 @@
             this.guna2PictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.Image")));
             this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(367, 118);
+            this.guna2PictureBox3.Location = new System.Drawing.Point(27, 264);
             this.guna2PictureBox3.Name = "guna2PictureBox3";
             this.guna2PictureBox3.Size = new System.Drawing.Size(32, 29);
             this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -451,6 +469,7 @@
             // txtEmail
             // 
             this.txtEmail.AutoRoundedCorners = true;
+            this.txtEmail.BackColor = System.Drawing.Color.Transparent;
             this.txtEmail.BorderColor = System.Drawing.Color.Transparent;
             this.txtEmail.BorderRadius = 16;
             this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -460,9 +479,10 @@
             this.txtEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtEmail.Font = new System.Drawing.Font("Andalus", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.ForeColor = System.Drawing.Color.Black;
             this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmail.Location = new System.Drawing.Point(481, 118);
+            this.txtEmail.Location = new System.Drawing.Point(193, 265);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PasswordChar = '\0';
@@ -470,7 +490,7 @@
             this.txtEmail.PlaceholderText = "";
             this.txtEmail.ReadOnly = true;
             this.txtEmail.SelectedText = "";
-            this.txtEmail.Size = new System.Drawing.Size(138, 34);
+            this.txtEmail.Size = new System.Drawing.Size(203, 34);
             this.txtEmail.TabIndex = 17;
             // 
             // guna2HtmlLabel8
@@ -478,9 +498,9 @@
             this.guna2HtmlLabel8.AutoSize = false;
             this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel8.Font = new System.Drawing.Font("Andalus", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel8.Location = new System.Drawing.Point(405, 118);
+            this.guna2HtmlLabel8.Location = new System.Drawing.Point(65, 266);
             this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
-            this.guna2HtmlLabel8.Size = new System.Drawing.Size(70, 34);
+            this.guna2HtmlLabel8.Size = new System.Drawing.Size(110, 29);
             this.guna2HtmlLabel8.TabIndex = 18;
             this.guna2HtmlLabel8.Text = "Email:";
             // 
@@ -489,7 +509,7 @@
             this.guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
             this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(14, 169);
+            this.guna2PictureBox2.Location = new System.Drawing.Point(421, 264);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
             this.guna2PictureBox2.Size = new System.Drawing.Size(32, 29);
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -502,7 +522,7 @@
             this.guna2HtmlLabel7.AutoSize = false;
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel7.Font = new System.Drawing.Font("Andalus", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(52, 169);
+            this.guna2HtmlLabel7.Location = new System.Drawing.Point(448, 264);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
             this.guna2HtmlLabel7.Size = new System.Drawing.Size(81, 35);
             this.guna2HtmlLabel7.TabIndex = 11;
@@ -512,7 +532,7 @@
             // 
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(14, 123);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(27, 104);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.Size = new System.Drawing.Size(32, 29);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -522,6 +542,7 @@
             // txtNationalNo
             // 
             this.txtNationalNo.AutoRoundedCorners = true;
+            this.txtNationalNo.BackColor = System.Drawing.Color.Transparent;
             this.txtNationalNo.BorderColor = System.Drawing.Color.Transparent;
             this.txtNationalNo.BorderRadius = 16;
             this.txtNationalNo.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -531,9 +552,10 @@
             this.txtNationalNo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtNationalNo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtNationalNo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNationalNo.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtNationalNo.Font = new System.Drawing.Font("Andalus", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNationalNo.ForeColor = System.Drawing.Color.Black;
             this.txtNationalNo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNationalNo.Location = new System.Drawing.Point(180, 118);
+            this.txtNationalNo.Location = new System.Drawing.Point(193, 105);
             this.txtNationalNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNationalNo.Name = "txtNationalNo";
             this.txtNationalNo.PasswordChar = '\0';
@@ -541,7 +563,7 @@
             this.txtNationalNo.PlaceholderText = "";
             this.txtNationalNo.ReadOnly = true;
             this.txtNationalNo.SelectedText = "";
-            this.txtNationalNo.Size = new System.Drawing.Size(138, 34);
+            this.txtNationalNo.Size = new System.Drawing.Size(177, 34);
             this.txtNationalNo.TabIndex = 9;
             // 
             // guna2HtmlLabel6
@@ -549,7 +571,7 @@
             this.guna2HtmlLabel6.AutoSize = false;
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel6.Font = new System.Drawing.Font("Andalus", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(52, 123);
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(65, 102);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
             this.guna2HtmlLabel6.Size = new System.Drawing.Size(110, 29);
             this.guna2HtmlLabel6.TabIndex = 9;
@@ -561,7 +583,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Name = "uc_PersonInfoCard";
-            this.Size = new System.Drawing.Size(809, 403);
+            this.Size = new System.Drawing.Size(723, 398);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox8)).EndInit();
@@ -580,8 +602,8 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
-        private Guna.UI2.WinForms.Guna2HtmlLabel labPersonId;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel13;
+        private Guna.UI2.WinForms.Guna2HtmlLabel labId;
+        private Guna.UI2.WinForms.Guna2HtmlLabel LabPersonId;
         private System.Windows.Forms.LinkLabel linkLabPic;
         private Guna.UI2.WinForms.Guna2CirclePictureBox picPerson;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox7;
@@ -607,7 +629,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtCountry;
         private Guna.UI2.WinForms.Guna2TextBox txtBirth;
         private Guna.UI2.WinForms.Guna2TextBox txtGender;
-        private System.Windows.Forms.LinkLabel linklabEdit;
+        private System.Windows.Forms.LinkLabel linkLabEdit;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox8;
     }
 }

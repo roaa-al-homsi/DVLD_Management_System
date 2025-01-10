@@ -47,7 +47,7 @@ namespace DVLD_DataAccess
         public static bool Update(int PersonID, string NationalNo, string FirstName, string SecondName, string ThirdName, string LastName, DateTime DateOfBirth, byte Gender, string Address, string Phone, string Email, int NationalityCountryID, string ImagePath)
         {
             int RowsAffected = 0;
-            string query = "update People set PersonID = @PersonID,NationalNo = @NationalNo,FirstName = @FirstName,SecondName = @SecondName,ThirdName = @ThirdName,LastName = @LastName,DateOfBirth = @DateOfBirth,Gender = @Gender,Address = @Address,Phone = @Phone,Email = @Email,NationalityCountryID = @NationalityCountryID,ImagePath = @ImagePath  WHERE PersonID=@PersonID;";
+            string query = "update People set NationalNo = @NationalNo,FirstName = @FirstName,SecondName = @SecondName,ThirdName = @ThirdName,LastName = @LastName,DateOfBirth = @DateOfBirth,Gender = @Gender,Address = @Address,Phone = @Phone,Email = @Email,NationalityCountryID = @NationalityCountryID,ImagePath = @ImagePath  WHERE Id=@PersonID;";
             using (SqlConnection connection = new SqlConnection(SettingData.ConnectionString))
             {
                 using (SqlCommand command = new SqlCommand(query, connection))
@@ -175,7 +175,7 @@ namespace DVLD_DataAccess
         {
             return GenericData.Exist("select Found=1 from People where Id= @PersonID", "@PersonID", PersonID);
         }
-        static public bool ExistByNationalNo(int nationalNo)
+        static public bool ExistByNationalNo(string nationalNo)
         {
             return GenericData.Exist("select Found=1 from People where NationalNo= @nationalNo", "@nationalNo", nationalNo);
 

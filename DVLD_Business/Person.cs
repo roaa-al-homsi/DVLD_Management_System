@@ -19,8 +19,10 @@ namespace DVLD_Business
         public string Address { get; set; }
         public string Phone { get; set; }
         public string Email { get; set; }
-        public int NationalityCountryID { get; set; }
+        public int NationalityCountryID { get; set; }//fK
         public string ImagePath { get; set; }
+
+        public Country CountryInfo { get; set; }
 
         public Person()
         {
@@ -55,7 +57,7 @@ namespace DVLD_Business
             this.Email = Email;
             this.NationalityCountryID = NationalityCountryID;
             this.ImagePath = ImagePath;
-
+            this.CountryInfo = Country.Find(NationalityCountryID);
 
             _mode = Mode.Update;
         }
@@ -72,13 +74,19 @@ namespace DVLD_Business
         }
         public bool Save()
         {
-
             switch (_mode)
             {
                 case Mode.Add:
                     {
-                        _mode = Mode.Update;
-                        return _Add();
+                        if (_Add())
+                        {
+                            _mode = Mode.Update;
+                            return true;
+                        }
+                        else
+                        {
+                            return false;
+                        }
                     }
                 case Mode.Update: return _Update();
             }
@@ -154,7 +162,7 @@ namespace DVLD_Business
         {
             return PersonData.GetNameCountryById(id);
         }
-        public static bool ExistByNationalNo(int nationalNo)
+        public static bool ExistByNationalNo(string nationalNo)
         {
             return PersonData.ExistByNationalNo(nationalNo);
 

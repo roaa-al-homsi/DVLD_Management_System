@@ -68,11 +68,29 @@
     <Compile Include="People\frmAddUpdatePerson.Designer.cs">
       <DependentUpon>frmAddUpdatePerson.cs</DependentUpon>
     </Compile>
+    <Compile Include="People\frmFindPerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="People\frmFindPerson.Designer.cs">
+      <DependentUpon>frmFindPerson.cs</DependentUpon>
+    </Compile>
     <Compile Include="People\frmManagePeople.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="People\frmManagePeople.Designer.cs">
       <DependentUpon>frmManagePeople.cs</DependentUpon>
+    </Compile>
+    <Compile Include="People\frmShowPersonInfocs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="People\frmShowPersonInfocs.Designer.cs">
+      <DependentUpon>frmShowPersonInfocs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="People\userContros\uc_PersonInfoCardWithFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="People\userContros\uc_PersonInfoCardWithFilter.Designer.cs">
+      <DependentUpon>uc_PersonInfoCardWithFilter.cs</DependentUpon>
     </Compile>
     <Compile Include="People\userContros\usPersonInfoCard.cs">
       <SubType>UserControl</SubType>
@@ -85,8 +103,17 @@
     <EmbeddedResource Include="People\frmAddUpdatePerson.resx">
       <DependentUpon>frmAddUpdatePerson.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="People\frmFindPerson.resx">
+      <DependentUpon>frmFindPerson.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="People\frmManagePeople.resx">
       <DependentUpon>frmManagePeople.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="People\frmShowPersonInfocs.resx">
+      <DependentUpon>frmShowPersonInfocs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="People\userContros\uc_PersonInfoCardWithFilter.resx">
+      <DependentUpon>uc_PersonInfoCardWithFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="People\userContros\usPersonInfoCard.resx">
       <DependentUpon>usPersonInfoCard.cs</DependentUpon>

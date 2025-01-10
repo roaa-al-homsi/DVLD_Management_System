@@ -1,5 +1,7 @@
 ﻿using DVLD_Business;
+using Guna.UI2.WinForms;
 using System;
+using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.IO;
@@ -11,15 +13,21 @@ namespace DVLD.People
     public partial class frmAddUpdatePerson : Form
     {
         enum Mode { Add = 1, Update = 2 }
+        enum enGender { Female = 1, Male = 0 }
         private Mode _mode;
-        private Person _person;
-        private int _PersonId;
 
+        private Person _person;
+        private int _personId;
+        public frmAddUpdatePerson()
+        {
+            InitializeComponent();
+            _mode = Mode.Add;
+        }
         public frmAddUpdatePerson(int personId)
         {
             InitializeComponent();
-            _PersonId = personId;
-            _mode = personId == -1 ? Mode.Add : Mode.Update;
+            _personId = personId;
+            _mode = Mode.Update;
         }
         private void _FillCmbCountry()
         {
@@ -27,27 +35,16 @@ namespace DVLD.People
             foreach (DataRow row in dt.Rows)
             {
                 cmbCountry.Items.Add(row["Name"]);
-
             }
         }
 
         private void _LoadData()
         {
-            if (_mode == Mode.Add)
-            {
-                _person = new Person();
-                this.Text = "Add Person";
-                labTitleForm.Text = "Add Person";
-                linkLabPic.Text = "Set Image";
-                return;
-            }
-
-            this.Text = "Update Person";
-            labTitleForm.Text = "Update Person";
-            linkLabPic.Text = "Remove Image";
-            _person = Person.Find(_PersonId);
+            _person = Person.Find(_personId);
             if (_person == null)
             {
+                MessageBox.Show($"There is no person with Id {_personId} ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Close();
                 return;
             }
             labPersonId.Text = _person.Id.ToString();
@@ -59,8 +56,10 @@ namespace DVLD.People
             txtThirdName.Text = _person.ThirdName;
             txtPhone.Text = _person.Phone;
             txtNationalNo.Text = _person.NationalNo;
-            pickerBirth.Text = _person.DateOfBirth.ToString();
-            if (_person.Gender == 1)
+            dtpDateOfBirth.Text = _person.DateOfBirth.ToString();
+            cmbCountry.SelectedIndex = cmbCountry.FindString(_person.CountryInfo.Name);
+
+            if (_person.Gender == (byte)enGender.Female)
             {
                 radioBtnFemale.Checked = true;
             }
@@ -69,18 +68,69 @@ namespace DVLD.People
                 radioBtnMale.Checked = true;
             }
 
-            string nameCountry = Person.GetNameCountryById(_person.NationalityCountryID);
-            cmbCountry.SelectedIndex = cmbCountry.FindString(nameCountry);
+            if (!string.IsNullOrEmpty(_person.ImagePath))
+            {
+                picPerson.ImageLocation = _person.ImagePath;
+            }
 
+            linkLabRemoveImage.Visible = (!string.IsNullOrEmpty(_person.ImagePath));
         }
+        private void _ResetDefaultValues()
+        {
+            _FillCmbCountry();
+            if (_mode == Mode.Add)
+            {
+                _person = new Person();
+                this.Text = "Add New a Person";
+                labTitleForm.Text = "Add a Person";
+            }
+            else
+            {
+                this.Text = "Update a Person";
+                labTitleForm.Text = "Update a Person";
+            }
+            if (radioBtnFemale.Checked)
+            {
+                using (MemoryStream ms = new MemoryStream(Properties.Resources.Female_512))
+                {
+                    picPerson.Image = Image.FromStream(ms);
+                }
+            }
+            else
+            {
+                using (MemoryStream ms = new MemoryStream(Properties.Resources.Male_512))
+                {
+                    picPerson.Image = Image.FromStream(ms);
+                }
+            }
+            linkLabRemoveImage.Visible = !string.IsNullOrEmpty(picPerson.ImageLocation);
 
+            dtpDateOfBirth.MaxDate = DateTime.Now.AddYears(-18);
+            dtpDateOfBirth.Value = dtpDateOfBirth.MaxDate;
+            dtpDateOfBirth.MinDate = DateTime.Now.AddYears(-100);
+
+            cmbCountry.SelectedIndex = cmbCountry.FindString("Syria");
+            labPersonId.Text = string.Empty;
+            txtAddress.Text = string.Empty;
+            txtEmail.Text = string.Empty;
+            txtFirstName.Text = string.Empty;
+            txtLastName.Text = string.Empty;
+            txtSecondName.Text = string.Empty;
+            txtThirdName.Text = string.Empty;
+            txtPhone.Text = string.Empty;
+            txtNationalNo.Text = string.Empty;
+            dtpDateOfBirth.Text = string.Empty;
+            radioBtnMale.Checked = true;
+        }
         private void frmAddUpdatePerson_Load(object sender, System.EventArgs e)
         {
-            pickerBirth.MaxDate = DateTime.Now.AddYears(-18);
-            cmbCountry.SelectedIndex = cmbCountry.FindString("Syria");
-            _FillCmbCountry();
-            _LoadData();
+            _ResetDefaultValues();
+            if (_mode == Mode.Update)
+            {
+                _LoadData();
+            }
         }
+        #region MyValidate
         private void txtBoxLetters_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar))
@@ -90,7 +140,6 @@ namespace DVLD.People
         }
         private void txtBoxNumbers_KeyPress(object sender, KeyPressEventArgs e)
         {
-
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
@@ -112,31 +161,41 @@ namespace DVLD.People
                 e.Handled = true;
             }
         }
+        #endregion
         private void _FillDataPerson()
         {
-            _person.FirstName = txtFirstName.Text;
-            _person.SecondName = txtSecondName.Text;
-            _person.ThirdName = txtThirdName.Text;
-            _person.LastName = txtLastName.Text;
-            _person.NationalNo = txtNationalNo.Text;
-            _person.Address = txtAddress.Text;
-            _person.Phone = txtPhone.Text;
-            _person.Email = txtEmail.Text;
-            _person.Gender = (byte)((radioBtnFemale.Checked) ? 1 : 0);
-            _person.DateOfBirth = pickerBirth.Value;
+            _person.FirstName = txtFirstName.Text.Trim();
+            _person.SecondName = txtSecondName.Text.Trim();
+            _person.ThirdName = txtThirdName.Text.Trim();
+            _person.LastName = txtLastName.Text.Trim();
+            _person.NationalNo = txtNationalNo.Text.Trim();
+            _person.Address = txtAddress.Text.Trim();
+            _person.Phone = txtPhone.Text.Trim();
+            _person.Email = txtEmail.Text.Trim();
+            _person.DateOfBirth = dtpDateOfBirth.Value;
+            _person.Gender = (byte)((radioBtnFemale.Checked) ? enGender.Female : enGender.Male);
             _person.NationalityCountryID = Person.GetIdCountryByName(cmbCountry.Text);
+            _person.ImagePath = (string.IsNullOrEmpty(picPerson.ImageLocation)) ? null : picPerson.ImageLocation;
+
         }
         private void btnSave_Click(object sender, System.EventArgs e)
         {
-            if (picError.Visible)
+            if (!this.ValidateChildren())
             {
-                MessageBox.Show("You Can't Save It, By attention for entering data.", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Some fields are not validate ,but the mouse over red icon");
                 return;
             }
+            //if (!_HandlePersonImage)
+            //{
+            //    return;
+            //}
             _FillDataPerson();
             if (_person.Save())
             {
                 labPersonId.Text = _person.Id.ToString();
+                _mode = Mode.Update;
+                labTitleForm.Text = "Update A Person";
+                this.Text = "Update A Person";
                 MessageBox.Show("Data Saved Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
@@ -160,17 +219,93 @@ namespace DVLD.People
             }
         }
 
-        private void txtNationalNo_Leave(object sender, System.EventArgs e)
+        #region Validation
+        private void _ValidateEmptyTextBox(object sender, CancelEventArgs e)
         {
-            if (Person.ExistByNationalNo(Convert.ToInt32(txtNationalNo.Text)))
+            Guna2TextBox textBox = (Guna2TextBox)sender;
+            if (string.IsNullOrEmpty(textBox.Text.Trim()))
             {
-                picError.Visible = true;
+                e.Cancel = true;
+                errorProvider1.SetError(textBox, "This field is required!");
             }
             else
             {
-                picError.Visible = false;
+                //e.Cancel = false;
+                errorProvider1.SetError(textBox, null);
+            }
+        }
+        private void txtEmail_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtEmail.Text.Trim()))
+            {
+                return;
+            }
+            if (!Validation.ValidateEmail(txtEmail.Text))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtEmail, "Invalid Email Address Format!");
+            }
+            else
+            {
+                errorProvider1.SetError(txtEmail, null);
+            }
+        }
+        private void txtNationalNo_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtNationalNo.Text.Trim()))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtNationalNo, "This field is required");
+            }
+            else
+            {
+                errorProvider1.SetError(txtNationalNo, null);
             }
 
+            if (txtNationalNo.Text.Trim() != _person.NationalNo && Person.ExistByNationalNo(txtNationalNo.Text))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtNationalNo, "This national is used for another person");
+            }
+            else
+            {
+                errorProvider1.SetError(txtNationalNo, null);
+            }
+        }
+        #endregion
+        private void linkLabSetImage_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            openFileDialog1.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.bmp";
+            openFileDialog1.FilterIndex = 1;
+            openFileDialog1.RestoreDirectory = true;
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                // Process the selected file
+                string selectedFilePath = openFileDialog1.FileName;
+                picPerson.Load(selectedFilePath);
+                picPerson.ImageLocation = selectedFilePath;
+                linkLabRemoveImage.Visible = true;
+            }
+        }
+        private void linkLabRemoveImage_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            picPerson.ImageLocation = null;
+            if (radioBtnFemale.Checked)
+            {
+                using (MemoryStream ms = new MemoryStream(Properties.Resources.Female_512))
+                {
+                    picPerson.Image = Image.FromStream(ms);
+                }
+            }
+            else
+            {
+                using (MemoryStream ms = new MemoryStream(Properties.Resources.Male_512))
+                {
+                    picPerson.Image = Image.FromStream(ms);
+                }
+            }
+            linkLabRemoveImage.Visible = false;
         }
     }
 }
