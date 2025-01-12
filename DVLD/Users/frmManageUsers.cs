@@ -135,7 +135,8 @@ namespace DVLD.Users
 
         private void showDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frmShowUserDetails frmShowUser = new frmShowUserDetails((int)dgvAllUsers.CurrentRow.Cells[0].Value);
+            frmShowUser.ShowDialog();
         }
 
         private void btnAddUser_Click(object sender, EventArgs e)

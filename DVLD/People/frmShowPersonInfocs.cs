@@ -4,8 +4,6 @@ namespace DVLD.People
 {
     public partial class frmShowPersonInfo : Form
     {
-        private int _personId;
-
         public frmShowPersonInfo(int personId)
         {
             InitializeComponent();
