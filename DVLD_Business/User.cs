@@ -47,14 +47,19 @@ namespace DVLD_Business
         }
         public bool Save()
         {
-
             switch (_mode)
             {
                 case Mode.Add:
+                    if (_Add())
                     {
                         _mode = Mode.Update;
-                        return _Add();
+                        return true;
                     }
+                    else
+                    {
+                        return false;
+                    }
+
                 case Mode.Update: return _Update();
             }
             return false;
