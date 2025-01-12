@@ -27,7 +27,6 @@ namespace DVLD.Users.UserControls
             txtUserId.Text = _user.Id.ToString();
             txtUsername.Text = _user.Username;
         }
-
         public void LoadUserInfo(int userId)
         {
             _userId = userId;

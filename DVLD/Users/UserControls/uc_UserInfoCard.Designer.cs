@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.uc_PersonInfoCard1 = new DVLD.People.userControls.uc_PersonInfoCard();
-            this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.panelLoginInfo = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtUserId = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtIsActive = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2CustomGradientPanel1.SuspendLayout();
+            this.panelLoginInfo.SuspendLayout();
             this.SuspendLayout();
             // 
             // uc_PersonInfoCard1
@@ -46,20 +46,20 @@
             this.uc_PersonInfoCard1.Size = new System.Drawing.Size(723, 398);
             this.uc_PersonInfoCard1.TabIndex = 0;
             // 
-            // guna2CustomGradientPanel1
+            // panelLoginInfo
             // 
-            this.guna2CustomGradientPanel1.BorderColor = System.Drawing.Color.Black;
-            this.guna2CustomGradientPanel1.BorderThickness = 1;
-            this.guna2CustomGradientPanel1.Controls.Add(this.txtIsActive);
-            this.guna2CustomGradientPanel1.Controls.Add(this.txtUsername);
-            this.guna2CustomGradientPanel1.Controls.Add(this.txtUserId);
-            this.guna2CustomGradientPanel1.Controls.Add(this.guna2HtmlLabel3);
-            this.guna2CustomGradientPanel1.Controls.Add(this.guna2HtmlLabel2);
-            this.guna2CustomGradientPanel1.Controls.Add(this.guna2HtmlLabel1);
-            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(12, 404);
-            this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(723, 157);
-            this.guna2CustomGradientPanel1.TabIndex = 1;
+            this.panelLoginInfo.BorderColor = System.Drawing.Color.Black;
+            this.panelLoginInfo.BorderThickness = 1;
+            this.panelLoginInfo.Controls.Add(this.txtIsActive);
+            this.panelLoginInfo.Controls.Add(this.txtUsername);
+            this.panelLoginInfo.Controls.Add(this.txtUserId);
+            this.panelLoginInfo.Controls.Add(this.guna2HtmlLabel3);
+            this.panelLoginInfo.Controls.Add(this.guna2HtmlLabel2);
+            this.panelLoginInfo.Controls.Add(this.guna2HtmlLabel1);
+            this.panelLoginInfo.Location = new System.Drawing.Point(12, 404);
+            this.panelLoginInfo.Name = "panelLoginInfo";
+            this.panelLoginInfo.Size = new System.Drawing.Size(723, 157);
+            this.panelLoginInfo.TabIndex = 1;
             // 
             // guna2HtmlLabel1
             // 
@@ -179,11 +179,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.guna2CustomGradientPanel1);
+            this.Controls.Add(this.panelLoginInfo);
             this.Controls.Add(this.uc_PersonInfoCard1);
             this.Name = "uc_UserInfoCard";
             this.Size = new System.Drawing.Size(745, 576);
-            this.guna2CustomGradientPanel1.ResumeLayout(false);
+            this.panelLoginInfo.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -191,7 +191,7 @@
         #endregion
 
         private People.userControls.uc_PersonInfoCard uc_PersonInfoCard1;
-        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel panelLoginInfo;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
