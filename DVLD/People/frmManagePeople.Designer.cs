@@ -49,10 +49,13 @@
             // 
             // dgvAllPeople
             // 
+            this.dgvAllPeople.AllowUserToAddRows = false;
+            this.dgvAllPeople.AllowUserToDeleteRows = false;
             this.dgvAllPeople.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAllPeople.ContextMenuStrip = this.cmsManagePeople;
             this.dgvAllPeople.Location = new System.Drawing.Point(55, 326);
             this.dgvAllPeople.Name = "dgvAllPeople";
+            this.dgvAllPeople.ReadOnly = true;
             this.dgvAllPeople.RowHeadersWidth = 70;
             this.dgvAllPeople.RowTemplate.Height = 24;
             this.dgvAllPeople.Size = new System.Drawing.Size(1416, 209);

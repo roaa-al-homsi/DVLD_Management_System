@@ -8,11 +8,12 @@ namespace DVLD_Business
         private enum Mode { Add, Update }
         private Mode _mode;
         public int Id { get; set; }
-        public int PersonId { get; set; }
+        public int PersonId { get; set; }//fk
         public string Username { get; set; }
         public string Password { get; set; }
         public bool IsActive { get; set; }
 
+        public Person PersonInfo { get; set; }
         public User()
         {
             this.Id = -1;
@@ -30,7 +31,7 @@ namespace DVLD_Business
             this.Username = Username;
             this.Password = Password;
             this.IsActive = IsActive;
-
+            this.PersonInfo = Person.Find(PersonId);
 
             _mode = Mode.Update;
         }

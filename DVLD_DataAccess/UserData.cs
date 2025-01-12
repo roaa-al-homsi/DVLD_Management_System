@@ -98,7 +98,7 @@ namespace DVLD_DataAccess
         }
         static public DataTable All()
         {
-            return GenericData.All("select * from Users");
+            return GenericData.All("select * from User_Info_view");
         }
         static public bool Delete(int Id)
         {
@@ -108,10 +108,6 @@ namespace DVLD_DataAccess
         {
             return GenericData.Exist("select Found=1 from Users where Id= @Id", "@Id", Id);
         }
-
-
-
-
 
     }
 }

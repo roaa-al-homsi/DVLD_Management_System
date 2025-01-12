@@ -8,8 +8,8 @@ namespace DVLD.People
     public partial class frmManagePeople : Form
     {
 
-        private static DataTable _dtAllPeople = Person.All();//method all returns a view , I coded.
-        private DataTable _dtPeople = _dtAllPeople.DefaultView.ToTable(false, "Id", "NationalNo", "First Name", "Second Name", "Third Name", "Last Name", "Gender", "Date Of Birth", "Nationality", "Phone", "Email");
+        private static DataTable _dtAllPeople;//method all returns a view , I coded.
+        private DataTable _dtPeople;
 
         public frmManagePeople()
         {
@@ -66,6 +66,7 @@ namespace DVLD.People
         }
         private void frmManagePeople_Load(object sender, EventArgs e)
         {
+            _RefreshData();
             cmbFilterBy.SelectedIndex = 0;
             dgvAllPeople.DataSource = _dtPeople;
             labCountRecords.Text = dgvAllPeople.Rows.Count.ToString();

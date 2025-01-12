@@ -61,7 +61,8 @@ namespace DVLD.People.userControls
             txtNationalNo.Text = _Person.NationalNo;
             txtAddress.Text = _Person.Address;
             txtGender.Text = (_Person.Gender == 1) ? "Female" : "Male";
-            txtName.Text = $"{_Person.FirstName} {_Person.SecondName} {_Person.ThirdName} {_Person.LastName}";
+            txtName.Text = (string.IsNullOrWhiteSpace(_Person.ThirdName)) ? $"{_Person.FirstName} {_Person.SecondName} {_Person.LastName}" :
+                $"{_Person.FirstName} {_Person.SecondName} {_Person.ThirdName} {_Person.LastName}";
             txtCountry.Text = Person.GetNameCountryById(_Person.NationalityCountryID);
             linkLabEdit.Enabled = true;
             _LoadImagePerson();

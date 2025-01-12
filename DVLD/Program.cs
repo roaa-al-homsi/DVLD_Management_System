@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DVLD.Users;
+using System;
 using System.Windows.Forms;
 
 namespace DVLD
@@ -17,7 +18,7 @@ namespace DVLD
             }
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMain());
+            Application.Run(new frmManageUsers());
         }
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         private static extern bool SetProcessDPIAware();
