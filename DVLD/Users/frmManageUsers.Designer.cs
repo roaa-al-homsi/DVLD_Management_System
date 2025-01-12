@@ -154,6 +154,7 @@
             this.btnAddUser.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.btnAddUser.Size = new System.Drawing.Size(112, 65);
             this.btnAddUser.TabIndex = 15;
+            this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
             // 
             // txtFilterBy
             // 

@@ -122,7 +122,10 @@ namespace DVLD.Users
 
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frmAddUpdateUser addUpdateUser = new frmAddUpdateUser((int)dgvAllUsers.CurrentRow.Cells[0].Value);
+            addUpdateUser.ShowDialog();
+            //Refresh dgvUsers
+            frmManageUsers_Load(null, null);
         }
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
@@ -133,6 +136,12 @@ namespace DVLD.Users
         private void showDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAddUser_Click(object sender, EventArgs e)
+        {
+            frmAddUpdateUser addUpdateUser = new frmAddUpdateUser();
+            addUpdateUser.ShowDialog();
         }
     }
 }

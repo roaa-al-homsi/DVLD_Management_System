@@ -52,7 +52,7 @@ namespace DVLD.People.userControls
         }
         private void _FindNow()
         {
-            switch (cmbFilterBy.SelectedItem)
+            switch (cmbFilterBy.Text)
             {
                 case "Id":
                     if (!Person.Exist(int.Parse(txtFilterValue.Text)))
@@ -60,7 +60,7 @@ namespace DVLD.People.userControls
                         MessageBox.Show($"There is no person with this Id {txtFilterValue.Text}");
                         return;
                     }
-                    uc_PersonInfoCard1.LoadPersonInfo(int.Parse(txtFilterValue.ToString()));
+                    uc_PersonInfoCard1.LoadPersonInfo(int.Parse(txtFilterValue.Text));
                     break;
                 case "National Number":
                     if (!Person.ExistByNationalNo(txtFilterValue.Text))
@@ -93,7 +93,7 @@ namespace DVLD.People.userControls
         private void btnFind_Click(object sender, EventArgs e)
         {
 
-            if (this.ValidateChildren())
+            if (!this.ValidateChildren())
             {
                 MessageBox.Show($"Some fields are not validate!, put the mouse over the red icon", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -123,7 +123,7 @@ namespace DVLD.People.userControls
         private void btnAdd_Click(object sender, EventArgs e)
         {
             frmAddUpdatePerson frmAddUpdatePerson = new frmAddUpdatePerson();
-            //frmAddUpdatePerson.DataBack += _DataBackEvent;
+            frmAddUpdatePerson.DataBack += _DataBackEvent;
             frmAddUpdatePerson.ShowDialog();
         }
         private void _DataBackEvent(object sender, int personId)
@@ -150,5 +150,7 @@ namespace DVLD.People.userControls
                 e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
             }
         }
+
+
     }
 }

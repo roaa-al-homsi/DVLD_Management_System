@@ -33,16 +33,14 @@
             this.gbFilter = new Guna.UI2.WinForms.Guna2GroupBox();
             this.btnAdd = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.btnFind = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.txtFilterValue = new Guna.UI2.WinForms.Guna2TextBox();
             this.cmbFilterBy = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.uc_PersonInfoCard1 = new DVLD.People.userControls.uc_PersonInfoCard();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.uc_PersonInfoCard1 = new DVLD.People.userControls.uc_PersonInfoCard();
             this.gbFilter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFind)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,7 +49,6 @@
             this.gbFilter.BorderColor = System.Drawing.Color.Black;
             this.gbFilter.Controls.Add(this.btnAdd);
             this.gbFilter.Controls.Add(this.btnFind);
-            this.gbFilter.Controls.Add(this.guna2CirclePictureBox1);
             this.gbFilter.Controls.Add(this.txtFilterValue);
             this.gbFilter.Controls.Add(this.cmbFilterBy);
             this.gbFilter.Controls.Add(this.guna2HtmlLabel1);
@@ -91,16 +88,6 @@
             this.btnFind.TabIndex = 4;
             this.btnFind.TabStop = false;
             this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
-            // 
-            // guna2CirclePictureBox1
-            // 
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(-25, -39);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(64, 64);
-            this.guna2CirclePictureBox1.TabIndex = 3;
-            this.guna2CirclePictureBox1.TabStop = false;
             // 
             // txtFilterValue
             // 
@@ -159,16 +146,16 @@
             this.guna2HtmlLabel1.TabIndex = 0;
             this.guna2HtmlLabel1.Text = "Filter By:";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // uc_PersonInfoCard1
             // 
             this.uc_PersonInfoCard1.Location = new System.Drawing.Point(6, 151);
             this.uc_PersonInfoCard1.Name = "uc_PersonInfoCard1";
             this.uc_PersonInfoCard1.Size = new System.Drawing.Size(723, 391);
             this.uc_PersonInfoCard1.TabIndex = 1;
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
             // 
             // uc_PersonInfoCardWithFilter
             // 
@@ -183,7 +170,6 @@
             this.gbFilter.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFind)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
@@ -196,7 +182,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtFilterValue;
         private Guna.UI2.WinForms.Guna2ComboBox cmbFilterBy;
         private userControls.uc_PersonInfoCard uc_PersonInfoCard1;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
         private Guna.UI2.WinForms.Guna2CirclePictureBox btnAdd;
         private Guna.UI2.WinForms.Guna2CirclePictureBox btnFind;
         private System.Windows.Forms.ErrorProvider errorProvider1;

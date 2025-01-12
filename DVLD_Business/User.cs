@@ -68,6 +68,14 @@ namespace DVLD_Business
         {
             return UserData.Exist(Id);
         }
+        public static bool ExistByPersonId(int personId)
+        {
+            return UserData.ExistByPersonId(personId);
+        }
+        public static bool ExistByUsername(string username)
+        {
+            return UserData.ExistByUsername(username);
+        }
         public static bool Delete(int Id)
         {
             if (!Exist(Id))
@@ -93,6 +101,8 @@ namespace DVLD_Business
             }
             return null;
         }
+
+
     }
 
 

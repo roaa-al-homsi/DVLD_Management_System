@@ -90,18 +90,19 @@ namespace DVLD.People.userControls
             _Person = Person.Find(personId);
             if (_Person == null)
             {
-                //  _ResetPersonInfo();
-                MessageBox.Show($"There is no person with this Id {_Person.Id}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //_ResetPersonInfo();
+                MessageBox.Show($"There is no person with this Id {personId}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             _FillPersonInfo();
         }
+
         public void LoadPersonInfo(string nationalNo)
         {
             _Person = Person.FindByNationalNo(nationalNo);
             if (_Person == null)
             {
-                MessageBox.Show($"There is no person with this nationalNo {_Person.NationalNo}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"There is no person with this nationalNo {nationalNo}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             _FillPersonInfo();

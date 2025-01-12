@@ -339,6 +339,7 @@
             this.txtAddress.PasswordChar = '\0';
             this.txtAddress.PlaceholderForeColor = System.Drawing.Color.Transparent;
             this.txtAddress.PlaceholderText = "";
+            this.txtAddress.ReadOnly = true;
             this.txtAddress.SelectedText = "";
             this.txtAddress.Size = new System.Drawing.Size(414, 34);
             this.txtAddress.TabIndex = 30;
