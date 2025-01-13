@@ -43,6 +43,7 @@
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.cmbIsActive = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllUsers)).BeginInit();
             this.cmsManageUsers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -69,7 +70,8 @@
             this.cmsManageUsers.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.updateToolStripMenuItem,
             this.deleteToolStripMenuItem,
-            this.showDetailsToolStripMenuItem});
+            this.showDetailsToolStripMenuItem,
+            this.changePasswordToolStripMenuItem});
             this.cmsManageUsers.Name = "cmsManagePeople";
             this.cmsManageUsers.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.cmsManageUsers.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
@@ -80,13 +82,13 @@
             this.cmsManageUsers.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
             this.cmsManageUsers.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
             this.cmsManageUsers.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.cmsManageUsers.Size = new System.Drawing.Size(169, 82);
+            this.cmsManageUsers.Size = new System.Drawing.Size(215, 136);
             // 
             // updateToolStripMenuItem
             // 
             this.updateToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("updateToolStripMenuItem.Image")));
             this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-            this.updateToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
             this.updateToolStripMenuItem.Text = "Update";
             this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
             // 
@@ -94,7 +96,7 @@
             // 
             this.deleteToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("deleteToolStripMenuItem.Image")));
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
@@ -102,7 +104,7 @@
             // 
             this.showDetailsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("showDetailsToolStripMenuItem.Image")));
             this.showDetailsToolStripMenuItem.Name = "showDetailsToolStripMenuItem";
-            this.showDetailsToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
+            this.showDetailsToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
             this.showDetailsToolStripMenuItem.Text = "Show Details";
             this.showDetailsToolStripMenuItem.Click += new System.EventHandler(this.showDetailsToolStripMenuItem_Click);
             // 
@@ -243,6 +245,13 @@
             this.cmbIsActive.TabIndex = 19;
             this.cmbIsActive.SelectedIndexChanged += new System.EventHandler(this.cmbIsActive_SelectedIndexChanged);
             // 
+            // changePasswordToolStripMenuItem
+            // 
+            this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
+            this.changePasswordToolStripMenuItem.Text = "Change Password";
+            this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
+            // 
             // frmManageUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -287,5 +296,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2ComboBox cmbIsActive;
+        private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;
     }
 }

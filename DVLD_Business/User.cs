@@ -40,7 +40,6 @@ namespace DVLD_Business
             this.Id = UserData.Add(this.PersonId, this.Username, this.Password, this.IsActive);
             return (this.Id != -1);
         }
-
         private bool _Update()
         {
             return UserData.Update(this.Id, this.PersonId, this.Username, this.Password, this.IsActive);
@@ -101,7 +100,10 @@ namespace DVLD_Business
             }
             return null;
         }
-
+        public bool ChangePassword()
+        {
+            return UserData.ChangePassword(this.Id, this.Password);
+        }
 
     }
 

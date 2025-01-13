@@ -188,6 +188,31 @@ namespace DVLD_DataAccess
             return GenericData.Exist("select Found=1 from Users where Username= @username", "@username", username);
         }
         //method change password
+        static public bool ChangePassword(int id, string newPassword)
+        {
+            int RowsAffected = 0;
+            string query = "update Users set Password=@newPassword WHERE Id=@id;";
+            using (SqlConnection connection = new SqlConnection(SettingData.ConnectionString))
+            {
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@id", id);
+                    command.Parameters.AddWithValue("@newPassword", newPassword);
+
+                    try
+                    {
+                        connection.Open();
+                        RowsAffected = command.ExecuteNonQuery();
+                    }
+                    catch (Exception ex) { }
+                }
+            }
+
+            return RowsAffected > 0;
+        }
+
+
+
 
     }
 }
