@@ -27,12 +27,17 @@ namespace DVLD.ApplicationTypes
                 dgvApplicationTypes.Columns[1].Width = 300;
                 dgvApplicationTypes.Columns[2].Width = 100;
             }
-
         }
         private void ManageApplicationTypes_Load(object sender, EventArgs e)
         {
             _RefreshData();
             _ChangeFormatDgvAllApplicationTypes();
+        }
+        private void updateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUpdateApplicationType frmUpdateApplication = new frmUpdateApplicationType((int)dgvApplicationTypes.CurrentRow.Cells[0].Value);
+            frmUpdateApplication.ShowDialog();
+            _RefreshData();
         }
     }
 }

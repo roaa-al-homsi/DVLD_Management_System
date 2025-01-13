@@ -12,7 +12,6 @@ namespace DVLD.Global_Classes
 
             return regex.IsMatch(emailAddress);
         }
-
         public static bool ValidateInteger(string Number)
         {
             var pattern = @"^[0-9]*$";
@@ -21,7 +20,6 @@ namespace DVLD.Global_Classes
 
             return regex.IsMatch(Number);
         }
-
         public static bool ValidateFloat(string Number)
         {
             var pattern = @"^[0-9]*(?:\.[0-9]*)?$";
@@ -30,7 +28,6 @@ namespace DVLD.Global_Classes
 
             return regex.IsMatch(Number);
         }
-
         public static bool IsNumber(string Number)
         {
             return (ValidateInteger(Number) || ValidateFloat(Number));

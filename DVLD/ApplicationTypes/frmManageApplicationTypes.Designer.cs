@@ -117,14 +117,15 @@
             this.cmsManageAppTypes.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
             this.cmsManageAppTypes.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
             this.cmsManageAppTypes.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.cmsManageAppTypes.Size = new System.Drawing.Size(132, 30);
+            this.cmsManageAppTypes.Size = new System.Drawing.Size(215, 58);
             // 
             // updateToolStripMenuItem
             // 
             this.updateToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("updateToolStripMenuItem.Image")));
             this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-            this.updateToolStripMenuItem.Size = new System.Drawing.Size(131, 26);
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
             this.updateToolStripMenuItem.Text = "Update";
+            this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
             // 
             // frmManageApplicationTypes
             // 
