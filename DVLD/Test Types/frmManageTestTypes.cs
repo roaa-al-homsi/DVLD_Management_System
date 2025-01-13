@@ -1,4 +1,5 @@
-﻿using DVLD_Business;
+﻿using DVLD.Test_Types;
+using DVLD_Business;
 using System;
 using System.Data;
 using System.Windows.Forms;
@@ -33,6 +34,13 @@ namespace DVLD.TestTypes
         {
             _Refresh();
             _ChangeFormatDgvTestTypes();
+        }
+
+        private void updateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUpdateTestTypes frmUpdateTest = new frmUpdateTestTypes((int)dgvTestTypes.CurrentRow.Cells[0].Value);
+            frmUpdateTest.ShowDialog();
+            _Refresh();
         }
     }
 }
