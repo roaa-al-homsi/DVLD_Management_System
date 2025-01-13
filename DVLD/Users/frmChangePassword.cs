@@ -6,7 +6,6 @@ namespace DVLD.Users
     public partial class frmChangePassword : Form
     {
         private int _userId;
-        // private User _user;
         public frmChangePassword(int userId)
         {
             InitializeComponent();
