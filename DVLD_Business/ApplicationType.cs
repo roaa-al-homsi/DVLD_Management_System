@@ -10,12 +10,12 @@ namespace DVLD_Business
         public string Title { get; set; }
         public decimal Fees { get; set; }
 
-        //public ApplicationType()
-        //{
-        //    this.Id = -1;
-        //    this.Title = string.Empty;
-        //    this.Fees = 0;
-        //}
+        public ApplicationType()
+        {
+            this.Id = -1;
+            this.Title = string.Empty;
+            this.Fees = 0;
+        }
         private ApplicationType(int Id, string Title, decimal Fees)
         {
             this.Id = Id;

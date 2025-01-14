@@ -1,4 +1,5 @@
-﻿using DVLD_Business;
+﻿using DVLD.Global_Classes;
+using DVLD_Business;
 using Guna.UI2.WinForms;
 using System.ComponentModel;
 using System.Windows.Forms;
@@ -52,6 +53,10 @@ namespace DVLD.ApplicationTypes
         {
             // Reminder:: Adding if char is point in float case .
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            if (!Validation.IsNumber(txtFees.Text))
             {
                 e.Handled = true;
             }
