@@ -3,10 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{77A56D8A-CE3E-4012-AA9D-C62C2F3B031F}|..\\DVLD_DataAccess\\DVLD_DataAccess.csproj|c:\\users\\ruaa\\source\\repos\\dvld_management_system\\dvld_dataaccess\\applicationtypedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|c:\\users\\ruaa\\source\\repos\\dvld_management_system\\dvld\\test types\\frmmanagetesttypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|solutionrelative:test types\\frmmanagetesttypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0EA00617-C8EC-4C15-884F-394B2E1A0208}|..\\DVLD_Business\\DVLD_Business.csproj|c:\\users\\ruaa\\source\\repos\\dvld_management_system\\dvld_business\\applicationtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|c:\\users\\ruaa\\source\\repos\\dvld_management_system\\dvld\\test types\\frmmanagetesttypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|solutionrelative:test types\\frmmanagetesttypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|c:\\users\\ruaa\\source\\repos\\dvld_management_system\\dvld\\test types\\frmupdatetesttypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|solutionrelative:test types\\frmupdatetesttypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -16,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 270,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -24,29 +30,40 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ApplicationType.cs",
-              "DocumentMoniker": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD_Business\\ApplicationType.cs",
-              "RelativeDocumentMoniker": "..\\DVLD_Business\\ApplicationType.cs",
-              "ToolTip": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD_Business\\ApplicationType.cs",
-              "RelativeToolTip": "..\\DVLD_Business\\ApplicationType.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "frmManageTestTypes.cs",
+              "DocumentMoniker": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\Test Types\\frmManageTestTypes.cs",
+              "RelativeDocumentMoniker": "Test Types\\frmManageTestTypes.cs",
+              "ToolTip": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\Test Types\\frmManageTestTypes.cs \u2B24",
+              "RelativeToolTip": "Test Types\\frmManageTestTypes.cs \u2B24",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAewB8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-13T22:26:52.342Z",
+              "WhenOpened": "2025-01-14T06:37:19.56Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ApplicationTypeData.cs",
-              "DocumentMoniker": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD_DataAccess\\ApplicationTypeData.cs",
-              "RelativeDocumentMoniker": "..\\DVLD_DataAccess\\ApplicationTypeData.cs",
-              "ToolTip": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD_DataAccess\\ApplicationTypeData.cs",
-              "RelativeToolTip": "..\\DVLD_DataAccess\\ApplicationTypeData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "frmUpdateTestTypes.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\Test Types\\frmUpdateTestTypes.cs",
+              "RelativeDocumentMoniker": "Test Types\\frmUpdateTestTypes.cs",
+              "ToolTip": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\Test Types\\frmUpdateTestTypes.cs [Design]",
+              "RelativeToolTip": "Test Types\\frmUpdateTestTypes.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-13T22:26:50.489Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-14T06:19:54.19Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmManageTestTypes.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\Test Types\\frmManageTestTypes.cs",
+              "RelativeDocumentMoniker": "Test Types\\frmManageTestTypes.cs",
+              "ToolTip": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\Test Types\\frmManageTestTypes.cs [Design] \u2B24",
+              "RelativeToolTip": "Test Types\\frmManageTestTypes.cs [Design] \u2B24",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-14T06:19:52.625Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

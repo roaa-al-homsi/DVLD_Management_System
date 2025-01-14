@@ -7,9 +7,9 @@ namespace DVLD.Test_Types
 {
     public partial class frmUpdateTestTypes : Form
     {
-        private int _testTypeId;
+        private TestType.enTestTypes _testTypeId = TestType.enTestTypes.VisionTest;
         private TestType _TestType;
-        public frmUpdateTestTypes(int testTypeId)
+        public frmUpdateTestTypes(TestType.enTestTypes testTypeId)
         {
             InitializeComponent();
             _testTypeId = testTypeId;
@@ -17,7 +17,7 @@ namespace DVLD.Test_Types
 
         private void _LoadDataToForm()
         {
-            if (!TestType.Exist(_testTypeId))
+            if (!TestType.Exist((int)_testTypeId))
             {
                 MessageBox.Show("This Type Of Test Doesn't Exist! ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;

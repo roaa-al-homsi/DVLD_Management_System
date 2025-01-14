@@ -38,7 +38,7 @@ namespace DVLD.TestTypes
 
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmUpdateTestTypes frmUpdateTest = new frmUpdateTestTypes((int)dgvTestTypes.CurrentRow.Cells[0].Value);
+            frmUpdateTestTypes frmUpdateTest = new frmUpdateTestTypes((TestType.enTestTypes)dgvTestTypes.CurrentRow.Cells[0].Value);
             frmUpdateTest.ShowDialog();
             _Refresh();
         }
