@@ -127,7 +127,7 @@ namespace DVLD_DataAccess
         static public DataTable All()
         {
             //Create view a tall query. 
-            return GenericData.All("select * from LocalDrivingLicenseApplications");
+            return GenericData.All("select * from LocalDrivingLicenseApplication_View");
         }
         static public bool Delete(int Id)
         {
