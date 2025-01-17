@@ -7,8 +7,8 @@ namespace DVLD_Business
     public class Application
     {
 
-        private enum Mode { Add, Update }
-        private Mode _mode = Mode.Add;
+        public enum Mode { Add, Update }
+        public Mode mode = Mode.Add;
         public enum enApplicationType
         {
             NewDrivingLicense = 1, RenewDrivingLicense = 2, ReplaceLostDrivingLicense = 3,
@@ -63,7 +63,7 @@ namespace DVLD_Business
             this.PaidFees = 0;
             this.CreatedByUserId = -1;
 
-            _mode = Mode.Add;
+            mode = Mode.Add;
         }
         private Application(int Id, int PersonId, DateTime Date, int ApplicationTypeId, enApplicationStatus Status, DateTime LastStatusDate, decimal PaidFees, int CreatedByUserId)
         {
@@ -80,7 +80,7 @@ namespace DVLD_Business
             this.CreatedByUser = User.Find(CreatedByUserId);
 
 
-            _mode = Mode.Update;
+            mode = Mode.Update;
         }
         private bool _Add()
         {
@@ -95,13 +95,13 @@ namespace DVLD_Business
         public bool Save()
         {
 
-            switch (_mode)
+            switch (mode)
             {
                 case Mode.Add:
                     {
                         if (_Add())
                         {
-                            _mode = Mode.Update;
+                            mode = Mode.Update;
                             return true;
                         }
                         else
