@@ -35,7 +35,6 @@ namespace DVLD_Business
         {
             return ApplicationTypeData.Exist(Id);
         }
-
         public static DataTable All()
         {
             return ApplicationTypeData.All();
@@ -50,6 +49,10 @@ namespace DVLD_Business
                 return new ApplicationType(Id, Title, Fees);
             }
             return null;
+        }
+        public static decimal GetFeesForSpecificApplication(int Id)
+        {
+            return ApplicationTypeData.GetFeesForSpecificApplication(Id);
         }
     }
 

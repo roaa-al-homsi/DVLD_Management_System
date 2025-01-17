@@ -14,6 +14,7 @@ namespace DVLD_Business
             NewDrivingLicense = 1, RenewDrivingLicense = 2, ReplaceLostDrivingLicense = 3,
             ReplaceDamagedDrivingLicense = 4, ReleaseDetainedDrivingLicense = 5, NewInternationalLicense = 6, RetakeTest = 7
         }
+
         public enum enApplicationStatus { New = 1, Cancelled = 2, Completed = 3 };
 
         public int Id { get; set; }

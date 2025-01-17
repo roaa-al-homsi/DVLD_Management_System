@@ -138,6 +138,14 @@ namespace DVLD_DataAccess
             return GenericData.Exist("select Found=1 from LocalDrivingLicenseApplications where Id= @Id", "@Id", Id);
         }
 
+        //static public bool IsHaveLocalDrivingActive()
+        //{
+
+        //    return GenericData.Exist("select Found=1 from LocalDrivingLicenseApplications where Id= @Id", "@Id", Id);
+
+        //}
+
+
         //Al of these in lesson 49
         //Does pass Test Type
         //Does Attend Test Type

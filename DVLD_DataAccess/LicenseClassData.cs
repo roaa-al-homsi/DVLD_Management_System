@@ -103,6 +103,10 @@ namespace DVLD_DataAccess
         {
             return GenericData.All("select * from LicenseClasses");
         }
+        static public DataTable AllNames()
+        {
+            return GenericData.All("select  Name  from LicenseClasses");
+        }
         static public bool Delete(int Id)
         {
             return GenericData.Delete("delete LicenseClasses where Id = @Id", "@Id", Id);

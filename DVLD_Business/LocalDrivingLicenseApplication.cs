@@ -125,6 +125,11 @@ namespace DVLD_Business
             return null;
         }
 
+        public bool IsHaveLocalDrivingActive()
+        {
+
+
+        }
 
     }
 

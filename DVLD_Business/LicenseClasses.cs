@@ -77,6 +77,10 @@ namespace DVLD_Business
         {
             return LicenseClassData.All();
         }
+        public static DataTable AllNames()
+        {
+            return LicenseClassData.AllNames();
+        }
         public static LicenseClass Find(int Id)
         {
             string Name = string.Empty;
