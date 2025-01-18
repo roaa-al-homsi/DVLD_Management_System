@@ -121,7 +121,51 @@ namespace DVLD_DataAccess
         //lesson 47
         //DoesPersonHaveActiveApplication
         //GetActiveApplicationId
-        //GetActiveApplicationIdForLicenseClass
+
+
+        static public int GetActiveApplicationIdForLicenseClass(int personId, int applicationTypeId, int licenseClassId)
+        {
+            int ActiveApplicationID = -1;
+
+            SqlConnection connection = new SqlConnection(SettingData.ConnectionString);
+
+            string query = @"SELECT ActiveApplicationID=Applications.Id  
+                            From
+                            Applications INNER JOIN
+                            LocalDrivingLicenseApplications ON Applications.Id = LocalDrivingLicenseApplications.ApplicationID
+                            WHERE PersonId = @personId 
+                            and ApplicationTypeId=@applicationTypeId
+							and LocalDrivingLicenseApplications.LicenseClassesId = @licenseClassId
+                            and Status=1";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@personId", personId);
+            command.Parameters.AddWithValue("@applicationTypeId", applicationTypeId);
+            command.Parameters.AddWithValue("@licenseClassId", licenseClassId);
+            try
+            {
+                connection.Open();
+                object result = command.ExecuteScalar();
+
+
+                if (result != null && int.TryParse(result.ToString(), out int AppID))
+                {
+                    ActiveApplicationID = AppID;
+                }
+            }
+            catch (Exception ex)
+            {
+                //Console.WriteLine("Error: " + ex.Message);
+                return ActiveApplicationID;
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return ActiveApplicationID;
+        }
         public static bool UpdateStatus(int Id, short NewStatus)
         {
             int RowsAffected = 0;
@@ -144,6 +188,8 @@ namespace DVLD_DataAccess
 
             return RowsAffected > 0;
         }
+
+
 
     }
 }

@@ -155,9 +155,15 @@ namespace DVLD_Business
         {
             return ApplicationData.UpdateStatus(Id, (byte)enApplicationStatus.Completed);
         }
+        public static int GetActiveApplicationIdForLicenseClass(int personId, int applicationTypeId, int licenseClassId)
+        {
+            return ApplicationData.GetActiveApplicationIdForLicenseClass(personId, applicationTypeId, licenseClassId);
+
+        }
+
         //DoesPersonHaveActiveApplication(personId,applicationTypeId)
         //DoesPersonHaveActiveApplication(applicationTypeId)
-        //GetActiveApplicationIdForLicenseClass
+
         //GetActiveApplicationID
 
 

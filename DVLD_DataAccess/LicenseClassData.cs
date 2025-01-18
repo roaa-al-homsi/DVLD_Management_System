@@ -40,7 +40,7 @@ namespace DVLD_DataAccess
         public static bool Update(int Id, string Name, string Description, byte MinimumAllowedAge, byte DefaultValidityLength, decimal Fees)
         {
             int RowsAffected = 0;
-            string query = "update LicenseClasses set Id = @Id,Name = @Name,Description = @Description,MinimumAllowedAge = @MinimumAllowedAge,DefaultValidityLength = @DefaultValidityLength,Fees = @Fees  WHERE Id=@Id;";
+            string query = "update LicenseClasses set Name = @Name,Description = @Description,MinimumAllowedAge = @MinimumAllowedAge,DefaultValidityLength = @DefaultValidityLength,Fees = @Fees  WHERE Id=@Id;";
             using (SqlConnection connection = new SqlConnection(SettingData.ConnectionString))
             {
                 using (SqlCommand command = new SqlCommand(query, connection))
@@ -115,6 +115,13 @@ namespace DVLD_DataAccess
         {
             return GenericData.Exist("select Found=1 from LicenseClasses where Id= @Id", "@Id", Id);
         }
-
+        static public string GetNameById(int Id)
+        {
+            return GenericData.GetNameById("select Name from LicenseClasses where Id=@Id", "@Id", Id);
+        }
+        static public int GetIdByName(string name)
+        {
+            return GenericData.GetNameById("select Id from LicenseClasses where Name=@name", "@name", name);
+        }
     }
 }

@@ -81,6 +81,14 @@ namespace DVLD_Business
         {
             return LicenseClassData.AllNames();
         }
+        public static string GetNameById(int Id)
+        {
+            return LicenseClassData.GetNameById(Id);
+        }
+        public static int GetIdByName(string name)
+        {
+            return LicenseClassData.GetIdByName(name);
+        }
         public static LicenseClass Find(int Id)
         {
             string Name = string.Empty;
