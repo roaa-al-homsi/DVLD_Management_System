@@ -80,6 +80,12 @@
     <Compile Include="Applications\Local Driving License\UserControls\uc_LocalDrivingLicenseInfoCard.Designer.cs">
       <DependentUpon>uc_LocalDrivingLicenseInfoCard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Applications\uc_BasicApplicationInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Applications\uc_BasicApplicationInfo.Designer.cs">
+      <DependentUpon>uc_BasicApplicationInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,6 +192,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Applications\Local Driving License\UserControls\uc_LocalDrivingLicenseInfoCard.resx">
       <DependentUpon>uc_LocalDrivingLicenseInfoCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Applications\uc_BasicApplicationInfo.resx">
+      <DependentUpon>uc_BasicApplicationInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>

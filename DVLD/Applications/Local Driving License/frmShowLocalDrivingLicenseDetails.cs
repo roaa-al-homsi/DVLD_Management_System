@@ -9,7 +9,7 @@ namespace DVLD.Applications.Local_Driving_License
         {
             InitializeComponent();
 
-            uc_LocalDrivingLicenseInfoCard1.LoadLocalDrivingLicenseInfo(localDrivingLicenseId);
+            uc_LocalDrivingLicenseInfoCard1.LoadLocalDrivingLicenseInfoById(localDrivingLicenseId);
         }
 
 
