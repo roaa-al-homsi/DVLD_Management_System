@@ -1,4 +1,5 @@
-﻿using DVLD.Local_Driving_License_App;
+﻿using DVLD.Applications.Local_Driving_License;
+using DVLD.Local_Driving_License_App;
 using System.Windows.Forms;
 
 namespace DVLD
@@ -18,8 +19,9 @@ namespace DVLD
 
         private void localDrivingLicenseApplicationsToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            frmAddUpdateLocalDrivingLicenseApplication frmNewLocalDrivingLicense = new frmAddUpdateLocalDrivingLicenseApplication();
-            frmNewLocalDrivingLicense.ShowDialog();
+            frmManageLocalDrivingLicenseApplication frmManageLocalDrivingLicense = new frmManageLocalDrivingLicenseApplication();
+            frmManageLocalDrivingLicense.ShowDialog();
+
         }
     }
 }
