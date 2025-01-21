@@ -29,7 +29,7 @@ namespace DVLD_Business
             mode = Mode.Add;
         }
         private LocalDrivingLicenseApplication(int Id, int applicationId, int licenseClassId, DateTime date, int applicationTypeId,
-            enApplicationStatus status, DateTime lastStatusDate, decimal paidFees, int createByUserId)
+            enApplicationStatus status, DateTime lastStatusDate, decimal paidFees, int createByUserId, int personId)
         {
             this.Id = Id;
             this.ApplicationId = applicationId;
@@ -40,6 +40,7 @@ namespace DVLD_Business
             this.LastStatusDate = lastStatusDate;
             this.PaidFees = paidFees;
             this.CreatedByUserId = createByUserId;
+            this.PersonId = personId;
             this.LicenseClassId = licenseClassId;
             this.LicenseClass = LicenseClass.Find(licenseClassId);
 
@@ -107,7 +108,7 @@ namespace DVLD_Business
             {
                 Application application = Application.FindBaseApplication(ApplicationId);
                 return new LocalDrivingLicenseApplication(Id, ApplicationId, LicenseClassesId, application.Date, application.ApplicationTypeId, application.Status, application.LastStatusDate,
-                    application.PaidFees, application.CreatedByUserId);
+                    application.PaidFees, application.CreatedByUserId, application.PersonId);
             }
             return null;
         }
@@ -120,7 +121,7 @@ namespace DVLD_Business
             {
                 Application application = Application.FindBaseApplication(applicationId);
                 return new LocalDrivingLicenseApplication(applicationId, Id, LicenseClassesId, application.Date, application.ApplicationTypeId, application.Status, application.LastStatusDate,
-                    application.PaidFees, application.CreatedByUserId);
+                    application.PaidFees, application.CreatedByUserId, application.PersonId);
             }
             return null;
         }

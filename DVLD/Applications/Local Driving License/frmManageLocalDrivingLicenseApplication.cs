@@ -19,6 +19,10 @@ namespace DVLD.Applications.Local_Driving_License
         {
             foreach (DataColumn column in _dtLDLA.Columns)
             {
+                if (column.ColumnName == "Application Date" || column.ColumnName == "Driving Class")
+                {
+                    continue;
+                }
                 cmbFilterBy.Items.Add(column);
             }
         }
@@ -69,6 +73,9 @@ namespace DVLD.Applications.Local_Driving_License
                 txtValueFilterBy.Text = string.Empty;
                 txtValueFilterBy.Focus();
             }
+
+            _dtLDLA.DefaultView.RowFilter = "";
+            labCountRecords.Text = dgvAllLDLA.Rows.Count.ToString();
         }
 
         private void txtValueFilterBy_TextChanged(object sender, EventArgs e)

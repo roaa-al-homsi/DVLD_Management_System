@@ -11,7 +11,7 @@ namespace DVLD.Local_Driving_License_App
         private enum Mode { Add = 1, Update = 2 }
         private Mode _mode = Mode.Add;
         private LocalDrivingLicenseApplication _localDrivingLicenseApplication;
-        private int _localDrivingLicenseId = -1;
+        private static int _localDrivingLicenseId = -1;
         private int _SelectedPersonId = -1;
         public frmAddUpdateLocalDrivingLicenseApplication()
         {
