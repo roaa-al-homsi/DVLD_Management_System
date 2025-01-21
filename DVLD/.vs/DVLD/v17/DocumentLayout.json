@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|c:\\users\\ruaa\\source\\repos\\dvld_management_system\\dvld\\applications\\local driving license\\usercontrols\\uc_localdrivinglicenseinfocard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|solutionrelative:applications\\local driving license\\usercontrols\\uc_localdrivinglicenseinfocard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|c:\\users\\ruaa\\source\\repos\\dvld_management_system\\dvld\\applications\\local driving license\\frmshowlocaldrivinglicensedetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|solutionrelative:applications\\local driving license\\frmshowlocaldrivinglicensedetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|c:\\users\\ruaa\\source\\repos\\dvld_management_system\\dvld\\applications\\local driving license\\usercontrols\\uc_localdrivinglicenseinfocard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|solutionrelative:applications\\local driving license\\usercontrols\\uc_localdrivinglicenseinfocard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|c:\\users\\ruaa\\source\\repos\\dvld_management_system\\dvld\\applications\\local driving license\\frmshowlocaldrivinglicensedetails.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|solutionrelative:applications\\local driving license\\frmshowlocaldrivinglicensedetails.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|c:\\users\\ruaa\\source\\repos\\dvld_management_system\\dvld\\applications\\local driving license\\frmshowlocaldrivinglicensedetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|solutionrelative:applications\\local driving license\\frmshowlocaldrivinglicensedetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 270,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,27 +30,40 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "uc_LocalDrivingLicenseInfoCard.cs",
-              "DocumentMoniker": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\Applications\\Local Driving License\\UserControls\\uc_LocalDrivingLicenseInfoCard.cs",
-              "RelativeDocumentMoniker": "Applications\\Local Driving License\\UserControls\\uc_LocalDrivingLicenseInfoCard.cs",
-              "ToolTip": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\Applications\\Local Driving License\\UserControls\\uc_LocalDrivingLicenseInfoCard.cs",
-              "RelativeToolTip": "Applications\\Local Driving License\\UserControls\\uc_LocalDrivingLicenseInfoCard.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "frmShowLocalDrivingLicenseDetails.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\Applications\\Local Driving License\\frmShowLocalDrivingLicenseDetails.Designer.cs",
+              "RelativeDocumentMoniker": "Applications\\Local Driving License\\frmShowLocalDrivingLicenseDetails.Designer.cs",
+              "ToolTip": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\Applications\\Local Driving License\\frmShowLocalDrivingLicenseDetails.Designer.cs \u2B24",
+              "RelativeToolTip": "Applications\\Local Driving License\\frmShowLocalDrivingLicenseDetails.Designer.cs \u2B24",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAEwFIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-21T12:33:32.451Z",
+              "WhenOpened": "2025-01-21T14:30:34.852Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "uc_LocalDrivingLicenseInfoCard.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\Applications\\Local Driving License\\UserControls\\uc_LocalDrivingLicenseInfoCard.cs",
-              "RelativeDocumentMoniker": "Applications\\Local Driving License\\UserControls\\uc_LocalDrivingLicenseInfoCard.cs",
-              "ToolTip": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\Applications\\Local Driving License\\UserControls\\uc_LocalDrivingLicenseInfoCard.cs [Design]",
-              "RelativeToolTip": "Applications\\Local Driving License\\UserControls\\uc_LocalDrivingLicenseInfoCard.cs [Design]",
+              "DocumentIndex": 0,
+              "Title": "frmShowLocalDrivingLicenseDetails.cs",
+              "DocumentMoniker": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\Applications\\Local Driving License\\frmShowLocalDrivingLicenseDetails.cs",
+              "RelativeDocumentMoniker": "Applications\\Local Driving License\\frmShowLocalDrivingLicenseDetails.cs",
+              "ToolTip": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\Applications\\Local Driving License\\frmShowLocalDrivingLicenseDetails.cs",
+              "RelativeToolTip": "Applications\\Local Driving License\\frmShowLocalDrivingLicenseDetails.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAmwA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-21T12:22:28.491Z",
+              "WhenOpened": "2025-01-21T14:28:31.455Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmShowLocalDrivingLicenseDetails.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\Applications\\Local Driving License\\frmShowLocalDrivingLicenseDetails.cs",
+              "RelativeDocumentMoniker": "Applications\\Local Driving License\\frmShowLocalDrivingLicenseDetails.cs",
+              "ToolTip": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\Applications\\Local Driving License\\frmShowLocalDrivingLicenseDetails.cs [Design]",
+              "RelativeToolTip": "Applications\\Local Driving License\\frmShowLocalDrivingLicenseDetails.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-21T14:22:45.01Z",
               "EditorCaption": " [Design]"
             }
           ]
