@@ -35,6 +35,9 @@
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.labCountRecords = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnAddLDLA = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.cmbFilterBy = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.txtValueFilterBy = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllLDLA)).BeginInit();
             this.SuspendLayout();
@@ -80,7 +83,7 @@
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Andalus", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(36, 639);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(36, 635);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(114, 32);
             this.guna2HtmlLabel3.TabIndex = 14;
@@ -92,7 +95,7 @@
             this.labCountRecords.BackColor = System.Drawing.Color.Transparent;
             this.labCountRecords.Font = new System.Drawing.Font("Andalus", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labCountRecords.ForeColor = System.Drawing.Color.Black;
-            this.labCountRecords.Location = new System.Drawing.Point(131, 638);
+            this.labCountRecords.Location = new System.Drawing.Point(131, 634);
             this.labCountRecords.Name = "labCountRecords";
             this.labCountRecords.Size = new System.Drawing.Size(52, 33);
             this.labCountRecords.TabIndex = 13;
@@ -113,11 +116,70 @@
             this.btnAddLDLA.TabIndex = 15;
             this.btnAddLDLA.Click += new System.EventHandler(this.btnAddLDLA_Click);
             // 
+            // guna2HtmlLabel2
+            // 
+            this.guna2HtmlLabel2.AutoSize = false;
+            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Andalus", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(36, 253);
+            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(114, 32);
+            this.guna2HtmlLabel2.TabIndex = 16;
+            this.guna2HtmlLabel2.Text = "Filter By:";
+            // 
+            // cmbFilterBy
+            // 
+            this.cmbFilterBy.AutoRoundedCorners = true;
+            this.cmbFilterBy.BackColor = System.Drawing.Color.Transparent;
+            this.cmbFilterBy.BorderRadius = 17;
+            this.cmbFilterBy.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbFilterBy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbFilterBy.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbFilterBy.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbFilterBy.Font = new System.Drawing.Font("Andalus", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbFilterBy.ForeColor = System.Drawing.Color.Black;
+            this.cmbFilterBy.ItemHeight = 30;
+            this.cmbFilterBy.Items.AddRange(new object[] {
+            "None"});
+            this.cmbFilterBy.Location = new System.Drawing.Point(131, 249);
+            this.cmbFilterBy.Name = "cmbFilterBy";
+            this.cmbFilterBy.Size = new System.Drawing.Size(229, 36);
+            this.cmbFilterBy.TabIndex = 17;
+            this.cmbFilterBy.SelectedIndexChanged += new System.EventHandler(this.cmbFilterBy_SelectedIndexChanged);
+            // 
+            // txtValueFilterBy
+            // 
+            this.txtValueFilterBy.AutoRoundedCorners = true;
+            this.txtValueFilterBy.BorderRadius = 17;
+            this.txtValueFilterBy.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtValueFilterBy.DefaultText = "";
+            this.txtValueFilterBy.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtValueFilterBy.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtValueFilterBy.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtValueFilterBy.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtValueFilterBy.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtValueFilterBy.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtValueFilterBy.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtValueFilterBy.Location = new System.Drawing.Point(366, 249);
+            this.txtValueFilterBy.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtValueFilterBy.Name = "txtValueFilterBy";
+            this.txtValueFilterBy.PasswordChar = '\0';
+            this.txtValueFilterBy.PlaceholderText = "";
+            this.txtValueFilterBy.SelectedText = "";
+            this.txtValueFilterBy.Size = new System.Drawing.Size(228, 36);
+            this.txtValueFilterBy.TabIndex = 18;
+            this.txtValueFilterBy.TextChanged += new System.EventHandler(this.txtValueFilterBy_TextChanged);
+            this.txtValueFilterBy.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtValueFilterBy_KeyPress);
+            // 
             // frmManageLocalDrivingLicenseApplication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1437, 705);
+            this.Controls.Add(this.txtValueFilterBy);
+            this.Controls.Add(this.cmbFilterBy);
+            this.Controls.Add(this.guna2HtmlLabel2);
             this.Controls.Add(this.btnAddLDLA);
             this.Controls.Add(this.guna2HtmlLabel3);
             this.Controls.Add(this.labCountRecords);
@@ -143,5 +205,8 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2HtmlLabel labCountRecords;
         private Guna.UI2.WinForms.Guna2ImageButton btnAddLDLA;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbFilterBy;
+        private Guna.UI2.WinForms.Guna2TextBox txtValueFilterBy;
     }
 }
