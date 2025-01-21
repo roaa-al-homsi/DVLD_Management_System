@@ -12,6 +12,7 @@ namespace DVLD.Local_Driving_License_App
         private Mode _mode = Mode.Add;
         private LocalDrivingLicenseApplication _localDrivingLicenseApplication;
         private int _localDrivingLicenseId = -1;
+        private int _SelectedPersonId = -1;
         public frmAddUpdateLocalDrivingLicenseApplication()
         {
             InitializeComponent();
@@ -66,7 +67,7 @@ namespace DVLD.Local_Driving_License_App
                 labLDLAId.Text = _localDrivingLicenseId.ToString();
                 txtApplicationDate.Text = _localDrivingLicenseApplication.Date.ToString();
                 txtApplicationFees.Text = _localDrivingLicenseApplication.PaidFees.ToString();
-                // txtCreatedBy.Text = _localDrivingLicenseApplication.CreatedByUser.Username;)
+                txtCreatedBy.Text = _localDrivingLicenseApplication.CreatedByUser.Username;
                 cmbLicesneClasses.SelectedIndex = cmbLicesneClasses.FindString(LicenseClass.GetNameById(_localDrivingLicenseApplication.LicenseClassId));
             }
             else
@@ -111,28 +112,28 @@ namespace DVLD.Local_Driving_License_App
             _localDrivingLicenseApplication.Status = Application.enApplicationStatus.New;
             _localDrivingLicenseApplication.LastStatusDate = DateTime.Now;
             _localDrivingLicenseApplication.PaidFees = Convert.ToDecimal(txtApplicationFees.Text);
-            // _localDrivingLicenseApplication.CreatedByUserID = clsGlobal.CurrentUser.UserID;
+            //  _localDrivingLicenseApplication.CreatedByUserId = Global.CurrentUser.Id;
 
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
             _localDrivingLicenseApplication.LicenseClassId = LicenseClass.GetIdByName(cmbLicesneClasses.Text);
-            _localDrivingLicenseApplication.ApplicationId = (int)Application.enApplicationType.NewDrivingLicense;
+            // _localDrivingLicenseApplication.ApplicationId = (int)Application.enApplicationType.NewDrivingLicense;
 
             int activeApplicationId = Application.GetActiveApplicationIdForLicenseClass(_localDrivingLicenseApplication.PersonId, (int)Application.enApplicationType.NewDrivingLicense, _localDrivingLicenseApplication.LicenseClassId);
             if (activeApplicationId != -1)
             {
-                MessageBox.Show("Choose another License Class, the selected Person Already have an active application for the selected class with id=" + ActiveApplicationID, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Choose another License Class, the selected Person Already have an active application for the selected class with id=" + activeApplicationId, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 cmbLicesneClasses.Focus();
                 return;
             }
 
-            //if (License.IsLicenseExistByPersonID(ctrlPersonCardWithFilter1.PersonID, LicenseClassID))
-            //{
+            if (License.IsLicenseExistByPersonID(uc_PersonInfoCardWithFilter1.PersonId, _localDrivingLicenseApplication.LicenseClassId))
+            {
 
-            //    MessageBox.Show("Person already have a license with the same applied driving class, Choose diffrent driving class", "Not allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    return;
-            //}
+                MessageBox.Show("Person already have a license with the same applied driving class, Choose different driving class", "Not allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             _FillLocalDrivingLicenseApplicationBeforeSave();
             if (_localDrivingLicenseApplication.Save())
@@ -147,6 +148,17 @@ namespace DVLD.Local_Driving_License_App
             {
                 MessageBox.Show("Error: Data Is not Saved Successfully.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+
+        private void frmAddUpdateLocalDrivingLicenseApplication_Activated(object sender, EventArgs e)
+        {
+            uc_PersonInfoCardWithFilter1.FilterFocus();
+        }
+
+        private void uc_PersonInfoCardWithFilter1_OnPersonSelected(int obj)
+        {
+            _SelectedPersonId = obj;
         }
     }
 }

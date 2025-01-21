@@ -121,7 +121,7 @@ namespace DVLD_DataAccess
         }
         static public int GetIdByName(string name)
         {
-            return GenericData.GetNameById("select Id from LicenseClasses where Name=@name", "@name", name);
+            return GenericData.GetIdByName("select Id from LicenseClasses where Name=@name", "@name", name);
         }
     }
 }

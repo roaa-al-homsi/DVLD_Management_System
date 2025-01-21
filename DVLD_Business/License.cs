@@ -82,6 +82,7 @@ namespace DVLD_Business
         {
             return LicenseData.Exist(Id);
         }
+
         public static bool Delete(int Id)
         {
             if (!Exist(Id))
@@ -112,6 +113,15 @@ namespace DVLD_Business
                 return new License(Id, ApplicationId, DriverId, LicenseClassId, IssueDate, ExpirationDate, Notes, PaidFees, IsActive, IssueReason, CreatedByUserId);
             }
             return null;
+        }
+        public static bool IsLicenseExistByPersonID(int PersonID, int LicenseClassID)
+        {
+            return (GetActiveLicenseIDByPersonID(PersonID, LicenseClassID) != -1);
+        }
+        public static int GetActiveLicenseIDByPersonID(int PersonID, int LicenseClassID)
+        {
+            return LicenseData.GetActiveLicenseIDByPersonID(PersonID, LicenseClassID);
+
         }
     }
 

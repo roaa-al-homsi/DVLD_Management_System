@@ -74,6 +74,7 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Global Classes\Global.cs" />
     <Compile Include="Global Classes\Util.cs" />
     <Compile Include="Global Classes\Validation.cs" />
     <Compile Include="Applications\Local Driving License App\frmAddUpdateLocalDrivingLicenseApplication.cs">

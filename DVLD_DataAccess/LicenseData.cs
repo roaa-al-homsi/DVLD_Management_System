@@ -126,6 +126,57 @@ namespace DVLD_DataAccess
         {
             return GenericData.Exist("select Found=1 from Licenses where Id= @Id", "@Id", Id);
         }
+        public static int GetActiveLicenseIDByPersonID(int PersonID, int LicenseClassID)
+        {
+            int LicenseID = -1;
+
+            SqlConnection connection = new SqlConnection(SettingData.ConnectionString);
+
+            string query = @"SELECT Licenses.Id
+                            FROM Licenses INNER JOIN
+                            Drivers ON Licenses.DriverID = Drivers.Id
+                            WHERE  
+                             Licenses.LicenseClassId =@LicenseClassID
+                              AND Drivers.PersonID = @PersonID
+                              And IsActive=1;";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@PersonID", PersonID);
+            command.Parameters.AddWithValue("@LicenseClass", LicenseClassID);
+
+            try
+            {
+                connection.Open();
+
+                object result = command.ExecuteScalar();
+
+                if (result != null && int.TryParse(result.ToString(), out int insertedID))
+                {
+                    LicenseID = insertedID;
+                }
+            }
+
+            catch (Exception ex)
+            {
+                //Console.WriteLine("Error: " + ex.Message);
+            }
+
+            finally
+            {
+                connection.Close();
+            }
+            return LicenseID;
+        }
+
+
+
+
+
+
+
+
+
 
     }
 }
