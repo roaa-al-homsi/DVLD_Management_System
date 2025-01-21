@@ -34,6 +34,7 @@
             this.dgvAllLDLA = new System.Windows.Forms.DataGridView();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.labCountRecords = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.btnAddLDLA = new Guna.UI2.WinForms.Guna2ImageButton();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllLDLA)).BeginInit();
             this.SuspendLayout();
@@ -98,11 +99,26 @@
             this.labCountRecords.Text = "??";
             this.labCountRecords.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btnAddLDLA
+            // 
+            this.btnAddLDLA.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnAddLDLA.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnAddLDLA.Image = ((System.Drawing.Image)(resources.GetObject("btnAddLDLA.Image")));
+            this.btnAddLDLA.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnAddLDLA.ImageRotate = 0F;
+            this.btnAddLDLA.Location = new System.Drawing.Point(1263, 224);
+            this.btnAddLDLA.Name = "btnAddLDLA";
+            this.btnAddLDLA.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnAddLDLA.Size = new System.Drawing.Size(64, 70);
+            this.btnAddLDLA.TabIndex = 15;
+            this.btnAddLDLA.Click += new System.EventHandler(this.btnAddLDLA_Click);
+            // 
             // frmManageLocalDrivingLicenseApplication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1437, 705);
+            this.Controls.Add(this.btnAddLDLA);
             this.Controls.Add(this.guna2HtmlLabel3);
             this.Controls.Add(this.labCountRecords);
             this.Controls.Add(this.dgvAllLDLA);
@@ -126,5 +142,6 @@
         private System.Windows.Forms.DataGridView dgvAllLDLA;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2HtmlLabel labCountRecords;
+        private Guna.UI2.WinForms.Guna2ImageButton btnAddLDLA;
     }
 }

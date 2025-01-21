@@ -1,4 +1,5 @@
-﻿using DVLD_Business;
+﻿using DVLD.Local_Driving_License_App;
+using DVLD_Business;
 using System;
 using System.Data;
 using System.Windows.Forms;
@@ -38,6 +39,12 @@ namespace DVLD.Applications.Local_Driving_License
         private void frmManageLocalDrivingLicenseApplication_Load(object sender, EventArgs e)
         {
             _LoadDataToForm();
+        }
+
+        private void btnAddLDLA_Click(object sender, EventArgs e)
+        {
+            frmAddUpdateLocalDrivingLicenseApplication frmAddUpdateLocalDrivingLicense = new frmAddUpdateLocalDrivingLicenseApplication();
+            frmAddUpdateLocalDrivingLicense.ShowDialog();
         }
     }
 }
