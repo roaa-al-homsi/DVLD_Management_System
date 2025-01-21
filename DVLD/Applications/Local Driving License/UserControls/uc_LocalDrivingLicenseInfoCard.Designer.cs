@@ -108,10 +108,10 @@
             // 
             this.labPassedTest.AutoSize = false;
             this.labPassedTest.BackColor = System.Drawing.Color.Transparent;
-            this.labPassedTest.Font = new System.Drawing.Font("Andalus", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labPassedTest.Location = new System.Drawing.Point(215, 164);
+            this.labPassedTest.Font = new System.Drawing.Font("Andalus", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labPassedTest.Location = new System.Drawing.Point(267, 164);
             this.labPassedTest.Name = "labPassedTest";
-            this.labPassedTest.Size = new System.Drawing.Size(68, 29);
+            this.labPassedTest.Size = new System.Drawing.Size(116, 29);
             this.labPassedTest.TabIndex = 5;
             this.labPassedTest.Text = "???";
             this.labPassedTest.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -131,10 +131,10 @@
             // 
             this.labAppliedForLicense.AutoSize = false;
             this.labAppliedForLicense.BackColor = System.Drawing.Color.Transparent;
-            this.labAppliedForLicense.Font = new System.Drawing.Font("Andalus", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labAppliedForLicense.Location = new System.Drawing.Point(215, 116);
+            this.labAppliedForLicense.Font = new System.Drawing.Font("Andalus", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labAppliedForLicense.Location = new System.Drawing.Point(227, 116);
             this.labAppliedForLicense.Name = "labAppliedForLicense";
-            this.labAppliedForLicense.Size = new System.Drawing.Size(68, 29);
+            this.labAppliedForLicense.Size = new System.Drawing.Size(266, 29);
             this.labAppliedForLicense.TabIndex = 3;
             this.labAppliedForLicense.Text = "???";
             this.labAppliedForLicense.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -154,8 +154,8 @@
             // 
             this.labLDLAId.AutoSize = false;
             this.labLDLAId.BackColor = System.Drawing.Color.Transparent;
-            this.labLDLAId.Font = new System.Drawing.Font("Andalus", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labLDLAId.Location = new System.Drawing.Point(215, 60);
+            this.labLDLAId.Font = new System.Drawing.Font("Andalus", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labLDLAId.Location = new System.Drawing.Point(276, 60);
             this.labLDLAId.Name = "labLDLAId";
             this.labLDLAId.Size = new System.Drawing.Size(68, 29);
             this.labLDLAId.TabIndex = 1;

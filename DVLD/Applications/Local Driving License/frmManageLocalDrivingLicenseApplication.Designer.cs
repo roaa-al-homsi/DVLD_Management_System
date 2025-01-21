@@ -38,8 +38,13 @@
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.cmbFilterBy = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtValueFilterBy = new Guna.UI2.WinForms.Guna2TextBox();
+            this.cmsManageLDLA = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
+            this.showDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addNewLicenseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllLDLA)).BeginInit();
+            this.cmsManageLDLA.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2HtmlLabel1
@@ -69,6 +74,7 @@
             this.dgvAllLDLA.AllowUserToDeleteRows = false;
             this.dgvAllLDLA.BackgroundColor = System.Drawing.Color.White;
             this.dgvAllLDLA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAllLDLA.ContextMenuStrip = this.cmsManageLDLA;
             this.dgvAllLDLA.Location = new System.Drawing.Point(36, 300);
             this.dgvAllLDLA.Name = "dgvAllLDLA";
             this.dgvAllLDLA.ReadOnly = true;
@@ -172,6 +178,49 @@
             this.txtValueFilterBy.TextChanged += new System.EventHandler(this.txtValueFilterBy_TextChanged);
             this.txtValueFilterBy.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtValueFilterBy_KeyPress);
             // 
+            // cmsManageLDLA
+            // 
+            this.cmsManageLDLA.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.cmsManageLDLA.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showDetailsToolStripMenuItem,
+            this.updateToolStripMenuItem,
+            this.addNewLicenseToolStripMenuItem});
+            this.cmsManageLDLA.Name = "cmsManageLDLA";
+            this.cmsManageLDLA.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.cmsManageLDLA.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
+            this.cmsManageLDLA.RenderStyle.ColorTable = null;
+            this.cmsManageLDLA.RenderStyle.RoundedEdges = true;
+            this.cmsManageLDLA.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
+            this.cmsManageLDLA.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.cmsManageLDLA.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.cmsManageLDLA.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
+            this.cmsManageLDLA.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.cmsManageLDLA.Size = new System.Drawing.Size(197, 82);
+            // 
+            // showDetailsToolStripMenuItem
+            // 
+            this.showDetailsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("showDetailsToolStripMenuItem.Image")));
+            this.showDetailsToolStripMenuItem.Name = "showDetailsToolStripMenuItem";
+            this.showDetailsToolStripMenuItem.Size = new System.Drawing.Size(196, 26);
+            this.showDetailsToolStripMenuItem.Text = "Show Details";
+            this.showDetailsToolStripMenuItem.Click += new System.EventHandler(this.showDetailsToolStripMenuItem_Click);
+            // 
+            // updateToolStripMenuItem
+            // 
+            this.updateToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("updateToolStripMenuItem.Image")));
+            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(196, 26);
+            this.updateToolStripMenuItem.Text = "Update";
+            this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
+            // 
+            // addNewLicenseToolStripMenuItem
+            // 
+            this.addNewLicenseToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("addNewLicenseToolStripMenuItem.Image")));
+            this.addNewLicenseToolStripMenuItem.Name = "addNewLicenseToolStripMenuItem";
+            this.addNewLicenseToolStripMenuItem.Size = new System.Drawing.Size(196, 26);
+            this.addNewLicenseToolStripMenuItem.Text = "Add New Licesne";
+            this.addNewLicenseToolStripMenuItem.Click += new System.EventHandler(this.addNewLicesneToolStripMenuItem_Click);
+            // 
             // frmManageLocalDrivingLicenseApplication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -193,6 +242,7 @@
             this.Load += new System.EventHandler(this.frmManageLocalDrivingLicenseApplication_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllLDLA)).EndInit();
+            this.cmsManageLDLA.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -208,5 +258,9 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2ComboBox cmbFilterBy;
         private Guna.UI2.WinForms.Guna2TextBox txtValueFilterBy;
+        private Guna.UI2.WinForms.Guna2ContextMenuStrip cmsManageLDLA;
+        private System.Windows.Forms.ToolStripMenuItem showDetailsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addNewLicenseToolStripMenuItem;
     }
 }

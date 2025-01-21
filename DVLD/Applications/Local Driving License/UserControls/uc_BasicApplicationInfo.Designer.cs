@@ -156,10 +156,10 @@
             // 
             this.labDate.AutoSize = false;
             this.labDate.BackColor = System.Drawing.Color.Transparent;
-            this.labDate.Font = new System.Drawing.Font("Andalus", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labDate.Location = new System.Drawing.Point(704, 76);
+            this.labDate.Font = new System.Drawing.Font("Andalus", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labDate.Location = new System.Drawing.Point(750, 77);
             this.labDate.Name = "labDate";
-            this.labDate.Size = new System.Drawing.Size(68, 29);
+            this.labDate.Size = new System.Drawing.Size(176, 29);
             this.labDate.TabIndex = 41;
             this.labDate.Text = "???";
             this.labDate.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -179,10 +179,10 @@
             // 
             this.labFullNamePerson.AutoSize = false;
             this.labFullNamePerson.BackColor = System.Drawing.Color.Transparent;
-            this.labFullNamePerson.Font = new System.Drawing.Font("Andalus", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labFullNamePerson.Location = new System.Drawing.Point(704, 162);
+            this.labFullNamePerson.Font = new System.Drawing.Font("Andalus", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labFullNamePerson.Location = new System.Drawing.Point(750, 163);
             this.labFullNamePerson.Name = "labFullNamePerson";
-            this.labFullNamePerson.Size = new System.Drawing.Size(68, 29);
+            this.labFullNamePerson.Size = new System.Drawing.Size(176, 29);
             this.labFullNamePerson.TabIndex = 39;
             this.labFullNamePerson.Text = "???";
             this.labFullNamePerson.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -202,10 +202,10 @@
             // 
             this.labType.AutoSize = false;
             this.labType.BackColor = System.Drawing.Color.Transparent;
-            this.labType.Font = new System.Drawing.Font("Andalus", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labType.Location = new System.Drawing.Point(135, 201);
+            this.labType.Font = new System.Drawing.Font("Andalus", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labType.Location = new System.Drawing.Point(165, 199);
             this.labType.Name = "labType";
-            this.labType.Size = new System.Drawing.Size(68, 29);
+            this.labType.Size = new System.Drawing.Size(317, 29);
             this.labType.TabIndex = 37;
             this.labType.Text = "???";
             this.labType.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -251,10 +251,10 @@
             // 
             this.labCreatedByUser.AutoSize = false;
             this.labCreatedByUser.BackColor = System.Drawing.Color.Transparent;
-            this.labCreatedByUser.Font = new System.Drawing.Font("Andalus", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labCreatedByUser.Location = new System.Drawing.Point(704, 205);
+            this.labCreatedByUser.Font = new System.Drawing.Font("Andalus", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labCreatedByUser.Location = new System.Drawing.Point(750, 206);
             this.labCreatedByUser.Name = "labCreatedByUser";
-            this.labCreatedByUser.Size = new System.Drawing.Size(68, 29);
+            this.labCreatedByUser.Size = new System.Drawing.Size(176, 29);
             this.labCreatedByUser.TabIndex = 30;
             this.labCreatedByUser.Text = "???";
             this.labCreatedByUser.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -274,10 +274,10 @@
             // 
             this.labStatusDate.AutoSize = false;
             this.labStatusDate.BackColor = System.Drawing.Color.Transparent;
-            this.labStatusDate.Font = new System.Drawing.Font("Andalus", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labStatusDate.Location = new System.Drawing.Point(704, 123);
+            this.labStatusDate.Font = new System.Drawing.Font("Andalus", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labStatusDate.Location = new System.Drawing.Point(750, 124);
             this.labStatusDate.Name = "labStatusDate";
-            this.labStatusDate.Size = new System.Drawing.Size(68, 29);
+            this.labStatusDate.Size = new System.Drawing.Size(176, 29);
             this.labStatusDate.TabIndex = 28;
             this.labStatusDate.Text = "???";
             this.labStatusDate.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -336,10 +336,10 @@
             // 
             this.labFees.AutoSize = false;
             this.labFees.BackColor = System.Drawing.Color.Transparent;
-            this.labFees.Font = new System.Drawing.Font("Andalus", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labFees.Location = new System.Drawing.Point(135, 157);
+            this.labFees.Font = new System.Drawing.Font("Andalus", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labFees.Location = new System.Drawing.Point(165, 155);
             this.labFees.Name = "labFees";
-            this.labFees.Size = new System.Drawing.Size(68, 29);
+            this.labFees.Size = new System.Drawing.Size(176, 29);
             this.labFees.TabIndex = 14;
             this.labFees.Text = "???";
             this.labFees.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -359,10 +359,10 @@
             // 
             this.labStatus.AutoSize = false;
             this.labStatus.BackColor = System.Drawing.Color.Transparent;
-            this.labStatus.Font = new System.Drawing.Font("Andalus", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labStatus.Location = new System.Drawing.Point(135, 113);
+            this.labStatus.Font = new System.Drawing.Font("Andalus", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labStatus.Location = new System.Drawing.Point(165, 111);
             this.labStatus.Name = "labStatus";
-            this.labStatus.Size = new System.Drawing.Size(68, 29);
+            this.labStatus.Size = new System.Drawing.Size(176, 29);
             this.labStatus.TabIndex = 12;
             this.labStatus.Text = "???";
             this.labStatus.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -382,10 +382,10 @@
             // 
             this.labApplicationId.AutoSize = false;
             this.labApplicationId.BackColor = System.Drawing.Color.Transparent;
-            this.labApplicationId.Font = new System.Drawing.Font("Andalus", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labApplicationId.Location = new System.Drawing.Point(135, 69);
+            this.labApplicationId.Font = new System.Drawing.Font("Andalus", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labApplicationId.Location = new System.Drawing.Point(165, 67);
             this.labApplicationId.Name = "labApplicationId";
-            this.labApplicationId.Size = new System.Drawing.Size(68, 29);
+            this.labApplicationId.Size = new System.Drawing.Size(176, 29);
             this.labApplicationId.TabIndex = 10;
             this.labApplicationId.Text = "???";
             this.labApplicationId.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;

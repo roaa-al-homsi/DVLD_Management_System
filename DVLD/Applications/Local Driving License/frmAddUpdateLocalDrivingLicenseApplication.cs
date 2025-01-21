@@ -67,7 +67,7 @@ namespace DVLD.Local_Driving_License_App
                 labLDLAId.Text = _localDrivingLicenseId.ToString();
                 txtApplicationDate.Text = _localDrivingLicenseApplication.Date.ToString();
                 txtApplicationFees.Text = _localDrivingLicenseApplication.PaidFees.ToString();
-                txtCreatedBy.Text = _localDrivingLicenseApplication.CreatedByUser.Username;
+                // txtCreatedBy.Text = _localDrivingLicenseApplication.CreatedByUser.Username;
                 cmbLicesneClasses.SelectedIndex = cmbLicesneClasses.FindString(LicenseClass.GetNameById(_localDrivingLicenseApplication.LicenseClassId));
             }
             else

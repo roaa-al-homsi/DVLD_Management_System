@@ -104,5 +104,23 @@ namespace DVLD.Applications.Local_Driving_License
                 }
             }
         }
+
+        private void showDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmShowLocalDrivingLicenseDetails frmShowLocalDrivingLicense = new frmShowLocalDrivingLicenseDetails((int)dgvAllLDLA.CurrentRow.Cells[0].Value);
+            frmShowLocalDrivingLicense.ShowDialog();
+        }
+
+        private void addNewLicesneToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAddUpdateLocalDrivingLicenseApplication frmAddUpdateLocalDrivingLicense = new frmAddUpdateLocalDrivingLicenseApplication();
+            frmAddUpdateLocalDrivingLicense.ShowDialog();
+        }
+
+        private void updateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAddUpdateLocalDrivingLicenseApplication frmAddUpdateLocalDrivingLicense = new frmAddUpdateLocalDrivingLicenseApplication((int)dgvAllLDLA.CurrentRow.Cells[0].Value);
+            frmAddUpdateLocalDrivingLicense.ShowDialog();
+        }
     }
 }
