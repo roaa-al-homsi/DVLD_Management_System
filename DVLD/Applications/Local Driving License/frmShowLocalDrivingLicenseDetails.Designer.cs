@@ -28,18 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.uc_LocalDrivingLicenseInfoCard1 = new DVLD.Applications.Local_Driving_License.uc_LocalDrivingLicenseInfoCard();
             this.labTitleForm = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
+            this.uc_LocalDrivingLicenseInfoCard1 = new DVLD.Applications.Local_Driving_License.uc_LocalDrivingLicenseInfoCard();
             this.SuspendLayout();
-            // 
-            // uc_LocalDrivingLicenseInfoCard1
-            // 
-            this.uc_LocalDrivingLicenseInfoCard1.Location = new System.Drawing.Point(13, 73);
-            this.uc_LocalDrivingLicenseInfoCard1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uc_LocalDrivingLicenseInfoCard1.Name = "uc_LocalDrivingLicenseInfoCard1";
-            this.uc_LocalDrivingLicenseInfoCard1.Size = new System.Drawing.Size(1044, 496);
-            this.uc_LocalDrivingLicenseInfoCard1.TabIndex = 0;
             // 
             // labTitleForm
             // 
@@ -68,15 +60,23 @@
             this.btnClose.Size = new System.Drawing.Size(121, 46);
             this.btnClose.TabIndex = 2;
             this.btnClose.Text = "Close";
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // uc_LocalDrivingLicenseInfoCard1
+            // 
+            this.uc_LocalDrivingLicenseInfoCard1.Location = new System.Drawing.Point(3, 76);
+            this.uc_LocalDrivingLicenseInfoCard1.Name = "uc_LocalDrivingLicenseInfoCard1";
+            this.uc_LocalDrivingLicenseInfoCard1.Size = new System.Drawing.Size(1052, 495);
+            this.uc_LocalDrivingLicenseInfoCard1.TabIndex = 3;
             // 
             // frmShowLocalDrivingLicenseDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1056, 626);
+            this.Controls.Add(this.uc_LocalDrivingLicenseInfoCard1);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.labTitleForm);
-            this.Controls.Add(this.uc_LocalDrivingLicenseInfoCard1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmShowLocalDrivingLicenseDetails";
             this.Text = "Local Driving License Details";
@@ -85,9 +85,8 @@
         }
 
         #endregion
-
-        private uc_LocalDrivingLicenseInfoCard uc_LocalDrivingLicenseInfoCard1;
         private Guna.UI2.WinForms.Guna2HtmlLabel labTitleForm;
         private Guna.UI2.WinForms.Guna2Button btnClose;
+        private uc_LocalDrivingLicenseInfoCard uc_LocalDrivingLicenseInfoCard1;
     }
 }
