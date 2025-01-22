@@ -122,12 +122,43 @@ namespace DVLD.Applications.Local_Driving_License
         {
             frmAddUpdateLocalDrivingLicenseApplication frmAddUpdateLocalDrivingLicense = new frmAddUpdateLocalDrivingLicenseApplication();
             frmAddUpdateLocalDrivingLicense.ShowDialog();
+            frmManageLocalDrivingLicenseApplication_Load(null, null);
         }
 
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmAddUpdateLocalDrivingLicenseApplication frmAddUpdateLocalDrivingLicense = new frmAddUpdateLocalDrivingLicenseApplication((int)dgvAllLDLA.CurrentRow.Cells[0].Value);
             frmAddUpdateLocalDrivingLicense.ShowDialog();
+            frmManageLocalDrivingLicenseApplication_Load(null, null);
+        }
+
+        private void cancelApplicationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Application application = Application.FindBaseApplication((int)dgvAllLDLA.CurrentRow.Cells[0].Value);
+            LocalDrivingLicenseApplication localDrivingLicense = LocalDrivingLicenseApplication.Find((int)dgvAllLDLA.CurrentRow.Cells[0].Value);
+            if (localDrivingLicense != null)
+
+            {
+                if (MessageBox.Show("Are you sure you want cancel this application? ", "Question", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+
+                {
+                    if (localDrivingLicense.Cancel())
+                    {
+                        MessageBox.Show("Application cancelled successfully..");
+                    }
+                    else
+                    {
+                        MessageBox.Show(" Failed Application cancelled ..");
+                    }
+                }
+
+            }
+            frmManageLocalDrivingLicenseApplication_Load(null, null);
+        }
+
+        private void cmsManageLDLA_Opening(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+
         }
     }
 }

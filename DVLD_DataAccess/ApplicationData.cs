@@ -176,6 +176,7 @@ namespace DVLD_DataAccess
                 {
                     command.Parameters.AddWithValue("@NewStatus", NewStatus);
                     command.Parameters.AddWithValue("@LastStatusDate", DateTime.Now);
+                    command.Parameters.AddWithValue("@Id", Id);
 
                     try
                     {

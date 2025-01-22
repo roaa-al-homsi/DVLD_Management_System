@@ -30,6 +30,7 @@ namespace DVLD_Business
         }
         private LocalDrivingLicenseApplication(int Id, int applicationId, int licenseClassId, DateTime date, int applicationTypeId,
             enApplicationStatus status, DateTime lastStatusDate, decimal paidFees, int createByUserId, int personId)
+            : base(applicationId, personId, date, applicationTypeId, status, lastStatusDate, paidFees, createByUserId)
         {
             this.Id = Id;
             this.ApplicationId = applicationId;

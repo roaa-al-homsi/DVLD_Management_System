@@ -66,7 +66,7 @@ namespace DVLD_Business
 
             mode = Mode.Add;
         }
-        private Application(int Id, int PersonId, DateTime Date, int ApplicationTypeId, enApplicationStatus Status, DateTime LastStatusDate, decimal PaidFees, int CreatedByUserId)
+        public Application(int Id, int PersonId, DateTime Date, int ApplicationTypeId, enApplicationStatus Status, DateTime LastStatusDate, decimal PaidFees, int CreatedByUserId)
         {
             this.Id = Id;
             this.PersonId = PersonId;
