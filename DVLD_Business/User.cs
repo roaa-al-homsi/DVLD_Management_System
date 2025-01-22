@@ -100,6 +100,18 @@ namespace DVLD_Business
             }
             return null;
         }
+        public static User FindByUsernameAndPassword(string username, string password)
+        {
+            int Id = -1;
+            int personId = -1;
+            bool IsActive = false;
+
+            if (UserData.GetByUsernameAndPassword(username, password, ref Id, ref personId, ref IsActive))
+            {
+                return new User(Id, personId, username, password, IsActive);
+            }
+            return null;
+        }
         public bool ChangePassword()
         {
             return UserData.ChangePassword(this.Id, this.Password);
