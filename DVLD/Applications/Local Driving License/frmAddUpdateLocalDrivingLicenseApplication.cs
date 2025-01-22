@@ -1,4 +1,5 @@
-﻿using DVLD_Business;
+﻿using DVLD.Global_Classes;
+using DVLD_Business;
 using System;
 using System.Data;
 using System.Windows.Forms;
@@ -46,7 +47,7 @@ namespace DVLD.Local_Driving_License_App
                 txtApplicationFees.Text = ApplicationType.GetFeesForSpecificApplication((int)Application.enApplicationType.NewDrivingLicense).ToString();
                 txtApplicationDate.Text = DateTime.Now.ToShortDateString().ToString();
                 uc_PersonInfoCardWithFilter1.FilterFocus();
-                // txtCreatedBy.Text = Global_Classes.CurrentUser;
+                txtCreatedBy.Text = Global.CurrentUser.Username;
             }
             else
             {
@@ -67,7 +68,7 @@ namespace DVLD.Local_Driving_License_App
                 labLDLAId.Text = _localDrivingLicenseId.ToString();
                 txtApplicationDate.Text = _localDrivingLicenseApplication.Date.ToString();
                 txtApplicationFees.Text = _localDrivingLicenseApplication.PaidFees.ToString();
-                // txtCreatedBy.Text = _localDrivingLicenseApplication.CreatedByUser.Username;
+                txtCreatedBy.Text = _localDrivingLicenseApplication.CreatedByUser.Username;
                 cmbLicesneClasses.SelectedIndex = cmbLicesneClasses.FindString(LicenseClass.GetNameById(_localDrivingLicenseApplication.LicenseClassId));
             }
             else
@@ -112,7 +113,7 @@ namespace DVLD.Local_Driving_License_App
             _localDrivingLicenseApplication.Status = Application.enApplicationStatus.New;
             _localDrivingLicenseApplication.LastStatusDate = DateTime.Now;
             _localDrivingLicenseApplication.PaidFees = Convert.ToDecimal(txtApplicationFees.Text);
-            //  _localDrivingLicenseApplication.CreatedByUserId = Global.CurrentUser.Id;
+            _localDrivingLicenseApplication.CreatedByUserId = Global.CurrentUser.Id;
 
         }
         private void btnSave_Click(object sender, EventArgs e)
