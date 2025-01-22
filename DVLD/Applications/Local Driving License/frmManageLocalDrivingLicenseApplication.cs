@@ -1,4 +1,5 @@
 ﻿using DVLD.Local_Driving_License_App;
+using DVLD.Tests.Schedule_Tests;
 using DVLD_Business;
 using System;
 using System.Data;
@@ -215,6 +216,12 @@ namespace DVLD.Applications.Local_Driving_License
                     MessageBox.Show("Could not delete application, other data depends on it.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void visionTEToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmManageTestAppointments frmManageTestAppointments = new frmManageTestAppointments();
+            frmManageTestAppointments.ShowDialog();
         }
     }
 }
