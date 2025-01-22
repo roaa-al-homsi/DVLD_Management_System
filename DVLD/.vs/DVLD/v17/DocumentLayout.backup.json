@@ -3,30 +3,21 @@
   "WorkspaceRootPath": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0EA00617-C8EC-4C15-884F-394B2E1A0208}|..\\DVLD_Business\\DVLD_Business.csproj|c:\\users\\ruaa\\source\\repos\\dvld_management_system\\dvld_business\\localdrivinglicenseapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0EA00617-C8EC-4C15-884F-394B2E1A0208}|..\\DVLD_Business\\DVLD_Business.csproj|c:\\users\\ruaa\\source\\repos\\dvld_management_system\\dvld_business\\application.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ruaa\\AppData\\Local\\Temp\\59f3251a-b79f-4037-9cee-864f0d7f6f90_DVLD Project Final.rar.f90\\Project\\DVLD\\Applications\\Local Driving License\\frmListLocalDrivingLicesnseApplications.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\applications\\local driving license\\frmmanagelocaldrivinglicenseapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|solutionrelative:applications\\local driving license\\frmmanagelocaldrivinglicenseapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\applications\\local driving license\\frmmanagelocaldrivinglicenseapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|solutionrelative:applications\\local driving license\\frmmanagelocaldrivinglicenseapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{77A56D8A-CE3E-4012-AA9D-C62C2F3B031F}|..\\DVLD_DataAccess\\DVLD_DataAccess.csproj|c:\\users\\ruaa\\source\\repos\\dvld_management_system\\dvld_dataaccess\\applicationdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ruaa\\AppData\\Local\\Temp\\75885c62-c0e9-414c-8fd6-9c17e0757f52_DVLD Project Final.rar.f52\\Project\\DVLD_Buisness\\clsApplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ruaa\\AppData\\Local\\Temp\\59f3251a-b79f-4037-9cee-864f0d7f6f90_DVLD Project Final.rar.f90\\Project\\DVLD\\Applications\\Local Driving License\\frmListLocalDrivingLicesnseApplications.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ruaa\\AppData\\Local\\Temp\\b79ec5dd-60d3-4bc4-b444-a2b26c03a4cb_DVLD Project Final.rar.4cb\\Project\\DVLD_Buisness\\clsLocalDrivingLicenseApplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\applications\\local driving license\\frmmanagelocaldrivinglicenseapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|solutionrelative:applications\\local driving license\\frmmanagelocaldrivinglicenseapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ruaa\\AppData\\Local\\Temp\\75885c62-c0e9-414c-8fd6-9c17e0757f52_DVLD Project Final.rar.f52\\Project\\DVLD_Buisness\\clsApplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -36,36 +27,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 270,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Application.cs",
-              "DocumentMoniker": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD_Business\\Application.cs",
-              "RelativeDocumentMoniker": "..\\DVLD_Business\\Application.cs",
-              "ToolTip": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD_Business\\Application.cs \u2B24",
-              "RelativeToolTip": "..\\DVLD_Business\\Application.cs \u2B24",
-              "ViewState": "AgIAADcAAAAAAAAAAAAAAEQAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-21T23:03:41.306Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "LocalDrivingLicenseApplication.cs",
-              "DocumentMoniker": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD_Business\\LocalDrivingLicenseApplication.cs",
-              "RelativeDocumentMoniker": "..\\DVLD_Business\\LocalDrivingLicenseApplication.cs",
-              "ToolTip": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD_Business\\LocalDrivingLicenseApplication.cs \u2B24",
-              "RelativeToolTip": "..\\DVLD_Business\\LocalDrivingLicenseApplication.cs \u2B24",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAACEAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T12:16:17.584Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
@@ -73,41 +36,28 @@
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "ApplicationData.cs",
-              "DocumentMoniker": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD_DataAccess\\ApplicationData.cs",
-              "RelativeDocumentMoniker": "..\\DVLD_DataAccess\\ApplicationData.cs",
-              "ToolTip": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD_DataAccess\\ApplicationData.cs",
-              "RelativeToolTip": "..\\DVLD_DataAccess\\ApplicationData.cs",
-              "ViewState": "AgIAAFsAAAAAAAAAAAD4v2sAAAAIAAAAAAAAAA==",
+              "Title": "clsApplication.cs",
+              "DocumentMoniker": "C:\\Users\\Ruaa\\AppData\\Local\\Temp\\75885c62-c0e9-414c-8fd6-9c17e0757f52_DVLD Project Final.rar.f52\\Project\\DVLD_Buisness\\clsApplication.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\75885c62-c0e9-414c-8fd6-9c17e0757f52_DVLD Project Final.rar.f52\\Project\\DVLD_Buisness\\clsApplication.cs",
+              "ToolTip": "C:\\Users\\Ruaa\\AppData\\Local\\Temp\\75885c62-c0e9-414c-8fd6-9c17e0757f52_DVLD Project Final.rar.f52\\Project\\DVLD_Buisness\\clsApplication.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\75885c62-c0e9-414c-8fd6-9c17e0757f52_DVLD Project Final.rar.f52\\Project\\DVLD_Buisness\\clsApplication.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAAAEkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-21T23:55:19.86Z",
+              "WhenOpened": "2025-01-21T23:23:37.156Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "clsApplication.cs",
-              "DocumentMoniker": "C:\\Users\\Ruaa\\AppData\\Local\\Temp\\75885c62-c0e9-414c-8fd6-9c17e0757f52_DVLD Project Final.rar.f52\\Project\\DVLD_Buisness\\clsApplication.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\75885c62-c0e9-414c-8fd6-9c17e0757f52_DVLD Project Final.rar.f52\\Project\\DVLD_Buisness\\clsApplication.cs",
-              "ToolTip": "C:\\Users\\Ruaa\\AppData\\Local\\Temp\\75885c62-c0e9-414c-8fd6-9c17e0757f52_DVLD Project Final.rar.f52\\Project\\DVLD_Buisness\\clsApplication.cs [Read Only]",
-              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\75885c62-c0e9-414c-8fd6-9c17e0757f52_DVLD Project Final.rar.f52\\Project\\DVLD_Buisness\\clsApplication.cs [Read Only]",
-              "ViewState": "AgIAADsAAAAAAAAAAAAAABEAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-21T23:23:37.156Z",
-              "EditorCaption": " [Read Only]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "clsLocalDrivingLicenseApplication.cs",
               "DocumentMoniker": "C:\\Users\\Ruaa\\AppData\\Local\\Temp\\b79ec5dd-60d3-4bc4-b444-a2b26c03a4cb_DVLD Project Final.rar.4cb\\Project\\DVLD_Buisness\\clsLocalDrivingLicenseApplication.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\b79ec5dd-60d3-4bc4-b444-a2b26c03a4cb_DVLD Project Final.rar.4cb\\Project\\DVLD_Buisness\\clsLocalDrivingLicenseApplication.cs",
-              "ToolTip": "C:\\Users\\Ruaa\\AppData\\Local\\Temp\\b79ec5dd-60d3-4bc4-b444-a2b26c03a4cb_DVLD Project Final.rar.4cb\\Project\\DVLD_Buisness\\clsLocalDrivingLicenseApplication.cs [Read Only]",
-              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\b79ec5dd-60d3-4bc4-b444-a2b26c03a4cb_DVLD Project Final.rar.4cb\\Project\\DVLD_Buisness\\clsLocalDrivingLicenseApplication.cs [Read Only]",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAAAwAAABFAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Ruaa\\AppData\\Local\\Temp\\b79ec5dd-60d3-4bc4-b444-a2b26c03a4cb_DVLD Project Final.rar.4cb\\Project\\DVLD_Buisness\\clsLocalDrivingLicenseApplication.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\b79ec5dd-60d3-4bc4-b444-a2b26c03a4cb_DVLD Project Final.rar.4cb\\Project\\DVLD_Buisness\\clsLocalDrivingLicenseApplication.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAAAwAAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-21T23:23:11.728Z",
-              "EditorCaption": " [Read Only]"
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -117,32 +67,32 @@
               "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\59f3251a-b79f-4037-9cee-864f0d7f6f90_DVLD Project Final.rar.f90\\Project\\DVLD\\Applications\\Local Driving License\\frmListLocalDrivingLicesnseApplications.cs",
               "ToolTip": "C:\\Users\\Ruaa\\AppData\\Local\\Temp\\59f3251a-b79f-4037-9cee-864f0d7f6f90_DVLD Project Final.rar.f90\\Project\\DVLD\\Applications\\Local Driving License\\frmListLocalDrivingLicesnseApplications.cs",
               "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\59f3251a-b79f-4037-9cee-864f0d7f6f90_DVLD Project Final.rar.f90\\Project\\DVLD\\Applications\\Local Driving License\\frmListLocalDrivingLicesnseApplications.cs",
-              "ViewState": "AgIAAJkAAAAAAAAAAAAcwGcBAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAK8AAAAAAAAAAAAAAPAAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-21T23:22:02.459Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "frmManageLocalDrivingLicenseApplication.cs",
               "DocumentMoniker": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\Applications\\Local Driving License\\frmManageLocalDrivingLicenseApplication.cs",
               "RelativeDocumentMoniker": "Applications\\Local Driving License\\frmManageLocalDrivingLicenseApplication.cs",
-              "ToolTip": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\Applications\\Local Driving License\\frmManageLocalDrivingLicenseApplication.cs",
-              "RelativeToolTip": "Applications\\Local Driving License\\frmManageLocalDrivingLicenseApplication.cs",
-              "ViewState": "AgIAAIAAAAAAAAAAAAAAAJAAAAAUAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\Applications\\Local Driving License\\frmManageLocalDrivingLicenseApplication.cs \u2B24",
+              "RelativeToolTip": "Applications\\Local Driving License\\frmManageLocalDrivingLicenseApplication.cs \u2B24",
+              "ViewState": "AgIAAHwAAAAAAAAAAAAAAKYAAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-21T23:00:47.209Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
               "Title": "frmManageLocalDrivingLicenseApplication.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\Applications\\Local Driving License\\frmManageLocalDrivingLicenseApplication.cs",
               "RelativeDocumentMoniker": "Applications\\Local Driving License\\frmManageLocalDrivingLicenseApplication.cs",
-              "ToolTip": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\Applications\\Local Driving License\\frmManageLocalDrivingLicenseApplication.cs [Design]",
-              "RelativeToolTip": "Applications\\Local Driving License\\frmManageLocalDrivingLicenseApplication.cs [Design]",
+              "ToolTip": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\Applications\\Local Driving License\\frmManageLocalDrivingLicenseApplication.cs [Design] \u2B24",
+              "RelativeToolTip": "Applications\\Local Driving License\\frmManageLocalDrivingLicenseApplication.cs [Design] \u2B24",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-21T22:59:48.378Z",
               "EditorCaption": " [Design]"

@@ -3,6 +3,7 @@ using DVLD_Business;
 using System;
 using System.Data;
 using System.Windows.Forms;
+using Application = DVLD_Business.Application;
 
 namespace DVLD.Applications.Local_Driving_License
 {
@@ -158,7 +159,61 @@ namespace DVLD.Applications.Local_Driving_License
 
         private void cmsManageLDLA_Opening(object sender, System.ComponentModel.CancelEventArgs e)
         {
+            int localDrivingLicenseId = (int)dgvAllLDLA.CurrentRow.Cells[0].Value;
+            LocalDrivingLicenseApplication localDrivingLicense = LocalDrivingLicenseApplication.Find(localDrivingLicenseId);
+            switch (localDrivingLicense.Status)
+            {
+                case Application.enApplicationStatus.New:
+                    cancelApplicationToolStripMenuItem.Enabled = true;
+                    updateToolStripMenuItem.Enabled = true;
+                    showLicenseToolStripMenuItem.Enabled = false;
+                    scheduleTestToolStripMenuItem.Enabled = true;
+                    issueDrivingLicenseFirstTimeToolStripMenuItem.Enabled = false;
+                    showLicenseToolStripMenuItem.Enabled = false;
+                    break;
+                default:
+                    cancelApplicationToolStripMenuItem.Enabled = false;
+                    updateToolStripMenuItem.Enabled = false;
+                    showLicenseToolStripMenuItem.Enabled = true;
+                    scheduleTestToolStripMenuItem.Enabled = false;
+                    issueDrivingLicenseFirstTimeToolStripMenuItem.Enabled = true;
+                    showLicenseToolStripMenuItem.Enabled = true;
+                    break;
 
+            }
+
+
+            //if (localDrivingLicense != null)
+            //{
+            //    cancelApplicationToolStripMenuItem.Enabled = (localDrivingLicense.Status == Application.enApplicationStatus.New);
+            //    updateToolStripMenuItem.Enabled = localDrivingLicense.Status != Application.enApplicationStatus.Completed;
+            //    showLicenseToolStripMenuItem.Enabled = localDrivingLicense.Status == Application.enApplicationStatus.Completed;
+            //    scheduleTestToolStripMenuItem.Enabled = localDrivingLicense.Status == Application.enApplicationStatus.New;
+            //}
+
+
+        }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure do want to delete this application?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            {
+                return;
+            }
+            LocalDrivingLicenseApplication LocalDrivingLicenseApplication = LocalDrivingLicenseApplication.Find((int)dgvAllLDLA.CurrentRow.Cells[0].Value);
+
+            if (LocalDrivingLicenseApplication != null)
+            {
+                if (LocalDrivingLicenseApplication.Delete())
+                {
+                    MessageBox.Show("Application Deleted Successfully.", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    frmManageLocalDrivingLicenseApplication_Load(null, null);
+                }
+                else
+                {
+                    MessageBox.Show("Could not delete application, other data depends on it.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }

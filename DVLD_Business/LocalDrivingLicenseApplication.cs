@@ -88,13 +88,17 @@ namespace DVLD_Business
         {
             return LocalDrivingLicenseApplicationData.Exist(Id);
         }
-        public static bool Delete(int Id)
+        public bool Delete()
         {
-            if (!Exist(Id))
+            if (!Exist(this.Id))
             {
                 return false;
             }
-            else { return LocalDrivingLicenseApplicationData.Delete(Id); }
+            if (LocalDrivingLicenseApplicationData.Delete(Id))
+            {
+                return Application.Delete(this.ApplicationId);
+            }
+            return false;
         }
         public static DataTable All()
         {
