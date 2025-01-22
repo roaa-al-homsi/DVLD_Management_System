@@ -130,7 +130,7 @@ namespace DVLD.Users
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frmManageUsers_Load(null, null);
         }
 
         private void showDetailsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -143,6 +143,7 @@ namespace DVLD.Users
         {
             frmAddUpdateUser addUpdateUser = new frmAddUpdateUser();
             addUpdateUser.ShowDialog();
+            frmManageUsers_Load(null, null);
         }
 
         private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)

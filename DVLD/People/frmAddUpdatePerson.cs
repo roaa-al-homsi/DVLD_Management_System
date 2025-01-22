@@ -246,6 +246,7 @@ namespace DVLD.People
                 labTitleForm.Text = "Update A Person";
                 this.Text = "Update A Person";
                 MessageBox.Show("Data Saved Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DataBack?.Invoke(this, _person.Id);
             }
             else
             {

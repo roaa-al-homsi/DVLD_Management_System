@@ -64,6 +64,7 @@ namespace DVLD.Applications.Local_Driving_License
         {
             frmAddUpdateLocalDrivingLicenseApplication frmAddUpdateLocalDrivingLicense = new frmAddUpdateLocalDrivingLicenseApplication();
             frmAddUpdateLocalDrivingLicense.ShowDialog();
+            frmManageLocalDrivingLicenseApplication_Load(null, null);
         }
 
         private void cmbFilterBy_SelectedIndexChanged(object sender, EventArgs e)

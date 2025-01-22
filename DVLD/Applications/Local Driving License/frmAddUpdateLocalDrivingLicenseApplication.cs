@@ -144,6 +144,7 @@ namespace DVLD.Local_Driving_License_App
                 labTitleForm.Text = "Update Local Driving License Application";
                 MessageBox.Show("Data Saved Successfully.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+
             }
             else
             {
@@ -161,7 +162,12 @@ namespace DVLD.Local_Driving_License_App
         {
             _SelectedPersonId = obj;
         }
-
+        private void DataBackEvent(object sender, int PersonID)
+        {
+            // Handle the data received
+            _SelectedPersonId = PersonID;
+            uc_PersonInfoCardWithFilter1.LoadPersonInfo(PersonID);
+        }
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();

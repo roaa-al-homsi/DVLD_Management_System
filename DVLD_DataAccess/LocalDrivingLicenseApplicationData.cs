@@ -10,7 +10,7 @@ namespace DVLD_DataAccess
         public static int Add(int ApplicationId, int LicenseClassesId)
         {
             int newId = 0;
-            string query = "insert into LocalDrivingLicenseApplications (ApplicationLicenseClassesId) values (@ApplicationId,@LicenseClassesId) SELECT SCOPE_IDENTITY(); ";
+            string query = "insert into LocalDrivingLicenseApplications (ApplicationId,LicenseClassesId) values (@ApplicationId,@LicenseClassesId) SELECT SCOPE_IDENTITY(); ";
             using (SqlConnection connection = new SqlConnection(SettingData.ConnectionString))
             {
                 using (SqlCommand command = new SqlCommand(query, connection))

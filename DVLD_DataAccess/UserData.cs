@@ -9,7 +9,7 @@ namespace DVLD_DataAccess
         public static int Add(int PersonId, string Username, string Password, bool IsActive)
         {
             int newId = 0;
-            string query = "insert into Users (PersonUsername,Password,IsActive) values (@PersonId,@Username,@Password,@IsActive) SELECT SCOPE_IDENTITY(); ";
+            string query = "insert into Users (PersonId,Username,Password,IsActive) values (@PersonId,@Username,@Password,@IsActive) SELECT SCOPE_IDENTITY(); ";
             using (SqlConnection connection = new SqlConnection(SettingData.ConnectionString))
             {
                 using (SqlCommand command = new SqlCommand(query, connection))
