@@ -59,6 +59,7 @@
             this.Controls.Add(this.uc_UserInfoCard1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmShowUserDetails";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "User Details";
             this.ResumeLayout(false);
             this.PerformLayout();

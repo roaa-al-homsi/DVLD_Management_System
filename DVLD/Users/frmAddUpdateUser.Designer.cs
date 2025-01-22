@@ -450,6 +450,7 @@
             this.Controls.Add(this.tcUserInfo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmAddUpdateUser";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmAddUpdateUser";
             this.Load += new System.EventHandler(this.frmAddUpdateUser_Load);
             this.tcUserInfo.ResumeLayout(false);

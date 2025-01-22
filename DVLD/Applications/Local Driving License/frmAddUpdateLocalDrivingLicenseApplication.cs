@@ -160,5 +160,10 @@ namespace DVLD.Local_Driving_License_App
         {
             _SelectedPersonId = obj;
         }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
