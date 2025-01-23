@@ -136,7 +136,7 @@ namespace DVLD_DataAccess
 
                     TestAppointmentId = (int)reader["TestAppointmentId"];
                     AppointmentDate = (DateTime)reader["Date"];
-                    PaidFees = Convert.ToSingle(reader["PaidFees"]);
+                    PaidFees = Convert.ToDecimal(reader["PaidFees"]);
                     CreatedByUserID = (int)reader["CreatedByUserId"];
                     IsLocked = (bool)reader["IsLocked"];
 
