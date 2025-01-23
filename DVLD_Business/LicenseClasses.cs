@@ -19,8 +19,8 @@ namespace DVLD_Business
             this.Id = -1;
             this.Name = string.Empty;
             this.Description = string.Empty;
-            this.MinimumAllowedAge = 0;
-            this.DefaultValidityLength = 0;
+            this.MinimumAllowedAge = 18;
+            this.DefaultValidityLength = 10;
             this.Fees = 0;
 
             _mode = Mode.Add;
@@ -93,8 +93,8 @@ namespace DVLD_Business
         {
             string Name = string.Empty;
             string Description = string.Empty;
-            byte MinimumAllowedAge = 0;
-            byte DefaultValidityLength = 0;
+            byte MinimumAllowedAge = 18;
+            byte DefaultValidityLength = 10;
             decimal Fees = 0;
 
             if (LicenseClassData.Get(Id, ref Name, ref Description, ref MinimumAllowedAge, ref DefaultValidityLength, ref Fees))

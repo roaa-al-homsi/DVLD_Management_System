@@ -151,11 +151,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tests\Schedule Tests\frmVisionTestAppointment.cs">
+    <Compile Include="Tests\Schedule Tests\frmManageTestAppointment.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tests\Schedule Tests\frmVisionTestAppointment.Designer.cs">
-      <DependentUpon>frmVisionTestAppointment.cs</DependentUpon>
+    <Compile Include="Tests\Schedule Tests\frmManageTestAppointment.Designer.cs">
+      <DependentUpon>frmManageTestAppointment.cs</DependentUpon>
     </Compile>
     <Compile Include="Tests\Test Types\frmManageTestTypes.cs">
       <SubType>Form</SubType>
@@ -249,8 +249,8 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tests\Schedule Tests\frmVisionTestAppointment.resx">
-      <DependentUpon>frmVisionTestAppointment.cs</DependentUpon>
+    <EmbeddedResource Include="Tests\Schedule Tests\frmManageTestAppointment.resx">
+      <DependentUpon>frmManageTestAppointment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tests\Test Types\frmManageTestTypes.resx">
       <DependentUpon>frmManageTestTypes.cs</DependentUpon>

@@ -50,6 +50,9 @@
     <Compile Include="LocalDrivingLicenseApplication.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TakeTest.cs" />
+    <Compile Include="Test.cs" />
+    <Compile Include="TestAppointment.cs" />
     <Compile Include="TestType.cs" />
     <Compile Include="User.cs" />
   </ItemGroup>
