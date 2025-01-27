@@ -11,11 +11,12 @@ namespace DVLD.People.userControls
         //Create a protected method to raise the event with a parameters
         protected virtual void PersonSelected(int personId)
         {
-            Action<int> handler = OnPersonSelected;
-            if (handler != null)
-            {
-                handler(personId);//Raise the event with the parameter
-            }
+            //Action<int> handler = OnPersonSelected;
+            //if (handler != null)
+            //{
+            //    handler(personId);//Raise the event with the parameter
+            //}
+            OnPersonSelected?.Invoke(personId); // the same
         }
 
 
@@ -73,10 +74,10 @@ namespace DVLD.People.userControls
                 default:
                     break;
             }
-            if (OnPersonSelected != null && FilterEnable)
+            if (FilterEnable)
             {
                 //Raise the event with a parameter 
-                OnPersonSelected(uc_PersonInfoCard1.PersonId);
+                OnPersonSelected?.Invoke(uc_PersonInfoCard1.PersonId);
             };
         }
         public void LoadPersonInfo(int personId)
@@ -108,16 +109,17 @@ namespace DVLD.People.userControls
         }
         private void txtFilterValue_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            if (string.IsNullOrEmpty(txtFilterValue.Text.Trim()))
-            {
-                e.Cancel = true;
-                errorProvider1.SetError(txtFilterValue, "This field is required!");
-            }
-            else
-            {
-                //e.Cancel = false;
-                errorProvider1.SetError(txtFilterValue, null);
-            }
+            // to do remove it
+            //if (string.IsNullOrEmpty(txtFilterValue.Text.Trim()))
+            //{
+            //    e.Cancel = true;
+            //    errorProvider1.SetError(txtFilterValue, "This field is required!");
+            //}
+            //else
+            //{
+            //    //e.Cancel = false;
+            //    errorProvider1.SetError(txtFilterValue, null);
+            //}
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -125,6 +127,7 @@ namespace DVLD.People.userControls
             frmAddUpdatePerson frmAddUpdatePerson = new frmAddUpdatePerson();
             frmAddUpdatePerson.DataBack += _DataBackEvent;
             frmAddUpdatePerson.ShowDialog();
+            FilterEnable = false;
         }
         private void _DataBackEvent(object sender, int personId)
         {    //handle the data received

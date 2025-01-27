@@ -8,10 +8,10 @@ namespace DVLD_Business
     {
         public enum Mode { Add, Update }
         public Mode mode;
-        public int Id { get; set; }
+        public override int Id { get; set; }
         public int ApplicationId { get; set; }//fk
         public int LicenseClassId { get; set; }//fk
-        public LicenseClass LicenseClass { get; set; }//Composition
+        public LicenseClass LicenseClass { get; }//Composition
         public string FullName
         {
             get
@@ -50,6 +50,7 @@ namespace DVLD_Business
         }
         private bool _Add()
         {
+            this.ApplicationId = base.Id;
             this.Id = LocalDrivingLicenseApplicationData.Add(this.ApplicationId, this.LicenseClassId);
             return (this.Id != -1);
         }
@@ -57,7 +58,7 @@ namespace DVLD_Business
         {
             return LocalDrivingLicenseApplicationData.Update(this.Id, this.ApplicationId, this.LicenseClassId);
         }
-        public bool Save()
+        public override bool Save()
         {
             base.mode = (Application.Mode)mode;
             if (!base.Save())
@@ -112,6 +113,12 @@ namespace DVLD_Business
             if (LocalDrivingLicenseApplicationData.Get(Id, ref ApplicationId, ref LicenseClassesId))
             {
                 Application application = Application.FindBaseApplication(ApplicationId);
+
+                if (application == null) // or is haha
+                {
+                    return null;
+                }
+
                 return new LocalDrivingLicenseApplication(Id, ApplicationId, LicenseClassesId, application.Date, application.ApplicationTypeId, application.Status, application.LastStatusDate,
                     application.PaidFees, application.CreatedByUserId, application.PersonId);
             }
@@ -125,13 +132,25 @@ namespace DVLD_Business
             if (LocalDrivingLicenseApplicationData.GetByApplicationId(applicationId, ref Id, ref LicenseClassesId))
             {
                 Application application = Application.FindBaseApplication(applicationId);
+                if (application == null) // or is haha
+                {
+                    return null;
+                }
+
                 return new LocalDrivingLicenseApplication(applicationId, Id, LicenseClassesId, application.Date, application.ApplicationTypeId, application.Status, application.LastStatusDate,
                     application.PaidFees, application.CreatedByUserId, application.PersonId);
             }
             return null;
         }
+        public bool DoesAttendTestType(TestType.enTestTypes testTypeId)
+        {
+            return LocalDrivingLicenseApplicationData.DoesAttendTestType(this.Id, (int)testTypeId);
+        }
 
-
+        public int TotalTrialsPerTest(TestType.enTestTypes testTypeId)
+        {
+            return LocalDrivingLicenseApplicationData.TotalTrialsPerTest(this.Id, (int)testTypeId);
+        }
 
     }
 

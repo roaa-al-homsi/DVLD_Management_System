@@ -78,6 +78,10 @@ namespace DVLD_Business
             }
             return null;
         }
+        public static decimal GetFeesForSpecificTest(TestType.enTestTypes Id)
+        {
+            return TestTypeData.GetFeesForSpecificTest((int)Id);
+        }
     }
 
 

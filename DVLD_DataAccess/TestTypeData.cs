@@ -106,9 +106,24 @@ namespace DVLD_DataAccess
         {
             return GenericData.Exist("select Found=1 from TestTypes where Id= @Id", "@Id", Id);
         }
-
-
-
+        static public decimal GetFeesForSpecificTest(int Id)
+        {
+            decimal fees = 0;
+            using (SqlConnection connection = new SqlConnection(SettingData.ConnectionString))
+            {
+                using (SqlCommand command = new SqlCommand("select Fees from TestTypes where Id=@Id", connection))
+                {
+                    command.Parameters.AddWithValue("@Id", Id);
+                    try
+                    {
+                        connection.Open();
+                        fees = (decimal)command.ExecuteScalar();
+                    }
+                    catch (Exception ex) { }
+                }
+            }
+            return fees;
+        }
 
     }
 }

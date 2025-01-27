@@ -18,7 +18,8 @@ namespace DVLD_Business
         {
             get
             {
-                return string.IsNullOrWhiteSpace(ThirdName) ? FirstName + " " + SecondName + " " + LastName : FirstName + " " + SecondName + " " + ThirdName + " " + LastName;
+                //return string.IsNullOrWhiteSpace(ThirdName) ? FirstName + " " + SecondName + " " + LastName : FirstName + " " + SecondName + " " + ThirdName + " " + LastName;
+                return string.IsNullOrWhiteSpace(ThirdName) ? $"{FirstName} {SecondName} {LastName}" : $"{FirstName} {SecondName} {ThirdName} {LastName}";
             }
 
         }
@@ -30,7 +31,7 @@ namespace DVLD_Business
         public int NationalityCountryID { get; set; }//fK
         public string ImagePath { get; set; }
 
-        public Country CountryInfo { get; set; }
+        public Country CountryInfo { get; private set; } // or  private set, if you need to update its value only inside this class.. (most cases you don't need that)
 
         public Person()
         {

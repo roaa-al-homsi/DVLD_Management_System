@@ -115,7 +115,7 @@ namespace DVLD_DataAccess
                 FROM            TestAppointments
                 WHERE        (TestTypeId = @TestTypeId) 
                 AND (LocalDrivingLicenseApplicationId = @LocalDrivingLicenseApplicationId) 
-                order by Id Desc";
+                order by Date DESC";
 
 
             SqlCommand command = new SqlCommand(query, connection);
@@ -140,14 +140,7 @@ namespace DVLD_DataAccess
                     CreatedByUserID = (int)reader["CreatedByUserId"];
                     IsLocked = (bool)reader["IsLocked"];
 
-                    if (reader["RetakeTestApplicationID"] == DBNull.Value)
-                    {
-                        RetakeTestApplicationId = -1;
-                    }
-                    else
-                    {
-                        RetakeTestApplicationId = (int)reader["RetakeTestApplicationId"];
-                    }
+                    RetakeTestApplicationId = reader["RetakeTestApplicationID"] == DBNull.Value ? -1 : (int)reader["RetakeTestApplicationId"];
                 }
                 else
                 {
@@ -182,7 +175,7 @@ namespace DVLD_DataAccess
                         WHERE  
                         (TestTypeId = @TestTypeId) 
                         AND (LocalDrivingLicenseApplicationId = @LocalDrivingLicenseApplicationId)
-                        order by Id desc;";
+                        order by Id DESC;";
 
 
             SqlCommand command = new SqlCommand(query, connection);
@@ -264,6 +257,10 @@ namespace DVLD_DataAccess
         {
             return GenericData.Exist("select Found=1 from TestAppointments where Id= @Id", "@Id", Id);
         }
+
+
+
+
 
     }
 }

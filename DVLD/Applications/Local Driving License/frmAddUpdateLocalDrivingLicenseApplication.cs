@@ -115,13 +115,13 @@ namespace DVLD.Local_Driving_License_App
             _localDrivingLicenseApplication.PaidFees = Convert.ToDecimal(txtApplicationFees.Text);
             _localDrivingLicenseApplication.CreatedByUserId = Global.CurrentUser.Id;
 
+
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
             _localDrivingLicenseApplication.LicenseClassId = LicenseClass.GetIdByName(cmbLicesneClasses.Text);
-            // _localDrivingLicenseApplication.ApplicationId = (int)Application.enApplicationType.NewDrivingLicense;
 
-            int activeApplicationId = Application.GetActiveApplicationIdForLicenseClass(_localDrivingLicenseApplication.PersonId, (int)Application.enApplicationType.NewDrivingLicense, _localDrivingLicenseApplication.LicenseClassId);
+            int activeApplicationId = Application.GetActiveApplicationIdForLicenseClass(uc_PersonInfoCardWithFilter1.PersonId, (int)Application.enApplicationType.NewDrivingLicense, _localDrivingLicenseApplication.LicenseClassId);
             if (activeApplicationId != -1)
             {
                 MessageBox.Show("Choose another License Class, the selected Person Already have an active application for the selected class with id=" + activeApplicationId, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

@@ -10,7 +10,7 @@ namespace DVLD_DataAccess
         public static int Add(int PersonId, DateTime Date, int ApplicationTypeId, byte Status, DateTime LastStatusDate, decimal PaidFees, int CreatedByUserId)
         {
             int newId = 0;
-            string query = "insert into Applications (PersonDate,ApplicationTypeStatus,LastStatusDate,PaidFees,CreatedByUserId) values (@PersonId,@Date,@ApplicationTypeId,@Status,@LastStatusDate,@PaidFees,@CreatedByUserId) SELECT SCOPE_IDENTITY(); ";
+            string query = "insert into Applications (PersonId,Date,ApplicationTypeId,Status,LastStatusDate,PaidFees,CreatedByUserId) values (@PersonId,@Date,@ApplicationTypeId,@Status,@LastStatusDate,@PaidFees,@CreatedByUserId) SELECT SCOPE_IDENTITY(); ";
             using (SqlConnection connection = new SqlConnection(SettingData.ConnectionString))
             {
                 using (SqlCommand command = new SqlCommand(query, connection))

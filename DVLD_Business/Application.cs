@@ -11,15 +11,20 @@ namespace DVLD_Business
         public Mode mode = Mode.Add;
         public enum enApplicationType
         {
-            NewDrivingLicense = 1, RenewDrivingLicense = 2, ReplaceLostDrivingLicense = 3,
-            ReplaceDamagedDrivingLicense = 4, ReleaseDetainedDrivingLicense = 5, NewInternationalLicense = 6, RetakeTest = 7
+            NewDrivingLicense = 1,
+            RenewDrivingLicense = 2,
+            ReplaceLostDrivingLicense = 3,
+            ReplaceDamagedDrivingLicense = 4,
+            ReleaseDetainedDrivingLicense = 5,
+            NewInternationalLicense = 6,
+            RetakeTest = 7
         }
 
         public enum enApplicationStatus { New = 1, Cancelled = 2, Completed = 3 };
 
-        public int Id { get; set; }
+        public virtual int Id { get; set; }
         public int PersonId { get; set; }//fk
-        public Person Person { get; set; }//composition for personInfo
+        public Person Person { get; }//composition for personInfo
         public string FullNamePerson
         {
             get
@@ -29,7 +34,7 @@ namespace DVLD_Business
         }
         public DateTime Date { get; set; }
         public int ApplicationTypeId { get; set; }//fk
-        public ApplicationType ApplicationType { get; set; }//composition
+        public ApplicationType ApplicationType { get; }//composition
         public enApplicationStatus Status { get; set; }
         public string StatusText
         {
@@ -51,7 +56,7 @@ namespace DVLD_Business
         public DateTime LastStatusDate { get; set; }
         public decimal PaidFees { get; set; }
         public int CreatedByUserId { get; set; }//fk
-        public User CreatedByUser { get; set; }//composition
+        public User CreatedByUser { get; }//composition // it is better to make it read only.. all composition, unless you have specific need to make it in write mode also
 
         public Application()
         {
@@ -93,7 +98,7 @@ namespace DVLD_Business
         {
             return ApplicationData.Update(this.Id, this.PersonId, this.Date, this.ApplicationTypeId, (byte)this.Status, this.LastStatusDate, this.PaidFees, this.CreatedByUserId);
         }
-        public bool Save()
+        public virtual bool Save()
         {
 
             switch (mode)

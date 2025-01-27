@@ -29,8 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc_ScheduleTest));
-            this.uc_RetakeTestInfo1 = new DVLD.Tests.Controls.uc_RetakeTestInfo();
-            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btnSave = new Guna.UI2.WinForms.Guna2ImageButton();
             this.gbTestType = new Guna.UI2.WinForms.Guna2GroupBox();
             this.labMessage = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.dtpDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -53,6 +52,16 @@
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.labTitleTest = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.picTestType = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.gbRetakeTestInfo = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.guna2PictureBox7 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.labTotalFees = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2PictureBox8 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.labRetakeTestId = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2PictureBox9 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.labRetakeAppFees = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.gbTestType.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).BeginInit();
@@ -61,27 +70,24 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picTestType)).BeginInit();
+            this.gbRetakeTestInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox9)).BeginInit();
             this.SuspendLayout();
             // 
-            // uc_RetakeTestInfo1
+            // btnSave
             // 
-            this.uc_RetakeTestInfo1.Location = new System.Drawing.Point(17, 590);
-            this.uc_RetakeTestInfo1.Name = "uc_RetakeTestInfo1";
-            this.uc_RetakeTestInfo1.Size = new System.Drawing.Size(620, 196);
-            this.uc_RetakeTestInfo1.TabIndex = 27;
-            // 
-            // guna2ImageButton1
-            // 
-            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton1.Image")));
-            this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton1.ImageRotate = 0F;
-            this.guna2ImageButton1.Location = new System.Drawing.Point(573, 784);
-            this.guna2ImageButton1.Name = "guna2ImageButton1";
-            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.Size = new System.Drawing.Size(64, 54);
-            this.guna2ImageButton1.TabIndex = 28;
+            this.btnSave.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnSave.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
+            this.btnSave.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnSave.ImageRotate = 0F;
+            this.btnSave.Location = new System.Drawing.Point(573, 784);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnSave.Size = new System.Drawing.Size(64, 54);
+            this.btnSave.TabIndex = 28;
             // 
             // gbTestType
             // 
@@ -370,13 +376,140 @@
             this.picTestType.TabStop = false;
             this.picTestType.UseTransparentBackground = true;
             // 
+            // gbRetakeTestInfo
+            // 
+            this.gbRetakeTestInfo.Controls.Add(this.guna2PictureBox7);
+            this.gbRetakeTestInfo.Controls.Add(this.labTotalFees);
+            this.gbRetakeTestInfo.Controls.Add(this.guna2HtmlLabel2);
+            this.gbRetakeTestInfo.Controls.Add(this.guna2PictureBox8);
+            this.gbRetakeTestInfo.Controls.Add(this.labRetakeTestId);
+            this.gbRetakeTestInfo.Controls.Add(this.guna2HtmlLabel4);
+            this.gbRetakeTestInfo.Controls.Add(this.guna2PictureBox9);
+            this.gbRetakeTestInfo.Controls.Add(this.labRetakeAppFees);
+            this.gbRetakeTestInfo.Controls.Add(this.guna2HtmlLabel6);
+            this.gbRetakeTestInfo.Font = new System.Drawing.Font("Andalus", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbRetakeTestInfo.ForeColor = System.Drawing.Color.Black;
+            this.gbRetakeTestInfo.Location = new System.Drawing.Point(26, 590);
+            this.gbRetakeTestInfo.Name = "gbRetakeTestInfo";
+            this.gbRetakeTestInfo.Size = new System.Drawing.Size(611, 189);
+            this.gbRetakeTestInfo.TabIndex = 30;
+            this.gbRetakeTestInfo.Text = "Retake Test Info";
+            // 
+            // guna2PictureBox7
+            // 
+            this.guna2PictureBox7.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox7.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox7.Image")));
+            this.guna2PictureBox7.ImageRotate = 0F;
+            this.guna2PictureBox7.Location = new System.Drawing.Point(312, 63);
+            this.guna2PictureBox7.Name = "guna2PictureBox7";
+            this.guna2PictureBox7.Size = new System.Drawing.Size(37, 36);
+            this.guna2PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox7.TabIndex = 18;
+            this.guna2PictureBox7.TabStop = false;
+            // 
+            // labTotalFees
+            // 
+            this.labTotalFees.AutoSize = false;
+            this.labTotalFees.BackColor = System.Drawing.Color.Transparent;
+            this.labTotalFees.Font = new System.Drawing.Font("Andalus", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labTotalFees.Location = new System.Drawing.Point(463, 67);
+            this.labTotalFees.Name = "labTotalFees";
+            this.labTotalFees.Size = new System.Drawing.Size(68, 29);
+            this.labTotalFees.TabIndex = 17;
+            this.labTotalFees.Text = "???";
+            this.labTotalFees.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // guna2HtmlLabel2
+            // 
+            this.guna2HtmlLabel2.AutoSize = false;
+            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Andalus", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(355, 67);
+            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(102, 29);
+            this.guna2HtmlLabel2.TabIndex = 16;
+            this.guna2HtmlLabel2.Text = "Total Fees :";
+            // 
+            // guna2PictureBox8
+            // 
+            this.guna2PictureBox8.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox8.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox8.Image")));
+            this.guna2PictureBox8.ImageRotate = 0F;
+            this.guna2PictureBox8.Location = new System.Drawing.Point(15, 112);
+            this.guna2PictureBox8.Name = "guna2PictureBox8";
+            this.guna2PictureBox8.Size = new System.Drawing.Size(37, 36);
+            this.guna2PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox8.TabIndex = 15;
+            this.guna2PictureBox8.TabStop = false;
+            // 
+            // labRetakeTestId
+            // 
+            this.labRetakeTestId.AutoSize = false;
+            this.labRetakeTestId.BackColor = System.Drawing.Color.Transparent;
+            this.labRetakeTestId.Font = new System.Drawing.Font("Andalus", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labRetakeTestId.Location = new System.Drawing.Point(197, 119);
+            this.labRetakeTestId.Name = "labRetakeTestId";
+            this.labRetakeTestId.Size = new System.Drawing.Size(68, 29);
+            this.labRetakeTestId.TabIndex = 14;
+            this.labRetakeTestId.Text = "???";
+            this.labRetakeTestId.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // guna2HtmlLabel4
+            // 
+            this.guna2HtmlLabel4.AutoSize = false;
+            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Andalus", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(58, 119);
+            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(133, 29);
+            this.guna2HtmlLabel4.TabIndex = 13;
+            this.guna2HtmlLabel4.Text = "R.Test .Appl.Id :";
+            // 
+            // guna2PictureBox9
+            // 
+            this.guna2PictureBox9.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox9.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox9.Image")));
+            this.guna2PictureBox9.ImageRotate = 0F;
+            this.guna2PictureBox9.Location = new System.Drawing.Point(15, 63);
+            this.guna2PictureBox9.Name = "guna2PictureBox9";
+            this.guna2PictureBox9.Size = new System.Drawing.Size(37, 36);
+            this.guna2PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox9.TabIndex = 12;
+            this.guna2PictureBox9.TabStop = false;
+            // 
+            // labRetakeAppFees
+            // 
+            this.labRetakeAppFees.AutoSize = false;
+            this.labRetakeAppFees.BackColor = System.Drawing.Color.Transparent;
+            this.labRetakeAppFees.Font = new System.Drawing.Font("Andalus", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labRetakeAppFees.Location = new System.Drawing.Point(197, 67);
+            this.labRetakeAppFees.Name = "labRetakeAppFees";
+            this.labRetakeAppFees.Size = new System.Drawing.Size(68, 29);
+            this.labRetakeAppFees.TabIndex = 11;
+            this.labRetakeAppFees.Text = "???";
+            this.labRetakeAppFees.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // guna2HtmlLabel6
+            // 
+            this.guna2HtmlLabel6.AutoSize = false;
+            this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Andalus", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(58, 67);
+            this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
+            this.guna2HtmlLabel6.Size = new System.Drawing.Size(100, 29);
+            this.guna2HtmlLabel6.TabIndex = 10;
+            this.guna2HtmlLabel6.Text = "R.App.Fees :";
+            // 
             // uc_ScheduleTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.gbRetakeTestInfo);
             this.Controls.Add(this.gbTestType);
-            this.Controls.Add(this.guna2ImageButton1);
-            this.Controls.Add(this.uc_RetakeTestInfo1);
+            this.Controls.Add(this.btnSave);
             this.Name = "uc_ScheduleTest";
             this.Size = new System.Drawing.Size(673, 841);
             this.gbTestType.ResumeLayout(false);
@@ -387,13 +520,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picTestType)).EndInit();
+            this.gbRetakeTestInfo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox9)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private uc_RetakeTestInfo uc_RetakeTestInfo1;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
+        private Guna.UI2.WinForms.Guna2ImageButton btnSave;
         private Guna.UI2.WinForms.Guna2GroupBox gbTestType;
         private Guna.UI2.WinForms.Guna2HtmlLabel labMessage;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpDate;
@@ -416,5 +552,15 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel labTitleTest;
         private Guna.UI2.WinForms.Guna2PictureBox picTestType;
+        private Guna.UI2.WinForms.Guna2GroupBox gbRetakeTestInfo;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox7;
+        private Guna.UI2.WinForms.Guna2HtmlLabel labTotalFees;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox8;
+        private Guna.UI2.WinForms.Guna2HtmlLabel labRetakeTestId;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox9;
+        private Guna.UI2.WinForms.Guna2HtmlLabel labRetakeAppFees;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
     }
 }
