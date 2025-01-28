@@ -202,8 +202,52 @@ namespace DVLD_DataAccess
 
             return testTypeId;
         }
+        public static bool IsThereAnActiveScheduledTest(int localDrivingLicenseId, int testTypeId)
+        {
+            bool IsFound = false;
+            string query = "select top 1 found =1 from TestAppointments where TestTypeId=@testTypeId and LocalDrivingLicenseApplicationsId=@localDrivingLicenseId and IsLocked=0";
+            using (SqlConnection connection = new SqlConnection(SettingData.ConnectionString))
+            {
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@testTypeId", testTypeId);
+                    command.Parameters.AddWithValue("@localDrivingLicenseId", localDrivingLicenseId);
+                    try
+                    {
+                        connection.Open();
+                        SqlDataReader Reader = command.ExecuteReader();
+                        IsFound = Reader.HasRows;
+                        Reader.Close();
+                    }
+                    catch (Exception ex) { }
+                }
+            }
+            return IsFound;
+        }
 
-
-
+        public static bool DoesPassTestType(int localDrivingLicenseId, int testTypeId)
+        {
+            bool IsFound = false;
+            string query = @" select top 1 Result from Tests inner join TestAppointments 
+                              on Tests.TestAppointmentId =TestAppointments.Id 
+                              where (TestAppointments.LocalDrivingLicenseApplicationsId=@localDrivingLicenseId and TestAppointments.TestTypeId=@testTypeId and Tests.Result=1)";
+            using (SqlConnection connection = new SqlConnection(SettingData.ConnectionString))
+            {
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@testTypeId", testTypeId);
+                    command.Parameters.AddWithValue("@localDrivingLicenseId", localDrivingLicenseId);
+                    try
+                    {
+                        connection.Open();
+                        SqlDataReader Reader = command.ExecuteReader();
+                        IsFound = Reader.HasRows;
+                        Reader.Close();
+                    }
+                    catch (Exception ex) { }
+                }
+            }
+            return IsFound;
+        }
     }
 }

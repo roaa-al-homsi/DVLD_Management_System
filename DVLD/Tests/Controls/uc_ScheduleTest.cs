@@ -94,17 +94,20 @@ namespace DVLD.Tests.Controls
             }
             labTotalFees.Text = (decimal.Parse(labRetakeAppFees.Text) + _localDrivingLicenseApplication.PaidFees).ToString();
 
-            //if (!_HandleActiveTestAppointmentConstraint())
-            //    return;
+            if (!_HandleActiveTestAppointmentConstraint())
+            {
+                return;
+            }
 
-            //if (!_HandleAppointmentLockedConstraint())
-            //    return;
+            if (!_HandleAppointmentLockedConstraint())
+            {
+                return;
+            }
 
-            //if (!_HandlePrviousTestConstraint())
-            //    return;
-
-
-
+            if (!_HandlePreviousTestConstraint())
+            {
+                return;
+            }
         }
 
         private bool _LoadTestAppointmentData()
@@ -128,6 +131,91 @@ namespace DVLD.Tests.Controls
             }
             return true;
         }
+        private bool _HandleActiveTestAppointmentConstraint()
+        {
+            if (_mode == Mode.Add && _localDrivingLicenseApplication.IsThereAnActiveScheduledTest(_TestTypeId))
+            {
+                labMessage.Text = "Person Already have an active appointment for this test";
+                btnSave.Enabled = false;
+                dtpDate.Enabled = false;
+                return false;
+            }
+            return true;
+        }
+
+        private bool _HandleAppointmentLockedConstraint()
+        {
+            if (_testAppointment.IsLocked)
+            {
+                //if appointment is locked that means the person already sat for this test
+                //we cannot update locked appointment
+                labMessage.Visible = true;
+                labMessage.Text = "Person already sat for the test, appointment locked.";
+                dtpDate.Enabled = false;
+                btnSave.Enabled = false;
+                return false;
+            }
+            else
+            {
+                labMessage.Visible = false;
+            }
+            return true;
+        }
+
+        private bool _HandlePreviousTestConstraint()
+        { //we need to make sure that this person passed the previous required test before apply to the new test.
+            //person can't apply for written test unless s/he passes the vision test.
+            //person cannot apply for street test unless s/he passes the written test.
+            switch (_TestTypeId)
+            {
+                case DVLD_Business.TestType.enTestTypes.VisionTest:
+                    labMessage.Visible = false;
+                    return true;
+
+                case DVLD_Business.TestType.enTestTypes.WrittenTest:
+                    if (!_localDrivingLicenseApplication.DoesPassTestType(DVLD_Business.TestType.enTestTypes.VisionTest))
+                    {
+                        labMessage.Visible = true;
+                        labMessage.Text = "Cannot schedule, Vision Test should be passed first";
+                        btnSave.Enabled = false;
+                        dtpDate.Enabled = false;
+                        return false;
+                    }
+                    else
+                    {
+                        labMessage.Visible = false;
+                        btnSave.Enabled = true;
+                        dtpDate.Enabled = true;
+                    }
+                    return true;
+
+                case DVLD_Business.TestType.enTestTypes.StreetTest:
+                    if (!_localDrivingLicenseApplication.DoesPassTestType(DVLD_Business.TestType.enTestTypes.WrittenTest))
+                    {
+                        labMessage.Text = "Cannot schedule, Written Test should be passed first";
+                        labMessage.Visible = true;
+                        btnSave.Enabled = false;
+                        dtpDate.Enabled = false;
+                        return false;
+                    }
+                    else
+                    {
+                        labMessage.Visible = false;
+                        btnSave.Enabled = true;
+                        dtpDate.Enabled = true;
+                    }
+                    return true;
+                default:
+                    return false;
+            }
+
+        }
+
+
+
+
+
+
 
 
     }

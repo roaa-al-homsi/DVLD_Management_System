@@ -146,10 +146,17 @@ namespace DVLD_Business
         {
             return LocalDrivingLicenseApplicationData.DoesAttendTestType(this.Id, (int)testTypeId);
         }
-
         public int TotalTrialsPerTest(TestType.enTestTypes testTypeId)
         {
             return LocalDrivingLicenseApplicationData.TotalTrialsPerTest(this.Id, (int)testTypeId);
+        }
+        public bool IsThereAnActiveScheduledTest(TestType.enTestTypes testTypeId)
+        {
+            return LocalDrivingLicenseApplicationData.IsThereAnActiveScheduledTest(this.Id, (int)testTypeId);
+        }
+        public bool DoesPassTestType(TestType.enTestTypes testTypeId)
+        {
+            return LocalDrivingLicenseApplicationData.DoesPassTestType(this.Id, (int)testTypeId);
         }
 
     }
