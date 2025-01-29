@@ -9,6 +9,7 @@ namespace DVLD_Business
         private Mode _mode;
         public int Id { get; set; }
         public int TestAppointmentId { get; set; }
+        public TestAppointment TestAppointmentInfo { get; }
         public bool Result { get; set; }
         public string Notes { get; set; }
         public int CreatedByUserId { get; set; }
@@ -30,7 +31,7 @@ namespace DVLD_Business
             this.Result = Result;
             this.Notes = Notes;
             this.CreatedByUserId = CreatedByUserId;
-
+            this.TestAppointmentInfo = TestAppointment.Find(TestAppointmentId);
 
             _mode = Mode.Update;
         }
@@ -47,13 +48,20 @@ namespace DVLD_Business
         }
         public bool Save()
         {
-
             switch (_mode)
             {
                 case Mode.Add:
                     {
-                        _mode = Mode.Update;
-                        return _Add();
+                        if (_Add())
+                        {
+                            _mode = Mode.Update;
+                            return true;
+                        }
+                        else
+                        {
+                            return false;
+                        }
+
                     }
                 case Mode.Update: return _Update();
             }
@@ -87,6 +95,37 @@ namespace DVLD_Business
                 return new Test(Id, TestAppointmentId, Result, Notes, CreatedByUserId);
             }
             return null;
+        }
+
+        public static Test FindLastTestPerPersonAndLicenseClass
+    (int PersonID, int LicenseClassID, TestType.enTestTypes TestTypeID)
+        {
+            int TestID = -1;
+            int TestAppointmentID = -1;
+            bool TestResult = false; string Notes = ""; int CreatedByUserID = -1;
+
+            if (TestData.GetLastTestByPersonAndTestTypeAndLicenseClass
+                (PersonID, LicenseClassID, (int)TestTypeID, ref TestID,
+            ref TestAppointmentID, ref TestResult,
+            ref Notes, ref CreatedByUserID))
+            {
+                return new Test(TestID,
+                        TestAppointmentID, TestResult,
+                        Notes, CreatedByUserID);
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public static byte GetPassedTestCount(int LocalDrivingLicenseApplicationId)
+        {
+            return TestData.GetPassedTestCount(LocalDrivingLicenseApplicationId);
+        }
+        public static bool PassedAllTests(int LocalDrivingLicenseApplicationId)
+        {
+            return GetPassedTestCount(LocalDrivingLicenseApplicationId) == 3;
         }
     }
 

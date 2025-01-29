@@ -9,7 +9,9 @@ namespace DVLD_DataAccess
         public static int Add(int TestAppointmentId, bool Result, string Notes, int CreatedByUserId)
         {
             int newId = 0;
-            string query = "insert into Tests (TestAppointmentResult,Notes,CreatedByUserId) values (@TestAppointmentId,@Result,@Notes,@CreatedByUserId) SELECT SCOPE_IDENTITY(); ";
+            string query = @"insert into Tests (TestAppointmentResult,Notes,CreatedByUserId) values (@TestAppointmentId,@Result,@Notes,@CreatedByUserId)
+                    UPDATE TestAppointments SET IsLocked=1 where Id = @TestAppointmentId;
+                      SELECT SCOPE_IDENTITY(); ";
             using (SqlConnection connection = new SqlConnection(SettingData.ConnectionString))
             {
                 using (SqlCommand command = new SqlCommand(query, connection))
@@ -17,7 +19,7 @@ namespace DVLD_DataAccess
 
                     command.Parameters.AddWithValue("@TestAppointmentId", TestAppointmentId);
                     command.Parameters.AddWithValue("@Result", Result);
-                    command.Parameters.AddWithValue("@Notes", Notes);
+                    command.Parameters.AddWithValue("@Notes", !string.IsNullOrWhiteSpace(Notes) ? Notes : (object)DBNull.Value);
                     command.Parameters.AddWithValue("@CreatedByUserId", CreatedByUserId);
 
                     try
@@ -47,7 +49,7 @@ namespace DVLD_DataAccess
                     command.Parameters.AddWithValue("@Id", Id);
                     command.Parameters.AddWithValue("@TestAppointmentId", TestAppointmentId);
                     command.Parameters.AddWithValue("@Result", Result);
-                    command.Parameters.AddWithValue("@Notes", Notes);
+                    command.Parameters.AddWithValue("@Notes", !string.IsNullOrWhiteSpace(Notes) ? Notes : (object)DBNull.Value);
                     command.Parameters.AddWithValue("@CreatedByUserId", CreatedByUserId);
 
                     try
@@ -80,7 +82,7 @@ namespace DVLD_DataAccess
                             Id = (int)reader["Id"];
                             TestAppointmentId = (int)reader["TestAppointmentId"];
                             Result = (bool)reader["Result"];
-                            Notes = (string)reader["Notes"];
+                            Notes = reader["Notes"] != DBNull.Value ? (string)reader["Notes"] : string.Empty;
                             CreatedByUserId = (int)reader["CreatedByUserId"];
 
 
@@ -96,6 +98,7 @@ namespace DVLD_DataAccess
 
             return IsFound;
         }
+
         static public DataTable All()
         {
             return GenericData.All("select * from Tests");
@@ -175,9 +178,43 @@ namespace DVLD_DataAccess
             return isFound;
         }
 
+        public static byte GetPassedTestCount(int LocalDrivingLicenseApplicationId)
+        {
+            byte PassedTestCount = 0;
 
+            string query = @"select PassedTestCount = count (Tests.Id) from Tests inner join TestAppointments on Tests.TestAppointmentId = TestAppointments.Id
+				  where  TestAppointments.LocalDrivingLicenseApplicationsId=@LocalDrivingLicenseApplicationId
+				  and Tests.Result=1";
 
+            using (SqlConnection connection = new SqlConnection(SettingData.ConnectionString))
+            {
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@LocalDrivingLicenseApplicationId", LocalDrivingLicenseApplicationId);
+                    try
+                    {
+                        connection.Open();
 
+                        object result = command.ExecuteScalar();
+                        if (result != null && byte.TryParse(result.ToString(), out byte ptCount))
+                        {
+                            PassedTestCount = ptCount;
+                        }
+                    }
+
+                    catch (Exception ex)
+                    {
+
+                    }
+
+                    finally
+                    {
+                        connection.Close();
+                    }
+                }
+            }
+            return PassedTestCount;
+        }
 
     }
 }
