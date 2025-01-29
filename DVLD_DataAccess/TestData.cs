@@ -109,5 +109,75 @@ namespace DVLD_DataAccess
             return GenericData.Exist("select Found=1 from Tests where Id= @Id", "@Id", Id);
         }
 
+        public static bool GetLastTestByPersonAndTestTypeAndLicenseClass
+          (int PersonId, int LicenseClassId, int TestTypeId, ref int TestId,
+            ref int TestAppointmentId, ref bool TestResult,
+            ref string Notes, ref int CreatedByUserId)
+        {
+            bool isFound = false;
+            string query = @"SELECT  top 1 Tests.Id as [Test Id], 
+                Tests.TestAppointmentID, Tests.Result, 
+			    Tests.Notes, Tests.CreatedByUserID, Applications.Id as [app Id]
+                FROM            LocalDrivingLicenseApplications INNER JOIN
+                                         Tests INNER JOIN
+                                         TestAppointments ON Tests.TestAppointmentId = TestAppointments.Id ON LocalDrivingLicenseApplications.Id = TestAppointments.LocalDrivingLicenseApplicationsId INNER JOIN
+                                         Applications ON LocalDrivingLicenseApplications.ApplicationID = Applications.Id
+                WHERE        (Applications.PersonId = @PersonId) 
+                        AND (LocalDrivingLicenseApplications.LicenseClassesId = @LicenseClassId)
+                        AND ( TestAppointments.TestTypeId=@TestTypeId)
+
+                ORDER BY Tests.TestAppointmentID DESc
+";
+
+
+            using (SqlConnection connection = new SqlConnection(SettingData.ConnectionString))
+            {
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+
+                    command.Parameters.AddWithValue("@PersonID", PersonId);
+                    command.Parameters.AddWithValue("@LicenseClassID", LicenseClassId);
+                    command.Parameters.AddWithValue("@TestTypeID", TestTypeId);
+                    try
+                    {
+                        connection.Open();
+                        SqlDataReader reader = command.ExecuteReader();
+
+                        if (reader.Read())
+                        {
+
+                            // The record was found
+                            isFound = true;
+                            TestId = (int)reader["Id"];
+                            TestAppointmentId = (int)reader["TestAppointmentId"];
+                            TestResult = (bool)reader["Result"];
+                            Notes = (reader["Notes"] == DBNull.Value) ? string.Empty : (string)reader["Notes"];
+                            CreatedByUserId = (int)reader["CreatedByUserId"];
+                        }
+                        else
+                        {
+                            // The record was not found
+                            isFound = false;
+                        }
+
+                        reader.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        isFound = false;
+                    }
+                    finally
+                    {
+                        connection.Close();
+                    }
+                }
+            }
+            return isFound;
+        }
+
+
+
+
+
     }
 }

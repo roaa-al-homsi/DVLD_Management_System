@@ -36,13 +36,17 @@
             this.picTest = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.dgvAllAppointments = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.cmsManageAppointments = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.takeTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnAddNewAppointment = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.labCountRecords = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
             this.uc_LocalDrivingLicenseInfoCard1 = new DVLD.Applications.Local_Driving_License.uc_LocalDrivingLicenseInfoCard();
             ((System.ComponentModel.ISupportInitialize)(this.picTest)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllAppointments)).BeginInit();
+            this.cmsManageAppointments.SuspendLayout();
             this.SuspendLayout();
             // 
             // labTitleForm
@@ -97,6 +101,7 @@
             this.dgvAllAppointments.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvAllAppointments.ColumnHeadersHeight = 4;
             this.dgvAllAppointments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvAllAppointments.ContextMenuStrip = this.cmsManageAppointments;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -135,19 +140,54 @@
             this.dgvAllAppointments.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvAllAppointments.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // guna2ImageButton1
+            // cmsManageAppointments
             // 
-            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton1.Image")));
-            this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton1.ImageRotate = 0F;
-            this.guna2ImageButton1.ImageSize = new System.Drawing.Size(60, 60);
-            this.guna2ImageButton1.Location = new System.Drawing.Point(990, 560);
-            this.guna2ImageButton1.Name = "guna2ImageButton1";
-            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.Size = new System.Drawing.Size(58, 54);
-            this.guna2ImageButton1.TabIndex = 5;
+            this.cmsManageAppointments.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.cmsManageAppointments.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editToolStripMenuItem,
+            this.takeTestToolStripMenuItem});
+            this.cmsManageAppointments.Name = "cmsManageAppointments";
+            this.cmsManageAppointments.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.cmsManageAppointments.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
+            this.cmsManageAppointments.RenderStyle.ColorTable = null;
+            this.cmsManageAppointments.RenderStyle.RoundedEdges = true;
+            this.cmsManageAppointments.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
+            this.cmsManageAppointments.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.cmsManageAppointments.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.cmsManageAppointments.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
+            this.cmsManageAppointments.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.cmsManageAppointments.Size = new System.Drawing.Size(142, 56);
+            // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("editToolStripMenuItem.Image")));
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(141, 26);
+            this.editToolStripMenuItem.Text = "Edit";
+            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
+            // 
+            // takeTestToolStripMenuItem
+            // 
+            this.takeTestToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("takeTestToolStripMenuItem.Image")));
+            this.takeTestToolStripMenuItem.Name = "takeTestToolStripMenuItem";
+            this.takeTestToolStripMenuItem.Size = new System.Drawing.Size(141, 26);
+            this.takeTestToolStripMenuItem.Text = "Take Test";
+            this.takeTestToolStripMenuItem.Click += new System.EventHandler(this.takeTestToolStripMenuItem_Click);
+            // 
+            // btnAddNewAppointment
+            // 
+            this.btnAddNewAppointment.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnAddNewAppointment.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnAddNewAppointment.Image = ((System.Drawing.Image)(resources.GetObject("btnAddNewAppointment.Image")));
+            this.btnAddNewAppointment.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnAddNewAppointment.ImageRotate = 0F;
+            this.btnAddNewAppointment.ImageSize = new System.Drawing.Size(60, 60);
+            this.btnAddNewAppointment.Location = new System.Drawing.Point(990, 560);
+            this.btnAddNewAppointment.Name = "btnAddNewAppointment";
+            this.btnAddNewAppointment.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnAddNewAppointment.Size = new System.Drawing.Size(58, 54);
+            this.btnAddNewAppointment.TabIndex = 5;
+            this.btnAddNewAppointment.Click += new System.EventHandler(this.btnAddNewAppointment_Click);
             // 
             // guna2HtmlLabel3
             // 
@@ -209,7 +249,7 @@
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.guna2HtmlLabel3);
             this.Controls.Add(this.labCountRecords);
-            this.Controls.Add(this.guna2ImageButton1);
+            this.Controls.Add(this.btnAddNewAppointment);
             this.Controls.Add(this.dgvAllAppointments);
             this.Controls.Add(this.guna2HtmlLabel2);
             this.Controls.Add(this.picTest);
@@ -219,8 +259,10 @@
             this.Name = "frmManageTestAppointments";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Vision Test Appointments";
+            this.Load += new System.EventHandler(this.frmManageTestAppointments_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picTest)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllAppointments)).EndInit();
+            this.cmsManageAppointments.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -232,9 +274,12 @@
         private Guna.UI2.WinForms.Guna2CirclePictureBox picTest;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2DataGridView dgvAllAppointments;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
+        private Guna.UI2.WinForms.Guna2ImageButton btnAddNewAppointment;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2HtmlLabel labCountRecords;
         private Guna.UI2.WinForms.Guna2Button btnClose;
+        private Guna.UI2.WinForms.Guna2ContextMenuStrip cmsManageAppointments;
+        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem takeTestToolStripMenuItem;
     }
 }

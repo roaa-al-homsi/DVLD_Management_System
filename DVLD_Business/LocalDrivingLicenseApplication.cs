@@ -158,7 +158,11 @@ namespace DVLD_Business
         {
             return LocalDrivingLicenseApplicationData.DoesPassTestType(this.Id, (int)testTypeId);
         }
-
+        //I'm not convinced...why we need person Id and license class Id 
+        public Test GetLastTestPerTestType(TestType.enTestTypes testTypeId)
+        {
+            return Test.FindLastTestPerPersonAndLicenseClass(this.PersonId, this.LicenseClassId, testTypeId);
+        }
     }
 
 
