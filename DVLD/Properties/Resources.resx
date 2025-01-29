@@ -124,4 +124,13 @@
   <data name="Male 512" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Male 512.png;System.Byte[]</value>
   </data>
+  <data name="Vision Test Schdule" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Vision Test Schdule.png;System.Byte[]</value>
+  </data>
+  <data name="Written Test 32 Sechdule" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Written Test 32 Sechdule.png;System.Byte[]</value>
+  </data>
+  <data name="Street Test 32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Street Test 32.png;System.Byte[]</value>
+  </data>
 </root>

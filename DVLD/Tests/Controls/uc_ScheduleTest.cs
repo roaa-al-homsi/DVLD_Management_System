@@ -1,6 +1,8 @@
 ﻿using DVLD.Global_Classes;
 using DVLD_Business;
 using System;
+using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 using Application = DVLD_Business.Application;
 using TestType = DVLD_Business.TestType;
@@ -29,6 +31,31 @@ namespace DVLD.Tests.Controls
             {
                 labTitleTest.Text = value.ToString();
                 _TestTypeId = value;
+
+                switch (_TestTypeId)
+                {
+                    case DVLD_Business.TestType.enTestTypes.VisionTest:
+                        gbTestType.Text = "Schedule Vision Test";
+                        using (MemoryStream ms = new MemoryStream(Properties.Resources.Vision_Test_Schdule))
+                        {
+                            picTestType.Image = Image.FromStream(ms);
+                        }
+                        break;
+                    case DVLD_Business.TestType.enTestTypes.WrittenTest:
+                        gbTestType.Text = "Schedule Written Test";
+                        using (MemoryStream ms = new MemoryStream(Properties.Resources.Written_Test_32_Sechdule))
+                        {
+                            picTestType.Image = Image.FromStream(ms);
+                        }
+                        break;
+                    case DVLD_Business.TestType.enTestTypes.StreetTest:
+                        gbTestType.Text = "Schedule Street Test";
+                        using (MemoryStream ms = new MemoryStream(Properties.Resources.Street_Test_32))
+                        {
+                            picTestType.Image = Image.FromStream(ms);
+                        }
+                        break;
+                }
             }
         }
         public uc_ScheduleTest()
