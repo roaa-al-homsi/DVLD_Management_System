@@ -93,9 +93,9 @@ namespace DVLD.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] Vision_Test_Schdule {
+        internal static byte[] Vision_512 {
             get {
-                object obj = ResourceManager.GetObject("Vision Test Schdule", resourceCulture);
+                object obj = ResourceManager.GetObject("Vision 512", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -103,9 +103,9 @@ namespace DVLD.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] Written_Test_32_Sechdule {
+        internal static byte[] Written_Test_512 {
             get {
-                object obj = ResourceManager.GetObject("Written Test 32 Sechdule", resourceCulture);
+                object obj = ResourceManager.GetObject("Written Test 512", resourceCulture);
                 return ((byte[])(obj));
             }
         }

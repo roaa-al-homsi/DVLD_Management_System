@@ -117,20 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Female 512" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Female 512.png;System.Byte[]</value>
-  </data>
-  <data name="Male 512" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Male 512.png;System.Byte[]</value>
-  </data>
-  <data name="Vision 512" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Vision 512.png;System.Byte[]</value>
-  </data>
-  <data name="Written Test 512" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Written Test 512.png;System.Byte[]</value>
-  </data>
-  <data name="Street Test 32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Street Test 32.png;System.Byte[]</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnClose.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAUtJREFUSEvV
+        lu1twzAMRD1KR+koHaWbdJSOklFaPSAKLOl4pJr4Rw84BFZkPpL6SI7/pLfmj+bP+yd+b75EBP5q/jG+
+        NTOHRJ4W1X03K5AzSfy5C2SuglYNnOXYUtbWHZfhtEgFeMYp3EFpnRo/O5qTrnm0kRhHbt0J7DZjj7Eo
+        qnZ+QcHP1Ti4rFptKFqkdIarYBFcVj1Pwu5IAJcVNEXdWwqJJmIHV3Kx8JBsdllU4RkUw3ooA+MMXoHi
+        IQYPatLsoU2TKsnj7YodtKsSZwBnbapAuzI4R+0hHtQkHEEZj9bcwRepA7+cu7t6h9yGU/G4pBZF7Z7h
+        8zwF37oyUfRCh7vkOjyKwXgot9YEV+PdfO/mhNV2VY7ErlNoV/VCqVhuKKdXwIfLYkfuR92ZtS6314nM
+        s3+ewEjyJcBZdIDAJIJZDj4vgV2g4/gFvt22ijyo9SAAAAAASUVORK5CYII=
+</value>
   </data>
 </root>

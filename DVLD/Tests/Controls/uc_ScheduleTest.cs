@@ -36,14 +36,14 @@ namespace DVLD.Tests.Controls
                 {
                     case DVLD_Business.TestType.enTestTypes.VisionTest:
                         gbTestType.Text = "Schedule Vision Test";
-                        using (MemoryStream ms = new MemoryStream(Properties.Resources.Vision_Test_Schdule))
+                        using (MemoryStream ms = new MemoryStream(Properties.Resources.Vision_512))
                         {
                             picTestType.Image = Image.FromStream(ms);
                         }
                         break;
                     case DVLD_Business.TestType.enTestTypes.WrittenTest:
                         gbTestType.Text = "Schedule Written Test";
-                        using (MemoryStream ms = new MemoryStream(Properties.Resources.Written_Test_32_Sechdule))
+                        using (MemoryStream ms = new MemoryStream(Properties.Resources.Written_Test_512))
                         {
                             picTestType.Image = Image.FromStream(ms);
                         }
