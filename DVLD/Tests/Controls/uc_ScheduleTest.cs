@@ -1,4 +1,5 @@
-﻿using DVLD_Business;
+﻿using DVLD.Global_Classes;
+using DVLD_Business;
 using System;
 using System.Windows.Forms;
 using Application = DVLD_Business.Application;
@@ -109,7 +110,6 @@ namespace DVLD.Tests.Controls
                 return;
             }
         }
-
         private bool _LoadTestAppointmentData()
         {
             _testAppointment = TestAppointment.Find(_testAppointmentId);
@@ -142,7 +142,6 @@ namespace DVLD.Tests.Controls
             }
             return true;
         }
-
         private bool _HandleAppointmentLockedConstraint()
         {
             if (_testAppointment.IsLocked)
@@ -161,7 +160,6 @@ namespace DVLD.Tests.Controls
             }
             return true;
         }
-
         private bool _HandlePreviousTestConstraint()
         { //we need to make sure that this person passed the previous required test before apply to the new test.
             //person can't apply for written test unless s/he passes the vision test.
@@ -210,13 +208,58 @@ namespace DVLD.Tests.Controls
             }
 
         }
+        private bool _HandleRetakeApplication()
+        {
+            //this will decide to create a separate application for retake test or not.
+            // and will create it if needed , then it will link it to the appointment.
+            if (_mode == Mode.Add && _CreationMode == enCreationMode.RetakeTestSchedule)
+            {
+                //in case the mode is add new and creation mode is retake test we should create a separate application for it.
+                //then we link it with the appointment.
+                Application application = new Application();
 
+                application.ApplicationTypeId = (int)Application.enApplicationType.RetakeTest;
+                application.PersonId = _localDrivingLicenseApplication.PersonId;
+                application.Date = DateTime.Now;
+                application.LastStatusDate = DateTime.Now;
+                application.CreatedByUserId = Global.CurrentUser.Id;
+                application.PaidFees = ApplicationType.GetFeesForSpecificApplication((int)Application.enApplicationType.RetakeTest);
+                application.Status = Application.enApplicationStatus.Completed;
 
+                if (!application.Save())
+                {
+                    _testAppointment.RetakeTestApplicationId = -1;
+                    MessageBox.Show("Failed to Create application", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+                _testAppointment.RetakeTestApplicationId = application.Id;
+            }
+            return true;
+        }
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (!_HandleRetakeApplication())
+            {
+                return;
+            }
 
+            _testAppointment.CreatedByUserId = Global_Classes.Global.CurrentUser.Id;
+            _testAppointment.Date = dtpDate.Value;
+            _testAppointment.TestTypeId = _TestTypeId;
+            _testAppointment.LocalDrivingLicenseApplicationsId = _localDrivingLicenseApplicationId;
+            _testAppointment.PaidFees = decimal.Parse(labFees.Text);
 
+            if (_testAppointment.Save())
+            {
+                _mode = Mode.Update;
+                MessageBox.Show("Data Saved Successfully.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-
-
+            }
+            else
+            {
+                MessageBox.Show("Error: Data Is not Saved Successfully.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
     }
 

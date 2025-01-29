@@ -88,6 +88,7 @@
             this.btnSave.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.btnSave.Size = new System.Drawing.Size(64, 54);
             this.btnSave.TabIndex = 28;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // gbTestType
             // 
