@@ -210,7 +210,7 @@ namespace DVLD_DataAccess
             int TestID = -1;
             SqlConnection connection = new SqlConnection(SettingData.ConnectionString);
 
-            string query = @"select Id from Tests where TestAppointmentID=@TestAppointmentID;";
+            string query = @"select Id from Tests where TestAppointmentId=@TestAppointmentID;";
 
             SqlCommand command = new SqlCommand(query, connection);
 
