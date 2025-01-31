@@ -1,4 +1,5 @@
 ﻿using DVLD.Applications.Local_Driving_License;
+using DVLD.ApplicationTypes;
 using DVLD.Global_Classes;
 using DVLD.Local_Driving_License_App;
 using DVLD.People;
@@ -72,6 +73,12 @@ namespace DVLD
         {
             frmManageLocalDrivingLicenseApplication frmManageLocalDrivingLicense = new frmManageLocalDrivingLicenseApplication();
             frmManageLocalDrivingLicense.ShowDialog();
+        }
+
+        private void manageApplicationTypesToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            frmManageApplicationTypes manageApplicationTypes = new frmManageApplicationTypes();
+            manageApplicationTypes.ShowDialog();
         }
     }
 }
