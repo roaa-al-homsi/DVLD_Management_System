@@ -196,7 +196,6 @@
             this.visionTEToolStripMenuItem.Name = "visionTEToolStripMenuItem";
             this.visionTEToolStripMenuItem.Size = new System.Drawing.Size(233, 26);
             this.visionTEToolStripMenuItem.Text = "schedule Vision Test";
-            this.visionTEToolStripMenuItem.Click += new System.EventHandler(this.visionTEToolStripMenuItem_Click);
             // 
             // scheduleWrittenTestToolStripMenuItem
             // 

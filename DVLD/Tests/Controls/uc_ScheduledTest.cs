@@ -13,7 +13,7 @@ namespace DVLD.Tests.Controls
         private TestAppointment _testAppointment;
         private int _localDrivingLicenseApplicationId = -1;
         private LocalDrivingLicenseApplication _localDrivingLicenseApplication;
-        private TestType.enTestTypes _testTypeId;
+        private TestType.enTestTypes _testTypeId = TestType.enTestTypes.VisionTest;
         private int _testId;
         public int TestAppointmentId
         {
