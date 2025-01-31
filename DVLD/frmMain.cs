@@ -67,5 +67,11 @@ namespace DVLD
         {
             labCurrentUser.Text = Global.CurrentUser.Username;
         }
+
+        private void retakeTestToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            frmManageLocalDrivingLicenseApplication frmManageLocalDrivingLicense = new frmManageLocalDrivingLicenseApplication();
+            frmManageLocalDrivingLicense.ShowDialog();
+        }
     }
 }
