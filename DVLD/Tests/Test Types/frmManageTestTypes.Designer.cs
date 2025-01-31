@@ -71,13 +71,13 @@
             this.cmsManageTestTypes.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
             this.cmsManageTestTypes.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
             this.cmsManageTestTypes.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.cmsManageTestTypes.Size = new System.Drawing.Size(215, 58);
+            this.cmsManageTestTypes.Size = new System.Drawing.Size(132, 30);
             // 
             // updateToolStripMenuItem
             // 
             this.updateToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("updateToolStripMenuItem.Image")));
             this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-            this.updateToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(131, 26);
             this.updateToolStripMenuItem.Text = "Update";
             this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
             // 
@@ -139,6 +139,7 @@
             this.Controls.Add(this.guna2PictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmManageTestTypes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Manage Test Types";
             this.Load += new System.EventHandler(this.frmManageTestTypes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTestTypes)).EndInit();

@@ -305,6 +305,7 @@
             this.Controls.Add(this.guna2HtmlLabel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmUpdateTestTypes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Update Test Type";
             this.Load += new System.EventHandler(this.frmUpdateTestTypes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
