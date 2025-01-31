@@ -34,7 +34,6 @@
             this.guna2PictureBox7 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.labTestId = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.labMessage = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2PictureBox6 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.labPersonName = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -71,7 +70,6 @@
             this.gbTestType.Controls.Add(this.guna2PictureBox7);
             this.gbTestType.Controls.Add(this.labTestId);
             this.gbTestType.Controls.Add(this.guna2HtmlLabel4);
-            this.gbTestType.Controls.Add(this.labMessage);
             this.gbTestType.Controls.Add(this.guna2PictureBox6);
             this.gbTestType.Controls.Add(this.labPersonName);
             this.gbTestType.Controls.Add(this.guna2HtmlLabel11);
@@ -95,7 +93,7 @@
             this.gbTestType.ForeColor = System.Drawing.Color.Black;
             this.gbTestType.Location = new System.Drawing.Point(3, 3);
             this.gbTestType.Name = "gbTestType";
-            this.gbTestType.Size = new System.Drawing.Size(596, 684);
+            this.gbTestType.Size = new System.Drawing.Size(413, 595);
             this.gbTestType.TabIndex = 30;
             this.gbTestType.Text = "Test Type";
             // 
@@ -104,7 +102,7 @@
             this.labDate.AutoSize = false;
             this.labDate.BackColor = System.Drawing.Color.Transparent;
             this.labDate.Font = new System.Drawing.Font("Andalus", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labDate.Location = new System.Drawing.Point(331, 480);
+            this.labDate.Location = new System.Drawing.Point(234, 454);
             this.labDate.Name = "labDate";
             this.labDate.Size = new System.Drawing.Size(68, 29);
             this.labDate.TabIndex = 51;
@@ -117,7 +115,7 @@
             this.guna2PictureBox7.FillColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox7.Image")));
             this.guna2PictureBox7.ImageRotate = 0F;
-            this.guna2PictureBox7.Location = new System.Drawing.Point(214, 573);
+            this.guna2PictureBox7.Location = new System.Drawing.Point(117, 547);
             this.guna2PictureBox7.Name = "guna2PictureBox7";
             this.guna2PictureBox7.Size = new System.Drawing.Size(37, 36);
             this.guna2PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -129,7 +127,7 @@
             this.labTestId.AutoSize = false;
             this.labTestId.BackColor = System.Drawing.Color.Transparent;
             this.labTestId.Font = new System.Drawing.Font("Andalus", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labTestId.Location = new System.Drawing.Point(331, 580);
+            this.labTestId.Location = new System.Drawing.Point(234, 554);
             this.labTestId.Name = "labTestId";
             this.labTestId.Size = new System.Drawing.Size(68, 29);
             this.labTestId.TabIndex = 49;
@@ -141,23 +139,11 @@
             this.guna2HtmlLabel4.AutoSize = false;
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Andalus", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(257, 580);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(160, 554);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(68, 29);
             this.guna2HtmlLabel4.TabIndex = 48;
             this.guna2HtmlLabel4.Text = "Test Id :";
-            // 
-            // labMessage
-            // 
-            this.labMessage.AutoSize = false;
-            this.labMessage.BackColor = System.Drawing.Color.Transparent;
-            this.labMessage.Font = new System.Drawing.Font("Andalus", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labMessage.ForeColor = System.Drawing.Color.Maroon;
-            this.labMessage.Location = new System.Drawing.Point(67, 227);
-            this.labMessage.Name = "labMessage";
-            this.labMessage.Size = new System.Drawing.Size(510, 48);
-            this.labMessage.TabIndex = 47;
-            this.labMessage.Text = "Can\'t schedule ,Vision Test Should Be Passed First Test";
             // 
             // guna2PictureBox6
             // 
@@ -165,7 +151,7 @@
             this.guna2PictureBox6.FillColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox6.Image")));
             this.guna2PictureBox6.ImageRotate = 0F;
-            this.guna2PictureBox6.Location = new System.Drawing.Point(214, 373);
+            this.guna2PictureBox6.Location = new System.Drawing.Point(117, 347);
             this.guna2PictureBox6.Name = "guna2PictureBox6";
             this.guna2PictureBox6.Size = new System.Drawing.Size(37, 36);
             this.guna2PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -177,7 +163,7 @@
             this.labPersonName.AutoSize = false;
             this.labPersonName.BackColor = System.Drawing.Color.Transparent;
             this.labPersonName.Font = new System.Drawing.Font("Andalus", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labPersonName.Location = new System.Drawing.Point(331, 380);
+            this.labPersonName.Location = new System.Drawing.Point(234, 354);
             this.labPersonName.Name = "labPersonName";
             this.labPersonName.Size = new System.Drawing.Size(68, 29);
             this.labPersonName.TabIndex = 44;
@@ -189,7 +175,7 @@
             this.guna2HtmlLabel11.AutoSize = false;
             this.guna2HtmlLabel11.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel11.Font = new System.Drawing.Font("Andalus", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel11.Location = new System.Drawing.Point(257, 380);
+            this.guna2HtmlLabel11.Location = new System.Drawing.Point(160, 354);
             this.guna2HtmlLabel11.Name = "guna2HtmlLabel11";
             this.guna2HtmlLabel11.Size = new System.Drawing.Size(68, 29);
             this.guna2HtmlLabel11.TabIndex = 43;
@@ -201,7 +187,7 @@
             this.guna2PictureBox5.FillColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox5.Image")));
             this.guna2PictureBox5.ImageRotate = 0F;
-            this.guna2PictureBox5.Location = new System.Drawing.Point(214, 415);
+            this.guna2PictureBox5.Location = new System.Drawing.Point(117, 389);
             this.guna2PictureBox5.Name = "guna2PictureBox5";
             this.guna2PictureBox5.Size = new System.Drawing.Size(37, 36);
             this.guna2PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -213,7 +199,7 @@
             this.labTrial.AutoSize = false;
             this.labTrial.BackColor = System.Drawing.Color.Transparent;
             this.labTrial.Font = new System.Drawing.Font("Andalus", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labTrial.Location = new System.Drawing.Point(331, 429);
+            this.labTrial.Location = new System.Drawing.Point(234, 403);
             this.labTrial.Name = "labTrial";
             this.labTrial.Size = new System.Drawing.Size(68, 29);
             this.labTrial.TabIndex = 41;
@@ -225,7 +211,7 @@
             this.guna2HtmlLabel9.AutoSize = false;
             this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel9.Font = new System.Drawing.Font("Andalus", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel9.Location = new System.Drawing.Point(257, 429);
+            this.guna2HtmlLabel9.Location = new System.Drawing.Point(160, 403);
             this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
             this.guna2HtmlLabel9.Size = new System.Drawing.Size(68, 29);
             this.guna2HtmlLabel9.TabIndex = 40;
@@ -237,7 +223,7 @@
             this.guna2PictureBox4.FillColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox4.Image")));
             this.guna2PictureBox4.ImageRotate = 0F;
-            this.guna2PictureBox4.Location = new System.Drawing.Point(214, 473);
+            this.guna2PictureBox4.Location = new System.Drawing.Point(117, 447);
             this.guna2PictureBox4.Name = "guna2PictureBox4";
             this.guna2PictureBox4.Size = new System.Drawing.Size(37, 36);
             this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -249,7 +235,7 @@
             this.guna2HtmlLabel7.AutoSize = false;
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel7.Font = new System.Drawing.Font("Andalus", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(257, 473);
+            this.guna2HtmlLabel7.Location = new System.Drawing.Point(160, 447);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
             this.guna2HtmlLabel7.Size = new System.Drawing.Size(68, 29);
             this.guna2HtmlLabel7.TabIndex = 38;
@@ -261,7 +247,7 @@
             this.guna2PictureBox3.FillColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.Image")));
             this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(214, 521);
+            this.guna2PictureBox3.Location = new System.Drawing.Point(117, 495);
             this.guna2PictureBox3.Name = "guna2PictureBox3";
             this.guna2PictureBox3.Size = new System.Drawing.Size(37, 36);
             this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -273,7 +259,7 @@
             this.labFees.AutoSize = false;
             this.labFees.BackColor = System.Drawing.Color.Transparent;
             this.labFees.Font = new System.Drawing.Font("Andalus", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labFees.Location = new System.Drawing.Point(331, 528);
+            this.labFees.Location = new System.Drawing.Point(234, 502);
             this.labFees.Name = "labFees";
             this.labFees.Size = new System.Drawing.Size(68, 29);
             this.labFees.TabIndex = 36;
@@ -285,7 +271,7 @@
             this.guna2HtmlLabel5.AutoSize = false;
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Andalus", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(257, 528);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(160, 502);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(68, 29);
             this.guna2HtmlLabel5.TabIndex = 35;
@@ -297,7 +283,7 @@
             this.guna2PictureBox2.FillColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
             this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(214, 331);
+            this.guna2PictureBox2.Location = new System.Drawing.Point(117, 305);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
             this.guna2PictureBox2.Size = new System.Drawing.Size(37, 36);
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -309,7 +295,7 @@
             this.labClassName.AutoSize = false;
             this.labClassName.BackColor = System.Drawing.Color.Transparent;
             this.labClassName.Font = new System.Drawing.Font("Andalus", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labClassName.Location = new System.Drawing.Point(331, 338);
+            this.labClassName.Location = new System.Drawing.Point(234, 312);
             this.labClassName.Name = "labClassName";
             this.labClassName.Size = new System.Drawing.Size(68, 29);
             this.labClassName.TabIndex = 33;
@@ -321,7 +307,7 @@
             this.guna2HtmlLabel3.AutoSize = false;
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Andalus", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(257, 338);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(160, 312);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(68, 29);
             this.guna2HtmlLabel3.TabIndex = 32;
@@ -333,7 +319,7 @@
             this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(214, 281);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(117, 255);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.Size = new System.Drawing.Size(37, 36);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -345,7 +331,7 @@
             this.labLDLAId.AutoSize = false;
             this.labLDLAId.BackColor = System.Drawing.Color.Transparent;
             this.labLDLAId.Font = new System.Drawing.Font("Andalus", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labLDLAId.Location = new System.Drawing.Point(331, 288);
+            this.labLDLAId.Location = new System.Drawing.Point(234, 262);
             this.labLDLAId.Name = "labLDLAId";
             this.labLDLAId.Size = new System.Drawing.Size(68, 29);
             this.labLDLAId.TabIndex = 30;
@@ -357,7 +343,7 @@
             this.guna2HtmlLabel1.AutoSize = false;
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Andalus", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(257, 288);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(160, 262);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(68, 29);
             this.guna2HtmlLabel1.TabIndex = 29;
@@ -368,7 +354,7 @@
             this.labTitleTest.AutoSize = false;
             this.labTitleTest.BackColor = System.Drawing.Color.Transparent;
             this.labTitleTest.Font = new System.Drawing.Font("Andalus", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labTitleTest.Location = new System.Drawing.Point(230, 179);
+            this.labTitleTest.Location = new System.Drawing.Point(107, 179);
             this.labTitleTest.Name = "labTitleTest";
             this.labTitleTest.Size = new System.Drawing.Size(195, 48);
             this.labTitleTest.TabIndex = 28;
@@ -379,7 +365,7 @@
             this.picTestType.BackColor = System.Drawing.Color.Transparent;
             this.picTestType.Image = ((System.Drawing.Image)(resources.GetObject("picTestType.Image")));
             this.picTestType.ImageRotate = 0F;
-            this.picTestType.Location = new System.Drawing.Point(214, 43);
+            this.picTestType.Location = new System.Drawing.Point(91, 43);
             this.picTestType.Name = "picTestType";
             this.picTestType.Size = new System.Drawing.Size(211, 130);
             this.picTestType.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -393,7 +379,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.gbTestType);
             this.Name = "uc_ScheduledTest";
-            this.Size = new System.Drawing.Size(602, 691);
+            this.Size = new System.Drawing.Size(423, 604);
             this.gbTestType.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).EndInit();
@@ -413,7 +399,6 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox7;
         private Guna.UI2.WinForms.Guna2HtmlLabel labTestId;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
-        private Guna.UI2.WinForms.Guna2HtmlLabel labMessage;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox6;
         private Guna.UI2.WinForms.Guna2HtmlLabel labPersonName;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel11;
