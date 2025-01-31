@@ -3,6 +3,7 @@ using DVLD.ApplicationTypes;
 using DVLD.Global_Classes;
 using DVLD.Local_Driving_License_App;
 using DVLD.People;
+using DVLD.TestTypes;
 using DVLD.Users;
 using System.Windows.Forms;
 
@@ -79,6 +80,12 @@ namespace DVLD
         {
             frmManageApplicationTypes manageApplicationTypes = new frmManageApplicationTypes();
             manageApplicationTypes.ShowDialog();
+        }
+
+        private void manageTestTypesToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            frmManageTestTypes frmManageTestTypes = new frmManageTestTypes();
+            frmManageTestTypes.ShowDialog();
         }
     }
 }
