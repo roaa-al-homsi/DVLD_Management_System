@@ -1,29 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|c:\\users\\ruaa\\source\\repos\\dvld_management_system\\dvld\\tests\\controls\\uc_scheduletest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|solutionrelative:tests\\controls\\uc_scheduletest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|c:\\users\\ruaa\\source\\repos\\dvld_management_system\\dvld\\tests\\controls\\uc_scheduletest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|solutionrelative:tests\\controls\\uc_scheduletest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ruaa\\AppData\\Local\\Temp\\065d9622-eb48-482e-bf77-8d448e64d803_DVLD Project Final.rar.803\\Project\\DVLD\\Applications\\Local Driving License\\frmListLocalDrivingLicesnseApplications.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|c:\\users\\ruaa\\source\\repos\\dvld_management_system\\dvld\\tests\\schedule tests\\frmtaketest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|solutionrelative:tests\\schedule tests\\frmtaketest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ruaa\\AppData\\Local\\Temp\\7e346d6b-ed0d-4941-9563-6e80c5cac3de_DVLD Project Final.rar.3de\\Project\\DVLD\\Tests\\frmListTestAppointments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ruaa\\AppData\\Local\\Temp\\cb50b932-22e8-4701-8772-bbdd10204d1b_DVLD Project Final.rar.d1b\\Project\\DVLD_Buisness\\clsLocalDrivingLicenseApplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -31,89 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 270,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": -1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "frmListLocalDrivingLicesnseApplications.cs",
-              "DocumentMoniker": "C:\\Users\\Ruaa\\AppData\\Local\\Temp\\065d9622-eb48-482e-bf77-8d448e64d803_DVLD Project Final.rar.803\\Project\\DVLD\\Applications\\Local Driving License\\frmListLocalDrivingLicesnseApplications.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\065d9622-eb48-482e-bf77-8d448e64d803_DVLD Project Final.rar.803\\Project\\DVLD\\Applications\\Local Driving License\\frmListLocalDrivingLicesnseApplications.cs",
-              "ToolTip": "C:\\Users\\Ruaa\\AppData\\Local\\Temp\\065d9622-eb48-482e-bf77-8d448e64d803_DVLD Project Final.rar.803\\Project\\DVLD\\Applications\\Local Driving License\\frmListLocalDrivingLicesnseApplications.cs [Read Only]",
-              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\065d9622-eb48-482e-bf77-8d448e64d803_DVLD Project Final.rar.803\\Project\\DVLD\\Applications\\Local Driving License\\frmListLocalDrivingLicesnseApplications.cs [Read Only]",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAAAAEBAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-01T17:25:13.164Z",
-              "IsPinned": true,
-              "EditorCaption": " [Read Only]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "clsLocalDrivingLicenseApplication.cs",
-              "DocumentMoniker": "C:\\Users\\Ruaa\\AppData\\Local\\Temp\\cb50b932-22e8-4701-8772-bbdd10204d1b_DVLD Project Final.rar.d1b\\Project\\DVLD_Buisness\\clsLocalDrivingLicenseApplication.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\cb50b932-22e8-4701-8772-bbdd10204d1b_DVLD Project Final.rar.d1b\\Project\\DVLD_Buisness\\clsLocalDrivingLicenseApplication.cs",
-              "ToolTip": "C:\\Users\\Ruaa\\AppData\\Local\\Temp\\cb50b932-22e8-4701-8772-bbdd10204d1b_DVLD Project Final.rar.d1b\\Project\\DVLD_Buisness\\clsLocalDrivingLicenseApplication.cs [Read Only]",
-              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\cb50b932-22e8-4701-8772-bbdd10204d1b_DVLD Project Final.rar.d1b\\Project\\DVLD_Buisness\\clsLocalDrivingLicenseApplication.cs [Read Only]",
-              "ViewState": "AgIAAAIBAAAAAAAAAAAAABkBAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-01T17:49:38.93Z",
-              "IsPinned": true,
-              "EditorCaption": " [Read Only]"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "uc_ScheduleTest.cs",
-              "DocumentMoniker": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\Tests\\Controls\\uc_ScheduleTest.cs",
-              "RelativeDocumentMoniker": "Tests\\Controls\\uc_ScheduleTest.cs",
-              "ToolTip": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\Tests\\Controls\\uc_ScheduleTest.cs",
-              "RelativeToolTip": "Tests\\Controls\\uc_ScheduleTest.cs",
-              "ViewState": "AgIAAFAAAAAAAAAAAAAAAF8AAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-01T22:58:33.046Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "frmTakeTest.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\Tests\\Schedule Tests\\frmTakeTest.cs",
-              "RelativeDocumentMoniker": "Tests\\Schedule Tests\\frmTakeTest.cs",
-              "ToolTip": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\Tests\\Schedule Tests\\frmTakeTest.cs [Design]",
-              "RelativeToolTip": "Tests\\Schedule Tests\\frmTakeTest.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-01T20:13:33.583Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "frmListTestAppointments.cs",
-              "DocumentMoniker": "C:\\Users\\Ruaa\\AppData\\Local\\Temp\\7e346d6b-ed0d-4941-9563-6e80c5cac3de_DVLD Project Final.rar.3de\\Project\\DVLD\\Tests\\frmListTestAppointments.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\7e346d6b-ed0d-4941-9563-6e80c5cac3de_DVLD Project Final.rar.3de\\Project\\DVLD\\Tests\\frmListTestAppointments.cs",
-              "ToolTip": "C:\\Users\\Ruaa\\AppData\\Local\\Temp\\7e346d6b-ed0d-4941-9563-6e80c5cac3de_DVLD Project Final.rar.3de\\Project\\DVLD\\Tests\\frmListTestAppointments.cs [Read Only]",
-              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\7e346d6b-ed0d-4941-9563-6e80c5cac3de_DVLD Project Final.rar.3de\\Project\\DVLD\\Tests\\frmListTestAppointments.cs [Read Only]",
-              "ViewState": "AgIAABEAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-01T19:24:51.898Z",
-              "EditorCaption": " [Read Only]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "uc_ScheduleTest.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\Tests\\Controls\\uc_ScheduleTest.cs",
-              "RelativeDocumentMoniker": "Tests\\Controls\\uc_ScheduleTest.cs",
-              "ToolTip": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\Tests\\Controls\\uc_ScheduleTest.cs [Design]",
-              "RelativeToolTip": "Tests\\Controls\\uc_ScheduleTest.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-01T19:48:52.678Z",
-              "EditorCaption": " [Design]"
             }
           ]
         }

@@ -10,7 +10,9 @@ namespace DVLD_Business
         private Mode _mode;
         public int Id { get; set; }
         public int PersonId { get; set; }
+        public Person PersonInfo { get; }
         public int CreatedByUserId { get; set; }
+        public User UserInfo { get; }
         public DateTime CreatedDate { get; set; }
         public Driver()
         {
@@ -27,7 +29,8 @@ namespace DVLD_Business
             this.PersonId = PersonId;
             this.CreatedByUserId = CreatedByUserId;
             this.CreatedDate = CreatedDate;
-
+            this.PersonInfo = Person.Find(PersonId);
+            this.UserInfo = User.Find(CreatedByUserId);
 
             _mode = Mode.Update;
         }
@@ -39,17 +42,23 @@ namespace DVLD_Business
         }
         private bool _Update()
         {
-            return DriverData.Update(this.Id, this.PersonId, this.CreatedByUserId, this.CreatedDate);
+            return DriverData.Update(this.Id, this.PersonId, this.CreatedByUserId);
         }
         public bool Save()
         {
-
             switch (_mode)
             {
                 case Mode.Add:
                     {
-                        _mode = Mode.Update;
-                        return _Add();
+                        if (_Add())
+                        {
+                            _mode = Mode.Update;
+                            return true;
+                        }
+                        else
+                        {
+                            return false;
+                        }
                     }
                 case Mode.Update: return _Update();
             }
@@ -83,6 +92,15 @@ namespace DVLD_Business
             }
             return null;
         }
+        //public static DataTable GetLicenses(int DriverID)
+        //{
+        //    return clsLicense.GetDriverLicenses(DriverID);
+        //}
+
+        //public static DataTable GetInternationalLicenses(int DriverID)
+        //{
+        //    return clsInternationalLicense.GetDriverInternationalLicenses(DriverID);
+        //}
     }
 
 

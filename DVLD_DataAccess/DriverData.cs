@@ -35,10 +35,10 @@ namespace DVLD_DataAccess
 
             return newId;
         }
-        public static bool Update(int Id, int PersonId, int CreatedByUserId, DateTime CreatedDate)
+        public static bool Update(int Id, int PersonId, int CreatedByUserId)
         {
             int RowsAffected = 0;
-            string query = "update Drivers set Id = @Id,PersonId = @PersonId,CreatedByUserId = @CreatedByUserId,CreatedDate = @CreatedDate  WHERE Id=@Id;";
+            string query = "update Drivers set PersonId = @PersonId,CreatedByUserId = @CreatedByUserId  WHERE Id=@Id;";
             using (SqlConnection connection = new SqlConnection(SettingData.ConnectionString))
             {
                 using (SqlCommand command = new SqlCommand(query, connection))
@@ -46,7 +46,6 @@ namespace DVLD_DataAccess
                     command.Parameters.AddWithValue("@Id", Id);
                     command.Parameters.AddWithValue("@PersonId", PersonId);
                     command.Parameters.AddWithValue("@CreatedByUserId", CreatedByUserId);
-                    command.Parameters.AddWithValue("@CreatedDate", CreatedDate);
 
                     try
                     {
