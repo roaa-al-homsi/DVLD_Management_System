@@ -9,7 +9,7 @@ namespace DVLD_DataAccess
         public static int Add(int TestAppointmentId, bool Result, string Notes, int CreatedByUserId)
         {
             int newId = 0;
-            string query = @"insert into Tests (TestAppointmentResult,Notes,CreatedByUserId) values (@TestAppointmentId,@Result,@Notes,@CreatedByUserId)
+            string query = @"insert into Tests (TestAppointmentId,Result,Notes,CreatedByUserId) values (@TestAppointmentId,@Result,@Notes,@CreatedByUserId)
                     UPDATE TestAppointments SET IsLocked=1 where Id = @TestAppointmentId;
                       SELECT SCOPE_IDENTITY(); ";
             using (SqlConnection connection = new SqlConnection(SettingData.ConnectionString))

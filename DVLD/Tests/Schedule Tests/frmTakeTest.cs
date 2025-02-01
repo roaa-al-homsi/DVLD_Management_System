@@ -35,7 +35,7 @@ namespace DVLD.Tests.Schedule_Tests
             {
                 MessageBox.Show("Data Saved Successfully.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 btnSave.Enabled = false;
-
+                frmTakeTest_Load(null, null);
             }
             else
             {
@@ -50,9 +50,10 @@ namespace DVLD.Tests.Schedule_Tests
 
             btnSave.Enabled = (uc_ScheduledTest1.TestAppointmentId != -1);//How test appointment does not find?
             _testId = uc_ScheduledTest1.TestId;
-            if (_testId != 1)
+            if (_testId != -1)
             {
                 _test = Test.Find(_testId);
+
                 if (_test.Result)
                 {
                     RbPass.Checked = true;
@@ -65,6 +66,8 @@ namespace DVLD.Tests.Schedule_Tests
                 labMessageToUser.Visible = true;
                 RbFail.Enabled = false;
                 RbPass.Enabled = false;
+
+
             }
             else
             {

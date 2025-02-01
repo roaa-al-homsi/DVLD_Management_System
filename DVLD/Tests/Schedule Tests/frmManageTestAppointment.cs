@@ -107,7 +107,9 @@ namespace DVLD.Tests.Schedule_Tests
         }
         private void takeTestToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            //soon
+            frmTakeTest frmTakeTest = new frmTakeTest((int)dgvAllAppointments.CurrentRow.Cells[0].Value, _testType);
+            frmTakeTest.ShowDialog();
+
         }
         private void btnClose_Click(object sender, System.EventArgs e)
         {

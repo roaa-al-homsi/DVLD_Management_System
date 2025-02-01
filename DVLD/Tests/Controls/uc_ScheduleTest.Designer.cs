@@ -360,7 +360,7 @@
             this.labTitleTest.Font = new System.Drawing.Font("Andalus", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labTitleTest.Location = new System.Drawing.Point(230, 179);
             this.labTitleTest.Name = "labTitleTest";
-            this.labTitleTest.Size = new System.Drawing.Size(195, 48);
+            this.labTitleTest.Size = new System.Drawing.Size(347, 48);
             this.labTitleTest.TabIndex = 28;
             this.labTitleTest.Text = "Schedule Test";
             // 

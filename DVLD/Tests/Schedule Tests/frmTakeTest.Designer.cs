@@ -190,9 +190,9 @@
             // 
             // uc_ScheduledTest1
             // 
-            this.uc_ScheduledTest1.Location = new System.Drawing.Point(109, 0);
+            this.uc_ScheduledTest1.Location = new System.Drawing.Point(85, -3);
             this.uc_ScheduledTest1.Name = "uc_ScheduledTest1";
-            this.uc_ScheduledTest1.Size = new System.Drawing.Size(423, 604);
+            this.uc_ScheduledTest1.Size = new System.Drawing.Size(428, 604);
             this.uc_ScheduledTest1.TabIndex = 59;
             this.uc_ScheduledTest1.TestTypeId = DVLD_Business.TestType.enTestTypes.VisionTest;
             // 
