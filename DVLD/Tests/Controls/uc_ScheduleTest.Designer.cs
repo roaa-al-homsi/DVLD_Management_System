@@ -169,7 +169,7 @@
             this.labPersonName.Font = new System.Drawing.Font("Andalus", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labPersonName.Location = new System.Drawing.Point(331, 380);
             this.labPersonName.Name = "labPersonName";
-            this.labPersonName.Size = new System.Drawing.Size(68, 29);
+            this.labPersonName.Size = new System.Drawing.Size(246, 29);
             this.labPersonName.TabIndex = 44;
             this.labPersonName.Text = "???";
             this.labPersonName.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -205,7 +205,7 @@
             this.labTrial.Font = new System.Drawing.Font("Andalus", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labTrial.Location = new System.Drawing.Point(331, 429);
             this.labTrial.Name = "labTrial";
-            this.labTrial.Size = new System.Drawing.Size(68, 29);
+            this.labTrial.Size = new System.Drawing.Size(246, 29);
             this.labTrial.TabIndex = 41;
             this.labTrial.Text = "???";
             this.labTrial.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -301,7 +301,7 @@
             this.labClassName.Font = new System.Drawing.Font("Andalus", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labClassName.Location = new System.Drawing.Point(331, 338);
             this.labClassName.Name = "labClassName";
-            this.labClassName.Size = new System.Drawing.Size(68, 29);
+            this.labClassName.Size = new System.Drawing.Size(246, 29);
             this.labClassName.TabIndex = 33;
             this.labClassName.Text = "???";
             this.labClassName.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -337,7 +337,7 @@
             this.labLDLAId.Font = new System.Drawing.Font("Andalus", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labLDLAId.Location = new System.Drawing.Point(331, 288);
             this.labLDLAId.Name = "labLDLAId";
-            this.labLDLAId.Size = new System.Drawing.Size(68, 29);
+            this.labLDLAId.Size = new System.Drawing.Size(246, 29);
             this.labLDLAId.TabIndex = 30;
             this.labLDLAId.Text = "???";
             this.labLDLAId.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;

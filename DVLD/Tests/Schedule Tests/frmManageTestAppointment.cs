@@ -94,9 +94,9 @@ namespace DVLD.Tests.Schedule_Tests
                 return;
             }
 
-            //frmScheduleTest frm2 = new frmScheduleTest(lastTest.TestAppointmentInfo.LocalDrivingLicenseApplicationID, _testType);
-            //frm2.ShowDialog();
-            //frmManageTestAppointments_Load(null, null);
+            frmScheduleTest frm2 = new frmScheduleTest(lastTest.TestAppointmentInfo.LocalDrivingLicenseApplicationsId, _testType);
+            frm2.ShowDialog();
+            frmManageTestAppointments_Load(null, null);
 
         }
         private void editToolStripMenuItem_Click(object sender, System.EventArgs e)

@@ -91,6 +91,7 @@ namespace DVLD.Tests.Controls
                 case enCreationMode.RetakeTestSchedule:
                     labRetakeAppFees.Text = ApplicationType.GetFeesForSpecificApplication((int)Application.enApplicationType.RetakeTest).ToString();
                     labTitleTest.Text = "Schedule Retake Test ";
+                    gbRetakeTestInfo.Enabled = true;
                     break;
                 case enCreationMode.FirstTimeSchedule:
                     gbRetakeTestInfo.Enabled = false;
@@ -120,7 +121,7 @@ namespace DVLD.Tests.Controls
                     }
                     break;
             }
-            labTotalFees.Text = (decimal.Parse(labRetakeAppFees.Text) + _localDrivingLicenseApplication.PaidFees).ToString();
+            labTotalFees.Text = (decimal.Parse(labRetakeAppFees.Text) + decimal.Parse(labFees.Text)).ToString();
 
             if (!_HandleActiveTestAppointmentConstraint())
             {

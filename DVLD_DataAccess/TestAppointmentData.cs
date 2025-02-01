@@ -9,7 +9,7 @@ namespace DVLD_DataAccess
         public static int Add(int TestTypeId, int LocalDrivingLicenseApplicationsId, DateTime Date, decimal PaidFees, int CreatedByUserId, bool IsLocked, int RetakeTestApplicationId)
         {
             int newId = 0;
-            string query = "insert into TestAppointments (TestTypeLocalDrivingLicenseApplicationsDate,PaidFees,CreatedByUserIsLocked,RetakeTestApplicationId) values (@TestTypeId,@LocalDrivingLicenseApplicationsId,@Date,@PaidFees,@CreatedByUserId,@IsLocked,@RetakeTestApplicationId) SELECT SCOPE_IDENTITY(); ";
+            string query = "insert into TestAppointments (TestTypeId,LocalDrivingLicenseApplicationsId,Date,PaidFees,CreatedByUserId,IsLocked,RetakeTestApplicationId) values (@TestTypeId,@LocalDrivingLicenseApplicationsId,@Date,@PaidFees,@CreatedByUserId,@IsLocked,@RetakeTestApplicationId) SELECT SCOPE_IDENTITY(); ";
             using (SqlConnection connection = new SqlConnection(SettingData.ConnectionString))
             {
                 using (SqlCommand command = new SqlCommand(query, connection))
@@ -174,7 +174,7 @@ namespace DVLD_DataAccess
                         FROM TestAppointments
                         WHERE  
                         (TestTypeId = @TestTypeId) 
-                        AND (LocalDrivingLicenseApplicationId = @LocalDrivingLicenseApplicationId)
+                        AND (LocalDrivingLicenseApplicationsId = @LocalDrivingLicenseApplicationId)
                         order by Id DESC;";
 
 
