@@ -140,7 +140,7 @@
             this.addNewLicenseToolStripMenuItem.Name = "addNewLicenseToolStripMenuItem";
             this.addNewLicenseToolStripMenuItem.Size = new System.Drawing.Size(296, 26);
             this.addNewLicenseToolStripMenuItem.Text = "Add New Licesne";
-            this.addNewLicenseToolStripMenuItem.Click += new System.EventHandler(this.addNewLicesneToolStripMenuItem_Click);
+            this.addNewLicenseToolStripMenuItem.Click += new System.EventHandler(this.addNewLicenseToolStripMenuItem_Click);
             // 
             // cancelApplicationToolStripMenuItem
             // 
@@ -196,6 +196,7 @@
             this.visionTEToolStripMenuItem.Name = "visionTEToolStripMenuItem";
             this.visionTEToolStripMenuItem.Size = new System.Drawing.Size(233, 26);
             this.visionTEToolStripMenuItem.Text = "schedule Vision Test";
+            this.visionTEToolStripMenuItem.Click += new System.EventHandler(this.visionTEToolStripMenuItem_Click_1);
             // 
             // scheduleWrittenTestToolStripMenuItem
             // 
@@ -203,6 +204,7 @@
             this.scheduleWrittenTestToolStripMenuItem.Name = "scheduleWrittenTestToolStripMenuItem";
             this.scheduleWrittenTestToolStripMenuItem.Size = new System.Drawing.Size(233, 26);
             this.scheduleWrittenTestToolStripMenuItem.Text = "schedule Written Test";
+            this.scheduleWrittenTestToolStripMenuItem.Click += new System.EventHandler(this.scheduleWrittenTestToolStripMenuItem_Click);
             // 
             // scheduleStreetTestToolStripMenuItem
             // 
@@ -210,6 +212,7 @@
             this.scheduleStreetTestToolStripMenuItem.Name = "scheduleStreetTestToolStripMenuItem";
             this.scheduleStreetTestToolStripMenuItem.Size = new System.Drawing.Size(233, 26);
             this.scheduleStreetTestToolStripMenuItem.Text = "schedule Street Test";
+            this.scheduleStreetTestToolStripMenuItem.Click += new System.EventHandler(this.scheduleStreetTestToolStripMenuItem_Click);
             // 
             // guna2HtmlLabel3
             // 

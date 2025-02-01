@@ -163,6 +163,15 @@ namespace DVLD_Business
         {
             return Test.FindLastTestPerPersonAndLicenseClass(this.PersonId, this.LicenseClassId, testTypeId);
         }
+        public bool IsLicenseIssued()
+        {
+            return (GetActiveLicenseID() != -1);
+        }
+
+        public int GetActiveLicenseID()
+        {//this will get the license id that belongs to this application
+            return License.GetActiveLicenseIDByPersonID(this.PersonId, this.LicenseClassId);
+        }
     }
 
 
