@@ -167,11 +167,20 @@ namespace DVLD_Business
         {
             return (GetActiveLicenseID() != -1);
         }
-
         public int GetActiveLicenseID()
         {//this will get the license id that belongs to this application
             return License.GetActiveLicenseIDByPersonID(this.PersonId, this.LicenseClassId);
         }
+        public byte GetPassedTestCount()
+        {
+            return Test.GetPassedTestCount(this.Id);
+        }
+
+        public static byte GetPassedTestCount(int LocalDrivingLicenseApplicationID)
+        {
+            return Test.GetPassedTestCount(LocalDrivingLicenseApplicationID);
+        }
+
     }
 
 

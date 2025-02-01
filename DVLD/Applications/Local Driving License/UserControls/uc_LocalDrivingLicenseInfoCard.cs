@@ -19,11 +19,12 @@ namespace DVLD.Applications.Local_Driving_License
         {
             labLDLAId.Text = _localDrivingLicenseApplication.Id.ToString();
             labAppliedForLicense.Text = _localDrivingLicenseApplication.LicenseClass.Name;
-            labPassedTest.Text = 3.ToString();
+            labPassedTest.Text = _localDrivingLicenseApplication.GetPassedTestCount().ToString();
             uc_BasicApplicationInfo1.LoadApplicationInfo(_localDrivingLicenseApplication.ApplicationId);
         }
         public void LoadLocalDrivingLicenseInfoById(int localDrivingLicenseId)
         {
+            _localDrivingLicenseId = localDrivingLicenseId;
             _localDrivingLicenseApplication = LocalDrivingLicenseApplication.Find(localDrivingLicenseId);
             if (_localDrivingLicenseApplication == null)
             {

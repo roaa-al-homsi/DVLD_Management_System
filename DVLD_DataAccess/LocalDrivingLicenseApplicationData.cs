@@ -224,7 +224,6 @@ namespace DVLD_DataAccess
             }
             return IsFound;
         }
-
         public static bool DoesPassTestType(int localDrivingLicenseId, int testTypeId)
         {
             bool IsFound = false;
