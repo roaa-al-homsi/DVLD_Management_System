@@ -30,6 +30,13 @@ namespace DVLD_Business
                 return GetIssueReasonText(this.IssueReason);
             }
         }
+        public bool IsDetained
+        {
+            get
+            {
+                return DetainedLicense.IsLicenseDetained(this.Id);
+            }
+        }
         public License()
         {
             this.Id = -1;

@@ -168,15 +168,5 @@ namespace DVLD_DataAccess
             }
             return LicenseID;
         }
-
-
-
-
-
-
-
-
-
-
     }
 }

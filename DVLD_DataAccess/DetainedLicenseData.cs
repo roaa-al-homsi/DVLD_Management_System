@@ -1,0 +1,129 @@
+﻿using System;
+using System.Data;
+using System.Data.SqlClient;
+
+namespace DVLD_DataAccess
+{
+    public static class DetainedLicenseData
+    {
+        public static int Add(int LicenseId, DateTime DetainDate, decimal FineFees, int CreatedByUserId, bool IsReleased, DateTime ReleaseDate, int ReleasedByUserId, int ReleaseApplicationId)
+        {
+            int newId = 0;
+            string query = "insert into DetainedLicenses (LicenseId,DetainDate,FineFees,CreatedByUserId,IsReleased,ReleaseDate,ReleasedByUserId,ReleaseApplicationId) values (@LicenseId,@DetainDate,@FineFees,@CreatedByUserId,@IsReleased,@ReleaseDate,@ReleasedByUserId,@ReleaseApplicationId) SELECT SCOPE_IDENTITY(); ";
+            using (SqlConnection connection = new SqlConnection(SettingData.ConnectionString))
+            {
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+
+                    command.Parameters.AddWithValue("@LicenseId", LicenseId);
+                    command.Parameters.AddWithValue("@DetainDate", DetainDate);
+                    command.Parameters.AddWithValue("@FineFees", FineFees);
+                    command.Parameters.AddWithValue("@CreatedByUserId", CreatedByUserId);
+                    command.Parameters.AddWithValue("@IsReleased", IsReleased);
+                    command.Parameters.AddWithValue("@ReleasedByUserId", (ReleasedByUserId == -1) ? DBNull.Value : (object)ReleasedByUserId);
+                    command.Parameters.AddWithValue("@ReleaseApplicationId", (ReleaseApplicationId == -1) ? DBNull.Value : (object)ReleaseApplicationId);
+
+                    try
+                    {
+                        connection.Open();
+                        object result = command.ExecuteScalar();
+                        if (result != null && int.TryParse(result.ToString(), out int insertedID))
+                        {
+                            newId = insertedID;
+                        }
+
+                    }
+                    catch (Exception ex) { }
+                }
+            }
+
+            return newId;
+        }
+        public static bool Update(int Id, int LicenseId, DateTime DetainDate, decimal FineFees, int CreatedByUserId, bool IsReleased, DateTime ReleaseDate, int ReleasedByUserId, int ReleaseApplicationId)
+        {
+            int RowsAffected = 0;
+            string query = "update DetainedLicenses set LicenseId = @LicenseId,DetainDate = @DetainDate,FineFees = @FineFees,CreatedByUserId = @CreatedByUserId,IsReleased = @IsReleased,ReleaseDate = @ReleaseDate,ReleasedByUserId = @ReleasedByUserId,ReleaseApplicationId = @ReleaseApplicationId  WHERE Id=@Id;";
+            using (SqlConnection connection = new SqlConnection(SettingData.ConnectionString))
+            {
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Id", Id);
+                    command.Parameters.AddWithValue("@LicenseId", LicenseId);
+                    command.Parameters.AddWithValue("@DetainDate", DetainDate);
+                    command.Parameters.AddWithValue("@FineFees", FineFees);
+                    command.Parameters.AddWithValue("@CreatedByUserId", CreatedByUserId);
+                    command.Parameters.AddWithValue("@IsReleased", IsReleased);
+                    command.Parameters.AddWithValue("@ReleasedByUserId", (ReleasedByUserId == -1) ? DBNull.Value : (object)ReleasedByUserId);
+                    command.Parameters.AddWithValue("@ReleaseApplicationId", (ReleaseApplicationId == -1) ? DBNull.Value : (object)ReleaseApplicationId);
+
+                    try
+                    {
+                        connection.Open();
+                        RowsAffected = command.ExecuteNonQuery();
+                    }
+                    catch (Exception ex) { }
+                }
+            }
+
+            return RowsAffected > 0;
+        }
+        public static bool Get(int Id, ref int LicenseId, ref DateTime DetainDate, ref decimal FineFees, ref int CreatedByUserId, ref bool IsReleased, ref DateTime ReleaseDate, ref int ReleasedByUserId, ref int ReleaseApplicationId)
+        {
+            bool IsFound = false;
+            string query = "select * from DetainedLicenses  WHERE Id=@Id;";
+            using (SqlConnection connection = new SqlConnection(SettingData.ConnectionString))
+            {
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Id", Id);
+                    try
+                    {
+                        connection.Open();
+                        SqlDataReader reader = command.ExecuteReader();
+                        if (reader.Read())
+                        {
+                            IsFound = true;
+                            Id = (int)reader["Id"];
+                            LicenseId = (int)reader["LicenseId"];
+                            DetainDate = (DateTime)reader["DetainDate"];
+                            FineFees = (decimal)reader["FineFees"];
+                            CreatedByUserId = (int)reader["CreatedByUserId"];
+                            IsReleased = (bool)reader["IsReleased"];
+                            ReleasedByUserId = reader["ReleasedByUserId"] != DBNull.Value ? (int)reader["ReleasedByUserId"] : -1;
+                            ReleaseApplicationId = reader["ReleaseApplicationId"] != DBNull.Value ? (int)reader["ReleaseApplicationId"] : -1;
+
+
+                        }
+                        else
+                        {
+                            IsFound = false;
+                        }
+                    }
+                    catch (Exception ex) { }
+                }
+            }
+
+            return IsFound;
+        }
+        static public DataTable All()
+        {
+            return GenericData.All("select * from DetainedLicenses");
+        }
+        static public bool Delete(int Id)
+        {
+            return GenericData.Delete("delete DetainedLicenses where Id = @Id", "@Id", Id);
+        }
+        static public bool Exist(int Id)
+        {
+            return GenericData.Exist("select Found=1 from DetainedLicenses where Id= @Id", "@Id", Id);
+        }
+
+
+        static public bool IsLicenseDetained(int licenseId)
+        {
+            return GenericData.Exist("select Found=1 from DetainedLicenses where LicenseId= @licenseId", "@licenseId", licenseId);
+        }
+
+
+    }
+}
