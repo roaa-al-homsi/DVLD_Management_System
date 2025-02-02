@@ -9,7 +9,7 @@ namespace DVLD_DataAccess
         public static int Add(int ApplicationId, int DriverId, int LicenseClassId, DateTime IssueDate, DateTime ExpirationDate, string Notes, decimal PaidFees, bool IsActive, byte IssueReason, int CreatedByUserId)
         {
             int newId = 0;
-            string query = "insert into Licenses (ApplicationDriverLicenseClassIssueDate,ExpirationDate,Notes,PaidFees,IsActive,IssueReason,CreatedByUserId) values (@ApplicationId,@DriverId,@LicenseClassId,@IssueDate,@ExpirationDate,@Notes,@PaidFees,@IsActive,@IssueReason,@CreatedByUserId) SELECT SCOPE_IDENTITY(); ";
+            string query = "insert into Licenses (ApplicationId,Driver Id,LicenseClassId,IssueDate,ExpirationDate,Notes,PaidFees,IsActive,IssueReason,CreatedByUserId) values (@ApplicationId,@DriverId,@LicenseClassId,@IssueDate,@ExpirationDate,@Notes,@PaidFees,@IsActive,@IssueReason,@CreatedByUserId) SELECT SCOPE_IDENTITY(); ";
             using (SqlConnection connection = new SqlConnection(SettingData.ConnectionString))
             {
                 using (SqlCommand command = new SqlCommand(query, connection))
@@ -45,7 +45,7 @@ namespace DVLD_DataAccess
         public static bool Update(int Id, int ApplicationId, int DriverId, int LicenseClassId, DateTime IssueDate, DateTime ExpirationDate, string Notes, decimal PaidFees, bool IsActive, byte IssueReason, int CreatedByUserId)
         {
             int RowsAffected = 0;
-            string query = "update Licenses set Id = @Id,ApplicationId = @ApplicationId,DriverId = @DriverId,LicenseClassId = @LicenseClassId,IssueDate = @IssueDate,ExpirationDate = @ExpirationDate,Notes = @Notes,PaidFees = @PaidFees,IsActive = @IsActive,IssueReason = @IssueReason,CreatedByUserId = @CreatedByUserId  WHERE Id=@Id;";
+            string query = "update Licenses set ApplicationId = @ApplicationId,DriverId = @DriverId,LicenseClassId = @LicenseClassId,IssueDate = @IssueDate,ExpirationDate = @ExpirationDate,Notes = @Notes,PaidFees = @PaidFees,IsActive = @IsActive,IssueReason = @IssueReason,CreatedByUserId = @CreatedByUserId  WHERE Id=@Id;";
             using (SqlConnection connection = new SqlConnection(SettingData.ConnectionString))
             {
                 using (SqlCommand command = new SqlCommand(query, connection))

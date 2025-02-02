@@ -8,18 +8,28 @@ namespace DVLD_Business
     {
         private enum Mode { Add, Update }
         private Mode _mode;
+        public enum enIssueReason { FirstTime = 1, Renew = 2, DamagedReplacement = 3, LostReplacement = 4 };
         public int Id { get; set; }
         public int ApplicationId { get; set; }
+        public Application ApplicationInfo { get; }
         public int DriverId { get; set; }
+        public Driver DriverInfo { get; }
         public int LicenseClassId { get; set; }
+        public LicenseClass LicenseClass { get; }
         public DateTime IssueDate { get; set; }
         public DateTime ExpirationDate { get; set; }
         public string Notes { get; set; }
         public decimal PaidFees { get; set; }
         public bool IsActive { get; set; }
-        public byte IssueReason { get; set; }
+        public enIssueReason IssueReason { get; set; }
         public int CreatedByUserId { get; set; }
-
+        public string IssueReasonText
+        {
+            get
+            {
+                return GetIssueReasonText(this.IssueReason);
+            }
+        }
         public License()
         {
             this.Id = -1;
@@ -31,12 +41,12 @@ namespace DVLD_Business
             this.Notes = string.Empty;
             this.PaidFees = 0;
             this.IsActive = false;
-            this.IssueReason = 0;
+            this.IssueReason = enIssueReason.FirstTime;
             this.CreatedByUserId = -1;
 
             _mode = Mode.Add;
         }
-        private License(int Id, int ApplicationId, int DriverId, int LicenseClassId, DateTime IssueDate, DateTime ExpirationDate, string Notes, decimal PaidFees, bool IsActive, byte IssueReason, int CreatedByUserId)
+        private License(int Id, int ApplicationId, int DriverId, int LicenseClassId, DateTime IssueDate, DateTime ExpirationDate, string Notes, decimal PaidFees, bool IsActive, enIssueReason IssueReason, int CreatedByUserId)
         {
             this.Id = Id;
             this.ApplicationId = ApplicationId;
@@ -49,20 +59,38 @@ namespace DVLD_Business
             this.IsActive = IsActive;
             this.IssueReason = IssueReason;
             this.CreatedByUserId = CreatedByUserId;
-
+            this.DriverInfo = Driver.Find(DriverId);
+            this.ApplicationInfo = Application.FindBaseApplication(ApplicationId);
+            this.LicenseClass = LicenseClass.Find(LicenseClassId);
 
             _mode = Mode.Update;
+        }
+        public static string GetIssueReasonText(enIssueReason issueReason)
+        {
+            switch (issueReason)
+            {
+                case enIssueReason.FirstTime:
+                    return "First Time";
+                case enIssueReason.LostReplacement:
+                    return "Lost Replacement";
+                case enIssueReason.DamagedReplacement:
+                    return "Damaged Replacement";
+                case enIssueReason.Renew:
+                    return "Renew";
+                default:
+                    return "First Time";
+            }
         }
         private bool _Add()
         {
             this.Id =
-                        LicenseData.Add(this.ApplicationId, this.DriverId, this.LicenseClassId, this.IssueDate, this.ExpirationDate, this.Notes, this.PaidFees, this.IsActive, this.IssueReason, this.CreatedByUserId);
+                        LicenseData.Add(this.ApplicationId, this.DriverId, this.LicenseClassId, this.IssueDate, this.ExpirationDate, this.Notes, this.PaidFees, this.IsActive, (byte)this.IssueReason, this.CreatedByUserId);
             return (this.Id != -1);
         }
 
         private bool _Update()
         {
-            return LicenseData.Update(this.Id, this.ApplicationId, this.DriverId, this.LicenseClassId, this.IssueDate, this.ExpirationDate, this.Notes, this.PaidFees, this.IsActive, this.IssueReason, this.CreatedByUserId);
+            return LicenseData.Update(this.Id, this.ApplicationId, this.DriverId, this.LicenseClassId, this.IssueDate, this.ExpirationDate, this.Notes, this.PaidFees, this.IsActive, (byte)this.IssueReason, this.CreatedByUserId);
         }
         public bool Save()
         {
@@ -105,12 +133,12 @@ namespace DVLD_Business
             string Notes = string.Empty;
             decimal PaidFees = 0;
             bool IsActive = false;
-            byte IssueReason = 0;
+            byte IssueReason = 1;
             int CreatedByUserId = -1;
 
             if (LicenseData.Get(Id, ref ApplicationId, ref DriverId, ref LicenseClassId, ref IssueDate, ref ExpirationDate, ref Notes, ref PaidFees, ref IsActive, ref IssueReason, ref CreatedByUserId))
             {
-                return new License(Id, ApplicationId, DriverId, LicenseClassId, IssueDate, ExpirationDate, Notes, PaidFees, IsActive, IssueReason, CreatedByUserId);
+                return new License(Id, ApplicationId, DriverId, LicenseClassId, IssueDate, ExpirationDate, Notes, PaidFees, IsActive, (enIssueReason)IssueReason, CreatedByUserId);
             }
             return null;
         }
