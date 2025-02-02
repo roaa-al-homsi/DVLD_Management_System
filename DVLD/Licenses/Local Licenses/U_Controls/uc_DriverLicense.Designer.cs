@@ -144,6 +144,7 @@
             this.picPerson.Location = new System.Drawing.Point(310, 53);
             this.picPerson.Name = "picPerson";
             this.picPerson.Size = new System.Drawing.Size(226, 164);
+            this.picPerson.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picPerson.TabIndex = 55;
             this.picPerson.TabStop = false;
             // 
@@ -419,7 +420,7 @@
             this.lbIssueDate.Font = new System.Drawing.Font("Andalus", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbIssueDate.Location = new System.Drawing.Point(207, 439);
             this.lbIssueDate.Name = "lbIssueDate";
-            this.lbIssueDate.Size = new System.Drawing.Size(176, 29);
+            this.lbIssueDate.Size = new System.Drawing.Size(297, 29);
             this.lbIssueDate.TabIndex = 32;
             this.lbIssueDate.Text = "???";
             this.lbIssueDate.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -455,7 +456,7 @@
             this.lbGendor.Font = new System.Drawing.Font("Andalus", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbGendor.Location = new System.Drawing.Point(207, 402);
             this.lbGendor.Name = "lbGendor";
-            this.lbGendor.Size = new System.Drawing.Size(176, 29);
+            this.lbGendor.Size = new System.Drawing.Size(297, 29);
             this.lbGendor.TabIndex = 29;
             this.lbGendor.Text = "???";
             this.lbGendor.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -491,7 +492,7 @@
             this.lbNationalNo.Font = new System.Drawing.Font("Andalus", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNationalNo.Location = new System.Drawing.Point(207, 365);
             this.lbNationalNo.Name = "lbNationalNo";
-            this.lbNationalNo.Size = new System.Drawing.Size(176, 29);
+            this.lbNationalNo.Size = new System.Drawing.Size(297, 29);
             this.lbNationalNo.TabIndex = 26;
             this.lbNationalNo.Text = "???";
             this.lbNationalNo.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -527,7 +528,7 @@
             this.lbLicesneId.Font = new System.Drawing.Font("Andalus", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbLicesneId.Location = new System.Drawing.Point(207, 328);
             this.lbLicesneId.Name = "lbLicesneId";
-            this.lbLicesneId.Size = new System.Drawing.Size(176, 29);
+            this.lbLicesneId.Size = new System.Drawing.Size(297, 29);
             this.lbLicesneId.TabIndex = 23;
             this.lbLicesneId.Text = "???";
             this.lbLicesneId.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -563,7 +564,7 @@
             this.lbName.Font = new System.Drawing.Font("Andalus", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbName.Location = new System.Drawing.Point(207, 291);
             this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(176, 29);
+            this.lbName.Size = new System.Drawing.Size(297, 29);
             this.lbName.TabIndex = 20;
             this.lbName.Text = "???";
             this.lbName.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -599,7 +600,7 @@
             this.lbClass.Font = new System.Drawing.Font("Andalus", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbClass.Location = new System.Drawing.Point(207, 254);
             this.lbClass.Name = "lbClass";
-            this.lbClass.Size = new System.Drawing.Size(176, 29);
+            this.lbClass.Size = new System.Drawing.Size(297, 29);
             this.lbClass.TabIndex = 17;
             this.lbClass.Text = "???";
             this.lbClass.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;

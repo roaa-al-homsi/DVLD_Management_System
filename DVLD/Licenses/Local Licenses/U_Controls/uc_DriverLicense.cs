@@ -66,7 +66,7 @@ namespace DVLD.Licenses.U_controls
             lbName.Text = _licenses.DriverInfo.PersonInfo.FullName;
             lbNotes.Text = string.IsNullOrWhiteSpace(_licenses.Notes) ? "No Notes.." : _licenses.Notes;
             lbClass.Text = _licenses.LicenseClass.Name;
-
+            lbNationalNo.Text = _licenses.DriverInfo.PersonInfo.NationalNo;
             _LoadPicPerson();
 
         }

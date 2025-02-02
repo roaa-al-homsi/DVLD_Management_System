@@ -126,7 +126,7 @@ namespace DVLD_DataAccess
         {
             return GenericData.Exist("select Found=1 from Licenses where Id= @Id", "@Id", Id);
         }
-        public static int GetActiveLicenseIDByPersonID(int PersonID, int LicenseClassID)
+        public static int GetActiveLicenseIDByPersonID(int PersonId, int LicenseClassId)
         {
             int LicenseID = -1;
 
@@ -134,16 +134,16 @@ namespace DVLD_DataAccess
 
             string query = @"SELECT Licenses.Id
                             FROM Licenses INNER JOIN
-                            Drivers ON Licenses.DriverID = Drivers.Id
+                            Drivers ON Licenses.DriverId = Drivers.Id
                             WHERE  
-                             Licenses.LicenseClassId =@LicenseClassID
-                              AND Drivers.PersonID = @PersonID
+                             Licenses.LicenseClassId =@LicenseClassId
+                              AND Drivers.PersonId = @PersonId
                               And IsActive=1;";
 
             SqlCommand command = new SqlCommand(query, connection);
 
-            command.Parameters.AddWithValue("@PersonID", PersonID);
-            command.Parameters.AddWithValue("@LicenseClass", LicenseClassID);
+            command.Parameters.AddWithValue("@PersonId", PersonId);
+            command.Parameters.AddWithValue("@LicenseClassId", LicenseClassId);
 
             try
             {

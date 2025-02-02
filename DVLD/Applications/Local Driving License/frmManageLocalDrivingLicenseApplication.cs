@@ -1,4 +1,5 @@
-﻿using DVLD.Local_Driving_License_App;
+﻿using DVLD.Licenses.Local_Licenses;
+using DVLD.Local_Driving_License_App;
 using DVLD.Tests.Schedule_Tests;
 using DVLD_Business;
 using System;
@@ -235,6 +236,25 @@ namespace DVLD.Applications.Local_Driving_License
             _ScheduleTest(TestType.enTestTypes.StreetTest);
         }
 
+        private void showLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int activeLicenseId = -1;
+            LocalDrivingLicenseApplication localDrivingLicense = LocalDrivingLicenseApplication.Find((int)dgvAllLDLA.CurrentRow.Cells[0].Value);
+            if (localDrivingLicense != null)
+            {
+                activeLicenseId = localDrivingLicense.GetActiveLicenseID();
+                if (activeLicenseId != -1)
+                {
+                    frmShowDriverLicenseInfo frmShowDriverLicenseInfo = new frmShowDriverLicenseInfo(activeLicenseId);
+                    frmShowDriverLicenseInfo.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("No License Found!", "No License", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
 
+        }
     }
 }

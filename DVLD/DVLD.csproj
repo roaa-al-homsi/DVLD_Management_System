@@ -92,10 +92,16 @@
     <Compile Include="Applications\Local Driving License\UserControls\uc_BasicApplicationInfo.Designer.cs">
       <DependentUpon>uc_BasicApplicationInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Licenses\U_controls\uc_DriverLicense.cs">
+    <Compile Include="Licenses\Local Licenses\frmShowDriverLicenseInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Licenses\Local Licenses\frmShowDriverLicenseInfo.Designer.cs">
+      <DependentUpon>frmShowDriverLicenseInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Licenses\Local Licenses\U_Controls\uc_DriverLicense.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Licenses\U_controls\uc_DriverLicense.Designer.cs">
+    <Compile Include="Licenses\Local Licenses\U_Controls\uc_DriverLicense.Designer.cs">
       <DependentUpon>uc_DriverLicense.cs</DependentUpon>
     </Compile>
     <Compile Include="Login\frmLogin.cs">
@@ -247,7 +253,10 @@
     <EmbeddedResource Include="Applications\Local Driving License\UserControls\uc_BasicApplicationInfo.resx">
       <DependentUpon>uc_BasicApplicationInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Licenses\U_controls\uc_DriverLicense.resx">
+    <EmbeddedResource Include="Licenses\Local Licenses\frmShowDriverLicenseInfo.resx">
+      <DependentUpon>frmShowDriverLicenseInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Licenses\Local Licenses\U_Controls\uc_DriverLicense.resx">
       <DependentUpon>uc_DriverLicense.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login\frmLogin.resx">
@@ -344,7 +353,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Licenses\Local Licenses\U_Controls\" />
+    <Folder Include="Licenses\U_controls\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

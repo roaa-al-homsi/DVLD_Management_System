@@ -20,7 +20,7 @@ namespace DVLD.People
         // Declare an event using the delegate
         public event DataBackEventHandler DataBack;
         enum Mode { Add = 1, Update = 2 }
-        //  enum enGender { Female = 1, Male = 0 }
+
         private Mode _mode;
 
         private Person _person;

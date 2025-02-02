@@ -60,7 +60,7 @@ namespace DVLD.People.userControls
             txtPhone.Text = _Person.Phone;
             txtNationalNo.Text = _Person.NationalNo;
             txtAddress.Text = _Person.Address;
-            txtGender.Text = (_Person.Gender == 1) ? "Female" : "Male";
+            txtGender.Text = _Person.GenderText;
             txtName.Text = (string.IsNullOrWhiteSpace(_Person.ThirdName)) ? $"{_Person.FirstName} {_Person.SecondName} {_Person.LastName}" :
                 $"{_Person.FirstName} {_Person.SecondName} {_Person.ThirdName} {_Person.LastName}";
             txtCountry.Text = Person.GetNameCountryById(_Person.NationalityCountryID);
