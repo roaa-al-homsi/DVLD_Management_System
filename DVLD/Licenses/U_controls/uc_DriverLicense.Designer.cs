@@ -139,6 +139,7 @@
             // 
             // picPerson
             // 
+            this.picPerson.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picPerson.ImageRotate = 0F;
             this.picPerson.Location = new System.Drawing.Point(310, 53);
             this.picPerson.Name = "picPerson";

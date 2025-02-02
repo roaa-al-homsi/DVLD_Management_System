@@ -66,7 +66,7 @@ namespace DVLD.People
             dtpDateOfBirth.Text = _person.DateOfBirth.ToString();
             cmbCountry.SelectedIndex = cmbCountry.FindString(_person.CountryInfo.Name);
 
-            if (_person.Gender == (byte)enGender.Female)
+            if (_person.Gender == enGender.Female)
             {
                 radioBtnFemale.Checked = true;
             }
