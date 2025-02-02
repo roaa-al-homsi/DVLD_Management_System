@@ -20,7 +20,7 @@ namespace DVLD.People
         // Declare an event using the delegate
         public event DataBackEventHandler DataBack;
         enum Mode { Add = 1, Update = 2 }
-        enum enGender { Female = 1, Male = 0 }
+        //  enum enGender { Female = 1, Male = 0 }
         private Mode _mode;
 
         private Person _person;
@@ -66,7 +66,7 @@ namespace DVLD.People
             dtpDateOfBirth.Text = _person.DateOfBirth.ToString();
             cmbCountry.SelectedIndex = cmbCountry.FindString(_person.CountryInfo.Name);
 
-            if (_person.Gender == enGender.Female)
+            if (_person.Gender == Person.enGender.Female)
             {
                 radioBtnFemale.Checked = true;
             }
@@ -174,7 +174,7 @@ namespace DVLD.People
             _person.Phone = txtPhone.Text.Trim();
             _person.Email = txtEmail.Text.Trim();
             _person.DateOfBirth = dtpDateOfBirth.Value;
-            _person.Gender = (byte)((radioBtnFemale.Checked) ? enGender.Female : enGender.Male);
+            _person.Gender = ((radioBtnFemale.Checked) ? Person.enGender.Female : Person.enGender.Male);
             _person.NationalityCountryID = Person.GetIdCountryByName(cmbCountry.Text);
             _person.ImagePath = (string.IsNullOrEmpty(pbPersonImage.ImageLocation)) ? null : pbPersonImage.ImageLocation;
 
