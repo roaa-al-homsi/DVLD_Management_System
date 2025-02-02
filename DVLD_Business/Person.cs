@@ -8,6 +8,7 @@ namespace DVLD_Business
     {
         private enum Mode { Add, Update }
         private Mode _mode;
+        public enum enGender { Male = 0, Female = 1 }
         public int Id { get; set; }
         public string NationalNo { get; set; }
         public string FirstName { get; set; }
@@ -24,13 +25,28 @@ namespace DVLD_Business
 
         }
         public DateTime DateOfBirth { get; set; }
-        public byte Gender { get; set; }
+        public enGender Gender { get; set; }
         public string Address { get; set; }
         public string Phone { get; set; }
         public string Email { get; set; }
         public int NationalityCountryID { get; set; }//fK
         public string ImagePath { get; set; }
 
+        public string GenderText
+        {
+            get
+            {
+                switch (Gender)
+                {
+                    case enGender.Male:
+                        return "Male";
+                    case enGender.Female:
+                        return "Female";
+                    default:
+                        return "Male";
+                }
+            }
+        }
         public Country CountryInfo { get; private set; } // or  private set, if you need to update its value only inside this class.. (most cases you don't need that)
 
         public Person()
@@ -42,7 +58,7 @@ namespace DVLD_Business
             this.ThirdName = string.Empty;
             this.LastName = string.Empty;
             this.DateOfBirth = DateTime.MinValue;
-            this.Gender = 0;
+            this.Gender = enGender.Male;
             this.Address = string.Empty;
             this.Phone = string.Empty;
             this.Email = string.Empty;
@@ -51,7 +67,7 @@ namespace DVLD_Business
 
             _mode = Mode.Add;
         }
-        private Person(int PersonID, string NationalNo, string FirstName, string SecondName, string ThirdName, string LastName, DateTime DateOfBirth, byte Gender, string Address, string Phone, string Email, int NationalityCountryID, string ImagePath)
+        private Person(int PersonID, string NationalNo, string FirstName, string SecondName, string ThirdName, string LastName, DateTime DateOfBirth, enGender Gender, string Address, string Phone, string Email, int NationalityCountryID, string ImagePath)
         {
             this.Id = PersonID;
             this.NationalNo = NationalNo;
@@ -73,13 +89,13 @@ namespace DVLD_Business
         private bool _Add()
         {
             this.Id =
-                        PersonData.Add(this.NationalNo, this.FirstName, this.SecondName, this.ThirdName, this.LastName, this.DateOfBirth, this.Gender, this.Address, this.Phone, this.Email, this.NationalityCountryID, this.ImagePath);
+                        PersonData.Add(this.NationalNo, this.FirstName, this.SecondName, this.ThirdName, this.LastName, this.DateOfBirth, (byte)this.Gender, this.Address, this.Phone, this.Email, this.NationalityCountryID, this.ImagePath);
             return (this.Id != -1);
         }
 
         private bool _Update()
         {
-            return PersonData.Update(this.Id, this.NationalNo, this.FirstName, this.SecondName, this.ThirdName, this.LastName, this.DateOfBirth, this.Gender, this.Address, this.Phone, this.Email, this.NationalityCountryID, this.ImagePath);
+            return PersonData.Update(this.Id, this.NationalNo, this.FirstName, this.SecondName, this.ThirdName, this.LastName, this.DateOfBirth, (byte)this.Gender, this.Address, this.Phone, this.Email, this.NationalityCountryID, this.ImagePath);
         }
         public bool Save()
         {
@@ -134,7 +150,7 @@ namespace DVLD_Business
 
             if (PersonData.Get(PersonID, ref NationalNo, ref FirstName, ref SecondName, ref ThirdName, ref LastName, ref DateOfBirth, ref Gender, ref Address, ref Phone, ref Email, ref NationalityCountryID, ref ImagePath))
             {
-                return new Person(PersonID, NationalNo, FirstName, SecondName, ThirdName, LastName, DateOfBirth, Gender, Address, Phone, Email, NationalityCountryID, ImagePath);
+                return new Person(PersonID, NationalNo, FirstName, SecondName, ThirdName, LastName, DateOfBirth, (enGender)Gender, Address, Phone, Email, NationalityCountryID, ImagePath);
             }
             return null;
         }
@@ -155,7 +171,7 @@ namespace DVLD_Business
 
             if (PersonData.Get(nationalNo, ref PersonId, ref FirstName, ref SecondName, ref ThirdName, ref LastName, ref DateOfBirth, ref Gender, ref Address, ref Phone, ref Email, ref NationalityCountryID, ref ImagePath))
             {
-                return new Person(PersonId, nationalNo, FirstName, SecondName, ThirdName, LastName, DateOfBirth, Gender, Address, Phone, Email, NationalityCountryID, ImagePath);
+                return new Person(PersonId, nationalNo, FirstName, SecondName, ThirdName, LastName, DateOfBirth, (enGender)Gender, Address, Phone, Email, NationalityCountryID, ImagePath);
             }
             return null;
         }
