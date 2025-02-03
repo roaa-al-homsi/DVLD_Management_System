@@ -104,6 +104,12 @@
     <Compile Include="Licenses\Local Licenses\U_Controls\uc_DriverLicense.Designer.cs">
       <DependentUpon>uc_DriverLicense.cs</DependentUpon>
     </Compile>
+    <Compile Include="Licenses\Local Licenses\U_Controls\uc_DriverLicesneWithFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Licenses\Local Licenses\U_Controls\uc_DriverLicesneWithFilter.Designer.cs">
+      <DependentUpon>uc_DriverLicesneWithFilter.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -258,6 +264,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Licenses\Local Licenses\U_Controls\uc_DriverLicense.resx">
       <DependentUpon>uc_DriverLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Licenses\Local Licenses\U_Controls\uc_DriverLicesneWithFilter.resx">
+      <DependentUpon>uc_DriverLicesneWithFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
