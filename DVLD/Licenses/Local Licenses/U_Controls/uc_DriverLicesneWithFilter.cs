@@ -15,8 +15,8 @@ namespace DVLD.Licenses.Local_Licenses.U_Controls
                 handler(LicenseID); // Raise the event with the parameter
             }
         }
+        private int _licenseID = -1;
         private bool _filterEnabled = true;
-
         public bool FilterEnabled
         {
             get
@@ -29,9 +29,6 @@ namespace DVLD.Licenses.Local_Licenses.U_Controls
                 gbFilter.Enabled = _filterEnabled;
             }
         }
-
-        private int _licenseID = -1;
-
         public int LicenseID
         {
             get { return uc_DriverLicense1.LicenseID; }
@@ -66,8 +63,6 @@ namespace DVLD.Licenses.Local_Licenses.U_Controls
             }
         }
 
-
-
         public void txtLicenseIDFocus()
         {
             txtFilterValue.Focus();
@@ -85,12 +80,6 @@ namespace DVLD.Licenses.Local_Licenses.U_Controls
             _licenseID = int.Parse(txtFilterValue.Text);
             LoadLicenseInfo(_licenseID);
 
-            DVLD_Business.License license = DVLD_Business.License.Find(int.Parse(txtFilterValue.Text));
-            if (license == null)
-            {
-                return;
-            }
-            uc_DriverLicense1.LoadDriverLicenseInfo(license.Id);
         }
     }
 }

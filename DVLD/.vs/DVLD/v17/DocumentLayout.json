@@ -10,15 +10,15 @@
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ruaa\\AppData\\Local\\Temp\\c7833109-0af1-4bd5-b199-734c98da7cfd_DVLD Project Final.rar.cfd\\Project\\DVLD\\Licenses\\Local Licenses\\Controls\\ctrlDriverLicenseInfoWithFilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|c:\\users\\ruaa\\source\\repos\\dvld_management_system\\dvld\\people\\usercontros\\uc_personinfocardwithfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\people\\usercontros\\uc_personinfocardwithfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|solutionrelative:people\\usercontros\\uc_personinfocardwithfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|c:\\users\\ruaa\\source\\repos\\dvld_management_system\\dvld\\people\\usercontros\\uc_personinfocardwithfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\people\\usercontros\\uc_personinfocardwithfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|solutionrelative:people\\usercontros\\uc_personinfocardwithfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|c:\\users\\ruaa\\source\\repos\\dvld_management_system\\dvld\\licenses\\local licenses\\u_controls\\uc_driverlicesnewithfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\licenses\\local licenses\\u_controls\\uc_driverlicesnewithfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|solutionrelative:licenses\\local licenses\\u_controls\\uc_driverlicesnewithfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -45,8 +45,7 @@
               "RelativeToolTip": "People\\userContros\\uc_PersonInfoCardWithFilter.cs",
               "ViewState": "AgIAAIMAAAAAAAAAAAAAAJMAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-03T00:18:55.688Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-03T00:18:55.688Z"
             },
             {
               "$type": "Document",
@@ -57,8 +56,7 @@
               "ToolTip": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\People\\userContros\\uc_PersonInfoCardWithFilter.cs [Design]",
               "RelativeToolTip": "People\\userContros\\uc_PersonInfoCardWithFilter.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-03T00:18:48.497Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-02-03T00:18:48.497Z"
             },
             {
               "$type": "Document",
@@ -68,7 +66,7 @@
               "RelativeDocumentMoniker": "Licenses\\Local Licenses\\U_Controls\\uc_DriverLicesneWithFilter.cs",
               "ToolTip": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\Licenses\\Local Licenses\\U_Controls\\uc_DriverLicesneWithFilter.cs",
               "RelativeToolTip": "Licenses\\Local Licenses\\U_Controls\\uc_DriverLicesneWithFilter.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAAAFUAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAACsAAAAAAAAAAAAAAFIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-03T00:18:40.346Z",
               "EditorCaption": ""
@@ -82,8 +80,7 @@
               "ToolTip": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\Licenses\\Local Licenses\\U_Controls\\uc_DriverLicesneWithFilter.cs [Design]",
               "RelativeToolTip": "Licenses\\Local Licenses\\U_Controls\\uc_DriverLicesneWithFilter.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-03T00:09:53.288Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-02-03T00:09:53.288Z"
             },
             {
               "$type": "Document",
@@ -91,12 +88,12 @@
               "Title": "ctrlDriverLicenseInfoWithFilter.cs",
               "DocumentMoniker": "C:\\Users\\Ruaa\\AppData\\Local\\Temp\\c7833109-0af1-4bd5-b199-734c98da7cfd_DVLD Project Final.rar.cfd\\Project\\DVLD\\Licenses\\Local Licenses\\Controls\\ctrlDriverLicenseInfoWithFilter.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\c7833109-0af1-4bd5-b199-734c98da7cfd_DVLD Project Final.rar.cfd\\Project\\DVLD\\Licenses\\Local Licenses\\Controls\\ctrlDriverLicenseInfoWithFilter.cs",
-              "ToolTip": "C:\\Users\\Ruaa\\AppData\\Local\\Temp\\c7833109-0af1-4bd5-b199-734c98da7cfd_DVLD Project Final.rar.cfd\\Project\\DVLD\\Licenses\\Local Licenses\\Controls\\ctrlDriverLicenseInfoWithFilter.cs [Read Only]",
-              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\c7833109-0af1-4bd5-b199-734c98da7cfd_DVLD Project Final.rar.cfd\\Project\\DVLD\\Licenses\\Local Licenses\\Controls\\ctrlDriverLicenseInfoWithFilter.cs [Read Only]",
-              "ViewState": "AgIAAFEAAAAAAAAAAAAAAFcAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Ruaa\\AppData\\Local\\Temp\\c7833109-0af1-4bd5-b199-734c98da7cfd_DVLD Project Final.rar.cfd\\Project\\DVLD\\Licenses\\Local Licenses\\Controls\\ctrlDriverLicenseInfoWithFilter.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\c7833109-0af1-4bd5-b199-734c98da7cfd_DVLD Project Final.rar.cfd\\Project\\DVLD\\Licenses\\Local Licenses\\Controls\\ctrlDriverLicenseInfoWithFilter.cs",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAAAGMAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-03T00:09:18.858Z",
-              "EditorCaption": " [Read Only]"
+              "EditorCaption": ""
             }
           ]
         }
