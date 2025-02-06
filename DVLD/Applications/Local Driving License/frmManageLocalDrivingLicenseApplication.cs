@@ -256,5 +256,12 @@ namespace DVLD.Applications.Local_Driving_License
             }
 
         }
+
+        private void issueDrivingLicenseFirstTimeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmIssueDriverLicenseFirstTime frmIssueDriverLicenseFirst = new frmIssueDriverLicenseFirstTime((int)dgvAllLDLA.CurrentRow.Cells[0].Value);
+            frmIssueDriverLicenseFirst.ShowDialog();
+
+        }
     }
 }

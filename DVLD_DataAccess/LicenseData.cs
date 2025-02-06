@@ -9,7 +9,7 @@ namespace DVLD_DataAccess
         public static int Add(int ApplicationId, int DriverId, int LicenseClassId, DateTime IssueDate, DateTime ExpirationDate, string Notes, decimal PaidFees, bool IsActive, byte IssueReason, int CreatedByUserId)
         {
             int newId = 0;
-            string query = "insert into Licenses (ApplicationId,Driver Id,LicenseClassId,IssueDate,ExpirationDate,Notes,PaidFees,IsActive,IssueReason,CreatedByUserId) values (@ApplicationId,@DriverId,@LicenseClassId,@IssueDate,@ExpirationDate,@Notes,@PaidFees,@IsActive,@IssueReason,@CreatedByUserId) SELECT SCOPE_IDENTITY(); ";
+            string query = "insert into Licenses (ApplicationId,DriverId,LicenseClassId,IssueDate,ExpirationDate,Notes,PaidFees,IsActive,IssueReason,CreatedByUserId) values (@ApplicationId,@DriverId,@LicenseClassId,@IssueDate,@ExpirationDate,@Notes,@PaidFees,@IsActive,@IssueReason,@CreatedByUserId) SELECT SCOPE_IDENTITY(); ";
             using (SqlConnection connection = new SqlConnection(SettingData.ConnectionString))
             {
                 using (SqlCommand command = new SqlCommand(query, connection))

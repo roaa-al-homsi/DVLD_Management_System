@@ -92,6 +92,18 @@ namespace DVLD_Business
             }
             return null;
         }
+        public static Driver FindByPersonId(int PersonId)
+        {
+            int driverId = -1;
+            int CreatedByUserId = -1;
+            DateTime CreatedDate = DateTime.MinValue;
+
+            if (DriverData.GetByPersonId(PersonId, ref driverId, ref CreatedByUserId, ref CreatedDate))
+            {
+                return new Driver(driverId, PersonId, CreatedByUserId, CreatedDate);
+            }
+            return null;
+        }
         //public static DataTable GetLicenses(int DriverID)
         //{
         //    return clsLicense.GetDriverLicenses(DriverID);

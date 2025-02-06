@@ -180,8 +180,50 @@ namespace DVLD_Business
         {
             return Test.GetPassedTestCount(LocalDrivingLicenseApplicationID);
         }
-
+        public int IssueLicenseForTheFirstTime(string notes, int createdByUserID)
+        {
+            int driverId = -1;
+            Driver driver = Driver.FindByPersonId(this.PersonId);
+            if (driver == null)
+            {
+                driver = new Driver();
+                driver.CreatedByUserId = this.CreatedByUserId;
+                driver.PersonId = this.PersonId;
+                driver.CreatedDate = DateTime.Now;
+                if (driver.Save())
+                {
+                    driverId = driver.Id;
+                }
+                else
+                {
+                    return -1;
+                }
+            }
+            else
+            {
+                driverId = driver.Id;
+            }
+            License license = new License();
+            license.CreatedByUserId = createdByUserID;
+            license.ApplicationId = this.ApplicationId;
+            license.LicenseClassId = this.LicenseClassId;
+            license.Notes = notes;
+            license.DriverId = driverId;
+            license.IsActive = true;
+            license.IssueReason = License.enIssueReason.FirstTime;
+            license.PaidFees = this.LicenseClass.Fees;
+            license.ExpirationDate = DateTime.Now.AddYears(this.LicenseClass.DefaultValidityLength); ;
+            license.IssueDate = DateTime.Now;
+            if (license.Save())
+            {
+                this.Complete();
+                return license.Id;
+            }
+            else
+            {
+                return -1;
+            }
+        }
     }
-
 
 }

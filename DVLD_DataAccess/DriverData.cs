@@ -9,7 +9,7 @@ namespace DVLD_DataAccess
         public static int Add(int PersonId, int CreatedByUserId, DateTime CreatedDate)
         {
             int newId = 0;
-            string query = "insert into Drivers (PersonCreatedByUserCreatedDate) values (@PersonId,@CreatedByUserId,@CreatedDate) SELECT SCOPE_IDENTITY(); ";
+            string query = "insert into Drivers (PersonId,CreatedByUserId,CreatedDate) values (@PersonId,@CreatedByUserId,@CreatedDate) SELECT SCOPE_IDENTITY(); ";
             using (SqlConnection connection = new SqlConnection(SettingData.ConnectionString))
             {
                 using (SqlCommand command = new SqlCommand(query, connection))
@@ -67,6 +67,40 @@ namespace DVLD_DataAccess
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@Id", Id);
+                    try
+                    {
+                        connection.Open();
+                        SqlDataReader reader = command.ExecuteReader();
+                        if (reader.Read())
+                        {
+                            IsFound = true;
+                            Id = (int)reader["Id"];
+                            PersonId = (int)reader["PersonId"];
+                            CreatedByUserId = (int)reader["CreatedByUserId"];
+                            CreatedDate = (DateTime)reader["CreatedDate"];
+
+
+                        }
+                        else
+                        {
+                            IsFound = false;
+                        }
+                    }
+                    catch (Exception ex) { }
+                }
+            }
+
+            return IsFound;
+        }
+        public static bool GetByPersonId(int PersonId, ref int Id, ref int CreatedByUserId, ref DateTime CreatedDate)
+        {
+            bool IsFound = false;
+            string query = "select * from Drivers  WHERE PersonId=@PersonId;";
+            using (SqlConnection connection = new SqlConnection(SettingData.ConnectionString))
+            {
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@PersonId", PersonId);
                     try
                     {
                         connection.Open();
