@@ -8,12 +8,17 @@ namespace DVLD_Business
     {
         public enum Mode { Add, Update }
         public Mode mode;
-        public override int Id { get; set; }
-        public int ApplicationId { get; set; }//fk
-        public int LicenseClassId { get; set; }//fk
-        public LicenseClass LicenseClass { get; }//Composition
+        public new int Id { get; set; }
+
+        public int ApplicationId { get; set; }
+        public int LicenseClassId { get; set; }
+        public LicenseClass LicenseClass { get; }
         public string FullName
         {
+            //get
+            //{
+            //    return Person.Find(ApplicantPersonID).FullName;
+            //}
             get
             {
                 return base.Person.FullName;
@@ -30,7 +35,6 @@ namespace DVLD_Business
         }
         private LocalDrivingLicenseApplication(int Id, int applicationId, int licenseClassId, DateTime date, int applicationTypeId,
             enApplicationStatus status, DateTime lastStatusDate, decimal paidFees, int createByUserId, int personId)
-            : base(applicationId, personId, date, applicationTypeId, status, lastStatusDate, paidFees, createByUserId)
         {
             this.Id = Id;
             this.ApplicationId = applicationId;
@@ -44,7 +48,7 @@ namespace DVLD_Business
             this.PersonId = personId;
             this.LicenseClassId = licenseClassId;
             this.LicenseClass = LicenseClass.Find(licenseClassId);
-
+            this.Person = Person.Find(personId);
 
             mode = Mode.Update;
         }
@@ -114,7 +118,7 @@ namespace DVLD_Business
             {
                 Application application = Application.FindBaseApplication(ApplicationId);
 
-                if (application == null) // or is haha
+                if (application is null)
                 {
                     return null;
                 }
@@ -216,7 +220,7 @@ namespace DVLD_Business
             license.IssueDate = DateTime.Now;
             if (license.Save())
             {
-                this.Complete();
+                this.Complete(this.ApplicationId);
                 return license.Id;
             }
             else

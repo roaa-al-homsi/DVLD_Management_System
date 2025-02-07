@@ -19,12 +19,11 @@ namespace DVLD_Business
             NewInternationalLicense = 6,
             RetakeTest = 7
         }
-
         public enum enApplicationStatus { New = 1, Cancelled = 2, Completed = 3 };
-
         public virtual int Id { get; set; }
-        public int PersonId { get; set; }//fk
-        public Person Person { get; }//composition for personInfo
+
+        public int PersonId { get; set; }
+        public Person Person { get; set; }
         public string FullNamePerson
         {
             get
@@ -33,8 +32,8 @@ namespace DVLD_Business
             }
         }
         public DateTime Date { get; set; }
-        public int ApplicationTypeId { get; set; }//fk
-        public ApplicationType ApplicationType { get; }//composition
+        public int ApplicationTypeId { get; set; }
+        public ApplicationType ApplicationType { get; }
         public enApplicationStatus Status { get; set; }
         public string StatusText
         {
@@ -71,7 +70,7 @@ namespace DVLD_Business
 
             mode = Mode.Add;
         }
-        public Application(int Id, int PersonId, DateTime Date, int ApplicationTypeId, enApplicationStatus Status, DateTime LastStatusDate, decimal PaidFees, int CreatedByUserId)
+        private Application(int Id, int PersonId, DateTime Date, int ApplicationTypeId, enApplicationStatus Status, DateTime LastStatusDate, decimal PaidFees, int CreatedByUserId)
         {
             this.Id = Id;
             this.PersonId = PersonId;
@@ -156,9 +155,9 @@ namespace DVLD_Business
         {
             return ApplicationData.UpdateStatus(Id, (byte)enApplicationStatus.Cancelled);
         }
-        public bool Complete()
+        public bool Complete(int applicationId)
         {
-            return ApplicationData.UpdateStatus(Id, (byte)enApplicationStatus.Completed);
+            return ApplicationData.UpdateStatus(applicationId, (byte)enApplicationStatus.Completed);
         }
         public static int GetActiveApplicationIdForLicenseClass(int personId, int applicationTypeId, int licenseClassId)
         {

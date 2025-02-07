@@ -71,7 +71,7 @@ namespace DVLD.Tests.Schedule_Tests
         }
         private void btnAddNewAppointment_Click(object sender, System.EventArgs e)
         {
-            LocalDrivingLicenseApplication localDrivingLicenseApplication = new LocalDrivingLicenseApplication();
+            LocalDrivingLicenseApplication localDrivingLicenseApplication = LocalDrivingLicenseApplication.Find(_localDrivingLicenseId);
             if (localDrivingLicenseApplication.IsThereAnActiveScheduledTest(_testType))
             {
                 MessageBox.Show("Person Already have an active appointment for this test, You cannot add new appointment", "Not allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
