@@ -50,9 +50,10 @@ namespace DVLD_Business
             }
             return null;
         }
-        public static decimal GetFeesForSpecificApplication(int Id)
+
+        public static decimal GetFeesForSpecificApplication(Application.enApplicationType applicationType)
         {
-            return ApplicationTypeData.GetFeesForSpecificApplication(Id);
+            return ApplicationTypeData.GetFeesForSpecificApplication((byte)applicationType);
         }
     }
 

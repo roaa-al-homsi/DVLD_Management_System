@@ -7,7 +7,7 @@ namespace DVLD.Licenses.Local_Licenses.U_Controls
     {  // Define a custom event handler delegate with parameters
         public event Action<int> OnLicenseSelected;
         // Create a protected method to raise the event with a parameter
-        protected virtual void PersonSelected(int LicenseID)
+        protected virtual void LicenseSelected(int LicenseID)
         {
             Action<int> handler = OnLicenseSelected;
             if (handler != null)

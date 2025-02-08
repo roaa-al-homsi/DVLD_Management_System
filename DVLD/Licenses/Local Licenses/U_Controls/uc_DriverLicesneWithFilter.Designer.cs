@@ -48,9 +48,9 @@
             this.gbFilter.CustomBorderColor = System.Drawing.Color.Gainsboro;
             this.gbFilter.Font = new System.Drawing.Font("Andalus", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbFilter.ForeColor = System.Drawing.Color.Black;
-            this.gbFilter.Location = new System.Drawing.Point(3, 3);
+            this.gbFilter.Location = new System.Drawing.Point(239, 3);
             this.gbFilter.Name = "gbFilter";
-            this.gbFilter.Size = new System.Drawing.Size(541, 114);
+            this.gbFilter.Size = new System.Drawing.Size(393, 100);
             this.gbFilter.TabIndex = 1;
             this.gbFilter.Text = "Filter";
             // 
@@ -59,7 +59,7 @@
             this.btnFind.BackColor = System.Drawing.Color.Transparent;
             this.btnFind.Image = ((System.Drawing.Image)(resources.GetObject("btnFind.Image")));
             this.btnFind.ImageRotate = 0F;
-            this.btnFind.Location = new System.Drawing.Point(385, 56);
+            this.btnFind.Location = new System.Drawing.Point(342, 56);
             this.btnFind.Name = "btnFind";
             this.btnFind.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btnFind.Size = new System.Drawing.Size(53, 37);
@@ -105,19 +105,19 @@
             // 
             // uc_DriverLicense1
             // 
-            this.uc_DriverLicense1.Location = new System.Drawing.Point(3, 123);
+            this.uc_DriverLicense1.Location = new System.Drawing.Point(0, 102);
             this.uc_DriverLicense1.Name = "uc_DriverLicense1";
-            this.uc_DriverLicense1.Size = new System.Drawing.Size(927, 518);
+            this.uc_DriverLicense1.Size = new System.Drawing.Size(927, 512);
             this.uc_DriverLicense1.TabIndex = 2;
             // 
-            // uc_DriverLicesneWithFilter
+            // uc_DriverLicenseWithFilter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.uc_DriverLicense1);
             this.Controls.Add(this.gbFilter);
-            this.Name = "uc_DriverLicesneWithFilter";
-            this.Size = new System.Drawing.Size(930, 637);
+            this.Name = "uc_DriverLicenseWithFilter";
+            this.Size = new System.Drawing.Size(923, 613);
             this.gbFilter.ResumeLayout(false);
             this.gbFilter.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnFind)).EndInit();

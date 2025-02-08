@@ -89,7 +89,7 @@ namespace DVLD.Tests.Controls
             switch (_CreationMode)
             {
                 case enCreationMode.RetakeTestSchedule:
-                    labRetakeAppFees.Text = ApplicationType.GetFeesForSpecificApplication((int)Application.enApplicationType.RetakeTest).ToString();
+                    labRetakeAppFees.Text = ApplicationType.GetFeesForSpecificApplication(Application.enApplicationType.RetakeTest).ToString();
                     labTitleTest.Text = "Schedule Retake Test ";
                     gbRetakeTestInfo.Enabled = true;
                     break;
@@ -251,7 +251,7 @@ namespace DVLD.Tests.Controls
                 application.Date = DateTime.Now;
                 application.LastStatusDate = DateTime.Now;
                 application.CreatedByUserId = Global.CurrentUser.Id;
-                application.PaidFees = ApplicationType.GetFeesForSpecificApplication((int)Application.enApplicationType.RetakeTest);
+                application.PaidFees = ApplicationType.GetFeesForSpecificApplication(Application.enApplicationType.RetakeTest);
                 application.Status = Application.enApplicationStatus.Completed;
 
                 if (!application.Save())

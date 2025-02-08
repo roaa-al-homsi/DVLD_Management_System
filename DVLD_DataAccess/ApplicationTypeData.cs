@@ -71,7 +71,7 @@ namespace DVLD_DataAccess
         {
             return GenericData.Exist("select Found=1 from ApplicationTypes where Id= @Id", "@Id", Id);
         }
-        static public decimal GetFeesForSpecificApplication(int Id)
+        static public decimal GetFeesForSpecificApplication(byte Id)
         {
             decimal fees = 0;
             using (SqlConnection connection = new SqlConnection(SettingData.ConnectionString))

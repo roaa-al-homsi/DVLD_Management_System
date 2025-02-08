@@ -1,4 +1,5 @@
 ﻿using DVLD.Applications.Local_Driving_License;
+using DVLD.Applications.Renew_Local_License;
 using DVLD.ApplicationTypes;
 using DVLD.Global_Classes;
 using DVLD.Local_Driving_License_App;
@@ -86,6 +87,12 @@ namespace DVLD
         {
             frmManageTestTypes frmManageTestTypes = new frmManageTestTypes();
             frmManageTestTypes.ShowDialog();
+        }
+
+        private void renewDrivingLicenseToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            frmRenewLocalLicense frmRenewLocalLicense = new frmRenewLocalLicense();
+            frmRenewLocalLicense.ShowDialog();
         }
     }
 }

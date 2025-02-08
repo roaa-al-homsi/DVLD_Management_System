@@ -158,6 +158,51 @@ namespace DVLD_Business
             return LicenseData.GetActiveLicenseIDByPersonID(PersonID, LicenseClassID);
 
         }
+        public bool IsLicenseExpired()
+        {
+            return (DateTime.Now > this.ExpirationDate);
+        }
+        public bool DeactivateCurrentLicense()
+        {
+            return (LicenseData.DeactivateCurrentLicense(this.Id));
+        }
+
+        public License RenewLicense(string notes, int createByUserId)
+        {
+            Application application = new Application();
+            application.CreatedByUserId = createByUserId;
+            application.ApplicationTypeId = (byte)Application.enApplicationType.RenewDrivingLicense;
+            application.Date = DateTime.Now;
+            application.Status = Application.enApplicationStatus.Completed;
+            application.LastStatusDate = DateTime.Now;
+            application.PersonId = this.DriverInfo.PersonId;
+            application.PaidFees = ApplicationType.GetFeesForSpecificApplication(Application.enApplicationType.RenewDrivingLicense);
+
+            if (!application.Save())
+            {
+                return null;
+            }
+            License license = new License();
+            license.Notes = notes;
+            license.ApplicationId = application.Id;
+            license.DriverId = this.DriverId;
+            license.CreatedByUserId = createByUserId;
+            license.IsActive = true;
+            license.ExpirationDate = DateTime.Now.AddYears(this.LicenseClass.DefaultValidityLength);
+            license.IssueDate = DateTime.Now;
+            license.IssueReason = License.enIssueReason.Renew;
+            license.IsActive = true;
+            license.LicenseClassId = this.LicenseClassId;
+
+            if (!license.Save())
+            {
+                return null;
+            }
+            DeactivateCurrentLicense();
+            return license;
+        }
+
+
     }
 
 

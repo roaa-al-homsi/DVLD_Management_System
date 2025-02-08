@@ -44,7 +44,7 @@ namespace DVLD.Local_Driving_License_App
                 _localDrivingLicenseApplication = new LocalDrivingLicenseApplication();
                 tabApplicationInfo.Enabled = false;
                 cmbLicesneClasses.SelectedIndex = 2;
-                txtApplicationFees.Text = ApplicationType.GetFeesForSpecificApplication((int)Application.enApplicationType.NewDrivingLicense).ToString();
+                txtApplicationFees.Text = ApplicationType.GetFeesForSpecificApplication(Application.enApplicationType.NewDrivingLicense).ToString();
                 txtApplicationDate.Text = DateTime.Now.ToShortDateString().ToString();
                 uc_PersonInfoCardWithFilter1.FilterFocus();
                 txtCreatedBy.Text = Global.CurrentUser.Username;
