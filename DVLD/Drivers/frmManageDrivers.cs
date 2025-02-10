@@ -45,5 +45,49 @@ namespace DVLD.Drivers
             _FillCmbFilterBy();
 
         }
+        private void txtFilterValue_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            switch (cmbFilterBy.Text)
+            {
+                case "Person Id":
+                case "Driver Id":
+                case "National No":
+                    if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+                    {
+                        e.Handled = true;
+                    }
+                    break;
+            }
+        }
+        private void cmbFilterBy_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtFilterValue.Visible = (cmbFilterBy.Text != "None");
+
+            txtFilterValue.Text = string.Empty;
+            txtFilterValue.Focus();
+        }
+
+        private void txtFilterValue_TextChanged(object sender, EventArgs e)
+        {
+            if (cmbFilterBy.Text == "None" || string.IsNullOrEmpty(txtFilterValue.Text))
+            {
+                _dtDrivers.DefaultView.RowFilter = string.Empty;
+                labCountRecords.Text = dgvAllDrivers.RowCount.ToString();
+                return;
+            }
+
+            switch (cmbFilterBy.Text)
+            {
+                case "Person Id":
+                case "Driver Id":
+                case "National No":
+                    _dtDrivers.DefaultView.RowFilter = string.Format("[{0}]={1}", cmbFilterBy.Text, txtFilterValue.Text.Trim());
+                    break;
+                default:
+                    _dtDrivers.DefaultView.RowFilter = string.Format("[{0}]Like '{1}%'", cmbFilterBy.Text, txtFilterValue.Text.Trim());
+                    break;
+            }
+            labCountRecords.Text = dgvAllDrivers.RowCount.ToString();
+        }
     }
 }

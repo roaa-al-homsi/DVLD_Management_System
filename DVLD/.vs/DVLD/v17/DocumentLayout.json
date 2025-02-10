@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|solutionrelative:drivers\\frmmanagedrivers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|c:\\users\\ruaa\\source\\repos\\dvld_management_system\\dvld\\users\\frmmanageusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|solutionrelative:users\\frmmanageusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|c:\\users\\ruaa\\source\\repos\\dvld_management_system\\dvld\\drivers\\frmmanagedrivers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|solutionrelative:drivers\\frmmanagedrivers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
@@ -18,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 270,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,25 +30,38 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmManageUsers.cs",
+              "DocumentMoniker": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\Users\\frmManageUsers.cs",
+              "RelativeDocumentMoniker": "Users\\frmManageUsers.cs",
+              "ToolTip": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\Users\\frmManageUsers.cs",
+              "RelativeToolTip": "Users\\frmManageUsers.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAADYAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-10T18:58:51.465Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "frmManageDrivers.cs",
               "DocumentMoniker": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\Drivers\\frmManageDrivers.cs",
               "RelativeDocumentMoniker": "Drivers\\frmManageDrivers.cs",
-              "ToolTip": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\Drivers\\frmManageDrivers.cs",
-              "RelativeToolTip": "Drivers\\frmManageDrivers.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAIAwwCIAAAARAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\Drivers\\frmManageDrivers.cs \u2B24",
+              "RelativeToolTip": "Drivers\\frmManageDrivers.cs \u2B24",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAAAEkAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-10T18:27:16.137Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "frmManageDrivers.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\Drivers\\frmManageDrivers.cs",
               "RelativeDocumentMoniker": "Drivers\\frmManageDrivers.cs",
-              "ToolTip": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\Drivers\\frmManageDrivers.cs [Design]",
-              "RelativeToolTip": "Drivers\\frmManageDrivers.cs [Design]",
+              "ToolTip": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\Drivers\\frmManageDrivers.cs [Design] \u2B24",
+              "RelativeToolTip": "Drivers\\frmManageDrivers.cs [Design] \u2B24",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-10T17:34:37.095Z",
               "EditorCaption": " [Design]"

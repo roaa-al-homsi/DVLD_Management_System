@@ -166,6 +166,8 @@
             this.txtFilterValue.SelectedText = "";
             this.txtFilterValue.Size = new System.Drawing.Size(175, 36);
             this.txtFilterValue.TabIndex = 24;
+            this.txtFilterValue.TextChanged += new System.EventHandler(this.txtFilterValue_TextChanged);
+            this.txtFilterValue.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFilterValue_KeyPress);
             // 
             // cmbFilterBy
             // 
@@ -185,6 +187,7 @@
             this.cmbFilterBy.Name = "cmbFilterBy";
             this.cmbFilterBy.Size = new System.Drawing.Size(186, 36);
             this.cmbFilterBy.TabIndex = 23;
+            this.cmbFilterBy.SelectedIndexChanged += new System.EventHandler(this.cmbFilterBy_SelectedIndexChanged);
             // 
             // guna2HtmlLabel2
             // 
