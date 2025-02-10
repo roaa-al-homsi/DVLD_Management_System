@@ -128,7 +128,7 @@ namespace DVLD_DataAccess
         }
         static public DataTable All()
         {
-            return GenericData.All("select * from Drivers");
+            return GenericData.All("select * from Driver_Info_View");
         }
         static public bool Delete(int Id)
         {
