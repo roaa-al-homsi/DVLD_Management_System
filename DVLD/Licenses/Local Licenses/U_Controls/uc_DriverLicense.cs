@@ -61,7 +61,7 @@ namespace DVLD.Licenses.U_controls
             lbIsActive.Text = _licenses.IsActive ? "Yes" : "No";
             lbIsDetained.Text = _licenses.IsDetained ? "Yes" : "No";
             lbIssueDate.Text = _licenses.IssueDate.ToShortDateString();
-            lbIssueReason.Text = _licenses.IssueReason.ToString();
+            lbIssueReason.Text = _licenses.IssueReasonText;
             lbLicesneId.Text = _licenses.Id.ToString();
             lbName.Text = _licenses.DriverInfo.PersonInfo.FullName;
             lbNotes.Text = string.IsNullOrWhiteSpace(_licenses.Notes) ? "No Notes.." : _licenses.Notes;
