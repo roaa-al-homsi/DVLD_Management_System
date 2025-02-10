@@ -43,7 +43,7 @@ namespace DVLD.Drivers
             labCountRecords.Text = dgvAllDrivers.RowCount.ToString();
             _changeDesignDgvDrivers();
             _FillCmbFilterBy();
-
+            cmbFilterBy.SelectedIndex = 0;
         }
         private void txtFilterValue_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -66,7 +66,6 @@ namespace DVLD.Drivers
             txtFilterValue.Text = string.Empty;
             txtFilterValue.Focus();
         }
-
         private void txtFilterValue_TextChanged(object sender, EventArgs e)
         {
             if (cmbFilterBy.Text == "None" || string.IsNullOrEmpty(txtFilterValue.Text))
