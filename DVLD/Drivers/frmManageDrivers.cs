@@ -1,4 +1,5 @@
-﻿using DVLD_Business;
+﻿using DVLD.People;
+using DVLD_Business;
 using System;
 using System.Data;
 using System.Windows.Forms;
@@ -87,6 +88,12 @@ namespace DVLD.Drivers
                     break;
             }
             labCountRecords.Text = dgvAllDrivers.RowCount.ToString();
+        }
+
+        private void updateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmShowPersonInfo frmShowPersonInfo = new frmShowPersonInfo((int)dgvAllDrivers.CurrentRow.Cells[1].Value);
+            frmShowPersonInfo.ShowDialog();
         }
     }
 }

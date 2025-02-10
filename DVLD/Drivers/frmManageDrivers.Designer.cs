@@ -32,9 +32,7 @@
             this.dgvAllDrivers = new System.Windows.Forms.DataGridView();
             this.cmsManageUsers = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
             this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.labCountRecords = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -59,7 +57,7 @@
             this.dgvAllDrivers.ReadOnly = true;
             this.dgvAllDrivers.RowHeadersWidth = 70;
             this.dgvAllDrivers.RowTemplate.Height = 24;
-            this.dgvAllDrivers.Size = new System.Drawing.Size(970, 313);
+            this.dgvAllDrivers.Size = new System.Drawing.Size(956, 313);
             this.dgvAllDrivers.TabIndex = 20;
             // 
             // cmsManageUsers
@@ -67,9 +65,7 @@
             this.cmsManageUsers.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.cmsManageUsers.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.updateToolStripMenuItem,
-            this.deleteToolStripMenuItem,
-            this.showDetailsToolStripMenuItem,
-            this.changePasswordToolStripMenuItem});
+            this.showDetailsToolStripMenuItem});
             this.cmsManageUsers.Name = "cmsManagePeople";
             this.cmsManageUsers.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.cmsManageUsers.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
@@ -80,34 +76,22 @@
             this.cmsManageUsers.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
             this.cmsManageUsers.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
             this.cmsManageUsers.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.cmsManageUsers.Size = new System.Drawing.Size(198, 108);
+            this.cmsManageUsers.Size = new System.Drawing.Size(269, 56);
             // 
             // updateToolStripMenuItem
             // 
             this.updateToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("updateToolStripMenuItem.Image")));
             this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-            this.updateToolStripMenuItem.Size = new System.Drawing.Size(197, 26);
-            this.updateToolStripMenuItem.Text = "Update";
-            // 
-            // deleteToolStripMenuItem
-            // 
-            this.deleteToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("deleteToolStripMenuItem.Image")));
-            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(197, 26);
-            this.deleteToolStripMenuItem.Text = "Delete";
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(268, 26);
+            this.updateToolStripMenuItem.Text = "Show Person Info";
+            this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
             // 
             // showDetailsToolStripMenuItem
             // 
             this.showDetailsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("showDetailsToolStripMenuItem.Image")));
             this.showDetailsToolStripMenuItem.Name = "showDetailsToolStripMenuItem";
-            this.showDetailsToolStripMenuItem.Size = new System.Drawing.Size(197, 26);
-            this.showDetailsToolStripMenuItem.Text = "Show Details";
-            // 
-            // changePasswordToolStripMenuItem
-            // 
-            this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(197, 26);
-            this.changePasswordToolStripMenuItem.Text = "Change Password";
+            this.showDetailsToolStripMenuItem.Size = new System.Drawing.Size(268, 26);
+            this.showDetailsToolStripMenuItem.Text = "Show Person Licesne History";
             // 
             // guna2PictureBox1
             // 
@@ -226,6 +210,7 @@
             this.Controls.Add(this.guna2HtmlLabel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmManageDrivers";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Manage Drivers";
             this.Load += new System.EventHandler(this.frmManageDrivers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllDrivers)).EndInit();
@@ -241,9 +226,7 @@
         private System.Windows.Forms.DataGridView dgvAllDrivers;
         private Guna.UI2.WinForms.Guna2ContextMenuStrip cmsManageUsers;
         private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem showDetailsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2HtmlLabel labCountRecords;
