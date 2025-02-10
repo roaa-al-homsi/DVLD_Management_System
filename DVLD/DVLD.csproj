@@ -134,6 +134,12 @@
     <Compile Include="Licenses\Local Licenses\U_Controls\uc_DriverLicesneWithFilter.Designer.cs">
       <DependentUpon>uc_DriverLicesneWithFilter.cs</DependentUpon>
     </Compile>
+    <Compile Include="Licenses\U_controls\uc_DriverLicenses.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Licenses\U_controls\uc_DriverLicenses.Designer.cs">
+      <DependentUpon>uc_DriverLicenses.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -304,6 +310,9 @@
     <EmbeddedResource Include="Licenses\Local Licenses\U_Controls\uc_DriverLicesneWithFilter.resx">
       <DependentUpon>uc_DriverLicesneWithFilter.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Licenses\U_controls\uc_DriverLicenses.resx">
+      <DependentUpon>uc_DriverLicenses.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -397,8 +406,6 @@
       <Name>DVLD_Business</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Licenses\U_controls\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

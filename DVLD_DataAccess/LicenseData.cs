@@ -188,5 +188,32 @@ namespace DVLD_DataAccess
             }
             return rowsAffected > 0;
         }
+
+        public static DataTable GetDriverLicenses(int driverId)
+        {
+            DataTable dt = new DataTable();
+            string query = @"SELECT Licenses.Id as [License Id], Licenses.ApplicationId as [Application Id], LicenseClasses.Name , Licenses.IssueDate, Licenses.ExpirationDate, Licenses.IsActive
+                           FROM     Licenses inner JOIN  LicenseClasses on Licenses.LicenseClassId=LicenseClasses.Id 
+                           inner join Drivers on Drivers.Id=Licenses.DriverId where DriverId=@driverId";
+            using (SqlConnection connection = new SqlConnection(SettingData.ConnectionString))
+            {
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@driverId", driverId);
+                    try
+                    {
+                        connection.Open();
+                        SqlDataReader Reader = command.ExecuteReader();
+                        if (Reader.HasRows)
+                        {
+                            dt.Load(Reader);
+                        }
+                    }
+                    catch (Exception ex) { }
+                }
+            }
+            return dt;
+        }
+
     }
 }

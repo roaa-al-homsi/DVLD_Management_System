@@ -238,6 +238,15 @@ namespace DVLD_Business
             return license;
         }
 
+        public static DataTable GetDriverLicenses(int driverId)
+        {
+            return LicenseData.GetDriverLicenses(driverId);
+        }
+
+
+
+
+
     }
 
 
