@@ -111,7 +111,7 @@ namespace DVLD_Business
 
         //public static DataTable GetInternationalLicenses(int DriverID)
         //{
-        //    return clsInternationalLicense.GetDriverInternationalLicenses(DriverID);
+        //    return InternationalLicense.GetDriverInternationalLicenses(DriverID);
         //}
     }
 
