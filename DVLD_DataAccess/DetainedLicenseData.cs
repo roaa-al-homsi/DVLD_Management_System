@@ -20,6 +20,8 @@ namespace DVLD_DataAccess
                     command.Parameters.AddWithValue("@FineFees", FineFees);
                     command.Parameters.AddWithValue("@CreatedByUserId", CreatedByUserId);
                     command.Parameters.AddWithValue("@IsReleased", IsReleased);
+                    command.Parameters.AddWithValue("@ReleaseDate", (ReleaseDate == DateTime.MinValue) ? DBNull.Value : (object)ReleaseDate);
+
                     command.Parameters.AddWithValue("@ReleasedByUserId", (ReleasedByUserId == -1) ? DBNull.Value : (object)ReleasedByUserId);
                     command.Parameters.AddWithValue("@ReleaseApplicationId", (ReleaseApplicationId == -1) ? DBNull.Value : (object)ReleaseApplicationId);
 
@@ -105,6 +107,44 @@ namespace DVLD_DataAccess
 
             return IsFound;
         }
+        public static bool GetByLicenseId(int LicenseId, ref int Id, ref DateTime DetainDate, ref decimal FineFees, ref int CreatedByUserId, ref bool IsReleased, ref DateTime ReleaseDate, ref int ReleasedByUserId, ref int ReleaseApplicationId)
+        {
+            bool IsFound = false;
+            string query = "select * from DetainedLicenses  WHERE LicenseId=@LicenseId;";
+            using (SqlConnection connection = new SqlConnection(SettingData.ConnectionString))
+            {
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@LicenseId", LicenseId);
+                    try
+                    {
+                        connection.Open();
+                        SqlDataReader reader = command.ExecuteReader();
+                        if (reader.Read())
+                        {
+                            IsFound = true;
+                            Id = (int)reader["Id"];
+                            LicenseId = (int)reader["LicenseId"];
+                            DetainDate = (DateTime)reader["DetainDate"];
+                            FineFees = (decimal)reader["FineFees"];
+                            CreatedByUserId = (int)reader["CreatedByUserId"];
+                            IsReleased = (bool)reader["IsReleased"];
+                            ReleasedByUserId = reader["ReleasedByUserId"] != DBNull.Value ? (int)reader["ReleasedByUserId"] : -1;
+                            ReleaseApplicationId = reader["ReleaseApplicationId"] != DBNull.Value ? (int)reader["ReleaseApplicationId"] : -1;
+
+
+                        }
+                        else
+                        {
+                            IsFound = false;
+                        }
+                    }
+                    catch (Exception ex) { }
+                }
+            }
+
+            return IsFound;
+        }
         static public DataTable All()
         {
             return GenericData.All("select * from DetainedLicenses");
@@ -117,11 +157,10 @@ namespace DVLD_DataAccess
         {
             return GenericData.Exist("select Found=1 from DetainedLicenses where Id= @Id", "@Id", Id);
         }
-
-
+        //Release Detained Licenses
         static public bool IsLicenseDetained(int licenseId)
         {
-            return GenericData.Exist("select Found=1 from DetainedLicenses where LicenseId= @licenseId", "@licenseId", licenseId);
+            return GenericData.Exist("select IsDetained=1 from DetainedLicenses where LicenseId= @licenseId and IsReleased=0", "@licenseId", licenseId);
         }
 
 

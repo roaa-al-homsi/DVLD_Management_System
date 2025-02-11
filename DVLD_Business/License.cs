@@ -237,7 +237,25 @@ namespace DVLD_Business
 
             return license;
         }
+        public int Detain(decimal fineFees, int createdByUserId)
+        {
+            DetainedLicense detainedLicense = new DetainedLicense();
+            detainedLicense.DetainDate = DateTime.Now;
+            detainedLicense.FineFees = fineFees;
+            detainedLicense.CreatedByUserId = createdByUserId;
+            detainedLicense.LicenseId = this.Id;
+            // detainedLicense.ReleaseDate = DateTime.MinValue;
+            //detainedLicense.IsReleased = false;
+            //detainedLicense.ReleasedByUserId = -1;
+            //detainedLicense.ReleaseApplicationId = -1;
 
+
+            if (!detainedLicense.Save())
+            {
+                return -1;
+            }
+            return detainedLicense.Id;
+        }
         public static DataTable GetDriverLicenses(int driverId)
         {
             return LicenseData.GetDriverLicenses(driverId);

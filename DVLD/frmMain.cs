@@ -4,6 +4,7 @@ using DVLD.Applications.Replace_lost_or_damage_license;
 using DVLD.ApplicationTypes;
 using DVLD.Drivers;
 using DVLD.Global_Classes;
+using DVLD.Licenses.Detained_Licenses;
 using DVLD.Local_Driving_License_App;
 using DVLD.People;
 using DVLD.TestTypes;
@@ -107,6 +108,12 @@ namespace DVLD
         {
             frmManageDrivers frmManageDrivers = new frmManageDrivers();
             frmManageDrivers.ShowDialog();
+        }
+
+        private void detaineLicenseToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            frmDetainLicenseApplication frmDetainLicenseApplication = new frmDetainLicenseApplication();
+            frmDetainLicenseApplication.ShowDialog();
         }
     }
 }
