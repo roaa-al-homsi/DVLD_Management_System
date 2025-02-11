@@ -1,4 +1,5 @@
-﻿using DVLD_Business;
+﻿using DVLD.Licenses.Local_Licenses;
+using DVLD_Business;
 using System.Data;
 using System.Windows.Forms;
 
@@ -24,7 +25,7 @@ namespace DVLD.Licenses.U_controls
         private void LoadInternationalInfo()
         {
             // _dtInternationalLicenses = Driver.AllInternationalLicenses(_DriverId);
-            //  dgvLocalLicesnes.DataSource = _dtLocalLicenses;
+            //    dgvInternationalLicenses.DataSource = _dtLocalLicenses;
             labCountRecords.Text = dgvInternationalLicenses.Rows.Count.ToString();
         }
         public void LoadLicensesHistory(int driverId)
@@ -59,5 +60,15 @@ namespace DVLD.Licenses.U_controls
             _dtLocalLicenses.Clear();
         }
 
+        private void showLocalInfoToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            frmShowDriverLicenseInfo frmShowDriverLicenseInfo = new frmShowDriverLicenseInfo(_DriverId);
+            frmShowDriverLicenseInfo.ShowDialog();
+        }
+
+        private void toolStripMenuItem1_Click(object sender, System.EventArgs e)
+        {
+            //show international info 
+        }
     }
 }
