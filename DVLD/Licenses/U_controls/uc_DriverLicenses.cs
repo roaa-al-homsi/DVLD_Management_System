@@ -15,18 +15,29 @@ namespace DVLD.Licenses.U_controls
         {
             InitializeComponent();
         }
-
+        private void ChangeFormatDgvLocal()
+        {
+            if (dgvLocalLicesnes.Rows.Count > 0)
+            {
+                dgvLocalLicesnes.Columns[0].Width = 110;
+                dgvLocalLicesnes.Columns[1].Width = 110;
+                dgvLocalLicesnes.Columns[2].Width = 250;
+                dgvLocalLicesnes.Columns[3].Width = 170;
+                dgvLocalLicesnes.Columns[4].Width = 170;
+                dgvLocalLicesnes.Columns[5].Width = 110;
+            }
+        }
         private void LoadLocalInfo()
         {
             _dtLocalLicenses = Driver.AllLocalLicenses(_DriverId);
             dgvLocalLicesnes.DataSource = _dtLocalLicenses;
-            labCountRecords.Text = dgvLocalLicesnes.Rows.Count.ToString();
+            labCountRecordsLocal.Text = dgvLocalLicesnes.RowCount.ToString();
         }
         private void LoadInternationalInfo()
         {
             // _dtInternationalLicenses = Driver.AllInternationalLicenses(_DriverId);
             //    dgvInternationalLicenses.DataSource = _dtLocalLicenses;
-            labCountRecords.Text = dgvInternationalLicenses.Rows.Count.ToString();
+            labCountRecordInternational.Text = dgvInternationalLicenses.RowCount.ToString();
         }
         public void LoadLicensesHistory(int driverId)
         {
@@ -39,7 +50,7 @@ namespace DVLD.Licenses.U_controls
             }
             LoadLocalInfo();
             LoadInternationalInfo();
-
+            ChangeFormatDgvLocal();
         }
         public void LoadLicensesHistoryByPersonId(int personId)
         {
@@ -53,6 +64,7 @@ namespace DVLD.Licenses.U_controls
             _DriverId = _Driver.Id;
             LoadLocalInfo();
             LoadInternationalInfo();
+            ChangeFormatDgvLocal();
         }
         public void Clear()
         {

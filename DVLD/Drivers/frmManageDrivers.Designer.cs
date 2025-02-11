@@ -76,7 +76,7 @@
             this.cmsManageUsers.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
             this.cmsManageUsers.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
             this.cmsManageUsers.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.cmsManageUsers.Size = new System.Drawing.Size(269, 56);
+            this.cmsManageUsers.Size = new System.Drawing.Size(269, 84);
             // 
             // updateToolStripMenuItem
             // 
@@ -92,6 +92,7 @@
             this.showDetailsToolStripMenuItem.Name = "showDetailsToolStripMenuItem";
             this.showDetailsToolStripMenuItem.Size = new System.Drawing.Size(268, 26);
             this.showDetailsToolStripMenuItem.Text = "Show Person Licesne History";
+            this.showDetailsToolStripMenuItem.Click += new System.EventHandler(this.showDetailsToolStripMenuItem_Click);
             // 
             // guna2PictureBox1
             // 
@@ -116,14 +117,14 @@
             this.guna2HtmlLabel3.TabIndex = 27;
             this.guna2HtmlLabel3.Text = "#Records:";
             // 
-            // labCountRecords
+            // labCountRecordsInternational
             // 
             this.labCountRecords.AutoSize = false;
             this.labCountRecords.BackColor = System.Drawing.Color.Transparent;
             this.labCountRecords.Font = new System.Drawing.Font("Andalus", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labCountRecords.ForeColor = System.Drawing.Color.Black;
             this.labCountRecords.Location = new System.Drawing.Point(143, 677);
-            this.labCountRecords.Name = "labCountRecords";
+            this.labCountRecords.Name = "labCountRecordsInternational";
             this.labCountRecords.Size = new System.Drawing.Size(104, 33);
             this.labCountRecords.TabIndex = 26;
             this.labCountRecords.Text = "??";

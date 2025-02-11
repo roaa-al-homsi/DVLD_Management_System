@@ -138,14 +138,14 @@
             this.guna2HtmlLabel3.TabIndex = 17;
             this.guna2HtmlLabel3.Text = "#Records:";
             // 
-            // labCountRecords
+            // labCountRecordsInternational
             // 
             this.labCountRecords.AutoSize = false;
             this.labCountRecords.BackColor = System.Drawing.Color.Transparent;
             this.labCountRecords.Font = new System.Drawing.Font("Andalus", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labCountRecords.ForeColor = System.Drawing.Color.Black;
             this.labCountRecords.Location = new System.Drawing.Point(147, 600);
-            this.labCountRecords.Name = "labCountRecords";
+            this.labCountRecords.Name = "labCountRecordsInternational";
             this.labCountRecords.Size = new System.Drawing.Size(104, 33);
             this.labCountRecords.TabIndex = 16;
             this.labCountRecords.Text = "??";

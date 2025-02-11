@@ -192,7 +192,7 @@ namespace DVLD_DataAccess
         public static DataTable GetDriverLicenses(int driverId)
         {
             DataTable dt = new DataTable();
-            string query = @"SELECT Licenses.Id as [License Id], Licenses.ApplicationId as [Application Id], LicenseClasses.Name , Licenses.IssueDate, Licenses.ExpirationDate, Licenses.IsActive
+            string query = @"SELECT Licenses.Id as [Lic.Id], Licenses.ApplicationId as [App.Id], LicenseClasses.Name , Licenses.IssueDate, Licenses.ExpirationDate, Licenses.IsActive
                            FROM     Licenses inner JOIN  LicenseClasses on Licenses.LicenseClassId=LicenseClasses.Id 
                            inner join Drivers on Drivers.Id=Licenses.DriverId where DriverId=@driverId";
             using (SqlConnection connection = new SqlConnection(SettingData.ConnectionString))

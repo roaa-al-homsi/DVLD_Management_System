@@ -183,14 +183,14 @@
             this.btnAddPerson.TabIndex = 6;
             this.btnAddPerson.Click += new System.EventHandler(this.btnAddPerson_Click);
             // 
-            // labCountRecords
+            // labCountRecordsInternational
             // 
             this.labCountRecords.AutoSize = false;
             this.labCountRecords.BackColor = System.Drawing.Color.Transparent;
             this.labCountRecords.Font = new System.Drawing.Font("Andalus", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labCountRecords.ForeColor = System.Drawing.Color.Black;
             this.labCountRecords.Location = new System.Drawing.Point(158, 600);
-            this.labCountRecords.Name = "labCountRecords";
+            this.labCountRecords.Name = "labCountRecordsInternational";
             this.labCountRecords.Size = new System.Drawing.Size(104, 33);
             this.labCountRecords.TabIndex = 7;
             this.labCountRecords.Text = "??";
