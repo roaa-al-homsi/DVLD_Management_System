@@ -77,7 +77,7 @@
             this.Controls.Add(this.uc_LocalDrivingLicenseInfoCard1);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.labTitleForm);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmShowLocalDrivingLicenseDetails";
             this.Text = "Local Driving License Details";
             this.ResumeLayout(false);

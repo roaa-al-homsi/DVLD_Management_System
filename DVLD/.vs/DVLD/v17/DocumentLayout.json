@@ -3,19 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|c:\\users\\ruaa\\source\\repos\\dvld_management_system\\dvld\\licenses\\u_controls\\uc_driverlicenses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|solutionrelative:licenses\\u_controls\\uc_driverlicenses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|c:\\users\\ruaa\\source\\repos\\dvld_management_system\\dvld\\licenses\\u_controls\\uc_driverlicenses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|solutionrelative:licenses\\u_controls\\uc_driverlicenses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ruaa\\AppData\\Local\\Temp\\ad670f31-7b53-4974-834d-cb79f87b3504_DVLD Project Final.rar.504\\Project\\DVLD\\Licenses\\Controls\\ctrlDriverLicenses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|c:\\users\\ruaa\\source\\repos\\dvld_management_system\\dvld\\licenses\\frmshowpersonlicenseshistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|solutionrelative:licenses\\frmshowpersonlicenseshistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|c:\\users\\ruaa\\source\\repos\\dvld_management_system\\dvld\\licenses\\local licenses\\frmissuedriverlicensefirsttime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|solutionrelative:licenses\\local licenses\\frmissuedriverlicensefirsttime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,53 +23,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "uc_DriverLicenses.cs",
-              "DocumentMoniker": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\Licenses\\U_controls\\uc_DriverLicenses.cs",
-              "RelativeDocumentMoniker": "Licenses\\U_controls\\uc_DriverLicenses.cs",
-              "ToolTip": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\Licenses\\U_controls\\uc_DriverLicenses.cs",
-              "RelativeToolTip": "Licenses\\U_controls\\uc_DriverLicenses.cs",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAAAFUAAAAAAAAAAAAAAA==",
+              "Title": "frmIssueDriverLicenseFirstTime.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\Licenses\\Local Licenses\\frmIssueDriverLicenseFirstTime.cs",
+              "RelativeDocumentMoniker": "Licenses\\Local Licenses\\frmIssueDriverLicenseFirstTime.cs",
+              "ToolTip": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\Licenses\\Local Licenses\\frmIssueDriverLicenseFirstTime.cs [Design]",
+              "RelativeToolTip": "Licenses\\Local Licenses\\frmIssueDriverLicenseFirstTime.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-11T13:17:43.628Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "uc_DriverLicenses.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\Licenses\\U_controls\\uc_DriverLicenses.cs",
-              "RelativeDocumentMoniker": "Licenses\\U_controls\\uc_DriverLicenses.cs",
-              "ToolTip": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\Licenses\\U_controls\\uc_DriverLicenses.cs [Design]",
-              "RelativeToolTip": "Licenses\\U_controls\\uc_DriverLicenses.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-11T13:17:41.704Z",
+              "WhenOpened": "2025-02-11T13:39:38.768Z",
               "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ctrlDriverLicenses.cs",
-              "DocumentMoniker": "C:\\Users\\Ruaa\\AppData\\Local\\Temp\\ad670f31-7b53-4974-834d-cb79f87b3504_DVLD Project Final.rar.504\\Project\\DVLD\\Licenses\\Controls\\ctrlDriverLicenses.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\ad670f31-7b53-4974-834d-cb79f87b3504_DVLD Project Final.rar.504\\Project\\DVLD\\Licenses\\Controls\\ctrlDriverLicenses.cs",
-              "ToolTip": "C:\\Users\\Ruaa\\AppData\\Local\\Temp\\ad670f31-7b53-4974-834d-cb79f87b3504_DVLD Project Final.rar.504\\Project\\DVLD\\Licenses\\Controls\\ctrlDriverLicenses.cs [Read Only]",
-              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\ad670f31-7b53-4974-834d-cb79f87b3504_DVLD Project Final.rar.504\\Project\\DVLD\\Licenses\\Controls\\ctrlDriverLicenses.cs [Read Only]",
-              "ViewState": "AgIAAEoAAAAAAAAAAAAAACgAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-11T13:15:11.251Z",
-              "EditorCaption": " [Read Only]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "frmShowPersonLicensesHistory.cs",
-              "DocumentMoniker": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\Licenses\\frmShowPersonLicensesHistory.cs",
-              "RelativeDocumentMoniker": "Licenses\\frmShowPersonLicensesHistory.cs",
-              "ToolTip": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\Licenses\\frmShowPersonLicensesHistory.cs",
-              "RelativeToolTip": "Licenses\\frmShowPersonLicensesHistory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAABLAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-11T12:37:06.348Z",
-              "EditorCaption": ""
             }
           ]
         }

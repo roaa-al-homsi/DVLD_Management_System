@@ -1,4 +1,5 @@
-﻿using DVLD_Business;
+﻿using DVLD.Licenses;
+using DVLD_Business;
 using System;
 using System.Data;
 using System.Windows.Forms;
@@ -150,6 +151,13 @@ namespace DVLD.People
                 }
 
             }
+
+        }
+
+        private void showDriverLicensesHistoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmShowPersonLicensesHistory frmShowPersonLicensesHistory = new frmShowPersonLicensesHistory((int)dgvAllPeople.CurrentRow.Cells[0].Value);
+            frmShowPersonLicensesHistory.ShowDialog();
 
         }
     }

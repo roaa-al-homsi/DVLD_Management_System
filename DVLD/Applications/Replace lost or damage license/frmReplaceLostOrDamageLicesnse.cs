@@ -1,4 +1,5 @@
 ﻿using DVLD.Global_Classes;
+using DVLD.Licenses;
 using DVLD.Licenses.Local_Licenses;
 using DVLD_Business;
 using System;
@@ -119,7 +120,8 @@ namespace DVLD.Applications.Replace_lost_or_damage_license
 
         private void lnkLabLicenseHistory_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            frmShowPersonLicensesHistory ShowPersonLicensesHistory = new frmShowPersonLicensesHistory(uc_DriverLicenseWithFilter1.SelectedLicenseInfo.DriverInfo.PersonId);
+            ShowPersonLicensesHistory.ShowDialog();
         }
 
         private void btnClose_Click(object sender, EventArgs e)

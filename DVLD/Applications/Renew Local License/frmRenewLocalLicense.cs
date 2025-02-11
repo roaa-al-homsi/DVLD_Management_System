@@ -1,4 +1,5 @@
 ﻿using DVLD.Global_Classes;
+using DVLD.Licenses;
 using DVLD.Licenses.Local_Licenses;
 using DVLD_Business;
 using System;
@@ -92,7 +93,8 @@ namespace DVLD.Applications.Renew_Local_License
 
         private void lnkLabLicenseHistory_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            frmShowPersonLicensesHistory ShowPersonLicensesHistory = new frmShowPersonLicensesHistory(uc_DriverLicenseWithFilter1.SelectedLicenseInfo.DriverInfo.PersonId);
+            ShowPersonLicensesHistory.ShowDialog();
         }
 
         private void frmRenewLocalLicense_Activated(object sender, EventArgs e)

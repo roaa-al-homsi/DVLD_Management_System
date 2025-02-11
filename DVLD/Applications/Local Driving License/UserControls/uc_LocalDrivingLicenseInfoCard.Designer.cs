@@ -40,6 +40,7 @@
             this.labLDLAId = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.uc_BasicApplicationInfo1 = new DVLD.Applications.uc_BasicApplicationInfo();
+            this.lnkViewLicenseInfo = new System.Windows.Forms.LinkLabel();
             this.grbLDLAInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
@@ -48,6 +49,7 @@
             // 
             // grbLDLAInfo
             // 
+            this.grbLDLAInfo.Controls.Add(this.lnkViewLicenseInfo);
             this.grbLDLAInfo.Controls.Add(this.guna2PictureBox3);
             this.grbLDLAInfo.Controls.Add(this.guna2PictureBox2);
             this.grbLDLAInfo.Controls.Add(this.guna2PictureBox1);
@@ -180,6 +182,18 @@
             this.uc_BasicApplicationInfo1.Size = new System.Drawing.Size(1053, 274);
             this.uc_BasicApplicationInfo1.TabIndex = 1;
             // 
+            // lnkViewLicenseInfo
+            // 
+            this.lnkViewLicenseInfo.AutoSize = true;
+            this.lnkViewLicenseInfo.BackColor = System.Drawing.Color.Transparent;
+            this.lnkViewLicenseInfo.Location = new System.Drawing.Point(352, 189);
+            this.lnkViewLicenseInfo.Name = "lnkViewLicenseInfo";
+            this.lnkViewLicenseInfo.Size = new System.Drawing.Size(132, 27);
+            this.lnkViewLicenseInfo.TabIndex = 46;
+            this.lnkViewLicenseInfo.TabStop = true;
+            this.lnkViewLicenseInfo.Text = "View License Info";
+            this.lnkViewLicenseInfo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkViewLicenseInfo_LinkClicked);
+            // 
             // uc_LocalDrivingLicenseInfoCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -189,6 +203,7 @@
             this.Name = "uc_LocalDrivingLicenseInfoCard";
             this.Size = new System.Drawing.Size(1061, 495);
             this.grbLDLAInfo.ResumeLayout(false);
+            this.grbLDLAInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
@@ -209,5 +224,6 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private uc_BasicApplicationInfo uc_BasicApplicationInfo1;
+        private System.Windows.Forms.LinkLabel lnkViewLicenseInfo;
     }
 }

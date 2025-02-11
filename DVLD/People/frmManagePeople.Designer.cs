@@ -42,6 +42,7 @@
             this.labCountRecords = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.showDriverLicensesHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllPeople)).BeginInit();
             this.cmsManagePeople.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -67,7 +68,8 @@
             this.cmsManagePeople.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.updateToolStripMenuItem,
             this.deleteToolStripMenuItem,
-            this.showDetailsToolStripMenuItem});
+            this.showDetailsToolStripMenuItem,
+            this.showDriverLicensesHistoryToolStripMenuItem});
             this.cmsManagePeople.Name = "cmsManagePeople";
             this.cmsManagePeople.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.cmsManagePeople.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
@@ -78,13 +80,13 @@
             this.cmsManagePeople.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
             this.cmsManagePeople.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
             this.cmsManagePeople.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.cmsManagePeople.Size = new System.Drawing.Size(169, 82);
+            this.cmsManagePeople.Size = new System.Drawing.Size(272, 136);
             // 
             // updateToolStripMenuItem
             // 
             this.updateToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("updateToolStripMenuItem.Image")));
             this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-            this.updateToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(271, 26);
             this.updateToolStripMenuItem.Text = "Update";
             this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
             // 
@@ -92,7 +94,7 @@
             // 
             this.deleteToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("deleteToolStripMenuItem.Image")));
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(271, 26);
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
@@ -100,7 +102,7 @@
             // 
             this.showDetailsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("showDetailsToolStripMenuItem.Image")));
             this.showDetailsToolStripMenuItem.Name = "showDetailsToolStripMenuItem";
-            this.showDetailsToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
+            this.showDetailsToolStripMenuItem.Size = new System.Drawing.Size(271, 26);
             this.showDetailsToolStripMenuItem.Text = "Show Details";
             this.showDetailsToolStripMenuItem.Click += new System.EventHandler(this.showDetailsToolStripMenuItem_Click);
             // 
@@ -183,14 +185,14 @@
             this.btnAddPerson.TabIndex = 6;
             this.btnAddPerson.Click += new System.EventHandler(this.btnAddPerson_Click);
             // 
-            // labCountRecordsInternational
+            // labCountRecords
             // 
             this.labCountRecords.AutoSize = false;
             this.labCountRecords.BackColor = System.Drawing.Color.Transparent;
             this.labCountRecords.Font = new System.Drawing.Font("Andalus", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labCountRecords.ForeColor = System.Drawing.Color.Black;
             this.labCountRecords.Location = new System.Drawing.Point(158, 600);
-            this.labCountRecords.Name = "labCountRecordsInternational";
+            this.labCountRecords.Name = "labCountRecords";
             this.labCountRecords.Size = new System.Drawing.Size(104, 33);
             this.labCountRecords.TabIndex = 7;
             this.labCountRecords.Text = "??";
@@ -218,6 +220,14 @@
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox1.TabIndex = 9;
             this.guna2PictureBox1.TabStop = false;
+            // 
+            // showDriverLicensesHistoryToolStripMenuItem
+            // 
+            this.showDriverLicensesHistoryToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("showDriverLicensesHistoryToolStripMenuItem.Image")));
+            this.showDriverLicensesHistoryToolStripMenuItem.Name = "showDriverLicensesHistoryToolStripMenuItem";
+            this.showDriverLicensesHistoryToolStripMenuItem.Size = new System.Drawing.Size(271, 26);
+            this.showDriverLicensesHistoryToolStripMenuItem.Text = "Show Driver Licenses History";
+            this.showDriverLicensesHistoryToolStripMenuItem.Click += new System.EventHandler(this.showDriverLicensesHistoryToolStripMenuItem_Click);
             // 
             // frmManagePeople
             // 
@@ -260,5 +270,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel labCountRecords;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private System.Windows.Forms.ToolStripMenuItem showDriverLicensesHistoryToolStripMenuItem;
     }
 }

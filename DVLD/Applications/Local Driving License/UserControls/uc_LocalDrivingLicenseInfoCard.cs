@@ -1,4 +1,5 @@
-﻿using DVLD_Business;
+﻿using DVLD.Licenses.Local_Licenses;
+using DVLD_Business;
 using System.Windows.Forms;
 
 namespace DVLD.Applications.Local_Driving_License
@@ -44,9 +45,15 @@ namespace DVLD.Applications.Local_Driving_License
                 MessageBox.Show($"There is no local driving license with this application Id {localDrivingLicenseId}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
             _LoadDataToForm();
 
         }
 
+        private void lnkViewLicenseInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmShowDriverLicenseInfo frmShowDriverLicenseInfo = new frmShowDriverLicenseInfo(_localDrivingLicenseApplication.GetActiveLicenseID());
+            frmShowDriverLicenseInfo.ShowDialog();
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using DVLD.Licenses.Local_Licenses;
+﻿using DVLD.Licenses;
+using DVLD.Licenses.Local_Licenses;
 using DVLD.Local_Driving_License_App;
 using DVLD.Tests.Schedule_Tests;
 using DVLD_Business;
@@ -135,6 +136,7 @@ namespace DVLD.Applications.Local_Driving_License
             if (localDrivingLicense != null)
 
             {
+
                 if (MessageBox.Show("Are you sure you want cancel this application? ", "Question", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
 
                 {
@@ -261,6 +263,17 @@ namespace DVLD.Applications.Local_Driving_License
         {
             frmIssueDriverLicenseFirstTime frmIssueDriverLicenseFirst = new frmIssueDriverLicenseFirstTime((int)dgvAllLDLA.CurrentRow.Cells[0].Value);
             frmIssueDriverLicenseFirst.ShowDialog();
+
+        }
+
+        private void showPersonLicesnseHistoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LocalDrivingLicenseApplication localDrivingLicense = LocalDrivingLicenseApplication.Find((int)dgvAllLDLA.CurrentRow.Cells[0].Value);
+            if (localDrivingLicense != null)
+            {
+                frmShowPersonLicensesHistory frmShowPersonLicensesHistory = new frmShowPersonLicensesHistory(localDrivingLicense.PersonId);
+                frmShowPersonLicensesHistory.ShowDialog();
+            }
 
         }
     }
