@@ -34,25 +34,17 @@
             this.btnDetain = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.labCountRecords = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.scheduleStreetTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.scheduleWrittenTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.visionTEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.scheduleTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ReleaseDetainedLicenseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ShowLicenseDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showPersonLicesnseHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.showLicenseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.issueDrivingLicenseFirstTimeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cancelApplicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addNewLicenseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.showDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cmsManageLDLA = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
+            this.showPersonDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmsManageDetainedLicenses = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
             this.cmbFilterBy = new Guna.UI2.WinForms.Guna2ComboBox();
             this.dgvDetainedLicenses = new System.Windows.Forms.DataGridView();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnRelease = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.cmsManageLDLA.SuspendLayout();
+            this.cmsManageDetainedLicenses.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetainedLicenses)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -70,7 +62,7 @@
             this.txtValueFilterBy.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtValueFilterBy.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtValueFilterBy.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtValueFilterBy.Location = new System.Drawing.Point(335, 243);
+            this.txtValueFilterBy.Location = new System.Drawing.Point(347, 243);
             this.txtValueFilterBy.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtValueFilterBy.Name = "txtValueFilterBy";
             this.txtValueFilterBy.PasswordChar = '\0';
@@ -79,6 +71,7 @@
             this.txtValueFilterBy.Size = new System.Drawing.Size(228, 36);
             this.txtValueFilterBy.TabIndex = 27;
             this.txtValueFilterBy.TextChanged += new System.EventHandler(this.txtValueFilterBy_TextChanged);
+            this.txtValueFilterBy.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtValueFilterBy_KeyPress);
             // 
             // guna2HtmlLabel2
             // 
@@ -88,7 +81,7 @@
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.Black;
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(5, 247);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(114, 32);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(101, 32);
             this.guna2HtmlLabel2.TabIndex = 25;
             this.guna2HtmlLabel2.Text = "Filter By:";
             // 
@@ -131,118 +124,58 @@
             this.labCountRecords.Text = "??";
             this.labCountRecords.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // scheduleStreetTestToolStripMenuItem
+            // ReleaseDetainedLicenseToolStripMenuItem
             // 
-            this.scheduleStreetTestToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("scheduleStreetTestToolStripMenuItem.Image")));
-            this.scheduleStreetTestToolStripMenuItem.Name = "scheduleStreetTestToolStripMenuItem";
-            this.scheduleStreetTestToolStripMenuItem.Size = new System.Drawing.Size(233, 26);
-            this.scheduleStreetTestToolStripMenuItem.Text = "schedule Street Test";
+            this.ReleaseDetainedLicenseToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("ReleaseDetainedLicenseToolStripMenuItem.Image")));
+            this.ReleaseDetainedLicenseToolStripMenuItem.Name = "ReleaseDetainedLicenseToolStripMenuItem";
+            this.ReleaseDetainedLicenseToolStripMenuItem.Size = new System.Drawing.Size(274, 26);
+            this.ReleaseDetainedLicenseToolStripMenuItem.Text = "Release Detained License";
+            this.ReleaseDetainedLicenseToolStripMenuItem.Click += new System.EventHandler(this.ReleaseDetainedLicenseToolStripMenuItem_Click);
             // 
-            // scheduleWrittenTestToolStripMenuItem
+            // ShowLicenseDetailsToolStripMenuItem
             // 
-            this.scheduleWrittenTestToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("scheduleWrittenTestToolStripMenuItem.Image")));
-            this.scheduleWrittenTestToolStripMenuItem.Name = "scheduleWrittenTestToolStripMenuItem";
-            this.scheduleWrittenTestToolStripMenuItem.Size = new System.Drawing.Size(233, 26);
-            this.scheduleWrittenTestToolStripMenuItem.Text = "schedule Written Test";
-            // 
-            // visionTEToolStripMenuItem
-            // 
-            this.visionTEToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("visionTEToolStripMenuItem.Image")));
-            this.visionTEToolStripMenuItem.Name = "visionTEToolStripMenuItem";
-            this.visionTEToolStripMenuItem.Size = new System.Drawing.Size(233, 26);
-            this.visionTEToolStripMenuItem.Text = "schedule Vision Test";
-            // 
-            // scheduleTestToolStripMenuItem
-            // 
-            this.scheduleTestToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.visionTEToolStripMenuItem,
-            this.scheduleWrittenTestToolStripMenuItem,
-            this.scheduleStreetTestToolStripMenuItem});
-            this.scheduleTestToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("scheduleTestToolStripMenuItem.Image")));
-            this.scheduleTestToolStripMenuItem.Name = "scheduleTestToolStripMenuItem";
-            this.scheduleTestToolStripMenuItem.Size = new System.Drawing.Size(296, 26);
-            this.scheduleTestToolStripMenuItem.Text = " schedule Test";
-            // 
-            // deleteToolStripMenuItem
-            // 
-            this.deleteToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("deleteToolStripMenuItem.Image")));
-            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(296, 26);
-            this.deleteToolStripMenuItem.Text = " Delete Application";
+            this.ShowLicenseDetailsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("ShowLicenseDetailsToolStripMenuItem.Image")));
+            this.ShowLicenseDetailsToolStripMenuItem.Name = "ShowLicenseDetailsToolStripMenuItem";
+            this.ShowLicenseDetailsToolStripMenuItem.Size = new System.Drawing.Size(274, 26);
+            this.ShowLicenseDetailsToolStripMenuItem.Text = "Show License Details";
+            this.ShowLicenseDetailsToolStripMenuItem.Click += new System.EventHandler(this.ShowLicenseDetailsToolStripMenuItem_Click);
             // 
             // showPersonLicesnseHistoryToolStripMenuItem
             // 
             this.showPersonLicesnseHistoryToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("showPersonLicesnseHistoryToolStripMenuItem.Image")));
             this.showPersonLicesnseHistoryToolStripMenuItem.Name = "showPersonLicesnseHistoryToolStripMenuItem";
-            this.showPersonLicesnseHistoryToolStripMenuItem.Size = new System.Drawing.Size(296, 26);
+            this.showPersonLicesnseHistoryToolStripMenuItem.Size = new System.Drawing.Size(274, 26);
             this.showPersonLicesnseHistoryToolStripMenuItem.Text = "Show Person Licesnse History";
+            this.showPersonLicesnseHistoryToolStripMenuItem.Click += new System.EventHandler(this.showPersonLicenseHistoryToolStripMenuItem_Click);
             // 
-            // showLicenseToolStripMenuItem
+            // showPersonDetailsToolStripMenuItem
             // 
-            this.showLicenseToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("showLicenseToolStripMenuItem.Image")));
-            this.showLicenseToolStripMenuItem.Name = "showLicenseToolStripMenuItem";
-            this.showLicenseToolStripMenuItem.Size = new System.Drawing.Size(296, 26);
-            this.showLicenseToolStripMenuItem.Text = "Show License";
+            this.showPersonDetailsToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.showPersonDetailsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("showPersonDetailsToolStripMenuItem.Image")));
+            this.showPersonDetailsToolStripMenuItem.Name = "showPersonDetailsToolStripMenuItem";
+            this.showPersonDetailsToolStripMenuItem.Size = new System.Drawing.Size(274, 26);
+            this.showPersonDetailsToolStripMenuItem.Text = "Show Person Detains";
             // 
-            // issueDrivingLicenseFirstTimeToolStripMenuItem
+            // cmsManageDetainedLicenses
             // 
-            this.issueDrivingLicenseFirstTimeToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("issueDrivingLicenseFirstTimeToolStripMenuItem.Image")));
-            this.issueDrivingLicenseFirstTimeToolStripMenuItem.Name = "issueDrivingLicenseFirstTimeToolStripMenuItem";
-            this.issueDrivingLicenseFirstTimeToolStripMenuItem.Size = new System.Drawing.Size(296, 26);
-            this.issueDrivingLicenseFirstTimeToolStripMenuItem.Text = "Issue Driving License (First Time)";
-            // 
-            // cancelApplicationToolStripMenuItem
-            // 
-            this.cancelApplicationToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("cancelApplicationToolStripMenuItem.Image")));
-            this.cancelApplicationToolStripMenuItem.Name = "cancelApplicationToolStripMenuItem";
-            this.cancelApplicationToolStripMenuItem.Size = new System.Drawing.Size(296, 26);
-            this.cancelApplicationToolStripMenuItem.Text = "Cancel Application";
-            // 
-            // addNewLicenseToolStripMenuItem
-            // 
-            this.addNewLicenseToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("addNewLicenseToolStripMenuItem.Image")));
-            this.addNewLicenseToolStripMenuItem.Name = "addNewLicenseToolStripMenuItem";
-            this.addNewLicenseToolStripMenuItem.Size = new System.Drawing.Size(296, 26);
-            this.addNewLicenseToolStripMenuItem.Text = "Add New Licesne";
-            // 
-            // updateToolStripMenuItem
-            // 
-            this.updateToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("updateToolStripMenuItem.Image")));
-            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-            this.updateToolStripMenuItem.Size = new System.Drawing.Size(296, 26);
-            this.updateToolStripMenuItem.Text = "Update";
-            // 
-            // showDetailsToolStripMenuItem
-            // 
-            this.showDetailsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("showDetailsToolStripMenuItem.Image")));
-            this.showDetailsToolStripMenuItem.Name = "showDetailsToolStripMenuItem";
-            this.showDetailsToolStripMenuItem.Size = new System.Drawing.Size(296, 26);
-            this.showDetailsToolStripMenuItem.Text = "Show Details";
-            // 
-            // cmsManageLDLA
-            // 
-            this.cmsManageLDLA.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.cmsManageLDLA.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.showDetailsToolStripMenuItem,
-            this.updateToolStripMenuItem,
-            this.addNewLicenseToolStripMenuItem,
-            this.cancelApplicationToolStripMenuItem,
-            this.issueDrivingLicenseFirstTimeToolStripMenuItem,
-            this.showLicenseToolStripMenuItem,
+            this.cmsManageDetainedLicenses.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.cmsManageDetainedLicenses.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showPersonDetailsToolStripMenuItem,
             this.showPersonLicesnseHistoryToolStripMenuItem,
-            this.deleteToolStripMenuItem,
-            this.scheduleTestToolStripMenuItem});
-            this.cmsManageLDLA.Name = "cmsManageLDLA";
-            this.cmsManageLDLA.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.cmsManageLDLA.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
-            this.cmsManageLDLA.RenderStyle.ColorTable = null;
-            this.cmsManageLDLA.RenderStyle.RoundedEdges = true;
-            this.cmsManageLDLA.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
-            this.cmsManageLDLA.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.cmsManageLDLA.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.cmsManageLDLA.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
-            this.cmsManageLDLA.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.cmsManageLDLA.Size = new System.Drawing.Size(297, 238);
+            this.ShowLicenseDetailsToolStripMenuItem,
+            this.ReleaseDetainedLicenseToolStripMenuItem});
+            this.cmsManageDetainedLicenses.Name = "cmsManageLDLA";
+            this.cmsManageDetainedLicenses.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.cmsManageDetainedLicenses.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
+            this.cmsManageDetainedLicenses.RenderStyle.ColorTable = null;
+            this.cmsManageDetainedLicenses.RenderStyle.RoundedEdges = true;
+            this.cmsManageDetainedLicenses.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
+            this.cmsManageDetainedLicenses.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.cmsManageDetainedLicenses.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.cmsManageDetainedLicenses.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
+            this.cmsManageDetainedLicenses.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.cmsManageDetainedLicenses.Size = new System.Drawing.Size(275, 136);
+            this.cmsManageDetainedLicenses.Opening += new System.ComponentModel.CancelEventHandler(this.cmsManageDetainedLicenses_Opening);
             // 
             // cmbFilterBy
             // 
@@ -258,10 +191,11 @@
             this.cmbFilterBy.ItemHeight = 30;
             this.cmbFilterBy.Items.AddRange(new object[] {
             "None"});
-            this.cmbFilterBy.Location = new System.Drawing.Point(100, 243);
+            this.cmbFilterBy.Location = new System.Drawing.Point(112, 243);
             this.cmbFilterBy.Name = "cmbFilterBy";
             this.cmbFilterBy.Size = new System.Drawing.Size(229, 36);
             this.cmbFilterBy.TabIndex = 26;
+            this.cmbFilterBy.SelectedIndexChanged += new System.EventHandler(this.cmbFilterBy_SelectedIndexChanged);
             // 
             // dgvDetainedLicenses
             // 
@@ -269,7 +203,7 @@
             this.dgvDetainedLicenses.AllowUserToDeleteRows = false;
             this.dgvDetainedLicenses.BackgroundColor = System.Drawing.Color.White;
             this.dgvDetainedLicenses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDetainedLicenses.ContextMenuStrip = this.cmsManageLDLA;
+            this.dgvDetainedLicenses.ContextMenuStrip = this.cmsManageDetainedLicenses;
             this.dgvDetainedLicenses.Location = new System.Drawing.Point(5, 294);
             this.dgvDetainedLicenses.Name = "dgvDetainedLicenses";
             this.dgvDetainedLicenses.ReadOnly = true;
@@ -282,7 +216,7 @@
             // 
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(579, 12);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(468, 12);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.Size = new System.Drawing.Size(205, 161);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -294,7 +228,7 @@
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Andalus", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.Maroon;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(506, 179);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(395, 179);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(312, 43);
             this.guna2HtmlLabel1.TabIndex = 19;
@@ -333,7 +267,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Manage Detained Llicenses";
             this.Load += new System.EventHandler(this.FrmManageDetainedLicenses_Load);
-            this.cmsManageLDLA.ResumeLayout(false);
+            this.cmsManageDetainedLicenses.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetainedLicenses)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -348,19 +282,11 @@
         private Guna.UI2.WinForms.Guna2ImageButton btnDetain;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2HtmlLabel labCountRecords;
-        private System.Windows.Forms.ToolStripMenuItem scheduleStreetTestToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem scheduleWrittenTestToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem visionTEToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem scheduleTestToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ReleaseDetainedLicenseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ShowLicenseDetailsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem showPersonLicesnseHistoryToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem showLicenseToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem issueDrivingLicenseFirstTimeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cancelApplicationToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addNewLicenseToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem showDetailsToolStripMenuItem;
-        private Guna.UI2.WinForms.Guna2ContextMenuStrip cmsManageLDLA;
+        private System.Windows.Forms.ToolStripMenuItem showPersonDetailsToolStripMenuItem;
+        private Guna.UI2.WinForms.Guna2ContextMenuStrip cmsManageDetainedLicenses;
         private Guna.UI2.WinForms.Guna2ComboBox cmbFilterBy;
         private System.Windows.Forms.DataGridView dgvDetainedLicenses;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;

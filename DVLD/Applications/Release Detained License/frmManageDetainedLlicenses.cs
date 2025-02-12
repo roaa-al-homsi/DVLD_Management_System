@@ -1,4 +1,6 @@
-﻿using DVLD.Licenses.Detained_Licenses;
+﻿using DVLD.Licenses;
+using DVLD.Licenses.Detained_Licenses;
+using DVLD.Licenses.Local_Licenses;
 using DVLD_Business;
 using System;
 using System.Data;
@@ -46,23 +48,91 @@ namespace DVLD.Applications.Release_Detained_License
             dgvDetainedLicenses.DataSource = _dtDetainedLicenses;
             labCountRecords.Text = dgvDetainedLicenses.RowCount.ToString();
             ChangeFormatDgvAllDetained();
+            _FillComboFilterBy();
+            cmbFilterBy.SelectedIndex = 0;
+            txtValueFilterBy.Focus();
         }
 
         private void btnRelease_Click(object sender, EventArgs e)
         {
             frmReleaseDetainedLicense frmReleaseDetainedLicense = new frmReleaseDetainedLicense();
             frmReleaseDetainedLicense.ShowDialog();
+            FrmManageDetainedLicenses_Load(null, null);
         }
 
         private void btnDetain_Click(object sender, EventArgs e)
         {
             frmDetainLicenseApplication frmDetainLicenseApplication = new frmDetainLicenseApplication();
             frmDetainLicenseApplication.ShowDialog();
+            FrmManageDetainedLicenses_Load(null, null);
         }
 
         private void txtValueFilterBy_TextChanged(object sender, EventArgs e)
         {
+            if (cmbFilterBy.Text == "None" || string.IsNullOrWhiteSpace(txtValueFilterBy.Text))
+            {
+                _dtDetainedLicenses.DefaultView.RowFilter = string.Empty;
+                labCountRecords.Text = dgvDetainedLicenses.RowCount.ToString();
+                return;
+            }
+            switch (txtValueFilterBy.Text)
+            {
+                case "D.Id":
+                case "L.Id":
+                case "R.App.Id":
+                case "Na No":
+                    _dtDetainedLicenses.DefaultView.RowFilter = string.Format("[{0}]={1}", cmbFilterBy.Text, txtValueFilterBy.Text);
+                    break;
+                default:
+                    _dtDetainedLicenses.DefaultView.RowFilter = string.Format("[{0}]Like '{1}%'", cmbFilterBy.Text, txtValueFilterBy.Text.Trim());
+                    break;
+            }
+            labCountRecords.Text = dgvDetainedLicenses.RowCount.ToString();
+        }
 
+        private void cmbFilterBy_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtValueFilterBy.Visible = (cmbFilterBy.SelectedIndex != 0);
+        }
+
+        private void txtValueFilterBy_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (cmbFilterBy.Text == "D.Id" || cmbFilterBy.Text == "L.Id" || cmbFilterBy.Text == "R.App.Id" || cmbFilterBy.Text == "National No")
+            {
+                if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+                {
+                    e.Handled = true;
+                }
+            }
+        }
+        private int _GetPersonId()
+        {
+            int personId = License.Find((int)dgvDetainedLicenses.CurrentRow.Cells[1].Value).DriverInfo.PersonId;
+            return personId;
+        }
+
+        private void ReleaseDetainedLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReleaseDetainedLicense frmReleaseDetainedLicense = new frmReleaseDetainedLicense((int)dgvDetainedLicenses.CurrentRow.Cells[1].Value);
+            frmReleaseDetainedLicense.ShowDialog();
+            FrmManageDetainedLicenses_Load(null, null);
+        }
+
+        private void showPersonLicenseHistoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmShowPersonLicensesHistory frmShowPersonLicenses = new frmShowPersonLicensesHistory(_GetPersonId());
+            frmShowPersonLicenses.ShowDialog();
+        }
+
+        private void ShowLicenseDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmShowDriverLicenseInfo frmShowDriverLicenseInfo = new frmShowDriverLicenseInfo(_GetPersonId());
+            frmShowDriverLicenseInfo.ShowDialog();
+        }
+
+        private void cmsManageDetainedLicenses_Opening(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            ReleaseDetainedLicenseToolStripMenuItem.Enabled = !(bool)dgvDetainedLicenses.CurrentRow.Cells[4].Value;
         }
     }
 }
