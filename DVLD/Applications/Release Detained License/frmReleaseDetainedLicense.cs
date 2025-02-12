@@ -20,6 +20,9 @@ namespace DVLD.Applications.Release_Detained_License
         {
             InitializeComponent();
             _LicenseId = licenseId;
+            uc_DriverLicenseWithFilter1.LoadLicenseInfo(licenseId);
+            uc_DriverLicenseWithFilter1.FilterEnabled = false;
+
         }
         private void frmReleaseDetainedLicense_Load(object sender, EventArgs e)
         {
@@ -48,7 +51,6 @@ namespace DVLD.Applications.Release_Detained_License
             lbLicenseId.Text = _LicenseId.ToString();
             btnRelease.Enabled = true;
         }
-
         private void frmReleaseDetainedLicense_Activated(object sender, EventArgs e)
         {
             uc_DriverLicenseWithFilter1.txtLicenseIDFocus();
@@ -58,19 +60,15 @@ namespace DVLD.Applications.Release_Detained_License
             frmShowDriverLicenseInfo frmShowDriverLicenseInfo = new frmShowDriverLicenseInfo(_LicenseId);
             frmShowDriverLicenseInfo.ShowDialog();
         }
-
         private void lnkLabLicenseHistory_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             frmShowPersonLicensesHistory frmShowPersonLicensesHistory = new frmShowPersonLicensesHistory(uc_DriverLicenseWithFilter1.SelectedLicenseInfo.DriverInfo.PersonId);
             frmShowPersonLicensesHistory.ShowDialog();
         }
-
-
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
         private void btnRelease_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Are you sure you want to release this detained  license?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)

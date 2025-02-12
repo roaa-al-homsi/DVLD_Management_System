@@ -410,7 +410,6 @@
             this.releaseDetainedDrivingLicenseToolStripMenuItem.Name = "releaseDetainedDrivingLicenseToolStripMenuItem";
             this.releaseDetainedDrivingLicenseToolStripMenuItem.Size = new System.Drawing.Size(410, 34);
             this.releaseDetainedDrivingLicenseToolStripMenuItem.Text = "Release Detained Driving License";
-            this.releaseDetainedDrivingLicenseToolStripMenuItem.Click += new System.EventHandler(this.releaseDetainedDrivingLicenseToolStripMenuItem_Click);
             // 
             // retakeTestToolStripMenuItem
             // 
@@ -458,19 +457,21 @@
             this.manageDetainedLicenseToolStripMenuItem.Name = "manageDetainedLicenseToolStripMenuItem";
             this.manageDetainedLicenseToolStripMenuItem.Size = new System.Drawing.Size(291, 34);
             this.manageDetainedLicenseToolStripMenuItem.Text = "Manage Detained License ";
+            this.manageDetainedLicenseToolStripMenuItem.Click += new System.EventHandler(this.manageDetainedLicenseToolStripMenuItem_Click);
             // 
             // detaineLicenseToolStripMenuItem
             // 
             this.detaineLicenseToolStripMenuItem.Name = "detaineLicenseToolStripMenuItem";
             this.detaineLicenseToolStripMenuItem.Size = new System.Drawing.Size(291, 34);
             this.detaineLicenseToolStripMenuItem.Text = "Detaine License";
-            this.detaineLicenseToolStripMenuItem.Click += new System.EventHandler(this.detaineLicenseToolStripMenuItem_Click);
+            this.detaineLicenseToolStripMenuItem.Click += new System.EventHandler(this.detainedLicenseToolStripMenuItem_Click);
             // 
             // releaseDetainedLicenseToolStripMenuItem
             // 
             this.releaseDetainedLicenseToolStripMenuItem.Name = "releaseDetainedLicenseToolStripMenuItem";
             this.releaseDetainedLicenseToolStripMenuItem.Size = new System.Drawing.Size(291, 34);
             this.releaseDetainedLicenseToolStripMenuItem.Text = "Release Detained License";
+            this.releaseDetainedLicenseToolStripMenuItem.Click += new System.EventHandler(this.releaseDetainedLicenseToolStripMenuItem_Click);
             // 
             // manageApplicationTypesToolStripMenuItem
             // 

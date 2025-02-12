@@ -146,7 +146,11 @@ namespace DVLD_DataAccess
         }
         static public DataTable All()
         {
-            return GenericData.All("select * from DetainedLicenses");
+            string query = @"SELECT DetainedLicenses.Id [D.Id], DetainedLicenses.LicenseId [L.Id], DetainedLicenses.ReleaseApplicationId [R.App.Id], DetainedLicenses.DetainDate [Detain Date], DetainedLicenses.FineFees [Fine Fees], DetainedLicenses.IsReleased [Is Release], DetainedLicenses.ReleaseDate [Release Date], People.NationalNo [Na No], 
+                     (People.FirstName +''+ People.SecondName+ISNULL(People.ThirdName,'' ) + ' '+ People.LastName) as [Full Name] 
+                   FROM     DetainedLicenses INNER JOIN
+                  People ON DetainedLicenses.Id = People.Id";
+            return GenericData.All(query);
         }
         static public bool Delete(int Id)
         {

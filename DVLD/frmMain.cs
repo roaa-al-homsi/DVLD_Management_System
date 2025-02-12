@@ -101,8 +101,8 @@ namespace DVLD
 
         private void replacementForDamagedOrLostLicenseToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            frmReplaceLostOrDamageLicense frmReplaceLostOrDamageLicesnse = new frmReplaceLostOrDamageLicense();
-            frmReplaceLostOrDamageLicesnse.ShowDialog();
+            frmReplaceLostOrDamageLicense frmReplaceLostOrDamageLicense = new frmReplaceLostOrDamageLicense();
+            frmReplaceLostOrDamageLicense.ShowDialog();
         }
 
         private void driversToolStripMenuItem_Click(object sender, System.EventArgs e)
@@ -111,13 +111,19 @@ namespace DVLD
             frmManageDrivers.ShowDialog();
         }
 
-        private void detaineLicenseToolStripMenuItem_Click(object sender, System.EventArgs e)
+        private void detainedLicenseToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
             frmDetainLicenseApplication frmDetainLicenseApplication = new frmDetainLicenseApplication();
             frmDetainLicenseApplication.ShowDialog();
         }
 
-        private void releaseDetainedDrivingLicenseToolStripMenuItem_Click(object sender, System.EventArgs e)
+        private void manageDetainedLicenseToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            frmManageDetainedLicenses frmManageDetainedLicenses = new frmManageDetainedLicenses();
+            frmManageDetainedLicenses.ShowDialog();
+        }
+
+        private void releaseDetainedLicenseToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
             frmReleaseDetainedLicense frmReleaseDetainedLicense = new frmReleaseDetainedLicense();
             frmReleaseDetainedLicense.ShowDialog();
