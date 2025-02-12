@@ -112,9 +112,30 @@ namespace DVLD_Business
             }
             return null;
         }
+        public static DetainedLicense FindByLicenseId(int licenseId)
+        {
+            int DetainId = -1;
+            DateTime DetainDate = DateTime.MinValue;
+            decimal FineFees = 0;
+            int CreatedByUserId = -1;
+            bool IsReleased = false;
+            DateTime ReleaseDate = DateTime.MinValue;
+            int ReleasedByUserId = -1;
+            int ReleaseApplicationId = -1;
+
+            if (DetainedLicenseData.GetByLicenseId(licenseId, ref DetainId, ref DetainDate, ref FineFees, ref CreatedByUserId, ref IsReleased, ref ReleaseDate, ref ReleasedByUserId, ref ReleaseApplicationId))
+            {
+                return new DetainedLicense(DetainId, licenseId, DetainDate, FineFees, CreatedByUserId, IsReleased, ReleaseDate, ReleasedByUserId, ReleaseApplicationId);
+            }
+            return null;
+        }
         public static bool IsLicenseDetained(int licenseId)
         {
             return DetainedLicenseData.IsLicenseDetained(licenseId);
+        }
+        public bool ReleaseDetainedLicense(int releaseByUserId, int releaseApplicationId)
+        {
+            return DetainedLicenseData.ReleaseDetainedLicense(this.Id, releaseByUserId, releaseApplicationId);
         }
     }
 

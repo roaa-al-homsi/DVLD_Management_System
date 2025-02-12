@@ -37,6 +37,7 @@ namespace DVLD_Business
                 return DetainedLicense.IsLicenseDetained(this.Id);
             }
         }
+        public DetainedLicense DetainInfo { get; set; }
         public License()
         {
             this.Id = -1;
@@ -69,6 +70,7 @@ namespace DVLD_Business
             this.DriverInfo = Driver.Find(DriverId);
             this.ApplicationInfo = Application.FindBaseApplication(ApplicationId);
             this.LicenseClass = LicenseClass.Find(LicenseClassId);
+            this.DetainInfo = DetainedLicense.FindByLicenseId(Id);
 
             _mode = Mode.Update;
         }
@@ -244,18 +246,29 @@ namespace DVLD_Business
             detainedLicense.FineFees = fineFees;
             detainedLicense.CreatedByUserId = createdByUserId;
             detainedLicense.LicenseId = this.Id;
-            // detainedLicense.ReleaseDate = DateTime.MinValue;
-            //detainedLicense.IsReleased = false;
-            //detainedLicense.ReleasedByUserId = -1;
-            //detainedLicense.ReleaseApplicationId = -1;
-
-
             if (!detainedLicense.Save())
             {
                 return -1;
             }
             return detainedLicense.Id;
         }
+        public bool Release(int releasedByUserId)
+        {
+            Application application = new Application();
+            application.CreatedByUserId = releasedByUserId;
+            application.Date = DateTime.Now;
+            application.ApplicationTypeId = (int)Application.enApplicationType.ReleaseDetainedDrivingLicense;
+            application.LastStatusDate = DateTime.Now;
+            application.PersonId = this.DriverInfo.PersonId;
+            application.Status = Application.enApplicationStatus.Completed;
+            application.PaidFees = ApplicationType.GetFeesForSpecificApplication(Application.enApplicationType.ReleaseDetainedDrivingLicense);
+            if (!application.Save())
+            {
+                return false;
+            }
+            return (this.DetainInfo.ReleaseDetainedLicense(releasedByUserId, application.Id));
+        }
+
         public static DataTable GetDriverLicenses(int driverId)
         {
             return LicenseData.GetDriverLicenses(driverId);

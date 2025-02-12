@@ -21,7 +21,6 @@ namespace DVLD_DataAccess
                     command.Parameters.AddWithValue("@CreatedByUserId", CreatedByUserId);
                     command.Parameters.AddWithValue("@IsReleased", IsReleased);
                     command.Parameters.AddWithValue("@ReleaseDate", (ReleaseDate == DateTime.MinValue) ? DBNull.Value : (object)ReleaseDate);
-
                     command.Parameters.AddWithValue("@ReleasedByUserId", (ReleasedByUserId == -1) ? DBNull.Value : (object)ReleasedByUserId);
                     command.Parameters.AddWithValue("@ReleaseApplicationId", (ReleaseApplicationId == -1) ? DBNull.Value : (object)ReleaseApplicationId);
 
@@ -91,6 +90,7 @@ namespace DVLD_DataAccess
                             FineFees = (decimal)reader["FineFees"];
                             CreatedByUserId = (int)reader["CreatedByUserId"];
                             IsReleased = (bool)reader["IsReleased"];
+
                             ReleasedByUserId = reader["ReleasedByUserId"] != DBNull.Value ? (int)reader["ReleasedByUserId"] : -1;
                             ReleaseApplicationId = reader["ReleaseApplicationId"] != DBNull.Value ? (int)reader["ReleaseApplicationId"] : -1;
 
@@ -129,10 +129,9 @@ namespace DVLD_DataAccess
                             FineFees = (decimal)reader["FineFees"];
                             CreatedByUserId = (int)reader["CreatedByUserId"];
                             IsReleased = (bool)reader["IsReleased"];
+                            ReleaseDate = reader["ReleaseDate"] != DBNull.Value ? (DateTime)reader["ReleaseDate"] : DateTime.MinValue;
                             ReleasedByUserId = reader["ReleasedByUserId"] != DBNull.Value ? (int)reader["ReleasedByUserId"] : -1;
                             ReleaseApplicationId = reader["ReleaseApplicationId"] != DBNull.Value ? (int)reader["ReleaseApplicationId"] : -1;
-
-
                         }
                         else
                         {
@@ -158,6 +157,29 @@ namespace DVLD_DataAccess
             return GenericData.Exist("select Found=1 from DetainedLicenses where Id= @Id", "@Id", Id);
         }
         //Release Detained Licenses
+        static public bool ReleaseDetainedLicense(int Id, int ReleasedByUserId, int ReleaseApplicationId)
+        {
+            int RowsAffected = 0;
+            string query = "update DetainedLicenses set IsReleased = 1,ReleaseDate = @ReleaseDate,ReleasedByUserId = @ReleasedByUserId,ReleaseApplicationId = @ReleaseApplicationId  WHERE Id=@Id;";
+            using (SqlConnection connection = new SqlConnection(SettingData.ConnectionString))
+            {
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Id", Id);
+                    command.Parameters.AddWithValue("@ReleaseDate", DateTime.Now);
+                    command.Parameters.AddWithValue("@ReleaseDate", DateTime.Now);
+                    command.Parameters.AddWithValue("@ReleasedByUserId", ReleasedByUserId);
+                    command.Parameters.AddWithValue("@ReleaseApplicationId", ReleaseApplicationId);
+                    try
+                    {
+                        connection.Open();
+                        RowsAffected = command.ExecuteNonQuery();
+                    }
+                    catch (Exception ex) { }
+                }
+            }
+            return RowsAffected > 0;
+        }
         static public bool IsLicenseDetained(int licenseId)
         {
             return GenericData.Exist("select IsDetained=1 from DetainedLicenses where LicenseId= @licenseId and IsReleased=0", "@licenseId", licenseId);
