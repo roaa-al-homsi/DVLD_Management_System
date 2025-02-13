@@ -75,12 +75,11 @@ namespace DVLD.Applications.Release_Detained_License
                 labCountRecords.Text = dgvDetainedLicenses.RowCount.ToString();
                 return;
             }
-            switch (txtValueFilterBy.Text)
+            switch (cmbFilterBy.Text)
             {
                 case "D.Id":
                 case "L.Id":
                 case "R.App.Id":
-                case "Na No":
                     _dtDetainedLicenses.DefaultView.RowFilter = string.Format("[{0}]={1}", cmbFilterBy.Text, txtValueFilterBy.Text);
                     break;
                 default:
@@ -92,7 +91,23 @@ namespace DVLD.Applications.Release_Detained_License
 
         private void cmbFilterBy_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txtValueFilterBy.Visible = (cmbFilterBy.SelectedIndex != 0);
+            if (cmbFilterBy.Text == "Is Release")
+            {
+                cmbReleased.Visible = true;
+                txtValueFilterBy.Visible = false;
+                cmbReleased.SelectedIndex = 0;
+                cmbReleased.Focus();
+            }
+            else
+            {
+                txtValueFilterBy.Visible = (cmbFilterBy.SelectedIndex != 0);
+                txtValueFilterBy.Text = string.Empty;
+                cmbReleased.Visible = false;
+                txtValueFilterBy.Focus();
+                _dtDetainedLicenses.DefaultView.RowFilter = string.Empty;
+
+            }
+
         }
 
         private void txtValueFilterBy_KeyPress(object sender, KeyPressEventArgs e)
@@ -132,7 +147,28 @@ namespace DVLD.Applications.Release_Detained_License
 
         private void cmsManageDetainedLicenses_Opening(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            ReleaseDetainedLicenseToolStripMenuItem.Enabled = !(bool)dgvDetainedLicenses.CurrentRow.Cells[4].Value;
+            ReleaseDetainedLicenseToolStripMenuItem.Enabled = !(bool)dgvDetainedLicenses.CurrentRow.Cells[5].Value;
+        }
+
+        private void cmbReleased_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string filterValue = string.Empty;
+            switch (cmbReleased.Text)
+            {
+                case "Yes":
+                    filterValue = "1";
+                    _dtDetainedLicenses.DefaultView.RowFilter = string.Format("[{0}] = {1}", cmbFilterBy.Text, filterValue);
+                    break;
+                case "No":
+                    filterValue = "0";
+                    _dtDetainedLicenses.DefaultView.RowFilter = string.Format("[{0}] = {1}", cmbFilterBy.Text, filterValue);
+                    break;
+                default:
+                    _dtDetainedLicenses.DefaultView.RowFilter = string.Empty;
+                    break;
+            }
+            labCountRecords.Text = _dtDetainedLicenses.Rows.Count.ToString();
         }
     }
+
 }

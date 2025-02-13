@@ -44,6 +44,7 @@
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnRelease = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.cmbReleased = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cmsManageDetainedLicenses.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetainedLicenses)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -61,6 +62,7 @@
             this.txtValueFilterBy.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtValueFilterBy.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtValueFilterBy.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtValueFilterBy.ForeColor = System.Drawing.Color.Black;
             this.txtValueFilterBy.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtValueFilterBy.Location = new System.Drawing.Point(347, 243);
             this.txtValueFilterBy.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -174,7 +176,7 @@
             this.cmsManageDetainedLicenses.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
             this.cmsManageDetainedLicenses.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
             this.cmsManageDetainedLicenses.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.cmsManageDetainedLicenses.Size = new System.Drawing.Size(275, 136);
+            this.cmsManageDetainedLicenses.Size = new System.Drawing.Size(275, 108);
             this.cmsManageDetainedLicenses.Opening += new System.ComponentModel.CancelEventHandler(this.cmsManageDetainedLicenses_Opening);
             // 
             // cmbFilterBy
@@ -248,11 +250,34 @@
             this.btnRelease.TabIndex = 28;
             this.btnRelease.Click += new System.EventHandler(this.btnRelease_Click);
             // 
+            // cmbReleased
+            // 
+            this.cmbReleased.AutoRoundedCorners = true;
+            this.cmbReleased.BackColor = System.Drawing.Color.Transparent;
+            this.cmbReleased.BorderRadius = 17;
+            this.cmbReleased.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbReleased.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbReleased.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbReleased.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbReleased.Font = new System.Drawing.Font("Andalus", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbReleased.ForeColor = System.Drawing.Color.Black;
+            this.cmbReleased.ItemHeight = 30;
+            this.cmbReleased.Items.AddRange(new object[] {
+            "All",
+            "Yes",
+            "No"});
+            this.cmbReleased.Location = new System.Drawing.Point(347, 243);
+            this.cmbReleased.Name = "cmbReleased";
+            this.cmbReleased.Size = new System.Drawing.Size(229, 36);
+            this.cmbReleased.TabIndex = 29;
+            this.cmbReleased.SelectedIndexChanged += new System.EventHandler(this.cmbReleased_SelectedIndexChanged);
+            // 
             // frmManageDetainedLicenses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1190, 761);
+            this.Controls.Add(this.cmbReleased);
             this.Controls.Add(this.btnRelease);
             this.Controls.Add(this.txtValueFilterBy);
             this.Controls.Add(this.guna2HtmlLabel2);
@@ -292,5 +317,6 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2ImageButton btnRelease;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbReleased;
     }
 }
