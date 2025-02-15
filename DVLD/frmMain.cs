@@ -142,5 +142,11 @@ namespace DVLD
             frmManageInternationalLicenses frmManageInternationalLicenses = new frmManageInternationalLicenses();
             frmManageInternationalLicenses.ShowDialog();
         }
+
+        private void currentUserInfoToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            frmShowUserDetails frmShowUserDetails = new frmShowUserDetails(Global.CurrentUser.Id);
+            frmShowUserDetails.ShowDialog();
+        }
     }
 }

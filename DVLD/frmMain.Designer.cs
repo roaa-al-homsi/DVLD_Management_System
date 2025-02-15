@@ -34,13 +34,6 @@
             this.picUserMain = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.btnTitle = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnApplications = new Guna.UI2.WinForms.Guna2Button();
-            this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
-            this.btnPeople = new Guna.UI2.WinForms.Guna2Button();
-            this.btnDrivers = new Guna.UI2.WinForms.Guna2Button();
-            this.btnAccountSetting = new Guna.UI2.WinForms.Guna2Button();
-            this.btnUsers = new Guna.UI2.WinForms.Guna2Button();
-            this.panelMainMenu = new Guna.UI2.WinForms.Guna2Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.applicationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -70,7 +63,6 @@
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picUserMain)).BeginInit();
-            this.guna2Panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -137,190 +129,11 @@
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.guna2Panel1.Controls.Add(this.btnApplications);
-            this.guna2Panel1.Controls.Add(this.btnLogout);
-            this.guna2Panel1.Controls.Add(this.btnPeople);
-            this.guna2Panel1.Controls.Add(this.btnDrivers);
-            this.guna2Panel1.Controls.Add(this.btnAccountSetting);
-            this.guna2Panel1.Controls.Add(this.btnUsers);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 812);
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 883);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1757, 81);
+            this.guna2Panel1.Size = new System.Drawing.Size(1757, 10);
             this.guna2Panel1.TabIndex = 18;
-            // 
-            // btnApplications
-            // 
-            this.btnApplications.AutoRoundedCorners = true;
-            this.btnApplications.BackColor = System.Drawing.Color.Transparent;
-            this.btnApplications.BorderRadius = 26;
-            this.btnApplications.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnApplications.CheckedState.CustomBorderColor = System.Drawing.Color.LightSkyBlue;
-            this.btnApplications.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.btnApplications.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnApplications.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnApplications.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnApplications.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnApplications.FillColor = System.Drawing.SystemColors.Control;
-            this.btnApplications.Font = new System.Drawing.Font("Andalus", 10.8F);
-            this.btnApplications.ForeColor = System.Drawing.Color.Black;
-            this.btnApplications.HoverState.CustomBorderColor = System.Drawing.Color.LightSkyBlue;
-            this.btnApplications.Image = ((System.Drawing.Image)(resources.GetObject("btnApplications.Image")));
-            this.btnApplications.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnApplications.ImageSize = new System.Drawing.Size(50, 50);
-            this.btnApplications.Location = new System.Drawing.Point(280, 9);
-            this.btnApplications.Name = "btnApplications";
-            this.btnApplications.Size = new System.Drawing.Size(188, 54);
-            this.btnApplications.TabIndex = 2;
-            this.btnApplications.Tag = "Applications";
-            this.btnApplications.Text = "  Applications";
-            this.btnApplications.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.AutoRoundedCorners = true;
-            this.btnLogout.BackColor = System.Drawing.Color.Transparent;
-            this.btnLogout.BorderRadius = 26;
-            this.btnLogout.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnLogout.CheckedState.CustomBorderColor = System.Drawing.Color.LightSkyBlue;
-            this.btnLogout.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.btnLogout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnLogout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnLogout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnLogout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnLogout.FillColor = System.Drawing.SystemColors.Control;
-            this.btnLogout.Font = new System.Drawing.Font("Andalus", 10.8F);
-            this.btnLogout.ForeColor = System.Drawing.Color.Black;
-            this.btnLogout.HoverState.CustomBorderColor = System.Drawing.Color.LightSkyBlue;
-            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
-            this.btnLogout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnLogout.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnLogout.Location = new System.Drawing.Point(1293, 9);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(188, 54);
-            this.btnLogout.TabIndex = 13;
-            this.btnLogout.Tag = "Logout";
-            this.btnLogout.Text = "Logout";
-            this.btnLogout.UseTransparentBackground = true;
-            // 
-            // btnPeople
-            // 
-            this.btnPeople.AutoRoundedCorners = true;
-            this.btnPeople.BackColor = System.Drawing.Color.Transparent;
-            this.btnPeople.BorderColor = System.Drawing.Color.Transparent;
-            this.btnPeople.BorderRadius = 26;
-            this.btnPeople.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnPeople.CheckedState.CustomBorderColor = System.Drawing.Color.LightSkyBlue;
-            this.btnPeople.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.btnPeople.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnPeople.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnPeople.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnPeople.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnPeople.FillColor = System.Drawing.SystemColors.Control;
-            this.btnPeople.Font = new System.Drawing.Font("Andalus", 10.8F);
-            this.btnPeople.ForeColor = System.Drawing.Color.Black;
-            this.btnPeople.HoverState.CustomBorderColor = System.Drawing.Color.LightSkyBlue;
-            this.btnPeople.Image = ((System.Drawing.Image)(resources.GetObject("btnPeople.Image")));
-            this.btnPeople.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnPeople.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnPeople.Location = new System.Drawing.Point(479, 9);
-            this.btnPeople.Name = "btnPeople";
-            this.btnPeople.Size = new System.Drawing.Size(188, 54);
-            this.btnPeople.TabIndex = 3;
-            this.btnPeople.Tag = "People";
-            this.btnPeople.Text = "People";
-            // 
-            // btnDrivers
-            // 
-            this.btnDrivers.AutoRoundedCorners = true;
-            this.btnDrivers.BackColor = System.Drawing.Color.Transparent;
-            this.btnDrivers.BorderColor = System.Drawing.Color.Transparent;
-            this.btnDrivers.BorderRadius = 26;
-            this.btnDrivers.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnDrivers.CheckedState.CustomBorderColor = System.Drawing.Color.LightSkyBlue;
-            this.btnDrivers.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.btnDrivers.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnDrivers.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnDrivers.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDrivers.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDrivers.FillColor = System.Drawing.SystemColors.Control;
-            this.btnDrivers.Font = new System.Drawing.Font("Andalus", 10.8F);
-            this.btnDrivers.ForeColor = System.Drawing.Color.Black;
-            this.btnDrivers.HoverState.CustomBorderColor = System.Drawing.Color.LightSkyBlue;
-            this.btnDrivers.Image = ((System.Drawing.Image)(resources.GetObject("btnDrivers.Image")));
-            this.btnDrivers.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnDrivers.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnDrivers.Location = new System.Drawing.Point(678, 9);
-            this.btnDrivers.Name = "btnDrivers";
-            this.btnDrivers.Size = new System.Drawing.Size(188, 54);
-            this.btnDrivers.TabIndex = 4;
-            this.btnDrivers.Tag = "Drivers";
-            this.btnDrivers.Text = "Drivers";
-            this.btnDrivers.UseTransparentBackground = true;
-            // 
-            // btnAccountSetting
-            // 
-            this.btnAccountSetting.AutoRoundedCorners = true;
-            this.btnAccountSetting.BackColor = System.Drawing.Color.Transparent;
-            this.btnAccountSetting.BorderRadius = 26;
-            this.btnAccountSetting.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnAccountSetting.CheckedState.CustomBorderColor = System.Drawing.Color.LightSkyBlue;
-            this.btnAccountSetting.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.btnAccountSetting.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAccountSetting.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAccountSetting.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAccountSetting.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAccountSetting.FillColor = System.Drawing.SystemColors.Control;
-            this.btnAccountSetting.Font = new System.Drawing.Font("Andalus", 10.8F);
-            this.btnAccountSetting.ForeColor = System.Drawing.Color.Black;
-            this.btnAccountSetting.HoverState.CustomBorderColor = System.Drawing.Color.LightSkyBlue;
-            this.btnAccountSetting.Image = ((System.Drawing.Image)(resources.GetObject("btnAccountSetting.Image")));
-            this.btnAccountSetting.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnAccountSetting.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnAccountSetting.Location = new System.Drawing.Point(877, 9);
-            this.btnAccountSetting.Name = "btnAccountSetting";
-            this.btnAccountSetting.Size = new System.Drawing.Size(206, 54);
-            this.btnAccountSetting.TabIndex = 8;
-            this.btnAccountSetting.Tag = "Account Setting";
-            this.btnAccountSetting.Text = "  Account Setting";
-            this.btnAccountSetting.UseTransparentBackground = true;
-            // 
-            // btnUsers
-            // 
-            this.btnUsers.AutoRoundedCorners = true;
-            this.btnUsers.BackColor = System.Drawing.Color.Transparent;
-            this.btnUsers.BorderColor = System.Drawing.Color.Transparent;
-            this.btnUsers.BorderRadius = 26;
-            this.btnUsers.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnUsers.CheckedState.CustomBorderColor = System.Drawing.Color.LightSkyBlue;
-            this.btnUsers.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.btnUsers.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnUsers.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnUsers.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnUsers.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnUsers.FillColor = System.Drawing.SystemColors.Control;
-            this.btnUsers.Font = new System.Drawing.Font("Andalus", 10.8F);
-            this.btnUsers.ForeColor = System.Drawing.Color.Black;
-            this.btnUsers.HoverState.CustomBorderColor = System.Drawing.Color.LightSkyBlue;
-            this.btnUsers.Image = ((System.Drawing.Image)(resources.GetObject("btnUsers.Image")));
-            this.btnUsers.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnUsers.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnUsers.Location = new System.Drawing.Point(1094, 9);
-            this.btnUsers.Name = "btnUsers";
-            this.btnUsers.Size = new System.Drawing.Size(188, 54);
-            this.btnUsers.TabIndex = 5;
-            this.btnUsers.Tag = "Users";
-            this.btnUsers.Text = "Users";
-            this.btnUsers.UseTransparentBackground = true;
-            // 
-            // panelMainMenu
-            // 
-            this.panelMainMenu.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.panelMainMenu.FillColor = System.Drawing.Color.White;
-            this.panelMainMenu.Location = new System.Drawing.Point(12, 246);
-            this.panelMainMenu.Name = "panelMainMenu";
-            this.panelMainMenu.Size = new System.Drawing.Size(1709, 260);
-            this.panelMainMenu.TabIndex = 19;
             // 
             // menuStrip1
             // 
@@ -365,8 +178,9 @@
             this.releaseDetainedDrivingLicenseToolStripMenuItem,
             this.retakeTestToolStripMenuItem});
             this.hIToolStripMenuItem.Font = new System.Drawing.Font("Andalus", 10.8F);
+            this.hIToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("hIToolStripMenuItem.Image")));
             this.hIToolStripMenuItem.Name = "hIToolStripMenuItem";
-            this.hIToolStripMenuItem.Size = new System.Drawing.Size(297, 34);
+            this.hIToolStripMenuItem.Size = new System.Drawing.Size(327, 56);
             this.hIToolStripMenuItem.Text = "Driving Licenses Services";
             // 
             // newDrivingLicenseToolStripMenuItem
@@ -374,48 +188,55 @@
             this.newDrivingLicenseToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.localLicenseToolStripMenuItem,
             this.internationalLicenseToolStripMenuItem});
+            this.newDrivingLicenseToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("newDrivingLicenseToolStripMenuItem.Image")));
             this.newDrivingLicenseToolStripMenuItem.Name = "newDrivingLicenseToolStripMenuItem";
-            this.newDrivingLicenseToolStripMenuItem.Size = new System.Drawing.Size(410, 34);
+            this.newDrivingLicenseToolStripMenuItem.Size = new System.Drawing.Size(440, 56);
             this.newDrivingLicenseToolStripMenuItem.Text = "New Driving License";
             // 
             // localLicenseToolStripMenuItem
             // 
+            this.localLicenseToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("localLicenseToolStripMenuItem.Image")));
             this.localLicenseToolStripMenuItem.Name = "localLicenseToolStripMenuItem";
-            this.localLicenseToolStripMenuItem.Size = new System.Drawing.Size(253, 34);
+            this.localLicenseToolStripMenuItem.Size = new System.Drawing.Size(283, 56);
             this.localLicenseToolStripMenuItem.Text = "Local License";
             this.localLicenseToolStripMenuItem.Click += new System.EventHandler(this.localLicenseToolStripMenuItem_Click);
             // 
             // internationalLicenseToolStripMenuItem
             // 
+            this.internationalLicenseToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("internationalLicenseToolStripMenuItem.Image")));
             this.internationalLicenseToolStripMenuItem.Name = "internationalLicenseToolStripMenuItem";
-            this.internationalLicenseToolStripMenuItem.Size = new System.Drawing.Size(253, 34);
+            this.internationalLicenseToolStripMenuItem.Size = new System.Drawing.Size(283, 56);
             this.internationalLicenseToolStripMenuItem.Text = "International License";
             this.internationalLicenseToolStripMenuItem.Click += new System.EventHandler(this.internationalLicenseToolStripMenuItem_Click);
             // 
             // renewDrivingLicenseToolStripMenuItem
             // 
+            this.renewDrivingLicenseToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("renewDrivingLicenseToolStripMenuItem.Image")));
             this.renewDrivingLicenseToolStripMenuItem.Name = "renewDrivingLicenseToolStripMenuItem";
-            this.renewDrivingLicenseToolStripMenuItem.Size = new System.Drawing.Size(410, 34);
+            this.renewDrivingLicenseToolStripMenuItem.Size = new System.Drawing.Size(440, 56);
             this.renewDrivingLicenseToolStripMenuItem.Text = "Renew Driving License";
             this.renewDrivingLicenseToolStripMenuItem.Click += new System.EventHandler(this.renewDrivingLicenseToolStripMenuItem_Click);
             // 
             // replacementForDamagedOrLostLicenseToolStripMenuItem
             // 
+            this.replacementForDamagedOrLostLicenseToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("replacementForDamagedOrLostLicenseToolStripMenuItem.Image")));
             this.replacementForDamagedOrLostLicenseToolStripMenuItem.Name = "replacementForDamagedOrLostLicenseToolStripMenuItem";
-            this.replacementForDamagedOrLostLicenseToolStripMenuItem.Size = new System.Drawing.Size(410, 34);
+            this.replacementForDamagedOrLostLicenseToolStripMenuItem.Size = new System.Drawing.Size(440, 56);
             this.replacementForDamagedOrLostLicenseToolStripMenuItem.Text = "Replacement For Damaged Or Lost License";
             this.replacementForDamagedOrLostLicenseToolStripMenuItem.Click += new System.EventHandler(this.replacementForDamagedOrLostLicenseToolStripMenuItem_Click);
             // 
             // releaseDetainedDrivingLicenseToolStripMenuItem
             // 
+            this.releaseDetainedDrivingLicenseToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("releaseDetainedDrivingLicenseToolStripMenuItem.Image")));
             this.releaseDetainedDrivingLicenseToolStripMenuItem.Name = "releaseDetainedDrivingLicenseToolStripMenuItem";
-            this.releaseDetainedDrivingLicenseToolStripMenuItem.Size = new System.Drawing.Size(410, 34);
+            this.releaseDetainedDrivingLicenseToolStripMenuItem.Size = new System.Drawing.Size(440, 56);
             this.releaseDetainedDrivingLicenseToolStripMenuItem.Text = "Release Detained Driving License";
             // 
             // retakeTestToolStripMenuItem
             // 
+            this.retakeTestToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("retakeTestToolStripMenuItem.Image")));
             this.retakeTestToolStripMenuItem.Name = "retakeTestToolStripMenuItem";
-            this.retakeTestToolStripMenuItem.Size = new System.Drawing.Size(410, 34);
+            this.retakeTestToolStripMenuItem.Size = new System.Drawing.Size(440, 56);
             this.retakeTestToolStripMenuItem.Text = "Retake Test";
             this.retakeTestToolStripMenuItem.Click += new System.EventHandler(this.retakeTestToolStripMenuItem_Click);
             // 
@@ -425,21 +246,24 @@
             this.localDrivingLicenseApplicationsToolStripMenuItem,
             this.internationalLicenseApplicationsToolStripMenuItem});
             this.manageApplicationsToolStripMenuItem.Font = new System.Drawing.Font("Andalus", 10.8F);
+            this.manageApplicationsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("manageApplicationsToolStripMenuItem.Image")));
             this.manageApplicationsToolStripMenuItem.Name = "manageApplicationsToolStripMenuItem";
-            this.manageApplicationsToolStripMenuItem.Size = new System.Drawing.Size(297, 34);
+            this.manageApplicationsToolStripMenuItem.Size = new System.Drawing.Size(327, 56);
             this.manageApplicationsToolStripMenuItem.Text = "Manage Applications";
             // 
             // localDrivingLicenseApplicationsToolStripMenuItem
             // 
+            this.localDrivingLicenseApplicationsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("localDrivingLicenseApplicationsToolStripMenuItem.Image")));
             this.localDrivingLicenseApplicationsToolStripMenuItem.Name = "localDrivingLicenseApplicationsToolStripMenuItem";
-            this.localDrivingLicenseApplicationsToolStripMenuItem.Size = new System.Drawing.Size(355, 34);
+            this.localDrivingLicenseApplicationsToolStripMenuItem.Size = new System.Drawing.Size(385, 56);
             this.localDrivingLicenseApplicationsToolStripMenuItem.Text = "Local Driving License Applications";
             this.localDrivingLicenseApplicationsToolStripMenuItem.Click += new System.EventHandler(this.localDrivingLicenseApplicationsToolStripMenuItem_Click);
             // 
             // internationalLicenseApplicationsToolStripMenuItem
             // 
+            this.internationalLicenseApplicationsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("internationalLicenseApplicationsToolStripMenuItem.Image")));
             this.internationalLicenseApplicationsToolStripMenuItem.Name = "internationalLicenseApplicationsToolStripMenuItem";
-            this.internationalLicenseApplicationsToolStripMenuItem.Size = new System.Drawing.Size(355, 34);
+            this.internationalLicenseApplicationsToolStripMenuItem.Size = new System.Drawing.Size(385, 56);
             this.internationalLicenseApplicationsToolStripMenuItem.Text = "International License Applications ";
             this.internationalLicenseApplicationsToolStripMenuItem.Click += new System.EventHandler(this.internationalLicenseApplicationsToolStripMenuItem_Click);
             // 
@@ -450,44 +274,50 @@
             this.detaineLicenseToolStripMenuItem,
             this.releaseDetainedLicenseToolStripMenuItem});
             this.detainLicensesToolStripMenuItem.Font = new System.Drawing.Font("Andalus", 10.8F);
+            this.detainLicensesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("detainLicensesToolStripMenuItem.Image")));
             this.detainLicensesToolStripMenuItem.Name = "detainLicensesToolStripMenuItem";
-            this.detainLicensesToolStripMenuItem.Size = new System.Drawing.Size(297, 34);
+            this.detainLicensesToolStripMenuItem.Size = new System.Drawing.Size(327, 56);
             this.detainLicensesToolStripMenuItem.Text = "Detain Licenses";
             // 
             // manageDetainedLicenseToolStripMenuItem
             // 
+            this.manageDetainedLicenseToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("manageDetainedLicenseToolStripMenuItem.Image")));
             this.manageDetainedLicenseToolStripMenuItem.Name = "manageDetainedLicenseToolStripMenuItem";
-            this.manageDetainedLicenseToolStripMenuItem.Size = new System.Drawing.Size(291, 34);
+            this.manageDetainedLicenseToolStripMenuItem.Size = new System.Drawing.Size(321, 56);
             this.manageDetainedLicenseToolStripMenuItem.Text = "Manage Detained License ";
             this.manageDetainedLicenseToolStripMenuItem.Click += new System.EventHandler(this.manageDetainedLicenseToolStripMenuItem_Click);
             // 
             // detaineLicenseToolStripMenuItem
             // 
+            this.detaineLicenseToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("detaineLicenseToolStripMenuItem.Image")));
             this.detaineLicenseToolStripMenuItem.Name = "detaineLicenseToolStripMenuItem";
-            this.detaineLicenseToolStripMenuItem.Size = new System.Drawing.Size(291, 34);
+            this.detaineLicenseToolStripMenuItem.Size = new System.Drawing.Size(321, 56);
             this.detaineLicenseToolStripMenuItem.Text = "Detaine License";
             this.detaineLicenseToolStripMenuItem.Click += new System.EventHandler(this.detainedLicenseToolStripMenuItem_Click);
             // 
             // releaseDetainedLicenseToolStripMenuItem
             // 
+            this.releaseDetainedLicenseToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("releaseDetainedLicenseToolStripMenuItem.Image")));
             this.releaseDetainedLicenseToolStripMenuItem.Name = "releaseDetainedLicenseToolStripMenuItem";
-            this.releaseDetainedLicenseToolStripMenuItem.Size = new System.Drawing.Size(291, 34);
+            this.releaseDetainedLicenseToolStripMenuItem.Size = new System.Drawing.Size(321, 56);
             this.releaseDetainedLicenseToolStripMenuItem.Text = "Release Detained License";
             this.releaseDetainedLicenseToolStripMenuItem.Click += new System.EventHandler(this.releaseDetainedLicenseToolStripMenuItem_Click);
             // 
             // manageApplicationTypesToolStripMenuItem
             // 
             this.manageApplicationTypesToolStripMenuItem.Font = new System.Drawing.Font("Andalus", 10.8F);
+            this.manageApplicationTypesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("manageApplicationTypesToolStripMenuItem.Image")));
             this.manageApplicationTypesToolStripMenuItem.Name = "manageApplicationTypesToolStripMenuItem";
-            this.manageApplicationTypesToolStripMenuItem.Size = new System.Drawing.Size(297, 34);
+            this.manageApplicationTypesToolStripMenuItem.Size = new System.Drawing.Size(327, 56);
             this.manageApplicationTypesToolStripMenuItem.Text = "Manage Application Types";
             this.manageApplicationTypesToolStripMenuItem.Click += new System.EventHandler(this.manageApplicationTypesToolStripMenuItem_Click);
             // 
             // manageTestTypesToolStripMenuItem
             // 
             this.manageTestTypesToolStripMenuItem.Font = new System.Drawing.Font("Andalus", 10.8F);
+            this.manageTestTypesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("manageTestTypesToolStripMenuItem.Image")));
             this.manageTestTypesToolStripMenuItem.Name = "manageTestTypesToolStripMenuItem";
-            this.manageTestTypesToolStripMenuItem.Size = new System.Drawing.Size(297, 34);
+            this.manageTestTypesToolStripMenuItem.Size = new System.Drawing.Size(327, 56);
             this.manageTestTypesToolStripMenuItem.Text = "Manage Test Types";
             this.manageTestTypesToolStripMenuItem.Click += new System.EventHandler(this.manageTestTypesToolStripMenuItem_Click);
             // 
@@ -527,8 +357,9 @@
             // 
             this.currentUserInfoToolStripMenuItem.Font = new System.Drawing.Font("Andalus", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.currentUserInfoToolStripMenuItem.Name = "currentUserInfoToolStripMenuItem";
-            this.currentUserInfoToolStripMenuItem.Size = new System.Drawing.Size(222, 32);
+            this.currentUserInfoToolStripMenuItem.Size = new System.Drawing.Size(224, 32);
             this.currentUserInfoToolStripMenuItem.Text = "Current User Info";
+            this.currentUserInfoToolStripMenuItem.Click += new System.EventHandler(this.currentUserInfoToolStripMenuItem_Click);
             // 
             // changePasswordToolStripMenuItem
             // 
@@ -569,7 +400,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1757, 893);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.panelMainMenu);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -581,7 +411,6 @@
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picUserMain)).EndInit();
-            this.guna2Panel1.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -596,13 +425,6 @@
         private Guna.UI2.WinForms.Guna2CirclePictureBox picUserMain;
         private Guna.UI2.WinForms.Guna2Button btnTitle;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2Button btnApplications;
-        private Guna.UI2.WinForms.Guna2Button btnLogout;
-        private Guna.UI2.WinForms.Guna2Button btnPeople;
-        private Guna.UI2.WinForms.Guna2Button btnDrivers;
-        private Guna.UI2.WinForms.Guna2Button btnUsers;
-        private Guna.UI2.WinForms.Guna2Panel panelMainMenu;
-        private Guna.UI2.WinForms.Guna2Button btnAccountSetting;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem applicationsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem peopleToolStripMenuItem;
