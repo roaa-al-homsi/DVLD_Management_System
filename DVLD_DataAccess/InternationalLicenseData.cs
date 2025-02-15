@@ -118,7 +118,10 @@ namespace DVLD_DataAccess
             return GenericData.Exist("select Found=1 from InternationalLicenses where Id= @Id", "@Id", Id);
         }
 
-
+        static public int GetActiveInternationalLicenseIDByDriverID(int driverId)
+        {
+            return GenericData.GetSpecificIdById("select Id from InternationalLicenses where DriverId=@driverId", "driverId", driverId);
+        }
 
     }
 }

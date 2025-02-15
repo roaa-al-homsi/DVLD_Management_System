@@ -72,6 +72,11 @@ namespace DVLD_Business
         }
         public bool Save()
         {
+            base.mode = (Application.Mode)_mode;
+            if (!base.Save())
+            {
+                return false;
+            }
 
             switch (_mode)
             {
@@ -125,6 +130,12 @@ namespace DVLD_Business
             }
             return null;
         }
+
+        public static int GetActiveInternationalLicenseIDByDriverID(int driverId)
+        {
+            return InternationalLicenseData.GetActiveInternationalLicenseIDByDriverID(driverId);
+        }
+
     }
 
 
