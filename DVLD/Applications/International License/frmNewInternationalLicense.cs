@@ -1,5 +1,6 @@
 ﻿using DVLD.Global_Classes;
 using DVLD.Licenses;
+using DVLD.Licenses.International_Licenses;
 using DVLD_Business;
 using System;
 using System.Windows.Forms;
@@ -98,7 +99,8 @@ namespace DVLD.Applications.International_License
 
         private void lnkLabShowNewLicenseInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            frmShowInternationalLicenseInfo frmShowInternationalLicenseInfo = new frmShowInternationalLicenseInfo(_InternationalLicenseID);
+            frmShowInternationalLicenseInfo.ShowDialog();
         }
 
         private void lnkLabLicenseHistory_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
