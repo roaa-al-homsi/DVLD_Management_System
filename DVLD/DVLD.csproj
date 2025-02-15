@@ -146,6 +146,12 @@
     <Compile Include="Licenses\International Licenses\Controls\uc_InternationalLicenseInfo.Designer.cs">
       <DependentUpon>uc_InternationalLicenseInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Licenses\International Licenses\frmShowInternationalLicenseInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Licenses\International Licenses\frmShowInternationalLicenseInfo.Designer.cs">
+      <DependentUpon>frmShowInternationalLicenseInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Licenses\Local Licenses\frmIssueDriverLicenseFirstTime.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -351,6 +357,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Licenses\International Licenses\Controls\uc_InternationalLicenseInfo.resx">
       <DependentUpon>uc_InternationalLicenseInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Licenses\International Licenses\frmShowInternationalLicenseInfo.resx">
+      <DependentUpon>frmShowInternationalLicenseInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Licenses\Local Licenses\frmIssueDriverLicenseFirstTime.resx">
       <DependentUpon>frmIssueDriverLicenseFirstTime.cs</DependentUpon>

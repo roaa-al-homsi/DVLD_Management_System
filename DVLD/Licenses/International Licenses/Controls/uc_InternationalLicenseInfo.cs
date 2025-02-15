@@ -52,7 +52,7 @@ namespace DVLD.Licenses.International_Licenses.Controls
             _internationalLicense = InternationalLicense.Find(_internationalLicenseId);
             if (_internationalLicense == null)
             {
-                MessageBox.Show($"Could not find License ID = {_internationalLicenseId} ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Could not find international License ID = {_internationalLicenseId} ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 _internationalLicenseId = -1;
                 return;
             }
