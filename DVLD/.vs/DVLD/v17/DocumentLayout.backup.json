@@ -3,10 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0EA00617-C8EC-4C15-884F-394B2E1A0208}|..\\DVLD_Business\\DVLD_Business.csproj|c:\\users\\ruaa\\source\\repos\\dvld_management_system\\dvld_business\\inernationallicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|c:\\users\\ruaa\\source\\repos\\dvld_management_system\\dvld\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|solutionrelative:frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ruaa\\AppData\\Local\\Temp\\a1a27eb6-073f-4e1a-bd2e-34fdd97f8451_DVLD Project Final.rar.451\\Project\\DVLD_Buisness\\clsInternationalLicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|c:\\users\\ruaa\\source\\repos\\dvld_management_system\\dvld\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|solutionrelative:frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|c:\\users\\ruaa\\source\\repos\\dvld_management_system\\dvld\\applications\\international license\\frmnewinternationallicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -18,6 +20,12 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ruaa\\AppData\\Local\\Temp\\819604d4-bf56-4bcb-b9a3-163d76490a7d_DVLD Project Final.rar.a7d\\Project\\DVLD\\Applications\\International License\\frmNewInternationalLicenseApplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ruaa\\AppData\\Local\\Temp\\a1a27eb6-073f-4e1a-bd2e-34fdd97f8451_DVLD Project Final.rar.451\\Project\\DVLD_Buisness\\clsInternationalLicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EA00617-C8EC-4C15-884F-394B2E1A0208}|..\\DVLD_Business\\DVLD_Business.csproj|c:\\users\\ruaa\\source\\repos\\dvld_management_system\\dvld_business\\inernationallicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,11 +35,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 270,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmMain.cs",
+              "DocumentMoniker": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\frmMain.cs",
+              "RelativeDocumentMoniker": "frmMain.cs",
+              "ToolTip": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\frmMain.cs",
+              "RelativeToolTip": "frmMain.cs",
+              "ViewState": "AgIAAHcAAAAAAAAAAADgv4cAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-15T21:06:45.56Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "frmMain.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\frmMain.cs",
+              "RelativeDocumentMoniker": "frmMain.cs",
+              "ToolTip": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\frmMain.cs [Design]",
+              "RelativeToolTip": "frmMain.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-15T21:06:36.573Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "clsInternationalLicense.cs",
               "DocumentMoniker": "C:\\Users\\Ruaa\\AppData\\Local\\Temp\\a1a27eb6-073f-4e1a-bd2e-34fdd97f8451_DVLD Project Final.rar.451\\Project\\DVLD_Buisness\\clsInternationalLicense.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\a1a27eb6-073f-4e1a-bd2e-34fdd97f8451_DVLD Project Final.rar.451\\Project\\DVLD_Buisness\\clsInternationalLicense.cs",
@@ -44,13 +77,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "InernationalLicense.cs",
               "DocumentMoniker": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD_Business\\InernationalLicense.cs",
               "RelativeDocumentMoniker": "..\\DVLD_Business\\InernationalLicense.cs",
               "ToolTip": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD_Business\\InernationalLicense.cs",
               "RelativeToolTip": "..\\DVLD_Business\\InernationalLicense.cs",
-              "ViewState": "AgIAAEMAAAAAAAAAAAAAAEoAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAAAFQAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-15T19:46:35.292Z",
               "EditorCaption": ""
@@ -67,7 +100,7 @@
               "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\819604d4-bf56-4bcb-b9a3-163d76490a7d_DVLD Project Final.rar.a7d\\Project\\DVLD\\Applications\\International License\\frmNewInternationalLicenseApplication.cs",
               "ToolTip": "C:\\Users\\Ruaa\\AppData\\Local\\Temp\\819604d4-bf56-4bcb-b9a3-163d76490a7d_DVLD Project Final.rar.a7d\\Project\\DVLD\\Applications\\International License\\frmNewInternationalLicenseApplication.cs [Read Only]",
               "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\819604d4-bf56-4bcb-b9a3-163d76490a7d_DVLD Project Final.rar.a7d\\Project\\DVLD\\Applications\\International License\\frmNewInternationalLicenseApplication.cs [Read Only]",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAAAE0AAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAHoAAAAAAAAAAAAAAIQAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-15T19:21:05.432Z",
               "EditorCaption": " [Read Only]"
@@ -80,7 +113,7 @@
               "RelativeDocumentMoniker": "Applications\\International License\\frmNewInternationalLicense.cs",
               "ToolTip": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\Applications\\International License\\frmNewInternationalLicense.cs",
               "RelativeToolTip": "Applications\\International License\\frmNewInternationalLicense.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAowBwAAABDAAAAAAAAAA==",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAnwF0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-15T13:56:18.849Z",
               "EditorCaption": ""
