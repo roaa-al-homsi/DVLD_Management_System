@@ -62,7 +62,7 @@ namespace DVLD_Business
         private bool _Add()
         {
             this.Id =
-                        InternationalLicenseData.Add(this.ApplicationId, this.DriverId, this.IssuedUsingLocalLicenseId, this.IssueDate, this.ExpirationDate, this.IsActive, this.CreateByUserId);
+                        InternationalLicenseData.Add(base.Id, this.DriverId, this.IssuedUsingLocalLicenseId, this.IssueDate, this.ExpirationDate, this.IsActive, this.CreateByUserId);
             return (this.Id != -1);
         }
 

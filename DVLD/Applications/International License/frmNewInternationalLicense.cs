@@ -74,7 +74,7 @@ namespace DVLD.Applications.International_License
             internationalLicense.PersonId = uc_DriverLicenseWithFilter1.SelectedLicenseInfo.DriverInfo.PersonId;
             internationalLicense.Status = Application.enApplicationStatus.Completed;
 
-
+            internationalLicense.CreatedByUserId = Global.CurrentUser.Id;
             internationalLicense.IssueDate = DateTime.Parse(lbIssueDate.Text);
             internationalLicense.ExpirationDate = DateTime.Parse(lbExpirationDate.Text);
             internationalLicense.IssuedUsingLocalLicenseId = uc_DriverLicenseWithFilter1.SelectedLicenseInfo.Id;
