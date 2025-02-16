@@ -58,7 +58,7 @@
             this.dgvInternationalLicenses.ReadOnly = true;
             this.dgvInternationalLicenses.RowHeadersWidth = 70;
             this.dgvInternationalLicenses.RowTemplate.Height = 24;
-            this.dgvInternationalLicenses.Size = new System.Drawing.Size(956, 313);
+            this.dgvInternationalLicenses.Size = new System.Drawing.Size(1282, 313);
             this.dgvInternationalLicenses.TabIndex = 29;
             // 
             // cmsManageUsers
@@ -99,7 +99,7 @@
             // 
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(305, 12);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(478, 12);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.Size = new System.Drawing.Size(300, 200);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -167,7 +167,12 @@
             this.cmbFilterBy.ForeColor = System.Drawing.Color.Black;
             this.cmbFilterBy.ItemHeight = 30;
             this.cmbFilterBy.Items.AddRange(new object[] {
-            "None"});
+            "None",
+            "Int.License ID",
+            "Application ID",
+            "Driver ID",
+            "L.License ID",
+            "Created By User"});
             this.cmbFilterBy.Location = new System.Drawing.Point(91, 278);
             this.cmbFilterBy.Name = "cmbFilterBy";
             this.cmbFilterBy.Size = new System.Drawing.Size(186, 36);
@@ -191,7 +196,7 @@
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Andalus", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.Maroon;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(270, 202);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(443, 202);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(390, 54);
             this.guna2HtmlLabel1.TabIndex = 30;
@@ -204,7 +209,7 @@
             this.guna2ImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton1.Image")));
             this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
             this.guna2ImageButton1.ImageRotate = 0F;
-            this.guna2ImageButton1.Location = new System.Drawing.Point(904, 240);
+            this.guna2ImageButton1.Location = new System.Drawing.Point(1230, 241);
             this.guna2ImageButton1.Name = "guna2ImageButton1";
             this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.guna2ImageButton1.Size = new System.Drawing.Size(64, 73);
@@ -215,7 +220,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(981, 673);
+            this.ClientSize = new System.Drawing.Size(1306, 673);
             this.Controls.Add(this.guna2ImageButton1);
             this.Controls.Add(this.dgvInternationalLicenses);
             this.Controls.Add(this.guna2PictureBox1);
