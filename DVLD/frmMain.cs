@@ -148,5 +148,11 @@ namespace DVLD
             frmShowUserDetails frmShowUserDetails = new frmShowUserDetails(Global.CurrentUser.Id);
             frmShowUserDetails.ShowDialog();
         }
+
+        private void releaseDetainedDrivingLicenseToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            frmReleaseDetainedLicense frmReleaseDetainedLicense = new frmReleaseDetainedLicense();
+            frmReleaseDetainedLicense.ShowDialog();
+        }
     }
 }
