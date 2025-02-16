@@ -67,9 +67,9 @@
             this.labTitleForm.AutoSize = false;
             this.labTitleForm.BackColor = System.Drawing.Color.Transparent;
             this.labTitleForm.Font = new System.Drawing.Font("Andalus", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labTitleForm.Location = new System.Drawing.Point(253, 12);
+            this.labTitleForm.Location = new System.Drawing.Point(267, 12);
             this.labTitleForm.Name = "labTitleForm";
-            this.labTitleForm.Size = new System.Drawing.Size(418, 51);
+            this.labTitleForm.Size = new System.Drawing.Size(467, 38);
             this.labTitleForm.TabIndex = 0;
             this.labTitleForm.Text = "New Local Driving License Application";
             // 
@@ -387,13 +387,12 @@
             this.labLDLAId.BackColor = System.Drawing.Color.Transparent;
             this.labLDLAId.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labLDLAId.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labLDLAId.Location = new System.Drawing.Point(389, 22);
+            this.labLDLAId.Location = new System.Drawing.Point(377, 64);
             this.labLDLAId.Name = "labLDLAId";
             this.labLDLAId.Size = new System.Drawing.Size(95, 32);
             this.labLDLAId.TabIndex = 146;
             this.labLDLAId.Text = "??";
             this.labLDLAId.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            this.labLDLAId.Visible = false;
             // 
             // labId
             // 
@@ -401,12 +400,11 @@
             this.labId.BackColor = System.Drawing.Color.Transparent;
             this.labId.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labId.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labId.Location = new System.Drawing.Point(226, 22);
+            this.labId.Location = new System.Drawing.Point(214, 64);
             this.labId.Name = "labId";
             this.labId.Size = new System.Drawing.Size(157, 32);
             this.labId.TabIndex = 154;
             this.labId.Text = "L.D.L Id :";
-            this.labId.Visible = false;
             // 
             // btnSave
             // 
@@ -457,6 +455,7 @@
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.tcNewLocalDrivingLicenseApp);
             this.Controls.Add(this.labTitleForm);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmAddUpdateLocalDrivingLicenseApplication";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "New Local Driving License Application";

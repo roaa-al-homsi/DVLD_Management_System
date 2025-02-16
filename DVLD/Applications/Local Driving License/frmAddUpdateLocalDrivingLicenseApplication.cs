@@ -139,6 +139,7 @@ namespace DVLD.Local_Driving_License_App
             _FillLocalDrivingLicenseApplicationBeforeSave();
             if (_localDrivingLicenseApplication.Save())
             {
+
                 labLDLAId.Text = _localDrivingLicenseApplication.Id.ToString();
                 _mode = Mode.Update;
                 labTitleForm.Text = "Update Local Driving License Application";
