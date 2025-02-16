@@ -261,6 +261,7 @@ namespace DVLD.Tests.Controls
                     return false;
                 }
                 _testAppointment.RetakeTestApplicationId = application.Id;
+                labRetakeTestId.Text = application.Id.ToString();
             }
             return true;
         }
