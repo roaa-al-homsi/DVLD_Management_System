@@ -22,6 +22,7 @@ namespace DVLD.Applications.Local_Driving_License
             labAppliedForLicense.Text = _localDrivingLicenseApplication.LicenseClass.Name;
             labPassedTest.Text = _localDrivingLicenseApplication.GetPassedTestCount().ToString();
             uc_BasicApplicationInfo1.LoadApplicationInfo(_localDrivingLicenseApplication.ApplicationId);
+            lnkViewLicenseInfo.Enabled = _localDrivingLicenseApplication.GetActiveLicenseID() != -1;
         }
         public void LoadLocalDrivingLicenseInfoById(int localDrivingLicenseId)
         {

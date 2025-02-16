@@ -79,6 +79,7 @@
             this.Controls.Add(this.labTitleForm);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmShowLocalDrivingLicenseDetails";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Local Driving License Details";
             this.ResumeLayout(false);
 
