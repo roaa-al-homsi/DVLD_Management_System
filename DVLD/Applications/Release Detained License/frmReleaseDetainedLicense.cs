@@ -81,12 +81,13 @@ namespace DVLD.Applications.Release_Detained_License
                 return;
             }
 
-            MessageBox.Show("Detained License released Successfully ", "Detained License Released", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
 
             lbAppId.Text = uc_DriverLicenseWithFilter1.SelectedLicenseInfo.DetainInfo.ReleaseApplicationId.ToString();
             btnRelease.Enabled = false;
             uc_DriverLicenseWithFilter1.FilterEnabled = false;
             lnklabShowLicenseInfo.Enabled = false;
+            MessageBox.Show("Detained License released Successfully ", "Detained License Released", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

@@ -33,7 +33,6 @@ namespace DVLD.Licenses.Local_Licenses.U_Controls
         {
             get { return uc_DriverLicense1.LicenseID; }
         }
-
         public DVLD_Business.License SelectedLicenseInfo
         { get { return uc_DriverLicense1.SelectedLicenseInfo; } }
         public uc_DriverLicenseWithFilter()
@@ -51,6 +50,7 @@ namespace DVLD.Licenses.Local_Licenses.U_Controls
                 btnFind.PerformLayout();
             }
         }
+
         public void LoadLicenseInfo(int LicenseID)
         {
             txtFilterValue.Text = LicenseID.ToString();

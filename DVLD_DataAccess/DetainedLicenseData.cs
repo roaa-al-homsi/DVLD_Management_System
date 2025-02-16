@@ -146,10 +146,13 @@ namespace DVLD_DataAccess
         }
         static public DataTable All()
         {
-            string query = @"SELECT DetainedLicenses.Id [D.Id], DetainedLicenses.LicenseId [L.Id], DetainedLicenses.ReleaseApplicationId [R.App.Id], DetainedLicenses.DetainDate [Detain Date], DetainedLicenses.FineFees [Fine Fees], DetainedLicenses.IsReleased [Is Release], DetainedLicenses.ReleaseDate [Release Date], People.NationalNo [Na No], 
+            string query = @"  SELECT DetainedLicenses.Id [D.Id], DetainedLicenses.LicenseId [L.Id], DetainedLicenses.ReleaseApplicationId [R.App.Id], DetainedLicenses.DetainDate [Detain Date], DetainedLicenses.FineFees [Fine Fees], DetainedLicenses.IsReleased [Is Release], DetainedLicenses.ReleaseDate [Release Date], People.NationalNo [Na No], 
                      (People.FirstName +''+ People.SecondName+ISNULL(People.ThirdName,'' ) + ' '+ People.LastName) as [Full Name] 
-                   FROM     DetainedLicenses INNER JOIN
-                  People ON DetainedLicenses.Id = People.Id";
+                 FROM     DetainedLicenses INNER JOIN
+                 
+                  Licenses ON DetainedLicenses.LicenseId = Licenses.Id INNER JOIN
+				   Drivers ON Licenses.DriverId = Drivers.Id INNER JOIN
+                  People ON Drivers.PersonId = People.Id";
             return GenericData.All(query);
         }
         static public bool Delete(int Id)
@@ -170,7 +173,6 @@ namespace DVLD_DataAccess
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@Id", Id);
-                    command.Parameters.AddWithValue("@ReleaseDate", DateTime.Now);
                     command.Parameters.AddWithValue("@ReleaseDate", DateTime.Now);
                     command.Parameters.AddWithValue("@ReleasedByUserId", ReleasedByUserId);
                     command.Parameters.AddWithValue("@ReleaseApplicationId", ReleaseApplicationId);

@@ -149,7 +149,10 @@ namespace DVLD_Business
             {
                 return new License(Id, ApplicationId, DriverId, LicenseClassId, IssueDate, ExpirationDate, Notes, PaidFees, IsActive, (enIssueReason)IssueReason, CreatedByUserId);
             }
-            return null;
+            else
+            {
+                return null;
+            }
         }
         public static bool IsLicenseExistByPersonID(int PersonID, int LicenseClassID)
         {

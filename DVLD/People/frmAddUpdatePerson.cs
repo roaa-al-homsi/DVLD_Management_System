@@ -63,7 +63,7 @@ namespace DVLD.People
             txtThirdName.Text = _person.ThirdName;
             txtPhone.Text = _person.Phone;
             txtNationalNo.Text = _person.NationalNo;
-            dtpDateOfBirth.Text = _person.DateOfBirth.ToString();
+            dtpDateOfBirth.Value = _person.DateOfBirth;
             cmbCountry.SelectedIndex = cmbCountry.FindString(_person.CountryInfo.Name);
 
             if (_person.Gender == Person.enGender.Female)

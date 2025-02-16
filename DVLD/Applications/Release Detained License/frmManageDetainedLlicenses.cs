@@ -42,22 +42,28 @@ namespace DVLD.Applications.Release_Detained_License
 
             }
         }
-        private void FrmManageDetainedLicenses_Load(object sender, EventArgs e)
+        private void _RefreshData()
         {
             _dtDetainedLicenses = DetainedLicense.All();
             dgvDetainedLicenses.DataSource = _dtDetainedLicenses;
             labCountRecords.Text = dgvDetainedLicenses.RowCount.ToString();
-            ChangeFormatDgvAllDetained();
-            _FillComboFilterBy();
             cmbFilterBy.SelectedIndex = 0;
             txtValueFilterBy.Focus();
+        }
+        private void FrmManageDetainedLicenses_Load(object sender, EventArgs e)
+        {
+            _RefreshData();
+            ChangeFormatDgvAllDetained();
+            _FillComboFilterBy();
+
         }
 
         private void btnRelease_Click(object sender, EventArgs e)
         {
             frmReleaseDetainedLicense frmReleaseDetainedLicense = new frmReleaseDetainedLicense();
             frmReleaseDetainedLicense.ShowDialog();
-            FrmManageDetainedLicenses_Load(null, null);
+
+            _RefreshData();
         }
 
         private void btnDetain_Click(object sender, EventArgs e)
@@ -130,7 +136,7 @@ namespace DVLD.Applications.Release_Detained_License
         {
             frmReleaseDetainedLicense frmReleaseDetainedLicense = new frmReleaseDetainedLicense((int)dgvDetainedLicenses.CurrentRow.Cells[1].Value);
             frmReleaseDetainedLicense.ShowDialog();
-            FrmManageDetainedLicenses_Load(null, null);
+            _RefreshData();
         }
 
         private void showPersonLicenseHistoryToolStripMenuItem_Click(object sender, EventArgs e)

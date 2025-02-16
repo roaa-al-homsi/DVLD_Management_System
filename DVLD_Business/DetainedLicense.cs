@@ -10,7 +10,7 @@ namespace DVLD_Business
         private Mode _mode;
         public int Id { get; set; }
         public int LicenseId { get; set; }
-        public License License { get; }
+
         public DateTime DetainDate { get; set; }
         public decimal FineFees { get; set; }
         public int CreatedByUserId { get; set; }
@@ -46,7 +46,6 @@ namespace DVLD_Business
             this.ReleaseDate = ReleaseDate;
             this.ReleasedByUserId = ReleasedByUserId;
             this.ReleaseApplicationId = ReleaseApplicationId;
-            this.License = License.Find(LicenseId);
             this.CreatedByUserInfo = User.Find(CreatedByUserId);
             this.ReleasedByUserInfo = User.Find(ReleasedByUserId);
             _mode = Mode.Update;
@@ -135,7 +134,7 @@ namespace DVLD_Business
         }
         public bool ReleaseDetainedLicense(int releaseByUserId, int releaseApplicationId)
         {
-            return DetainedLicenseData.ReleaseDetainedLicense(this.Id, releaseByUserId, releaseApplicationId);
+            return DetainedLicenseData.ReleaseDetainedLicense(this.Id, releaseByUserId, releaseApplicationId);//id 7 8 
         }
     }
 
