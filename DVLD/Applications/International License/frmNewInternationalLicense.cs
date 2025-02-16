@@ -46,6 +46,7 @@ namespace DVLD.Applications.International_License
                 return;
             }
             btnIssue.Enabled = true;
+
         }
 
         private void frmNewInternationalLicense_Load(object sender, System.EventArgs e)

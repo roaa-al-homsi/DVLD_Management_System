@@ -429,6 +429,7 @@
             // lnklabShowNewLicenseInfo
             // 
             this.lnklabShowNewLicenseInfo.AutoSize = true;
+            this.lnklabShowNewLicenseInfo.Enabled = false;
             this.lnklabShowNewLicenseInfo.Font = new System.Drawing.Font("Andalus", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnklabShowNewLicenseInfo.Location = new System.Drawing.Point(285, 920);
             this.lnklabShowNewLicenseInfo.Name = "lnklabShowNewLicenseInfo";
