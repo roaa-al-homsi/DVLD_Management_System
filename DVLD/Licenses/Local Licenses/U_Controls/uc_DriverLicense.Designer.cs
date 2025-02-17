@@ -139,7 +139,9 @@
             // 
             // picPerson
             // 
+            this.picPerson.BackColor = System.Drawing.Color.Transparent;
             this.picPerson.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picPerson.Image = ((System.Drawing.Image)(resources.GetObject("picPerson.Image")));
             this.picPerson.ImageRotate = 0F;
             this.picPerson.Location = new System.Drawing.Point(310, 53);
             this.picPerson.Name = "picPerson";
@@ -147,6 +149,7 @@
             this.picPerson.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picPerson.TabIndex = 55;
             this.picPerson.TabStop = false;
+            this.picPerson.UseTransparentBackground = true;
             // 
             // guna2PictureBox13
             // 

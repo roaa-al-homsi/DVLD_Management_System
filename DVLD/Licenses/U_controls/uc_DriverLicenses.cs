@@ -89,7 +89,7 @@ namespace DVLD.Licenses.U_controls
         private void showLocalInfoToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
 
-            frmShowDriverLicenseInfo frmShowDriverLicenseInfo = new frmShowDriverLicenseInfo((int)dgvInternationalLicenses.CurrentRow.Cells[0].Value);
+            frmShowDriverLicenseInfo frmShowDriverLicenseInfo = new frmShowDriverLicenseInfo((int)dgvLocalLicesnes.CurrentRow.Cells[0].Value);
             frmShowDriverLicenseInfo.ShowDialog();
         }
 
