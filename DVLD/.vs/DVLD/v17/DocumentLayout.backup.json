@@ -3,29 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|c:\\users\\ruaa\\source\\repos\\dvld_management_system\\dvld\\licenses\\u_controls\\uc_driverlicenses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|solutionrelative:licenses\\u_controls\\uc_driverlicenses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|c:\\users\\ruaa\\source\\repos\\dvld_management_system\\dvld\\login\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|solutionrelative:login\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|c:\\users\\ruaa\\source\\repos\\dvld_management_system\\dvld\\licenses\\u_controls\\uc_driverlicenses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|solutionrelative:licenses\\u_controls\\uc_driverlicenses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{77A56D8A-CE3E-4012-AA9D-C62C2F3B031F}|..\\DVLD_DataAccess\\DVLD_DataAccess.csproj|c:\\users\\ruaa\\source\\repos\\dvld_management_system\\dvld_dataaccess\\internationallicensedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0EA00617-C8EC-4C15-884F-394B2E1A0208}|..\\DVLD_Business\\DVLD_Business.csproj|c:\\users\\ruaa\\source\\repos\\dvld_management_system\\dvld_business\\inernationallicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0EA00617-C8EC-4C15-884F-394B2E1A0208}|..\\DVLD_Business\\DVLD_Business.csproj|c:\\users\\ruaa\\source\\repos\\dvld_management_system\\dvld_business\\driver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|c:\\users\\ruaa\\source\\repos\\dvld_management_system\\dvld\\applications\\international license\\frmnewinternationallicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|solutionrelative:applications\\international license\\frmnewinternationallicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|c:\\users\\ruaa\\source\\repos\\dvld_management_system\\dvld\\licenses\\frmshowpersonlicenseshistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|solutionrelative:licenses\\frmshowpersonlicenseshistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|c:\\users\\ruaa\\source\\repos\\dvld_management_system\\dvld\\login\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40A5DB06-FD39-46AD-A892-369BF53AB447}|DVLD.csproj|solutionrelative:login\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,99 +18,35 @@
       "DocumentGroups": [
         {
           "DockedWidth": 270,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "InternationalLicenseData.cs",
-              "DocumentMoniker": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD_DataAccess\\InternationalLicenseData.cs",
-              "RelativeDocumentMoniker": "..\\DVLD_DataAccess\\InternationalLicenseData.cs",
-              "ToolTip": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD_DataAccess\\InternationalLicenseData.cs",
-              "RelativeToolTip": "..\\DVLD_DataAccess\\InternationalLicenseData.cs",
-              "ViewState": "AgIAAHsAAAAAAAAAAAAAAJAAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T23:40:09.277Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "InernationalLicense.cs",
-              "DocumentMoniker": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD_Business\\InernationalLicense.cs",
-              "RelativeDocumentMoniker": "..\\DVLD_Business\\InernationalLicense.cs",
-              "ToolTip": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD_Business\\InernationalLicense.cs",
-              "RelativeToolTip": "..\\DVLD_Business\\InernationalLicense.cs",
-              "ViewState": "AgIAAFYAAAAAAAAAAAAYwIsAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T23:37:38.209Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "frmNewInternationalLicense.cs",
-              "DocumentMoniker": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\Applications\\International License\\frmNewInternationalLicense.cs",
-              "RelativeDocumentMoniker": "Applications\\International License\\frmNewInternationalLicense.cs",
-              "ToolTip": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\Applications\\International License\\frmNewInternationalLicense.cs",
-              "RelativeToolTip": "Applications\\International License\\frmNewInternationalLicense.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAA4wB4AAABEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T23:37:55.668Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Driver.cs",
-              "DocumentMoniker": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD_Business\\Driver.cs",
-              "RelativeDocumentMoniker": "..\\DVLD_Business\\Driver.cs",
-              "ToolTip": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD_Business\\Driver.cs",
-              "RelativeToolTip": "..\\DVLD_Business\\Driver.cs",
-              "ViewState": "AgIAAF8AAAAAAAAAAAAAAHEAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T23:37:18.536Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "uc_DriverLicenses.cs",
-              "DocumentMoniker": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\Licenses\\U_controls\\uc_DriverLicenses.cs",
-              "RelativeDocumentMoniker": "Licenses\\U_controls\\uc_DriverLicenses.cs",
-              "ToolTip": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\Licenses\\U_controls\\uc_DriverLicenses.cs",
-              "RelativeToolTip": "Licenses\\U_controls\\uc_DriverLicenses.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAAACYAAAAyAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "frmLogin.cs",
+              "DocumentMoniker": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\Login\\frmLogin.cs",
+              "RelativeDocumentMoniker": "Login\\frmLogin.cs",
+              "ToolTip": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\Login\\frmLogin.cs",
+              "RelativeToolTip": "Login\\frmLogin.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAADgv1AAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T23:36:35.005Z",
+              "WhenOpened": "2025-02-17T00:47:11.893Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "uc_DriverLicenses.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\Licenses\\U_controls\\uc_DriverLicenses.cs",
-              "RelativeDocumentMoniker": "Licenses\\U_controls\\uc_DriverLicenses.cs",
-              "ToolTip": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\Licenses\\U_controls\\uc_DriverLicenses.cs [Design]",
-              "RelativeToolTip": "Licenses\\U_controls\\uc_DriverLicenses.cs [Design]",
+              "DocumentIndex": 0,
+              "Title": "frmLogin.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\Login\\frmLogin.cs",
+              "RelativeDocumentMoniker": "Login\\frmLogin.cs",
+              "ToolTip": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\Login\\frmLogin.cs [Design]",
+              "RelativeToolTip": "Login\\frmLogin.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T23:36:30.862Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "frmShowPersonLicensesHistory.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\Licenses\\frmShowPersonLicensesHistory.cs",
-              "RelativeDocumentMoniker": "Licenses\\frmShowPersonLicensesHistory.cs",
-              "ToolTip": "C:\\Users\\Ruaa\\source\\repos\\DVLD_Management_System\\DVLD\\Licenses\\frmShowPersonLicensesHistory.cs [Design]",
-              "RelativeToolTip": "Licenses\\frmShowPersonLicensesHistory.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T23:36:15.813Z",
+              "WhenOpened": "2025-02-17T00:23:37.868Z",
               "EditorCaption": " [Design]"
             }
           ]

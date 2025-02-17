@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnLogin = new Guna.UI2.WinForms.Guna2Button();
@@ -36,6 +37,16 @@
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
             this.chkRememberMe = new Guna.UI2.WinForms.Guna2CustomCheckBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
+            this.guna2CustomGradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2HtmlLabel3
@@ -43,7 +54,7 @@
             this.guna2HtmlLabel3.AutoSize = false;
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Gabriola", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(568, 53);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(89, 210);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(109, 50);
             this.guna2HtmlLabel3.TabIndex = 74;
@@ -64,7 +75,7 @@
             this.txtUsername.Font = new System.Drawing.Font("Andalus", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.ForeColor = System.Drawing.Color.Black;
             this.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUsername.Location = new System.Drawing.Point(739, 65);
+            this.txtUsername.Location = new System.Drawing.Point(205, 219);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
@@ -86,12 +97,14 @@
             this.btnLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnLogin.FillColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnLogin.Font = new System.Drawing.Font("Gabriola", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.Font = new System.Drawing.Font("Gabriola", 16.2F, System.Drawing.FontStyle.Bold);
             this.btnLogin.ForeColor = System.Drawing.Color.Black;
             this.btnLogin.HoverState.CustomBorderColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnLogin.Location = new System.Drawing.Point(489, 249);
+            this.btnLogin.HoverState.FillColor = System.Drawing.Color.LightSteelBlue;
+            this.btnLogin.Image = ((System.Drawing.Image)(resources.GetObject("btnLogin.Image")));
+            this.btnLogin.Location = new System.Drawing.Point(251, 524);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(115, 58);
+            this.btnLogin.Size = new System.Drawing.Size(153, 58);
             this.btnLogin.TabIndex = 78;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseTransparentBackground = true;
@@ -102,7 +115,7 @@
             this.guna2HtmlLabel4.AutoSize = false;
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Gabriola", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(568, 146);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(89, 284);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(109, 50);
             this.guna2HtmlLabel4.TabIndex = 76;
@@ -123,7 +136,7 @@
             this.txtPassword.Font = new System.Drawing.Font("Andalus", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.ForeColor = System.Drawing.Color.Black;
             this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPassword.Location = new System.Drawing.Point(739, 158);
+            this.txtPassword.Location = new System.Drawing.Point(205, 296);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '●';
@@ -146,12 +159,14 @@
             this.btnClose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnClose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnClose.FillColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnClose.Font = new System.Drawing.Font("Gabriola", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.Font = new System.Drawing.Font("Gabriola", 16.2F, System.Drawing.FontStyle.Bold);
             this.btnClose.ForeColor = System.Drawing.Color.Black;
             this.btnClose.HoverState.CustomBorderColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnClose.Location = new System.Drawing.Point(489, 337);
+            this.btnClose.HoverState.FillColor = System.Drawing.Color.LightSteelBlue;
+            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
+            this.btnClose.Location = new System.Drawing.Point(46, 524);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(115, 58);
+            this.btnClose.Size = new System.Drawing.Size(156, 58);
             this.btnClose.TabIndex = 79;
             this.btnClose.Text = "Close";
             this.btnClose.UseTransparentBackground = true;
@@ -163,7 +178,7 @@
             this.chkRememberMe.CheckedState.BorderRadius = 2;
             this.chkRememberMe.CheckedState.BorderThickness = 0;
             this.chkRememberMe.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.chkRememberMe.Location = new System.Drawing.Point(1012, 267);
+            this.chkRememberMe.Location = new System.Drawing.Point(308, 401);
             this.chkRememberMe.Name = "chkRememberMe";
             this.chkRememberMe.Size = new System.Drawing.Size(20, 20);
             this.chkRememberMe.TabIndex = 80;
@@ -178,29 +193,110 @@
             this.guna2HtmlLabel1.AutoSize = false;
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Gabriola", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(829, 249);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(146, 382);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(156, 50);
             this.guna2HtmlLabel1.TabIndex = 81;
             this.guna2HtmlLabel1.Text = "Remember me ";
             // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(554, 239);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(708, 431);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 82;
+            this.guna2PictureBox1.TabStop = false;
+            // 
+            // guna2HtmlLabel2
+            // 
+            this.guna2HtmlLabel2.AutoSize = false;
+            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Gabriola", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(566, 12);
+            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(696, 68);
+            this.guna2HtmlLabel2.TabIndex = 83;
+            this.guna2HtmlLabel2.Text = " Welcome To Driver and Vehicle Licenses Departement (DVLD)";
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(35, 222);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(48, 35);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox2.TabIndex = 84;
+            this.guna2PictureBox2.TabStop = false;
+            this.guna2PictureBox2.UseTransparentBackground = true;
+            // 
+            // guna2PictureBox3
+            // 
+            this.guna2PictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.Image")));
+            this.guna2PictureBox3.ImageRotate = 0F;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(35, 296);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.Size = new System.Drawing.Size(48, 38);
+            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox3.TabIndex = 85;
+            this.guna2PictureBox3.TabStop = false;
+            this.guna2PictureBox3.UseTransparentBackground = true;
+            // 
+            // guna2HtmlLabel5
+            // 
+            this.guna2HtmlLabel5.AutoSize = false;
+            this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Gabriola", 18F);
+            this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(46, 94);
+            this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(166, 38);
+            this.guna2HtmlLabel5.TabIndex = 86;
+            this.guna2HtmlLabel5.Text = "Let\'s Start..";
+            // 
+            // guna2CustomGradientPanel1
+            // 
+            this.guna2CustomGradientPanel1.Controls.Add(this.guna2HtmlLabel5);
+            this.guna2CustomGradientPanel1.Controls.Add(this.txtPassword);
+            this.guna2CustomGradientPanel1.Controls.Add(this.guna2PictureBox3);
+            this.guna2CustomGradientPanel1.Controls.Add(this.guna2HtmlLabel4);
+            this.guna2CustomGradientPanel1.Controls.Add(this.guna2PictureBox2);
+            this.guna2CustomGradientPanel1.Controls.Add(this.btnLogin);
+            this.guna2CustomGradientPanel1.Controls.Add(this.txtUsername);
+            this.guna2CustomGradientPanel1.Controls.Add(this.guna2HtmlLabel3);
+            this.guna2CustomGradientPanel1.Controls.Add(this.guna2HtmlLabel1);
+            this.guna2CustomGradientPanel1.Controls.Add(this.btnClose);
+            this.guna2CustomGradientPanel1.Controls.Add(this.chkRememberMe);
+            this.guna2CustomGradientPanel1.FillColor = System.Drawing.SystemColors.ActiveCaption;
+            this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.SkyBlue;
+            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(0, -3);
+            this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(534, 703);
+            this.guna2CustomGradientPanel1.TabIndex = 87;
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1105, 689);
-            this.Controls.Add(this.guna2HtmlLabel1);
-            this.Controls.Add(this.chkRememberMe);
-            this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.guna2HtmlLabel3);
-            this.Controls.Add(this.txtUsername);
-            this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.guna2HtmlLabel4);
-            this.Controls.Add(this.txtPassword);
+            this.ClientSize = new System.Drawing.Size(1286, 700);
+            this.Controls.Add(this.guna2CustomGradientPanel1);
+            this.Controls.Add(this.guna2HtmlLabel2);
+            this.Controls.Add(this.guna2PictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmLogin";
             this.Load += new System.EventHandler(this.frmLogin_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
+            this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -215,5 +311,11 @@
         private Guna.UI2.WinForms.Guna2Button btnClose;
         private Guna.UI2.WinForms.Guna2CustomCheckBox chkRememberMe;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
     }
 }
