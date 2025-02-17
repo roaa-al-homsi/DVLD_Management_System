@@ -33,7 +33,6 @@
             this.labCurrentUser = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.picUserMain = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.btnTitle = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.applicationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,9 +60,11 @@
             this.siToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picUserMain)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2CustomGradientPanel1
@@ -72,12 +73,12 @@
             this.guna2CustomGradientPanel1.Controls.Add(this.picUserMain);
             this.guna2CustomGradientPanel1.Controls.Add(this.btnTitle);
             this.guna2CustomGradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2CustomGradientPanel1.FillColor = System.Drawing.SystemColors.ActiveCaption;
-            this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.SystemColors.ActiveCaption;
+            this.guna2CustomGradientPanel1.FillColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.SystemColors.ButtonFace;
             this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.DarkGray;
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1757, 54);
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1827, 54);
             this.guna2CustomGradientPanel1.TabIndex = 5;
             // 
             // labCurrentUser
@@ -86,7 +87,7 @@
             this.labCurrentUser.BackColor = System.Drawing.Color.Transparent;
             this.labCurrentUser.Font = new System.Drawing.Font("Andalus", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labCurrentUser.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labCurrentUser.Location = new System.Drawing.Point(1531, 10);
+            this.labCurrentUser.Location = new System.Drawing.Point(1641, 12);
             this.labCurrentUser.Name = "labCurrentUser";
             this.labCurrentUser.Size = new System.Drawing.Size(108, 38);
             this.labCurrentUser.TabIndex = 0;
@@ -97,7 +98,7 @@
             this.picUserMain.BackColor = System.Drawing.Color.Transparent;
             this.picUserMain.Image = ((System.Drawing.Image)(resources.GetObject("picUserMain.Image")));
             this.picUserMain.ImageRotate = 0F;
-            this.picUserMain.Location = new System.Drawing.Point(1675, 3);
+            this.picUserMain.Location = new System.Drawing.Point(1575, 0);
             this.picUserMain.Name = "picUserMain";
             this.picUserMain.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.picUserMain.Size = new System.Drawing.Size(60, 48);
@@ -121,19 +122,10 @@
             this.btnTitle.ImageSize = new System.Drawing.Size(40, 40);
             this.btnTitle.Location = new System.Drawing.Point(12, 4);
             this.btnTitle.Name = "btnTitle";
-            this.btnTitle.Size = new System.Drawing.Size(426, 47);
+            this.btnTitle.Size = new System.Drawing.Size(239, 44);
             this.btnTitle.TabIndex = 2;
-            this.btnTitle.Text = "Home";
+            this.btnTitle.Text = "DVLD Project";
             this.btnTitle.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 883);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1757, 10);
-            this.guna2Panel1.TabIndex = 18;
             // 
             // menuStrip1
             // 
@@ -149,7 +141,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 54);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.ShowItemToolTips = true;
-            this.menuStrip1.Size = new System.Drawing.Size(1757, 58);
+            this.menuStrip1.Size = new System.Drawing.Size(1827, 58);
             this.menuStrip1.TabIndex = 20;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -180,7 +172,7 @@
             this.hIToolStripMenuItem.Font = new System.Drawing.Font("Andalus", 10.8F);
             this.hIToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("hIToolStripMenuItem.Image")));
             this.hIToolStripMenuItem.Name = "hIToolStripMenuItem";
-            this.hIToolStripMenuItem.Size = new System.Drawing.Size(327, 56);
+            this.hIToolStripMenuItem.Size = new System.Drawing.Size(297, 34);
             this.hIToolStripMenuItem.Text = "Driving Licenses Services";
             // 
             // newDrivingLicenseToolStripMenuItem
@@ -190,7 +182,7 @@
             this.internationalLicenseToolStripMenuItem});
             this.newDrivingLicenseToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("newDrivingLicenseToolStripMenuItem.Image")));
             this.newDrivingLicenseToolStripMenuItem.Name = "newDrivingLicenseToolStripMenuItem";
-            this.newDrivingLicenseToolStripMenuItem.Size = new System.Drawing.Size(440, 56);
+            this.newDrivingLicenseToolStripMenuItem.Size = new System.Drawing.Size(410, 34);
             this.newDrivingLicenseToolStripMenuItem.Text = "New Driving License";
             // 
             // localLicenseToolStripMenuItem
@@ -213,7 +205,7 @@
             // 
             this.renewDrivingLicenseToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("renewDrivingLicenseToolStripMenuItem.Image")));
             this.renewDrivingLicenseToolStripMenuItem.Name = "renewDrivingLicenseToolStripMenuItem";
-            this.renewDrivingLicenseToolStripMenuItem.Size = new System.Drawing.Size(440, 56);
+            this.renewDrivingLicenseToolStripMenuItem.Size = new System.Drawing.Size(410, 34);
             this.renewDrivingLicenseToolStripMenuItem.Text = "Renew Driving License";
             this.renewDrivingLicenseToolStripMenuItem.Click += new System.EventHandler(this.renewDrivingLicenseToolStripMenuItem_Click);
             // 
@@ -221,7 +213,7 @@
             // 
             this.replacementForDamagedOrLostLicenseToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("replacementForDamagedOrLostLicenseToolStripMenuItem.Image")));
             this.replacementForDamagedOrLostLicenseToolStripMenuItem.Name = "replacementForDamagedOrLostLicenseToolStripMenuItem";
-            this.replacementForDamagedOrLostLicenseToolStripMenuItem.Size = new System.Drawing.Size(440, 56);
+            this.replacementForDamagedOrLostLicenseToolStripMenuItem.Size = new System.Drawing.Size(410, 34);
             this.replacementForDamagedOrLostLicenseToolStripMenuItem.Text = "Replacement For Damaged Or Lost License";
             this.replacementForDamagedOrLostLicenseToolStripMenuItem.Click += new System.EventHandler(this.replacementForDamagedOrLostLicenseToolStripMenuItem_Click);
             // 
@@ -229,7 +221,7 @@
             // 
             this.releaseDetainedDrivingLicenseToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("releaseDetainedDrivingLicenseToolStripMenuItem.Image")));
             this.releaseDetainedDrivingLicenseToolStripMenuItem.Name = "releaseDetainedDrivingLicenseToolStripMenuItem";
-            this.releaseDetainedDrivingLicenseToolStripMenuItem.Size = new System.Drawing.Size(440, 56);
+            this.releaseDetainedDrivingLicenseToolStripMenuItem.Size = new System.Drawing.Size(410, 34);
             this.releaseDetainedDrivingLicenseToolStripMenuItem.Text = "Release Detained Driving License";
             this.releaseDetainedDrivingLicenseToolStripMenuItem.Click += new System.EventHandler(this.releaseDetainedDrivingLicenseToolStripMenuItem_Click);
             // 
@@ -237,7 +229,7 @@
             // 
             this.retakeTestToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("retakeTestToolStripMenuItem.Image")));
             this.retakeTestToolStripMenuItem.Name = "retakeTestToolStripMenuItem";
-            this.retakeTestToolStripMenuItem.Size = new System.Drawing.Size(440, 56);
+            this.retakeTestToolStripMenuItem.Size = new System.Drawing.Size(410, 34);
             this.retakeTestToolStripMenuItem.Text = "Retake Test";
             this.retakeTestToolStripMenuItem.Click += new System.EventHandler(this.retakeTestToolStripMenuItem_Click);
             // 
@@ -249,7 +241,7 @@
             this.manageApplicationsToolStripMenuItem.Font = new System.Drawing.Font("Andalus", 10.8F);
             this.manageApplicationsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("manageApplicationsToolStripMenuItem.Image")));
             this.manageApplicationsToolStripMenuItem.Name = "manageApplicationsToolStripMenuItem";
-            this.manageApplicationsToolStripMenuItem.Size = new System.Drawing.Size(327, 56);
+            this.manageApplicationsToolStripMenuItem.Size = new System.Drawing.Size(297, 34);
             this.manageApplicationsToolStripMenuItem.Text = "Manage Applications";
             // 
             // localDrivingLicenseApplicationsToolStripMenuItem
@@ -277,7 +269,7 @@
             this.detainLicensesToolStripMenuItem.Font = new System.Drawing.Font("Andalus", 10.8F);
             this.detainLicensesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("detainLicensesToolStripMenuItem.Image")));
             this.detainLicensesToolStripMenuItem.Name = "detainLicensesToolStripMenuItem";
-            this.detainLicensesToolStripMenuItem.Size = new System.Drawing.Size(327, 56);
+            this.detainLicensesToolStripMenuItem.Size = new System.Drawing.Size(297, 34);
             this.detainLicensesToolStripMenuItem.Text = "Detain Licenses";
             // 
             // manageDetainedLicenseToolStripMenuItem
@@ -309,7 +301,7 @@
             this.manageApplicationTypesToolStripMenuItem.Font = new System.Drawing.Font("Andalus", 10.8F);
             this.manageApplicationTypesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("manageApplicationTypesToolStripMenuItem.Image")));
             this.manageApplicationTypesToolStripMenuItem.Name = "manageApplicationTypesToolStripMenuItem";
-            this.manageApplicationTypesToolStripMenuItem.Size = new System.Drawing.Size(327, 56);
+            this.manageApplicationTypesToolStripMenuItem.Size = new System.Drawing.Size(297, 34);
             this.manageApplicationTypesToolStripMenuItem.Text = "Manage Application Types";
             this.manageApplicationTypesToolStripMenuItem.Click += new System.EventHandler(this.manageApplicationTypesToolStripMenuItem_Click);
             // 
@@ -318,7 +310,7 @@
             this.manageTestTypesToolStripMenuItem.Font = new System.Drawing.Font("Andalus", 10.8F);
             this.manageTestTypesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("manageTestTypesToolStripMenuItem.Image")));
             this.manageTestTypesToolStripMenuItem.Name = "manageTestTypesToolStripMenuItem";
-            this.manageTestTypesToolStripMenuItem.Size = new System.Drawing.Size(327, 56);
+            this.manageTestTypesToolStripMenuItem.Size = new System.Drawing.Size(297, 34);
             this.manageTestTypesToolStripMenuItem.Text = "Manage Test Types";
             this.manageTestTypesToolStripMenuItem.Click += new System.EventHandler(this.manageTestTypesToolStripMenuItem_Click);
             // 
@@ -395,13 +387,28 @@
             this.logoutToolStripMenuItem.Text = "Logout";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(1288, 385);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(539, 446);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 22;
+            this.guna2PictureBox1.TabStop = false;
+            this.guna2PictureBox1.UseTransparentBackground = true;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1757, 893);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1827, 827);
+            this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
@@ -414,6 +421,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picUserMain)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -425,7 +433,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel labCurrentUser;
         private Guna.UI2.WinForms.Guna2CirclePictureBox picUserMain;
         private Guna.UI2.WinForms.Guna2Button btnTitle;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem applicationsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem peopleToolStripMenuItem;
@@ -453,6 +460,7 @@
         private System.Windows.Forms.ToolStripMenuItem currentUserInfoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem siToolStripMenuItem;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
     }
 }
 

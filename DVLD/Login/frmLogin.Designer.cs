@@ -54,6 +54,7 @@
             this.guna2HtmlLabel3.AutoSize = false;
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Gabriola", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.Black;
             this.guna2HtmlLabel3.Location = new System.Drawing.Point(89, 210);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(109, 50);
@@ -64,13 +65,16 @@
             // 
             this.txtUsername.AutoRoundedCorners = true;
             this.txtUsername.BackColor = System.Drawing.Color.Transparent;
+            this.txtUsername.BorderColor = System.Drawing.Color.Black;
             this.txtUsername.BorderRadius = 18;
+            this.txtUsername.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.txtUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUsername.DefaultText = "";
             this.txtUsername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtUsername.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtUsername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtUsername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUsername.FillColor = System.Drawing.Color.Beige;
             this.txtUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUsername.Font = new System.Drawing.Font("Andalus", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.ForeColor = System.Drawing.Color.Black;
@@ -91,16 +95,17 @@
             this.btnLogin.AutoRoundedCorners = true;
             this.btnLogin.BackColor = System.Drawing.Color.Transparent;
             this.btnLogin.BorderRadius = 28;
-            this.btnLogin.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            this.btnLogin.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.btnLogin.BorderThickness = 1;
             this.btnLogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnLogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnLogin.FillColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnLogin.FillColor = System.Drawing.Color.Beige;
             this.btnLogin.Font = new System.Drawing.Font("Gabriola", 16.2F, System.Drawing.FontStyle.Bold);
             this.btnLogin.ForeColor = System.Drawing.Color.Black;
-            this.btnLogin.HoverState.CustomBorderColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnLogin.HoverState.FillColor = System.Drawing.Color.LightSteelBlue;
+            this.btnLogin.HoverState.CustomBorderColor = System.Drawing.Color.Olive;
+            this.btnLogin.HoverState.FillColor = System.Drawing.Color.DarkKhaki;
             this.btnLogin.Image = ((System.Drawing.Image)(resources.GetObject("btnLogin.Image")));
             this.btnLogin.Location = new System.Drawing.Point(251, 524);
             this.btnLogin.Name = "btnLogin";
@@ -115,6 +120,7 @@
             this.guna2HtmlLabel4.AutoSize = false;
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Gabriola", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.Black;
             this.guna2HtmlLabel4.Location = new System.Drawing.Point(89, 284);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(109, 50);
@@ -125,13 +131,16 @@
             // 
             this.txtPassword.AutoRoundedCorners = true;
             this.txtPassword.BackColor = System.Drawing.Color.Transparent;
+            this.txtPassword.BorderColor = System.Drawing.Color.Black;
             this.txtPassword.BorderRadius = 18;
+            this.txtPassword.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPassword.DefaultText = "";
             this.txtPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPassword.FillColor = System.Drawing.Color.Beige;
             this.txtPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPassword.Font = new System.Drawing.Font("Andalus", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.ForeColor = System.Drawing.Color.Black;
@@ -153,16 +162,17 @@
             this.btnClose.AutoRoundedCorners = true;
             this.btnClose.BackColor = System.Drawing.Color.Transparent;
             this.btnClose.BorderRadius = 28;
-            this.btnClose.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            this.btnClose.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.btnClose.BorderThickness = 1;
             this.btnClose.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnClose.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnClose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnClose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnClose.FillColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnClose.FillColor = System.Drawing.Color.Beige;
             this.btnClose.Font = new System.Drawing.Font("Gabriola", 16.2F, System.Drawing.FontStyle.Bold);
             this.btnClose.ForeColor = System.Drawing.Color.Black;
-            this.btnClose.HoverState.CustomBorderColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnClose.HoverState.FillColor = System.Drawing.Color.LightSteelBlue;
+            this.btnClose.HoverState.CustomBorderColor = System.Drawing.Color.Olive;
+            this.btnClose.HoverState.FillColor = System.Drawing.Color.DarkKhaki;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.Location = new System.Drawing.Point(46, 524);
             this.btnClose.Name = "btnClose";
@@ -193,6 +203,7 @@
             this.guna2HtmlLabel1.AutoSize = false;
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Gabriola", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.Black;
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(146, 382);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(156, 50);
@@ -252,8 +263,8 @@
             // 
             this.guna2HtmlLabel5.AutoSize = false;
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Gabriola", 18F);
-            this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Gabriola", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.Black;
             this.guna2HtmlLabel5.Location = new System.Drawing.Point(46, 94);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(166, 38);
@@ -273,8 +284,8 @@
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2HtmlLabel1);
             this.guna2CustomGradientPanel1.Controls.Add(this.btnClose);
             this.guna2CustomGradientPanel1.Controls.Add(this.chkRememberMe);
-            this.guna2CustomGradientPanel1.FillColor = System.Drawing.SystemColors.ActiveCaption;
-            this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.SkyBlue;
+            this.guna2CustomGradientPanel1.FillColor = System.Drawing.SystemColors.Info;
+            this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.Silver;
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(0, -3);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(534, 703);
