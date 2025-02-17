@@ -114,6 +114,7 @@
             this.dgvLocalLicesnes.AllowUserToDeleteRows = false;
             this.dgvLocalLicesnes.BackgroundColor = System.Drawing.Color.White;
             this.dgvLocalLicesnes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLocalLicesnes.ContextMenuStrip = this.cmsShowLocalLicensesInfo;
             this.dgvLocalLicesnes.Location = new System.Drawing.Point(0, 0);
             this.dgvLocalLicesnes.Name = "dgvLocalLicesnes";
             this.dgvLocalLicesnes.ReadOnly = true;
@@ -166,6 +167,7 @@
             this.dgvInternationalLicenses.AllowUserToDeleteRows = false;
             this.dgvInternationalLicenses.BackgroundColor = System.Drawing.Color.White;
             this.dgvInternationalLicenses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvInternationalLicenses.ContextMenuStrip = this.cmsShowInternationalInfo;
             this.dgvInternationalLicenses.Location = new System.Drawing.Point(0, 3);
             this.dgvInternationalLicenses.Name = "dgvInternationalLicenses";
             this.dgvInternationalLicenses.ReadOnly = true;
@@ -239,7 +241,7 @@
             this.cmsShowInternationalInfo.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
             this.cmsShowInternationalInfo.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
             this.cmsShowInternationalInfo.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.cmsShowInternationalInfo.Size = new System.Drawing.Size(241, 30);
+            this.cmsShowInternationalInfo.Size = new System.Drawing.Size(241, 58);
             // 
             // toolStripMenuItem1
             // 

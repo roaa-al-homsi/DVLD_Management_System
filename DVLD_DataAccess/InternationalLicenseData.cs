@@ -117,11 +117,32 @@ namespace DVLD_DataAccess
         {
             return GenericData.Exist("select Found=1 from InternationalLicenses where Id= @Id", "@Id", Id);
         }
-
         static public int GetActiveInternationalLicenseIDByDriverID(int driverId)
         {
             return GenericData.GetSpecificIdById("select Id from InternationalLicenses where DriverId=@driverId", "driverId", driverId);
         }
-
+        static public DataTable AllInternationalLicensesByDriverId(int driverId)
+        {
+            DataTable dt = new DataTable();
+            string query = @"select * from InternationalLicenses where DriverId=@driverId";
+            using (SqlConnection connection = new SqlConnection(SettingData.ConnectionString))
+            {
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("driverId", driverId);
+                    try
+                    {
+                        connection.Open();
+                        SqlDataReader Reader = command.ExecuteReader();
+                        if (Reader.HasRows)
+                        {
+                            dt.Load(Reader);
+                        }
+                    }
+                    catch (Exception ex) { }
+                }
+            }
+            return dt;
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using DVLD.Licenses.Local_Licenses;
+﻿using DVLD.Licenses.International_Licenses;
+using DVLD.Licenses.Local_Licenses;
 using DVLD_Business;
 using System.Data;
 using System.Windows.Forms;
@@ -15,7 +16,7 @@ namespace DVLD.Licenses.U_controls
         {
             InitializeComponent();
         }
-        private void ChangeFormatDgvLocal()
+        private void _ChangeFormatDgvLocal()
         {
             if (dgvLocalLicesnes.Rows.Count > 0)
             {
@@ -27,6 +28,17 @@ namespace DVLD.Licenses.U_controls
                 dgvLocalLicesnes.Columns[5].Width = 110;
             }
         }
+        private void _ChangeFormatDgvInternational()
+        {
+            if (dgvInternationalLicenses.Rows.Count > 0)
+            {
+
+                dgvInternationalLicenses.Columns[3].Width = 200;
+                dgvInternationalLicenses.Columns[4].Width = 170;
+                dgvInternationalLicenses.Columns[5].Width = 110;
+                dgvInternationalLicenses.Columns[7].Width = 110;
+            }
+        }
         private void LoadLocalInfo()
         {
             _dtLocalLicenses = Driver.AllLocalLicenses(_DriverId);
@@ -35,8 +47,8 @@ namespace DVLD.Licenses.U_controls
         }
         private void LoadInternationalInfo()
         {
-            // _dtInternationalLicenses = Driver.AllInternationalLicenses(_DriverId);
-            //    dgvInternationalLicenses.DataSource = _dtLocalLicenses;
+            _dtInternationalLicenses = Driver.AllInternationalLicenses(_DriverId);
+            dgvInternationalLicenses.DataSource = _dtInternationalLicenses;
             labCountRecordInternational.Text = dgvInternationalLicenses.RowCount.ToString();
         }
         public void LoadLicensesHistory(int driverId)
@@ -50,7 +62,8 @@ namespace DVLD.Licenses.U_controls
             }
             LoadLocalInfo();
             LoadInternationalInfo();
-            ChangeFormatDgvLocal();
+            _ChangeFormatDgvLocal();
+            _ChangeFormatDgvInternational();
         }
         public void LoadLicensesHistoryByPersonId(int personId)
         {
@@ -64,7 +77,8 @@ namespace DVLD.Licenses.U_controls
             _DriverId = _Driver.Id;
             LoadLocalInfo();
             LoadInternationalInfo();
-            ChangeFormatDgvLocal();
+            _ChangeFormatDgvLocal();
+            _ChangeFormatDgvInternational();
         }
         public void Clear()
         {
@@ -74,13 +88,15 @@ namespace DVLD.Licenses.U_controls
 
         private void showLocalInfoToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            frmShowDriverLicenseInfo frmShowDriverLicenseInfo = new frmShowDriverLicenseInfo(_DriverId);
+
+            frmShowDriverLicenseInfo frmShowDriverLicenseInfo = new frmShowDriverLicenseInfo((int)dgvInternationalLicenses.CurrentRow.Cells[0].Value);
             frmShowDriverLicenseInfo.ShowDialog();
         }
 
         private void toolStripMenuItem1_Click(object sender, System.EventArgs e)
         {
-            //show international info 
+            frmShowInternationalLicenseInfo frmShowInternationalLicenseInfo = new frmShowInternationalLicenseInfo((int)dgvInternationalLicenses.CurrentRow.Cells[0].Value);
+            frmShowInternationalLicenseInfo.ShowDialog();
         }
     }
 }
