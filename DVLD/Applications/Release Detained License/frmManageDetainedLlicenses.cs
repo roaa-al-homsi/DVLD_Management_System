@@ -1,6 +1,7 @@
 ﻿using DVLD.Licenses;
 using DVLD.Licenses.Detained_Licenses;
 using DVLD.Licenses.Local_Licenses;
+using DVLD.People;
 using DVLD_Business;
 using System;
 using System.Data;
@@ -17,6 +18,7 @@ namespace DVLD.Applications.Release_Detained_License
         }
         private void _FillComboFilterBy()
         {
+            cmbFilterBy.Items.Clear();
             foreach (DataColumn dc in _dtDetainedLicenses.Columns)
             {
                 if (dc.ColumnName == "Detain Date" || dc.ColumnName == "Fine Fees" || dc.ColumnName == "Release Date")
@@ -174,6 +176,12 @@ namespace DVLD.Applications.Release_Detained_License
                     break;
             }
             labCountRecords.Text = _dtDetainedLicenses.Rows.Count.ToString();
+        }
+
+        private void showPersonDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmShowPersonInfo frmShowPersonInfo = new frmShowPersonInfo(_GetPersonId());
+            frmShowPersonInfo.ShowDialog();
         }
     }
 

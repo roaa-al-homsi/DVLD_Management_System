@@ -157,6 +157,7 @@
             this.showPersonDetailsToolStripMenuItem.Name = "showPersonDetailsToolStripMenuItem";
             this.showPersonDetailsToolStripMenuItem.Size = new System.Drawing.Size(274, 26);
             this.showPersonDetailsToolStripMenuItem.Text = "Show Person Detains";
+            this.showPersonDetailsToolStripMenuItem.Click += new System.EventHandler(this.showPersonDetailsToolStripMenuItem_Click);
             // 
             // cmsManageDetainedLicenses
             // 
@@ -176,7 +177,7 @@
             this.cmsManageDetainedLicenses.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
             this.cmsManageDetainedLicenses.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
             this.cmsManageDetainedLicenses.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.cmsManageDetainedLicenses.Size = new System.Drawing.Size(275, 108);
+            this.cmsManageDetainedLicenses.Size = new System.Drawing.Size(275, 136);
             this.cmsManageDetainedLicenses.Opening += new System.ComponentModel.CancelEventHandler(this.cmsManageDetainedLicenses_Opening);
             // 
             // cmbFilterBy
