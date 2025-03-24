@@ -1,5 +1,8 @@
 ﻿using DVLD_DataAccess;
+using System;
 using System.Data;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace DVLD_Business
 {
@@ -37,12 +40,14 @@ namespace DVLD_Business
         }
         private bool _Add()
         {
-            this.Id = UserData.Add(this.PersonId, this.Username, this.Password, this.IsActive);
+
+            this.Id = UserData.Add(this.PersonId, this.Username, ComputeHash(this.Password), this.IsActive);
             return (this.Id != -1);
         }
         private bool _Update()
         {
-            return UserData.Update(this.Id, this.PersonId, this.Username, this.Password, this.IsActive);
+            //ensure if old password doesn't equal new password.
+            return UserData.Update(this.Id, this.PersonId, this.Username, ComputeHash(this.Password), this.IsActive);
         }
         public bool Save()
         {
@@ -117,6 +122,19 @@ namespace DVLD_Business
             return UserData.ChangePassword(this.Id, this.Password);
         }
 
+        public static string ComputeHash(string input)
+        {
+            //SHA is security hash algorithm.
+            //Create an instance of the SHA-256 algorithm
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                //compute the hash value from the UTF-8 encoded input string.
+                byte[] hashBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(input));
+
+                //Convert the byte array to lowercase hexadecimal string.
+                return BitConverter.ToString(hashBytes).Replace("-", "").ToLower();
+            }
+        }
     }
 
 

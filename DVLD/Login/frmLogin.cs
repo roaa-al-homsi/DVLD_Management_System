@@ -9,6 +9,15 @@ namespace DVLD
     {
         //johndoe
         //password123
+
+        //alexbrown
+        //password789
+
+        //emilyjohnson
+        //password012
+
+        //michaelwilliams
+        //password345
         public frmLogin()
         {
             InitializeComponent();
@@ -16,7 +25,7 @@ namespace DVLD
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            Global.CurrentUser = User.FindByUsernameAndPassword(txtUsername.Text.Trim(), txtPassword.Text.Trim());
+            Global.CurrentUser = User.FindByUsernameAndPassword(txtUsername.Text.Trim(), User.ComputeHash(txtPassword.Text.Trim()));
 
 
             if (Global.CurrentUser != null)
@@ -25,7 +34,7 @@ namespace DVLD
                 if (chkRememberMe.Checked)
                 {
                     //store username and password
-                    Global.RememberUsernameAndPassword(txtUsername.Text.Trim(), txtPassword.Text.Trim());
+                    Global.RememberUsernameAndPassword(txtUsername.Text.Trim(), User.ComputeHash(txtPassword.Text.Trim()));
 
                 }
                 else
@@ -34,7 +43,7 @@ namespace DVLD
                     Global.RememberUsernameAndPassword("", "");
                 }
 
-                //incase the user is not active
+                //encase the user is not active
                 if (!Global.CurrentUser.IsActive)
                 {
                     txtUsername.Focus();
@@ -48,7 +57,7 @@ namespace DVLD
             else
             {
                 txtUsername.Focus();
-                MessageBox.Show("Invalid Username/Password.", "Wrong Credintials", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Invalid Username/Password.", "Wrong Credentials", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
 
